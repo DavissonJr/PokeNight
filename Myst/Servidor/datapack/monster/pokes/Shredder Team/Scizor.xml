@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Scizor" nameDescription="a scizor" race="steel" experience="1544" speed="177" manacost="0">
+    <health now="170" max="170"/>
+  <look type="912" head="80" body="92" legs="95" feet="113" corpse="0"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+	<attacks>
+
+	</attacks>
+
+	<defenses armor="0" defense="0">
+	</defenses>
+
+	<voices interval="5000" chance="10">
+	<voice sentence="SCIII!"/>
+	<voice sentence="ZOOOR!"/>
+	<voice sentence="SCIZOR!"/>
+	</voices>
+
+	<loot>
+
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Scrafty" nameDescription="an Scrafty" race="dark" experience="450" speed="275" manacost="0">
+  <health now="40" max="40"/>
+  <look type="2800" head="42" body="57" legs="95" feet="113" corpse="21812"/>
+	<targetchange interval="2000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   
+</flags>
+  <attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-78" max="-124"/>
+        <attack name="Feint Attack" interval="2852" chance="29" range="2"/>
+        <attack name="High Jump Kick" interval="2758" chance="20" range="6"/>
+        <attack name="Crunch" interval="2993" chance="28" range="2"/>
+        <attack name="Focus Punch" interval="2711" chance="24" range="6"/>
+        <attack name="Counter" interval="3087" chance="25" range="3"/>
+        <attack name="Brick Break" interval="3557" chance="28" range="3"/>
+        <attack name="Focus Blast" interval="4779" chance="25" range="2"/>
+        <attack name="Dark Pulse" interval="5766" chance="15" range="1"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="Scra!"/>
+<voice sentence="fty!"/>
+<voice sentence="Scrafty!"/>
+  </voices>
+  <loot>
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+        <item id="12204" chance="5000" count="1" countmax="1"/> --traces of ghost
+        <item id="12745" chance="10000" countmax="80"/> --darkness gem
+        <item id="12206" chance="10000" countmax="80"/> --essence of dark
+        <item id="12194" chance="5000" count="1" countmax="1"/> --future orb
+        <item id="11450" chance="150" count="1" countmax="1"/>
+        <item id="12240" chance="4000" count="1" countmax="1"/> --bag of poisonus dust
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

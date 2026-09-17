@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<npc name="Jorginho DJ" walkinterval="0" script="datapack/npc/scripts/default.lua" floorchange="0" access="1" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="1110" head="123" body="31" legs="7" feet="231" addons="0" corpse="0"/>
+<parameters>
+<parameter key="module_travel" value="1"/>
+<parameter key="message_greet" value="Olá |PLAYERNAME|. Deseja ir para {Johto}?" />
+<parameter key="travel_destinations" value="johto,821,2688,7,0;"/>
+</parameters>
+</npc>

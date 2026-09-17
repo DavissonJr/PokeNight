@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Willian" script="jester.lua" walkinterval="2000" floorchange="0" skull="1">
+<health now="100" max="100"/>
+<look type="1407" head="79" body="83" legs="86" feet="114" addons="0"/>
+<parameters>
+	<parameter key="message_greet" value="Olá |PLAYERNAME|, eu troco a passagem por item deseja {trocar}?"/>
+</parameters>
+</npc>

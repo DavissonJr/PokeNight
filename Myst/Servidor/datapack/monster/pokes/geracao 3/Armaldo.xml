@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Armaldo" nameDescription="a Armaldo" race="bug" experience="0" speed="162" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1629" head="60" body="77" legs="95" feet="113" corpse="593"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	<attack name="melee" interval="2000" chance="100" range="1" min="-92" max="-136"/>
+   	<attack name="Headbutt" interval="3040" chance="28" range="1"/>
+      <attack name="Body Slam" interval="2946" chance="28" range="4"/>
+      <attack name="Bug Bite" interval="3745" chance="24" range="1"/>
+      <attack name="Guillotine" interval="3510" chance="25" range="3"/>
+      <attack name="Agility" interval="3510" chance="25" range="3"/>
+      <attack name="Mega Punch" interval="2946" chance="28" range="6"/>
+      <attack name="X-Scissor" interval="3275" chance="26" range="4"/>
+      <attack name="Harden" interval="3040" chance="28" range="1"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="HERAA!"/>
+<voice sentence="Arma!"/>
+<voice sentence="Armaldo!"/>
+  </voices>
+  <loot>
+	<item id="12196" countmax="1" chance="1100"/> -- stone orb
+	<item id="12337" countmax="45" chance="6200"/> -- small stone
+			<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

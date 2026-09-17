@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mike" script="datapackpack/npc/scripts/default.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="606" head="58" body="68" legs="101" feet="95" addons="0"/>
+<voices>
+<voice text="Eu compro produtos pokémon!" interval2="10000" margin="1" yell="yes"/>
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+        <parameter key="message_farewell" value="Até mais, |PLAYERNAME|."/>
+		<parameter key="message_walkaway" value="Até mais." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="message_greet" value="Oi, |PLAYERNAME|. Eu compro objetos de Pokémon e vendo alguns equipamentos, me mande um {trade} para fazer um acordo." />
+		<parameter key="shop_buyable" value="Pokeball,2394,700;great ball,2391,2000;Ultra ball,2392,11000;red pokemon bag,12325,500;white pokemon bag,12326,500;yellow pokemon bag,12327,500;green pokemon bag,12328,500;blue pokemon bag,12329, 500;smallpot,12348,400;great potions,12345,800;super potions,12347,1600;ultra potions,12346,2200;full healts,12344,5000;recording camera,12330,100000;revive,12343,18000;bike,10588,100000;repel,10664,2000;"/>
+		<parameter key="shop_sellable" value="apple bite,12173,1000;bag of pollem,12153,2000;bat wing,12182,2500;bottle of poison,12165,100;crab claw,12207,3000;feather,12200,1000;fire essense,12162,100;fur,12181,2110;leaves,12155,1200;nail,12157,1850;pot of lava,12152,2500;pot of moss bug,12171,2000;sandbag,12177,2200;screw,12164,100;seed,12163,100;small stone,12337,80;squirtle hull,12158,3120;straw,10604,90;water gem,12161,90;water pendant,12170,2500;" />
+	</parameters>
+</npc>

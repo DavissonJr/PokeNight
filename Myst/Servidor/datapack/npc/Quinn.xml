@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Blackkiings" script="taskshiny.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="1100" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá tudo bem |PLAYERNAME|? Eu estou a procura de fragmentos de mew caso você tenha 10 deles diga {mew}!"/>
+<parameter key="message_farewell" value="Até mais, seu gay."/>
+</parameters>
+</npc>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Larvesta" nameDescription="a larvesta" race="fire" experience="35590" speed="167" manacost="0">
+    <health now="220" max="220"/>
+    <look type="2559" head="100" body="100" legs="95" feet="113" corpse="28013"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="15"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Larrvesta!"/>
+    </voices>
+    <loot>
+        <item id="12152" chance="50000" count="1" countmax="1"/>
+        <item id="12162" chance="50000" countmax="40"/>
+        <item id="11447" chance="200" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

@@ -1,0 +1,313 @@
+HotkeyListLabel < UILabel
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 2 0
+  focusable: true
+  phantom: false
+
+  $focus:
+    background-color: #ffffff22
+
+MainWindow
+  id: hotkeysWindow
+  text: Atalhos
+  size: 571 361
+  focusable: true
+
+  @onEnter: modules.game_hotkeys.ok()
+  @onEscape: modules.game_hotkeys.cancel()
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-left: -10
+    margin-top: -30
+    @onClick: exibir()
+    visible: false
+
+    $hover:
+      image-source: images/close_hover.png
+
+  Label
+    id: currentHotkeysLabel
+    !text: tr('Atalhos recentes') .. ':'
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+
+  VerticalScrollBar
+    id: currentHotkeysScrollBar
+    height: 150
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 181
+    step: 14
+    pixels-scroll: true
+
+  TextList
+    id: currentHotkeys
+    size: 347 150
+    vertical-scrollbar: currentHotkeysScrollBar
+    anchors.left: parent.left
+    anchors.top: prev.top
+    anchors.bottom: prev.bottom
+    focusable: false
+
+  UIButton
+    id: resetButton
+    size: 104 26
+    image-source: images/button.png
+    !text: tr('Resetar tudo')
+    anchors.left: parent.left
+    anchors.top: next.top
+    @onClick: modules.game_hotkeys.reset()
+    margin-right: 10
+
+    $hover:
+      image-source: images/button_hover.png
+
+
+  UIButton
+    id: addHotkeyButton
+    !text: tr('Adicionar')
+    size: 104 26
+    image-source: images/button.png
+    anchors.left: parent.left
+    anchors.top: next.top
+    margin-left: 147
+    @onClick: modules.game_hotkeys.addHotkey()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: removeHotkeyButton
+    !text: tr('Remover')
+    size: 104 26
+    image-source: images/button.png
+    enabled: false
+    anchors.right: parent.right
+    anchors.top: currentHotkeys.bottom
+    margin-top: 8
+    margin-right: 180
+    @onClick: modules.game_hotkeys.removeHotkey()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  Label
+    id: hotKeyActionLabel
+    !text: tr('Ação de Atalho') .. ':'
+    enable: false
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 10
+    visible: false
+
+  ComboBox
+    id: hotkeyActionCombo
+    enabled: false
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+    mouse-scroll: false
+    visible: false
+
+  Label
+    id: hotKeyTextLabel
+    !text: tr('Editar texto do atalho') .. ':'
+    enable: false
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: -35
+
+  TextEdit
+    id: hotkeyText
+    size: 546 29
+    enabled: false
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+    @onTextChange: modules.game_hotkeys.onHotkeyTextChange(self:getText())
+
+  CheckBox
+    id: sendAutomatically
+    text: Enviar automaticamente
+    text-offset: 29 1
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    enabled:false
+    margin-top: 9
+    @onCheckChange: modules.game_hotkeys.onSendAutomaticallyChange(self:isChecked())
+
+  Item
+    id: itemPreview
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 0
+    margin-left: 371
+    virtual: true
+
+  UIButton
+    id: selectObjectButton
+    !text: tr('Selecionar objeto')
+    size: 134 25
+    image-source: images/button.png
+    image-border: 20
+    enabled: false
+    anchors.left: prev.right
+    anchors.top: prev.top
+    margin-left: 10
+    @onClick: modules.game_hotkeys.startChooseItem()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: clearObjectButton
+    !text: tr('Limpar objeto')
+    size: 134 25
+    image-source: images/button.png
+    image-border: 20
+    enabled: false
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    margin-top: 2
+    margin-left: 0
+    @onClick: modules.game_hotkeys.clearObject()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: useOnSelf
+    text: Usar em si mesmo
+    size: 134 25
+    image-source: images/button.png
+    image-border: 20
+    enabled: false
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-top: 22
+    margin-left: 413
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: useOnTarget
+    text: Usar no alvo
+    size: 134 25
+    image-source: images/button.png
+    image-border: 20
+    enabled: false
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-top: 4
+    margin-left: 413
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: useWith
+    text: Com mira
+    size: 134 25
+    image-source: images/button.png
+    image-border: 20
+    enabled: false
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-top: 4
+    margin-left: 413
+
+    $hover:
+      image-source: images/button_hover.png
+
+  HorizontalSeparator
+    id: separator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 9
+
+  UIButton
+    id: okButton
+    text: Confirmar
+    size: 104 26
+    image-source: images/button.png
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_hotkeys.ok()
+    margin-right: 10
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: cancelButton
+    !text: tr('Voltar')
+    size: 104 26
+    image-source: images/button.png
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_hotkeys.cancel()
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png
+
+HotkeyAssignWindow < MainWindow
+  id: assignWindow
+  !text: tr('Button Assign')
+  size: 360 150
+  @onEscape: self:destroy()
+
+  Label
+    text: Por favor, pressione a tecla que deseja adicionar ao seu gerenciador de teclas de atalho
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-align: left
+
+  Label
+    id: comboPreview
+    !text: tr('Atalho para adicionar: %s', 'none')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: prev.bottom
+    margin-top: 10
+    text-auto-resize: true
+
+  HorizontalSeparator
+    id: separator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 10
+
+  Button
+    id: addButton
+    text: Adicionar
+    width: 64
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_hotkeys.hotkeyCaptureOk(self:getParent(), self:getParent():getChildById('comboPreview').keyCombo)
+
+  Button
+    id: cancelButton
+    text: Cancelar
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: self:getParent():destroy()

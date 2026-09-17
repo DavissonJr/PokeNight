@@ -1,0 +1,137 @@
+RoundCheckBox < CheckBox
+  image-source: /images/ui/checkbox1
+  text-offset: 22 0
+  
+  $first:
+    margin-top: 2
+
+  $!first:
+    margin-top: 5
+
+MainWindow
+  id: assignItemWindow
+  size: 275 195
+
+  UIButton
+    id: titleTab
+    size: 180 28
+    image-source: images/titleTab.png
+    color: #cda953
+    font: sans-bold-16px
+    text: Selecionar objeto
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -90
+
+  UIItem
+    id: item
+    anchors.top: parent.top
+    anchors.left: parent.left
+    size: 86 86
+    padding: 5
+    &selectable: true
+    &editable: false
+    image-source: /images/ui/panel_flat
+    image-border: 1
+
+  Panel
+    id: checks
+    anchors.left: prev.right
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-left: 10
+    layout: 
+      type: verticalBox
+      fit-children: true
+
+    RoundCheckBox
+      id: useSelf
+      text: Use on yourself
+      enabled: false
+    
+    RoundCheckBox
+      id: useTarget
+      text: Use on target
+      enabled: false
+
+    RoundCheckBox
+      id: useCross
+      text: With crosshair
+      enabled: false
+
+    RoundCheckBox
+      id: equip
+      text: Equip/Unequip
+      enabled: false
+
+    RoundCheckBox
+      id: use
+      text: Use
+      enabled: false
+
+  UIButton
+    id: select
+    anchors.left: item.left
+    anchors.right: item.right
+    anchors.top: item.bottom
+    margin-top: 5
+    font: cipsoftFont
+    size: 83 26
+    image-source: images/button.png
+    image-border: 20
+    text: Select item
+
+    $hover:
+      image-source: images/button_hover.png
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    margin-top: 10
+    anchors.left: parent.left
+    anchors.right: parent.right
+    visible: false
+
+  UIButton
+    id: buttonClose
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 55 26
+    image-source: images/button.png
+    image-border: 20
+    font: cipsoftFont
+    text: Fechar
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonApply
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 55 26
+    image-source: images/button.png
+    image-border: 20
+    font: cipsoftFont
+    text: Aplicar
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonOk
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 55 26
+    image-source: images/button.png
+    image-border: 20
+    font: cipsoftFont
+    text: Confirmar
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png

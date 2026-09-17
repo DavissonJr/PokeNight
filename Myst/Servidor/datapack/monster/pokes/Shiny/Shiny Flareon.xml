@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Flareon" nameDescription="a Shiny flareon" race="fire" experience="580" speed="152" manacost="0">
+  <health now="120" max="120"/>
+  <look type="1330" head="50" body="70" legs="95" feet="113" corpse="0"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="19"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2617" chance="30" range="2"/>
+        <attack name="Bite" interval="2852" chance="29" range="1"/>
+        <attack name="Sacred Fire" interval="2946" chance="24" range="4"/>
+        <attack name="Blaze Kick" interval="3040" chance="24" range="4"/>
+        <attack name="Raging Blast" interval="3258" chance="30" range="5"/>
+        <attack name="Flamethrower" interval="2963" chance="25" range="6"/>
+        <attack name="Overheat" interval="3369" chance="26" range="4"/>
+        <attack name="Fire Blast" interval="4168" chance="21" range="6"/>
+		<attack name="Magma Storm" interval="4968" chance="21" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="FLAREON!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

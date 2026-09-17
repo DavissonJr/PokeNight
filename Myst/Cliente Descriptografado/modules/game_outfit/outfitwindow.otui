@@ -1,0 +1,454 @@
+NextOutfitButton < NextButton
+PrevOutfitButton < PreviousButton
+NextMountButton < NextButton
+PrevMountButton < PreviousButton
+
+HeadlessWindow
+  size: 330 459
+  image-source: /images/ui/options_window
+  anchors.centerIn: parent
+  @onEnter: modules.game_outfit.accept()
+  @onEscape: modules.game_outfit.destroy()
+
+  UIButton
+    id: horizontal
+    opacity: 0.60
+    color: #e8c05e
+    font: sans-bold-16px
+    !text: tr('Select Outfit')
+    size: 365 37
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -7
+    margin-left: -19
+    draggable: false
+
+  UIButton
+    id: horizontal2
+    color: #e8c05e
+    font: sans-bold-16px
+    !text: tr('Select Outfit')
+    size: 365 37
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -7
+    margin-left: -19
+    draggable: false
+
+  // Creature Boxes
+  OutfitBox
+    id: outfitCreatureBox
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 20
+    margin-left: 90
+    padding: 4 4 4 4
+    fixed-creature-size: true
+
+  UIButton
+    id: randomOutfit
+    tooltip: Generate random outfit
+    opacity: 0.50
+    size: 26 24
+    image-source: images/randomOutfit
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 145
+    margin-left: 150
+    @onClick: modules.game_outfit.randomize()
+
+    $hover:
+      opacity: 0.70
+
+    $pressed:
+      opacity: 100
+
+  Label
+    id: outfitName
+    font: sans-bold-16px
+    size: 177 24
+    color: white
+    image-source: images/outfitName
+    !text: tr('No Outfit')
+    text-align: center
+    text-offset: 5 0
+    anchors.bottom: prev.top
+    anchors.left: prev.left
+    margin-bottom: -50
+    margin-left: -79
+
+  NextOutfitButton
+    id: outfitNextButton
+    image-color: white
+    opacity: 0.80
+    anchors.left: outfitCreatureBox.right
+    anchors.top: parent.top
+    anchors.verticalCenter: outfitCreatureBox.verticalCenter
+    margin-left: 55
+    margin-top: 27
+    enabled: true
+    @onClick: modules.game_outfit.nextOutfitType()
+
+    $hover:
+      image-color: white
+      opacity: 100
+
+    $pressed:
+      image-color: #343433
+
+  PrevOutfitButton
+    id: outfitPrevButton
+    image-color: white
+    opacity: 0.80
+    anchors.right: outfitCreatureBox.left
+    anchors.top: outfitNextButton.top
+    anchors.verticalCenter: outfitCreatureBox.verticalCenter
+    margin-right: 5
+    margin-top: 27
+    enabled: true
+    @onClick: modules.game_outfit.previousOutfitType()
+
+    $hover:
+      image-color: white
+      opacity: 100
+
+    $pressed:
+      image-color: #343433
+
+  Creature
+    id: mountCreatureBox
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 15
+    margin-right: 22
+    padding: 4 4 4 4
+    fixed-creature-size: true
+
+  Label
+    id: mountName
+    !text: tr('No Mount')
+    width: 115
+    anchors.bottom: prev.top
+    anchors.left: prev.left
+    margin-bottom: 2
+
+  NextMountButton
+    id: mountNextButton
+    anchors.left: mountCreatureBox.right
+    anchors.verticalCenter: mountCreatureBox.verticalCenter
+    margin-left: 3
+    enabled: true
+    @onClick: modules.game_outfit.nextMountType()
+
+  PrevMountButton
+    id: mountPrevButton
+    anchors.right: mountCreatureBox.left
+    anchors.verticalCenter: mountCreatureBox.verticalCenter
+    margin-right: 3
+    enabled: true
+    @onClick: modules.game_outfit.previousMountType()
+
+  // Addon Check Boxes
+
+  CheckBox
+    id: addon1
+    !text: tr('Addon 1')
+    font: sans-bold-16px
+    text-offset: 25 1
+    width: 80
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -55
+    margin-left: 10
+    enabled: false
+
+    $!enabled:
+      color: white
+
+  CheckBox
+    id: addon2
+    !text: tr('Addon 2')
+    color: white
+    font: sans-bold-16px
+    text-offset: 25 1
+    width: 80
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 20
+    enabled: false
+
+    $!enabled:
+      color: white
+
+  CheckBox
+    id: addon3
+    !text: tr('Addon 3')
+    color: white
+    font: sans-bold-16px
+    text-offset: 25 1
+    width: 80
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 20
+    enabled: false
+
+    $!enabled:
+      color: white
+
+  // Body Selection Buttons
+
+  SelectOutfitType
+    id: head
+    size: 52 54
+    image-source: images/cabeca_on
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -250
+    margin-left: 20
+    checked: true
+
+    $checked:
+      image-source: images/cabeca_on
+
+    $!checked:
+      image-source: images/cabeca_off
+
+  Label
+    id: headLabel
+    color: #e8c05e
+    !text: tr('Head')
+    anchors.top: head.top
+    anchors.left: head.left
+    margin-top: 58
+    margin-left: 7
+
+  SelectOutfitType
+    id: primary
+    size: 52 54
+    image-source: images/camisa_off
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -250
+    margin-left: 98
+
+    $checked:
+      image-source: images/camisa_on
+
+    $!checked:
+      image-source: images/camisa_off
+
+  Label
+    id: primaryLabel
+    color: #e8c05e
+    !text: tr('Primary')
+    anchors.top: primary.top
+    anchors.left: primary.left
+    margin-top: 57
+    margin-left: 3
+
+  SelectOutfitType
+    id: secondary
+    size: 52 54
+    image-source: images/bermuda_off
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -250
+    margin-left: 176
+
+    $checked:
+      image-source: images/bermuda_on
+
+    $!checked:
+      image-source: images/bermuda_off
+
+  Label
+    id: secondaryLabel
+    color: #e8c05e
+    !text: tr('Secondary')
+    anchors.top: secondary.top
+    anchors.left: secondary.left
+    margin-top: 57
+    margin-left: -4
+
+  SelectOutfitType
+    id: detail
+    size: 52 54
+    image-source: images/sapatos_off
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -250
+    margin-left: 254
+
+    $checked:
+      image-source: images/sapatos_on
+
+    $!checked:
+      image-source: images/sapatos_off
+
+  Label
+    id: detailLabel
+    color: #e8c05e
+    !text: tr('Detail')
+    anchors.top: detail.top
+    anchors.left: detail.left
+    margin-top: 57
+    margin-left: 6
+
+  // Color Panel
+
+  UIButton
+    id: panel_border
+    image-source: images/border_outfit_select_color
+    size: 308 115
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 275
+    margin-left: 5
+
+  UIButton
+    id: panel_border2
+    image-source: images/border_color_select
+    size: 327 19
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 247
+    margin-left: 219
+    visible: false
+
+  Panel
+    id: colorBoxPanel2
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -110
+    margin-left: 221
+    width: 0
+    height: 0
+    visible: false
+    layout:
+      type: grid
+      cell-size: 18 17
+      cell-spacing: -1
+      num-columns: 10
+      num-lines: 7
+
+  Panel
+    id: blocked
+    anchors.top: parent.bottom
+    anchors.left: parent.left
+    margin-top: -89
+    margin-left: 221
+    width: 157
+    height: 15
+    background-color: #00000099
+    visible: false
+
+  Panel
+    id: colorBoxPanel
+    anchors.top: head.bottom
+    anchors.left: head.left
+    margin-top: 25
+    margin-left: -12
+    width: 299
+    height: 108
+    layout:
+      type: grid
+      cell-size: 14 14
+      cell-spacing: 2
+      num-columns: 19
+      num-lines: 7
+
+  // Action Button Section
+
+  UIButton
+    id: outfitOkButton
+    image-color: white
+    color: #e8c05e
+    !text: tr('Ok')
+    image-source: images/button
+    size: 100 26
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    margin-right: 13
+    @onClick: modules.game_outfit.accept()
+
+    $hover:
+      color: white
+      image-source: images/button_hover
+      image-color: white
+    
+    $pressed:
+      color: white
+      image-color: #70706e
+
+  UIButton
+    id: outfitCancelButton
+    image-color: white
+    color: #e8c05e
+    !text: tr('Cancel')
+    image-source: images/button
+    size: 100 26
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_outfit.destroy()
+
+    $hover:
+      color: white
+      image-source: images/button_hover
+      image-color: white
+
+    $pressed:
+      color: white
+      image-color: #70706e
+
+  UIButton
+    id: dir1
+    image-color: white
+    opacity: 0.80
+    size: 22 20
+    image-source: images/dir1
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 140
+    margin-left: 75
+    @onClick: modules.game_outfit.changeDirRight()
+    visible: false
+
+    $hover:
+      opacity: 100
+
+    $pressed:
+      image-color: #343433
+      opacity: 100
+
+  UIButton
+    id: dir2
+    image-color: white
+    opacity: 0.80
+    size: 22 20
+    image-source: images/dir2
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 140
+    margin-left: 230
+    @onClick: modules.game_outfit.changeDirLeft()
+    visible: false
+
+    $hover:
+      opacity: 100
+
+    $pressed:
+      image-color: #343433
+      opacity: 100
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.left: parent.right
+    anchors.top: parent.top
+    margin-left: -22
+    @onClick: toggle()
+
+    $hover:
+      image-source: images/close_hover.png

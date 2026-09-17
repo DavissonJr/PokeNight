@@ -1,0 +1,9 @@
+Module
+  name: game_shop
+  description: Shop do Jogo
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ shop ]
+  @onLoad: init()
+  @onUnload: terminate()

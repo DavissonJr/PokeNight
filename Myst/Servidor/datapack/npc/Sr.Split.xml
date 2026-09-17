@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<npc name="Sr.Split" script="Lock.lua" walkinterval="10000" floorchange="0" access="5" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="1419" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+
+<parameters>
+	<parameter key="message_greet" value="Bem-vindo |PLAYERNAME|, eu posso {lock} suas pokébolas se quiser..."/>
+</parameters>
+</npc>

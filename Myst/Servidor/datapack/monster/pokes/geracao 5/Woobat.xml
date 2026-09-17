@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Woobat" nameDescription="a Woobat" race="psychic" experience="250" speed="204" manacost="0">
+    <health now="30" max="30"/>
+    <look type="2763" head="10" body="30" legs="95" feet="113" corpse="21746"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="100"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="physical" interval="2000" chance="100" range="4" min="-50" max="-100">
+            <attribute key="shootEffect" value="eartharrow"/>
+        </attack>
+        <attack name="Confusion" interval="2617" chance="26" range="6"/>
+        <attack name="Gust" interval="4920" chance="29" range="2"/>
+        <attack name="Assurance" interval="2852" chance="28" range="2"/>
+        <attack name="Air Cutter" interval="3040" chance="26" range="2"/>
+        <attack name="Calm Mind" interval="3840" chance="15" range="1"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Woobaaat!"/>
+    </voices>
+    <loot>
+        <item id="12194" chance="3000" count="1" countmax="5"/> --future orb
+		        <item id="13785" chance="10000" countmax="80"/> --enchanted gem
+        <item id="12193" chance="3000" count="1" countmax="5"/> --twisted spoon
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

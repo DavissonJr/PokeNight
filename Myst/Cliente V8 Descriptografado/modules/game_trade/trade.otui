@@ -1,0 +1,100 @@
+HeadlessWindow
+  id: tradeWindow
+  color: #d1ad55
+  image-source: images/window
+  size: 554 231
+  anchors.centerIn: parent
+
+  UIButton
+    id: title
+    font: sans-bold-16px
+    color: #d1ad55
+    text: Trade
+    image-source: images/titleTab
+    size: 212 28
+    anchors.top: parent.top
+    margin-top: -96
+    anchors.centerIn: parent
+
+  Label
+    id: messageLabel
+    color: #d1ad55
+    text: Escreva a mensagem aqui:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 50
+    margin-left: 10
+
+  MultilineTextEdit
+    id: message
+    size: 537 72
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 79
+    margin-left: 5
+    image-border: 6
+    image-border-top: 6
+    image-border-bottom: 6
+    max-length: 255
+
+  Label
+    id: textLength
+    text: 255
+    color: #d1ad55
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 155
+    margin-left: 6
+
+  Label
+    id: warning
+    color: #d1ad55
+    text: A mensagem será enviada a cada 2 minutos
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 200
+    margin-left: 10
+
+  UIButton
+    id: startButton
+    text: Iniciar
+    color: white
+    size: 100 26
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 194
+    margin-left: 330
+    opacity: 0.60
+
+    $hover:
+      image-source: images/button_hover
+
+  UIButton
+    id: stopButton
+    text: Parar
+    color: white
+    size: 100 26
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 194
+    margin-left: 440
+    opacity: 0.60
+
+    $hover:
+      image-source: images/button_hover
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-top: 3
+    margin-left: -24
+    @onClick: exibir()
+
+    $hover:
+      image-source: images/close_hover

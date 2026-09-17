@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Heracross" nameDescription="a heracross" race="bug" experience="0" speed="162" manacost="0">
+  <health now="40" max="40"/>
+  <look type="915" head="60" body="77" legs="95" feet="113" corpse="3295"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-92" max="-136"/>
+		<attack name="Triple Punch" interval="3040" chance="28" range="1"/>
+		<attack name="Slash" interval="2946" chance="28" range="1"/>
+		<attack name="Bug Bite" interval="2645" chance="24" range="1"/>
+		<attack name="Mega Punch" interval="2810" chance="25" range="1"/>
+		<attack name="Karate Chop" interval="2945" chance="24" range="1"/>
+		<attack name="Mega Kick" interval="2750" chance="25" range="1"/>
+		<attack name="Strafe" interval="4946" chance="28" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="HERAA!"/>
+<voice sentence="CROOSS!"/>
+<voice sentence="HERACROSS!"/>
+  </voices>
+  <loot>
+	<item id="12196" countmax="1" chance="11000"/> -- stone orb
+	<item id="12337" countmax="45" chance="62000"/> -- small stone
+	<item id="11446" countmax="1" chance="1500"/> -- punch stone
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

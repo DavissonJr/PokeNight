@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Vaporeon" nameDescription="a Shiny vaporeon" race="water" experience="580" speed="147" manacost="0">
+  <health now="150" max="150"/>
+  <look type="1328" head="40" body="60" legs="95" feet="113" corpse="0"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="18"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2617" chance="30" range="2"/>
+        <attack name="Bite" interval="2852" chance="29" range="1"/>
+        <attack name="Bubblebeam" interval="2899" chance="29" range="3"/>
+        <attack name="Muddy Water" interval="3246" chance="28" range="4"/>
+        <attack name="Aurora Beam" interval="3134" chance="27" range="4"/>
+        <attack name="Water Pulse" interval="3040" chance="28" range="4"/>
+        <attack name="Water Gun" interval="3228" chance="27" range="6"/>
+        <attack name="Hydro Cannon" interval="4168" chance="21" range="6"/>
+		<attack name="Hydropump" interval="4968" chance="21" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="VAPOREON!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

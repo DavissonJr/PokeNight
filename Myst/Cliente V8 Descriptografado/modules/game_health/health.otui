@@ -1,0 +1,183 @@
+HealthBar < ProgressBar
+  background-color: #00e100
+  size: 120 10
+  image-color: alpha
+  icon: img/hp
+  icon-align: right
+  icon-offset: 1 0
+  border-width: 0
+  margin: 5 0 0 30
+
+ExperienceBar < ProgressBar
+  background-color: #18b1f9
+  size: 105 5
+  image-color: alpha
+  icon: img/exp
+  icon-align: right
+  icon-offset: 1 0
+  border-width: 0
+  margin: 6 0 0 30
+
+FishBar < ProgressBar
+  background-color: #6b6dc7
+  size: 100 5
+  image-color: alpha
+  icon: img/fish
+  icon-align: right
+  icon-offset: 1 0
+  border-width: 0
+  margin: 7 0 0 27
+
+StmBar < ProgressBar
+  background-color: #e56c00
+  size: 87 5
+  image-color: alpha
+  icon: img/stm
+  icon-align: right
+  icon-offset: 1 0
+  border-width: 0
+  margin: 7 0 0 32
+
+PokeballBar < UIWidget
+  size: 86 12
+  image-source: img/pokeball0
+  margin: 8 0 0 -13
+
+Slot < UIWidget
+  image-source: img/slot
+  font: terminus-10px
+  color: #e8c05e
+  margin-left: 2
+  icon-align: left
+
+SoulLabel < GameLabel
+  id: soulLabel
+  text-align: right
+  color: white
+  font: verdana-11px-rounded
+  anchors.bottom: parent.bottom
+  anchors.right: parent.right
+  anchors.left: parent.horizontalCenter
+  margin-top: 5
+  margin-right: 3
+  on: true
+
+  $!on:
+    visible: false
+    margin-top: 0
+    height: 0
+
+ConditionWidget < UIWidget
+  size: 18 18
+
+  $!first:
+    margin-left: 2
+
+HeadlessWindow
+  id: healthInfoWindow
+  size: 253 103
+  image-source: img/healthinfo
+  anchors.top: parent.top
+  margin-top: 45
+
+  Label
+    id: nameLabel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    color: #e8c05e
+    margin: -5 0 0 65
+
+  UICreature
+    id: outfitBox
+    size: 50 50
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin: 9 0 0 10
+
+  Slot
+    id: levelLabel
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    image-color: #4f707b
+    margin: 0 0 10 13
+
+  HealthBar
+    id: healthBar
+    anchors.top: nameLabel.bottom
+    anchors.left: outfitBox.right
+
+  Label
+    id: healthLabel
+    font: terminus-10px
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin: -2 0 0 8
+
+  ExperienceBar
+    id: experienceBar
+    anchors.top: healthBar.bottom
+    anchors.left: outfitBox.right
+
+  Label
+    id: experienceLabel
+    font: terminus-10px
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin: -3 0 0 7
+
+  FishBar
+    id: fishBar
+    anchors.top: experienceBar.bottom
+    anchors.left: outfitBox.right
+
+  Label
+    id: fishLabel
+    font: terminus-10px
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin: -3 0 0 5
+    text: 100%
+
+  StmBar
+    id: stmBar
+    anchors.top: fishBar.bottom
+    anchors.left: outfitBox.right
+
+  PokeballBar
+    id: pokeballBar
+    anchors.top: prev.bottom
+    anchors.left: fishBar.left
+
+  Slot
+    id: winnerLabel
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin: 2 0 0 -10
+    icon: img/trophy
+    icon-align: left
+
+  Slot
+    id: catch
+    anchors.top: prev.top
+    anchors.left: prev.right
+    icon: img/catch
+    icon-align: left
+
+  Slot
+    id: capLabel
+    width: 60
+    anchors.top: prev.top
+    anchors.left: prev.right
+    icon: img/backpack
+
+  Panel
+    id: panelCondition
+    layout:
+      type: horizontalBox
+    height: 22
+    padding: 2
+    margin-top: 2
+    anchors.top: prev.bottom
+    anchors.left: winnerLabel.left
+    anchors.right: parent.right

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Houndoom" nameDescription="a houndoom" race="fire2" experience="0" speed="230" manacost="0">
+  <health now="40" max="40"/>
+  <look type="933" head="60" body="77" legs="95" feet="113" corpse="3555"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2523" chance="31" range="2"/>
+        <attack name="Ember" interval="2664" chance="30" range="3"/>
+        <attack name="Bite" interval="2758" chance="30" range="1"/>
+		<attack name="Roar" interval="5005" chance="21" range="2"/>
+        <attack name="Fireball" interval="2993" chance="28" range="4"/>
+        <attack name="Flamethrower" interval="3369" chance="26" range="6"/>
+		<attack name="Fire Fang" interval="3093" chance="28" range="1"/>
+		<attack name="Fire Blast" interval="4093" chance="28" range="4"/>
+		<attack name="Tri Flames" interval="4293" chance="21" range="4"/>
+		<attack name="War Dog" interval="3993" chance="22" range="4"/>
+  </attacks>
+  <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="HOOUN!"/>
+<voice sentence="DOOOM!"/>
+<voice sentence="HOUNDOOM!"/>
+  </voices>
+  <loot>
+	<item id="12162" countmax="80" chance="50000"/><!-- Essence of fire -->
+	<item id="12152" countmax="2" chance="30000"/><!-- Pot of lava -->
+	<item id="12157" countmax="2" chance="10000"/><!-- Nail -->
+	<item id="11447" countmax="1" chance="3500"/><!-- Fire stone -->
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

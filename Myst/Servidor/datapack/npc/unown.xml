@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Julios" script="SHStone.lua" walkinterval="0" floorchange="0" speed="0" lookdir="0">
+<health now="150" max="150"/>
+<look type="518" head="95" body="69" legs="114" feet="20"/>
+
+    <parameters>
+    </parameters>
+
+</npc>

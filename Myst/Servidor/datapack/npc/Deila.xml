@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Deila" script="inicial.lua" walkinterval="0" speed="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="531" head="19" body="113" legs="95" feet="115" addons="0"/>
+  <parameters>
+    <parameter key="message_greet" value="Olá |PLAYERNAME|, eu sou um NPC. NPCs são uma parte importante do Poke Night. Quando você estiver dialogando com um NPC, algumas palavras das falas deles vão estar destacadas em {azul forte} e, para continuar o diálogo, basta você escrever esta palavra destacada e teclar enter. Clicar na palavra destacada também vai enviá-la no chat." />
+		<parameter key="message_farewell" value="Até mais!" />
+		<parameter key="message_walkaway" value="Até mais, |PLAYERNAME|" />
+  </parameters>
+</npc>

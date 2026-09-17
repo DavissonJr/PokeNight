@@ -1,0 +1,70 @@
+HeadlessWindow
+  id: resgatarWindow
+  size: 401 211
+  image-source: images/window
+  anchors.centerIn: parent
+
+  UIButton
+    id: titleTab
+    color: #cda953
+    text: Resgatar Código
+    font: sans-bold-16px
+    size: 212 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    margin-top: -87
+    anchors.centerIn: parent
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-left: -25
+    @onClick: exibir()
+
+    $hover:
+      image-source: images/close_hover.png
+
+  Label
+    id: redeemLabel
+    color: white
+    text: Digite o código no campo abaixo.
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: -25
+    anchors.centerIn: parent
+
+  HorizontalSeparator
+    id: separator
+    size: 184 25
+    anchors.top: parent.top
+    margin-top: 20
+    anchors.centerIn: parent
+    visible: false
+
+  TextEdit
+    id: reedemEdit
+    text-align: center
+    size: 180 19
+    anchors.top: parent.top
+    margin-top: 20
+    anchors.centerIn: parent
+
+  UIButton
+    id: reedemBtn
+    size: 104 26
+    text: Resgatar
+    image-source: images/button.png
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 75
+    anchors.centerIn: parent
+    @onClick: resgatar()
+    enabled: false
+
+    $hover:
+      image-source: images/button_hover.png

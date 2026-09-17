@@ -1,0 +1,87 @@
+MainWindow
+  id: assignHotkeyWindow
+  size: 400 170
+
+  UIButton
+    id: titleTab
+    size: 180 28
+    image-source: images/titleTab.png
+    color: #cda953
+    font: sans-bold-16px
+    text: Adicionar Atalho
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -77
+
+  FlatLabel
+    id: display
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 33
+    text-align: center
+    font: verdana-11px-rounded
+
+  Label
+    id: desc
+    anchors.top: prev.bottom
+    color: white
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    multi-line: true
+    height: 40
+    text-wrap: true
+    text: Clique em “Ok” para atribuir a tecla de atalho. Clique em "Limpar" para remover a tecla de atalho de "
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    margin-top: 10
+    anchors.left: parent.left
+    anchors.right: parent.right
+
+  UIButton
+    id: buttonClose
+    image-source: images/button.png
+    image-border: 20
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 55 26
+    font: cipsoftFont
+    text: Fechar
+    @onClick: self:getParent():destroy()
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonClear
+    image-source: images/button.png
+    image-border: 20
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 55 26
+    font: cipsoftFont
+    text: Limpar
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonOk
+    image-source: images/button.png
+    image-border: 20
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 55 26
+    font: cipsoftFont
+    text: Confirmar
+    margin-bottom: -5
+
+    $hover:
+      image-source: images/button_hover.png

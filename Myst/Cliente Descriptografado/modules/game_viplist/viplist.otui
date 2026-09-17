@@ -1,0 +1,79 @@
+VipListLabel < GameLabel
+  text-offset: 16 0
+  image-rect: 0 0 12 12
+  image-clip: 0 0 12 12
+  image-source: /images/game/viplist/icons
+  font: verdana-11px-monochrome
+  phantom: false
+
+VIPButton < UIButton
+  text-align: left
+  text-offset: 10 0
+
+MiniWindow
+  id: vipWindow
+  !text: tr('VIP List')
+  height: 100
+  icon: /images/topbuttons/viplist
+  @onOpen: modules.game_viplist.onMiniWindowOpen()
+  @onClose: modules.game_viplist.onMiniWindowClose()
+  &save: true
+
+  MiniWindowContents
+    layout: verticalBox
+    padding-top: 15
+    padding-left: 5
+    padding-right: 5
+    &onMousePress: modules.game_viplist.onVipListMousePress
+
+  Button
+    id: online
+    tooltip: Online
+    size: 16 19
+    icon: /images/game/status/online
+    icon-size: 8 8
+    icon-offset: 4 6
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 25
+    margin-left: 60
+    @onClick: changeStatus(self:getId())
+
+  Button
+    id: ausente
+    tooltip: Ausente
+    size: 16 19
+    icon: /images/game/status/ausente
+    icon-size: 8 8
+    icon-offset: 4 6
+    anchors.top: online.top
+    anchors.left: online.left
+    margin-top: 0
+    margin-left: 18
+    @onClick: changeStatus(self:getId())
+
+  Button
+    id: meioocupado
+    tooltip: Meio Ocupado
+    size: 16 19
+    icon: /images/game/status/meioocupado
+    icon-size: 8 8
+    icon-offset: 4 6
+    anchors.top: ausente.top
+    anchors.left: ausente.left
+    margin-top: 0
+    margin-left: 18
+    @onClick: changeStatus(self:getId())
+
+  Button
+    id: ocupado
+    tooltip: Ocupado
+    size: 16 19
+    icon: /images/game/status/ocupado
+    icon-size: 8 8
+    icon-offset: 4 6
+    anchors.top: meioocupado.top
+    anchors.left: meioocupado.left
+    margin-top: 0
+    margin-left: 18
+    @onClick: changeStatus(self:getId())

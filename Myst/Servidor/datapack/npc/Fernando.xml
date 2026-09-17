@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Fernando" script="rayquaza.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="585" head="222" body="244" legs="14" feet="0" addons="0"/>
+<parameters>
+<parameter key="message_greet" value="Há anos que estou procurando meus três tesouros desaparecidos desde que 'Aquilo' aconteceu. Você conhece a História?"/>
+</parameters>
+</npc>

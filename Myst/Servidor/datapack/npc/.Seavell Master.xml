@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<npc name="Seavell GrandMaster" script=".seavell master.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="1438" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+
+<parameters>
+	<parameter key="message_greet" value="Bem-vindo |PLAYERNAME|, you want to join to my {clan}? Or you want to transform you poke in a {shiny}? Or you want to {leave} the clan?"/>
+</parameters>
+</npc>

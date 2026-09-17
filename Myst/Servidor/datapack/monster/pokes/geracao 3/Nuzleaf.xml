@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Nuzleaf" nameDescription="a Nuzleaf" race="grass" experience="608" speed="119" manacost="0">
+  <health now="110" max="110"/>
+  <look type="1762" head="45" body="50" legs="95" feet="113" corpse="12702"/>
+ <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="20"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2476" chance="31" range="2"/>
+        <attack name="Razor Leaf" interval="2758" chance="30" range="4"/>
+        <attack name="Vine Whip" interval="2993" chance="28" range="6"/>
+        <attack name="Headbutt" interval="2711" chance="30" range="1"/>
+        <attack name="Absorb" interval="3087" chance="28" range="5"/>
+        <attack name="Bullet Seed" interval="3557" chance="25" range="4"/>
+        <attack name="Solar Beam" interval="4779" chance="17" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="Nuz!"/>
+<voice sentence="leaf!"/>
+    <voice sentence="Nuzleaf!"/>
+   </voices>
+    <loot>
+        <item id="12163" chance="1000" countmax="50"/>
+        <item id="12155" chance="5000" count="1" countmax="1"/>
+        <item id="12153" chance="3000" count="1" countmax="1"/>
+        <item id="12154" chance="4000" count="1" countmax="1"/>
+        <item id="11441" chance="100" count="1" countmax="1"/>
+				<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

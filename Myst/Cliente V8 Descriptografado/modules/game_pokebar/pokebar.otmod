@@ -1,0 +1,9 @@
+Module
+  name: game_pokebar
+  description: Tenha acesso aos pokemons do seu time e mude o pokemon que esta usando por um da lista
+  author: Cosmic Programmer - Thalles Vitor
+  website: tem nao lek ;-;
+  sandboxed: true
+  scripts: [ pokebar ]
+  @onLoad: init()
+  @onUnload: terminate()

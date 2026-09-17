@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Granbull" nameDescription="a granbull" race="normal" experience="332" speed="152" manacost="0">
+    <health now="100" max="100"/>
+  <look type="951" head="15" body="35" legs="95" feet="113" corpse="3294"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2476" chance="31" range="2"/>
+        <attack name="Scratch" interval="2664" chance="30" range="1"/>
+        <attack name="Bite" interval="2852" chance="29" range="1"/>
+        <attack name="Super Fang" interval="3040" chance="28" range="1"/>
+		<attack name="Iron Tail" interval="3040" chance="28" range="1"/>
+		<attack name="Earthshock" interval="3040" chance="28" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="GRAAN!"/>
+<voice sentence="BUUULL!"/>
+<voice sentence="GRANBULL!"/>
+   </voices>
+    <loot>
+        <item id="11453" chance="100" count="1" countmax="1"/>
+        <item id="12173" chance="4000" count="1" countmax="1"/>
+        <item id="12174" chance="5000" countmax="5"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>
+

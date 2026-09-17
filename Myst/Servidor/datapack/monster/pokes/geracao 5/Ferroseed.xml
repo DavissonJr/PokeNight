@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ferroseed" nameDescription="a Ferroseed" race="grass" experience="100" speed="217" manacost="0">
+    <health now="40" max="40"/>
+    <look type="2841" head="1" body="10" legs="95" feet="113" corpse="21886"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag passive="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Tackle" interval="2664" chance="30" range="2"/>
+        <attack name="Harden" interval="2758" chance="15" range="6"/>
+        <attack name="Metal Claw" interval="2758" chance="25" range="2"/>
+        <attack name="Pin Missile" interval="2899" chance="28" range="2"/>
+        <attack name="Gyro Ball" interval="2899" chance="25" range="4"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Ferroseeeed!"/>
+    </voices>
+    <loot>
+        <item id="12163" chance="10000" countmax="80"/> --seed
+        <item id="12155" chance="5000" count="1" countmax="1"/> --pair of leaves
+        <item id="12153" chance="4000" count="1" countmax="1"/> --bag of pollem
+		         <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

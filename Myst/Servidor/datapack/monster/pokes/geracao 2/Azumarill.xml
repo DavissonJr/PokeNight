@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Azumarill" nameDescription="an azumarill" race="water" experience="292" speed="117" manacost="0">
+  <health now="110" max="110"/>
+  <look type="894" head="30" body="50" legs="95" feet="113" corpse="3270"/>
+ <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="20"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Bubbles" interval="2570" chance="31" range="3"/>
+        <attack name="Harden" interval="2664" chance="30" range="3"/>
+        <attack name="Water Gun" interval="2805" chance="29" range="6"/>
+        <attack name="Aqua Tail" interval="5625" chance="18" range="6"/>
+        <attack name="Hydro Cannon" interval="2805" chance="20" range="6"/>
+		<attack name="Headbutt" interval="2470" chance="31" range="1"/>
+		<attack name="Waterball" interval="2570" chance="31" range="3"/>
+		<attack name="Bubble Blast" interval="3170" chance="31" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="AZUUU!"/>
+<voice sentence="MARIILL!"/>
+<voice sentence="AZUMARILL!"/>
+  </voices>
+    <loot>
+        <item id="12161" chance="4000" countmax="50"/>
+        <item id="12170" chance="4000" count="1" countmax="1"/>
+        <item id="11442" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>
+

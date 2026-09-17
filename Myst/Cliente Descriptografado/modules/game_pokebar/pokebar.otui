@@ -1,0 +1,394 @@
+UIWindow
+  id: pokeBar
+  font: terminus-10px
+  color: #cda953
+  text-offset: -40 10
+  size: 198 319
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 170
+  &save: true
+  focusable: false
+  opacity: 1.8
+
+  UIItem
+    id: portrait1
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 36
+    margin-left: 6
+    draggable: false
+
+  UIItem
+    id: portrait2
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 83
+    margin-left: 6
+    draggable: false
+
+  UIItem
+    id: portrait3
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 130
+    margin-left: 6
+    draggable: false
+
+  UIItem
+    id: portrait4
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 177
+    margin-left: 6
+    draggable: false
+
+  UIItem
+    id: portrait5
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 224
+    margin-left: 6
+    draggable: false
+
+  UIItem
+    id: portrait6
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 271
+    margin-left: 6
+    draggable: false
+
+  UIProgressBar
+    id: life1
+    background-color: #02ec0d
+    background-border: 0
+    size: 87 12
+    image-source: images/progressbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 51
+    margin-left: 66
+
+  UIProgressBar
+    id: life2
+    background-color: #02ec0d
+    background-border: 0
+    size: 87 12
+    image-source: images/progressbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 98
+    margin-left: 66
+
+  UIProgressBar
+    id: life3
+    background-color: #02ec0d
+    background-border: 0
+    size: 87 12
+    image-source: images/progressbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 145
+    margin-left: 66
+
+  UIProgressBar
+    id: life4
+    background-color: #02ec0d
+    background-border: 0
+    size: 87 12
+    image-source: images/progressbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 192
+    margin-left: 66
+
+  UIProgressBar
+    id: life5
+    background-color: #02ec0d
+    background-border: 0
+    size: 87 12
+    image-source: images/progressbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 239
+    margin-left: 66
+
+  UIProgressBar
+    id: life6
+    background-color: #02ec0d
+    background-border: 0
+    size: 87 12
+    image-source: images/progressbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 286
+    margin-left: 66
+
+  UIButton
+    id: bar1
+    size: 183 43
+    image-source: images/pokebar_default
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 30
+    margin-right: 15
+    draggable: false
+
+  UIButton
+    id: bar2
+    size: 183 43
+    image-source: images/pokebar_default
+    anchors.top: parent.top
+    anchors.right: bar1.right
+    margin-top: 77
+    draggable: false
+
+  UIButton
+    id: bar3
+    size: 183 43
+    image-source: images/pokebar_default
+    anchors.top: parent.top
+    anchors.right: bar1.right
+    margin-top: 124
+    draggable: false
+
+  UIButton
+    id: bar4
+    size: 183 43
+    image-source: images/pokebar_default
+    anchors.top: parent.top
+    anchors.right: bar1.right
+    margin-top: 171
+    draggable: false
+  
+  UIButton
+    id: bar5
+    size: 183 43
+    image-source: images/pokebar_default
+    anchors.top: parent.top
+    anchors.right: bar1.right
+    margin-top: 218
+    draggable: false
+
+  UIButton
+    id: bar6
+    size: 183 43
+    image-source: images/pokebar_default
+    anchors.top: parent.top
+    anchors.right: bar1.right
+    margin-top: 265
+    draggable: false
+
+  Label
+    id: pokeName1
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 37
+    margin-left: 47
+    draggable: false
+
+  Label
+    id: pokeName2
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 84
+    margin-left: 47
+    draggable: false
+
+  Label
+    id: pokeName3
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 131
+    margin-left: 47
+    draggable: false
+
+  Label
+    id: pokeName4
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 178
+    margin-left: 47
+    draggable: false
+
+  Label
+    id: pokeName5
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 225
+    margin-left: 47
+    draggable: false
+
+  Label
+    id: pokeName6
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 272
+    margin-left: 47
+    draggable: false
+
+  Label
+    id: percent1
+    text-auto-resize: true
+    font: terminus-10px
+    color: #c5e4f9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 48
+    margin-left: 156
+    draggable: false
+
+  Label
+    id: percent2
+    text-auto-resize: true
+    font: terminus-10px
+    color: #c5e4f9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 95
+    margin-left: 156
+    draggable: false
+
+  Label
+    id: percent3
+    text-auto-resize: true
+    font: terminus-10px
+    color: #c5e4f9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 142
+    margin-left: 156
+    draggable: false
+
+  Label
+    id: percent4
+    text-auto-resize: true
+    font: terminus-10px
+    color: #c5e4f9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 189
+    margin-left: 156
+    draggable: false
+
+  Label
+    id: percent5
+    text-auto-resize: true
+    font: terminus-10px
+    color: #c5e4f9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 236
+    margin-left: 156
+    draggable: false
+
+  Label
+    id: percent6
+    text-auto-resize: true
+    font: terminus-10px
+    color: #c5e4f9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 283
+    margin-left: 156
+    draggable: false
+
+  UIButton
+    id: pokemonGender1
+    size: 11 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 33
+    margin-left: 29
+    draggable: false
+  
+  UIButton
+    id: pokemonGender2
+    size: 11 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 80
+    margin-left: 29
+    draggable: false
+
+  UIButton
+    id: pokemonGender3
+    size: 11 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 127
+    margin-left: 29
+    draggable: false
+
+  UIButton
+    id: pokemonGender4
+    size: 11 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 174
+    margin-left: 29
+    draggable: false
+
+  UIButton
+    id: pokemonGender5
+    size: 11 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 221
+    margin-left: 29
+    draggable: false
+
+  UIButton
+    id: pokemonGender6
+    size: 11 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 268
+    margin-left: 29
+    draggable: false
+
+  UIButton
+    id: minimize
+    size: 12 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 7
+    margin-left: 160
+    draggable: false
+    visible: false
+    @onClick: minimizeMain()
+
+  UIButton
+    id: close
+    size: 12 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 7
+    margin-left: 175
+    draggable: false
+    visible: false

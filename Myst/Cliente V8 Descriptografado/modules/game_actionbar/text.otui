@@ -1,0 +1,96 @@
+MainWindow
+  id: assignTextWindow
+  size: 275 150
+
+  UIButton
+    id: titleTab
+    size: 180 28
+    image-source: images/titleTab.png
+    color: #cda953
+    font: sans-bold-16px
+    text: Adicionar Texto
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -65
+
+  Label
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text: Text:
+    text-horizontal-auto-resize: true
+
+  TextEdit
+    id: text
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+
+  FlatPanel
+    id: checkPanel
+    anchors.top: prev.bottom
+    margin-top: 5
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 20
+
+    CheckBox
+      id: tick
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: parent.right
+      margin-left: 5
+      text: Enviar automaticamente
+      text-offset: 22 0
+      checked: true
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    margin-top: 10
+    anchors.left: parent.left
+    anchors.right: parent.right
+
+  UIButton
+    id: buttonClose
+    image-source: images/button.png
+    image-border: 20
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 55 26
+    font: cipsoftFont
+    text: Fechar
+    margin-bottom: -9
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonApply
+    image-source: images/button.png
+    image-border: 20
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 55 26
+    font: cipsoftFont
+    text: Aplicar
+    margin-bottom: -9
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonOk
+    image-source: images/button.png
+    image-border: 20
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 55 26
+    font: cipsoftFont
+    text: Confirmar
+    margin-bottom: -9
+
+    $hover:
+      image-source: images/button_hover.png

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<npc name="Quizmaster " script="quizofdeath.lua" walkinterval="350000" floorchange="0" speed="0">
+
+	<health now="150" max="150"/>
+
+	<look type="99" head="10" body="10" legs="10" feet="10"/>
+
+	<parameters>
+
+
+	</parameters>
+
+</npc>

@@ -1,0 +1,41 @@
+# ---- Saidas de build do Visual Studio (OTClient) ----
+# A solution e os .vcxproj em vc17/ ficam versionados; apenas os
+# diretorios e artefatos gerados pela compilacao sao ignorados.
+**/vc17/.vs/
+**/vc17/Release/
+**/vc17/Debug/
+**/vc17/x64/
+**/.vs/
+
+# Dependencias restauraveis a partir de vcpkg.json
+**/vcpkg_installed/
+
+# Artefatos de compilacao
+*.ipch
+*.iobj
+*.ilk
+*.pdb
+*.obj
+*.lib
+*.exp
+*.tlog
+*.o
+*.a
+*.so
+*.lo
+*.la
+*.Po
+.deps/
+.libs/
+
+# Logs e dumps de execucao
+*.log
+crashs/
+core
+core.*
+
+# Editores / SO
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<npc name="Tilapio" walkinterval="0" script="datapack/npc/scripts/default.lua" floorchange="400" access="1" level="400" maglevel="400">
+<health now="150" max="150"/>
+<look type="64" head="143" body="98" legs="79" feet="161" addons="0" corpse="0"/>
+<parameters>
+<parameter key="module_travel" value="1"/>
+<parameter key="message_greet" value="Olá |PLAYERNAME|. gostaria de ir para a {Área de Pesca} do Poke Ghosting?" />
+<parameter key="travel_destinations" value="sim,1017,1093,9,0;"/> 
+</parameters>
+</npc>

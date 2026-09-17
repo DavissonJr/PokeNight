@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Krookodile" nameDescription="a Krookodile" race="ground" experience="100" speed="207" manacost="0">
+    <health now="60" max="60"/>
+    <look type="2447" head="10" body="30" legs="95" feet="113" corpse="21798"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Rage" interval="2664" chance="15" range="1"/>
+        <attack name="Sand Tomb" interval="2852" chance="29" range="2"/>
+        <attack name="Assurance" interval="2805" chance="29" range="2"/>
+        <attack name="Crunch" interval="2899" chance="25" range="3"/>
+        <attack name="Sandstorm" interval="5625" chance="20" range="3"/>
+        <attack name="Earthquake" interval="5625" chance="22" range="1"/>
+        <attack name="Earth Power" interval="5625" chance="25" range="4"/>
+        <attack name="Bulldoze" interval="5625" chance="26" range="2"/>
+        <attack name="Dark Pulse" interval="5625" chance="20" range="1"/>
+        <attack name="Outrage" interval="5625" chance="18" range="6"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Krookodileeee!"/>
+    </voices>
+    <loot>
+        <item id="12337" chance="10000" countmax="80"/> --small stone
+        <item id="12196" chance="5000" countmax="1"/> --stone orb
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+        <item id="13867" chance="4000" count="1" countmax="1"/> --strange rock
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

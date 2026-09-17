@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Exploud" nameDescription="an Exploud" race="normal" experience="0" speed="205" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1665" head="67" body="89" legs="95" feet="113" corpse="12734"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-177" max="-219"/>
+        <attack name="Doubleslap" interval="2852" chance="29" range="1"/>
+        <attack name="Rest" interval="2711" chance="30" range="1"/>
+        <attack name="Lovely Kiss" interval="3087" chance="28" range="5"/>
+        <attack name="Body Slam" interval="4779" chance="17" range="6"/>
+        <attack name="Hyper Voice" interval="4497" chance="21" range="6"/>
+       </attacks>
+<defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="ploud!"/>
+<voice sentence="Explo!"/>
+<voice sentence="Exploud!"/>
+  </voices>
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<creaturescripts>
+	<!-- Thalles Vitor - PokeBar Move Item -->
+		<event type="moveitem" name="PokeBar" script="pokebar.lua"/>
+	<!-- Fim -->
+
+	<!-- Thalles Vitor - Boss Life -->
+	<event type="think" name="BossLife" event="script" value="bosslife.lua"/>
+
+	<!-- Thalles Vitor - Rope -->
+	<event type="extendedopcode" name="PlayerRope" event="script" value="rope.lua"/>
+
+	<!-- Thalles Vitor - Online Reward Window -->
+	<event type="extendedopcode" name="OnlineWindow" event="script" value="onlinereward.lua"/>
+
+	<!-- Thalles Vitor - Task System -->
+	<event type="extendedopcode" name="TaskSystem" event="script" value="task.lua"/>
+	<event type="kill" name="TaskSystemKill" event="script" value="task_kill.lua"/>
+
+	<!-- Thalles Vitor - Evolve Window -->
+	<event type="extendedopcode" name="EvolveWindowConfirm" event="script" value="evolve.lua"/>
+
+	<!-- Thalles Vitor - Auto Catch -->
+	<event type="walk" name="AutoCatch" event="script" value="autocatch.lua"/>
+	<event type="extendedopcode" name="AutoCatchCorpse" event="script" value="autocatch_corpse.lua"/>
+
+	<!-- Thalles Vitor - Janela de Addon -->
+	<event type="extendedopcode" name="AddonWindow" event="script" value="addon.lua"/>
+
+	<!-- Thalles Vitor - Auto Target -->
+	<event type="extendedopcode" name="AutoTarget" event="script" value="autotarget.lua"/>
+
+	<!-- Anti MC-->
+	<event type="login" name="AntiMC" script="antimc.lua"/>
+
+	<!-- Thalles Vitor - Premium Points Window -->
+		<event type="extendedopcode" name="PointsWindow" event="script" value="points.lua"/>
+	<!-- Fim -->
+
+	<!-- Thalles Vitor - Online Bolinha -->
+		<event type="extendedopcode" name="OnlineBall" event="script" value="online.lua"/>
+	<!-- Fim -->
+
+	<!-- Tm System -->
+		<event type="extendedopcode" name="TmSystem" event="script" value="tm.lua"/>
+		<event type="extendedopcode" name="TmSystemConfirm" event="script" value="tm-confirm.lua"/>
+		<event type="extendedopcode" name="TmSystemReset" event="script" value="tm-reset.lua"/>
+		<event type="extendedopcode" name="TmSystemChange" event="script" value="tm-change.lua"/>
+		<event type="extendedopcode" name="TmSystemChange2" event="script" value="tm-change-list.lua"/>
+	<!---->
+
+	<!-- Market System - Thalles Vitor -->
+		<event type="extendedopcode" name="MarketRCItem" event="script" value="market/market_receiveitem.lua" />
+		<event type="marketinsert" name="MarketSDItem" event="script" value="market/market_insert.lua" />
+		<event type="extendedopcode" name="MarketISItem" event="script" value="market/market_insertDB.lua" />
+		<event type="extendedopcode" name="MarketSCItem" event="script" value="market/market_sendmyoffers.lua" />
+		<event type="marketinsertmyoffers" name="MarketIMItem" event="script" value="market/market_insertmyoffers.lua" />
+		<event type="extendedopcode" name="MarketCLItem" event="script" value="market/market_canceloffer.lua" />
+		<event type="extendedopcode" name="MarketCPItem" event="script" value="market/market_changepage.lua" />
+		<event type="marketinsertalloffers" name="MarketIBItem" event="script" value="market/market_insertalloffers.lua" />
+		<event type="extendedopcode" name="MarketSBItem" event="script" value="market/market_sendbuyoffer.lua" />
+		<event type="marketbuyitemupdatewindow" name="MarketRBItem" event="script" value="market/market_receivebuyoffer.lua" />
+		<event type="extendedopcode" name="MarketIHItem" event="script" value="market/market_receivehistoric.lua" />
+		<event type="markethistoric" name="MarketSHItem" event="script" value="market/market_sendhistoric.lua" />
+		<event type="extendedopcode" name="MarketSMItem" event="script" value="market/market_sendmakeoffer.lua" />
+		<event type="marketmakeofferitemremove" name="MarketRMItem" event="script" value="market/market_receivemarketoffer.lua" />
+		<event type="extendedopcode" name="MarketSMCI" event="script" value="market/market_sendmarketofferconfirm.lua" />
+		<event type="marketupdatemakeoffers" name="MarketRUMO" event="script" value="market/market_receivemarketofferconfirm.lua"/>
+		<event type="extendedopcode" name="MarketSMYO" event="script" value="market/market_sendmarketyouroffers.lua" />
+		<event type="extendedopcode" name="MarketRMOS" event="script" value="market/market_receivemarketoffers.lua" />
+		<event type="extendedopcode" name="MarketSOC" event="script" value="market/market_sendmarketoffercancel.lua" />
+		<event type="extendedopcode" name="MarketSOCBUYER" event="script" value="market/market_sendmarketoffercancelbuyer.lua" />
+		<event type="extendedopcode" name="MarketSOTY" event="script" value="market/market_sendmarketofferstoyou.lua"/>
+		<event type="marketofferstome" name="MarketROTY" event="script" value="market/market_receivemarketofferstoyou.lua"/>
+		<event type="extendedopcode" name="MarketSMVOTY" event="script" value="market/market_sendmarketviewofferstoyou.lua"/>
+		<event type="extendedopcode" name="MarketCMOTME" event="script" value="market/market_sendmarketofferconfirmtome.lua"/>
+		<event type="extendedopcode" name="MarketRALLMO" event="script" value="market/market_receiveallmarketoffers.lua"/>
+		<event type="extendedopcode" name="MarketRCO" event="script" value="market/market_receivechangeoption.lua"/>
+		<event type="extendedopcode" name="MarketRRITP" event="script" value="market/market_reedemofferstoplayeragain.lua"/>
+		<event type="extendedopcode" name="MarketSearch" event="script" value="market/market_search.lua"/>
+	<!-- Fim -->
+
+	<!-- Thalles Vitor - Poke House -->
+		<event type="moveitem" name="PokeHouse" event="script" value="pokehouse.lua"/>
+		<event type="think" name="PokeHouseThink" event="script" value="pokehouseThink.lua"/>
+	<!-- Fim -->
+	
+	<!-- Thalles Vitor - Empilhar Dinheiro -->
+		<event type="extendedopcode" name="EmpilharDinheiro" script="empilhar_dinheiro.lua"/>
+	<!-- Fim -->
+
+	<!-- Thalles Vitor - Bike Effect -->
+		<event type="walk" name="BikeEffect" script="bikeeffect.lua"/>
+	<!-- Fim -->
+	
+	<!-- Auto Loot System - Thalles Vitor -->
+		<event type="extendedopcode" name="AutoLootReceive" script="autoloot/autoloot.lua"/>
+		<event type="extendedopcode" name="AutoLootChangeCategory" script="autoloot/changecategory.lua"/>
+		<event type="extendedopcode" name="AutoLootAdd" script="autoloot/add.lua"/>
+		<event type="extendedopcode" name="AutoLootRemove" script="autoloot/remove.lua"/>
+		<event type="extendedopcode" name="AutoLootStatus" script="autoloot/status.lua"/>
+		<event type="extendedopcode" name="AutoLootSearch" script="autoloot/search.lua"/>
+	<!-- Fim -->
+	
+	<!-- Thalles Vitor - Sistema de Shop -->
+		<event type="extendedopcode" name="ShopReceive" event="script" value="shop/shop_receive.lua"/>
+	<!-- Fim -->
+
+	<!-- Thalles Vitor - onDeath -->
+		<event type="death" name="Experience" script="pokeexp.lua"/>
+	<!-- Fim -->
+	
+	<!-- Thalles Vitor - Poke Level -->
+		<event type="kill" name="PokeLevel" script="pokelevel.lua"/>
+	<!-- Fim -->
+
+	<event type="kill" name="dropStone" script="dropStone.lua"/>
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+
+	<event type="death" name="PlayerPokeDeath" event="script" value="playerpdeath.lua" />
+	
+	<!-- Novos -->
+	<event type="login" name="FimPremium" event="script" value="fimvip.lua"/>
+ 	<event type="advance" name="UpAbsolute" event="script" value="uplevelabsolute.lua"/>
+
+	<!--pokekill -->
+	<event type="kill" name="Monster Hunter" event="script" value="Monster Hunter.lua"/>
+	<event type="login" name="Monster Hunterl" event="script" value="Monster Hunter.lua"/>
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	
+	<event type="advance" name="upspeed" event="script" value="levelspeed.lua"/>
+	<event type="login" name="bonuspremium" event="script" value="bonusvip.lua"/>
+	<event type="death" name="mewtwo" event="script" value="mewtwo.lua"/>
+	<event type="death" name="oh-oh" event="script" value="ho-oh.lua"/>
+
+	<event type="login" name="firstmessage" script="firstmessage.lua"/>
+	<event type="spawn" name="Spawn" event="script" value="spawn.lua"/>
+	<event type="logout" name="BlockL" event="script" value="blockl.lua"/>
+	
+	<event type="logout" name="BlockLogout" script="blocklogout.lua"/>
+	<event type="login" name="BlockLogin" script="blocklogin.lua"/>
+	<!-- <event type="think" name="t" event="script" value="wildpoke.lua"/> -->
+
+	<event type="statschange" name="GeneralConfiguration" event="script" value="exp2.0.lua"/> 
+	<!-- <event type="death" name="tp" event="script" value="tp.lua"/> -->
+
+	<event type="direction" name="DirectionSystem" event="script" value="wildpoke.lua"/>
+	<event type="attack" name="AttackSystem" event="script" value="wildpoke.lua"/>
+	<event type="cast" name="CastSystem" event="script" value="wildpoke.lua"/>
+	<event type="target" name="WildAttack" event="script" value="playerattack.lua"/>
+
+	<event type="look" name="LookSystem" event="script" value="look.lua"/>
+
+	<event type="death" name="SummonDeath" event="script" value="goback.lua"/>
+	<event type="logout" name="PlayerLogout" event="script" value="goback.lua"/>
+
+	<event type="traderequest" name="T2" event="script" value="trade system.lua"/>
+	<event type="preparedeath" name="TournamentDeath" event="script" value="tournamentdeath.lua"/>
+</creaturescripts>

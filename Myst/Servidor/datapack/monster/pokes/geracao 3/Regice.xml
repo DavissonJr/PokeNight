@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Regice" nameDescription="a Regice" race="ice" experience="50000" speed="300" manacost="0">
+  <health now="1000000" max="1000000"/>
+  <look type="1696" head="120" body="125" legs="95" feet="113" corpse="9960"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-83"/>
+      <attack name="Doubleslap" interval="2852" chance="29" range="1"/>
+      <attack name="Aurora Beam" interval="3040" chance="28" range="3"/>
+      <attack name="Ice Punch" interval="2758" chance="30" range="6"/>
+      <attack name="Ice Beam" interval="2852" chance="29" range="3"/>
+      <attack name="Blizzard" interval="3275" chance="26" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="Reeeeeeeeegiiiiii!"/>
+<voice sentence="ice!"/>
+<voice sentence="Regi!"/>
+  </voices>
+  <loot>
+        <item id="2174" chance="7000" count="1" countmax="0"/>
+        <item id="28239" chance="25" count="1" countmax="1"/> --TM08 - Blizzard
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

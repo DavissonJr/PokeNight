@@ -1,0 +1,263 @@
+IgnoreListLabel < Label
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 2 0
+  focusable: true
+  phantom: false
+
+  $focus:
+    background-color: #ffffff22
+    color: #ffffff
+
+WhiteListLabel < Label
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 2 0
+  focusable: true
+  phantom: false
+
+  $focus:
+    background-color: #ffffff22
+    color: #ffffff
+
+RuleCheckBox < CheckBox
+
+MainWindow
+  id: communicationWindow
+  size: 515 410
+  @onEscape: self:destroy()
+
+  UIButton
+    id: titleTab
+    size: 212 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -197
+
+  Label
+    id: ignoredLabel
+    color: #cda953
+    text: Lista de Ignorados
+    text-auto-resize: true
+    font: sans-bold-16px
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 165
+    margin-top: -30
+
+  RuleCheckBox
+    id: checkboxUseIgnoreList
+    text: Ativar lista de ignorados
+    text-offset: 25 1
+    anchors.left: parent.left
+    anchors.top: parent.top
+    width: 180
+
+  Label
+    text: Jogadores ignorados
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-top: 10
+
+  TextList
+    id: ignoreList
+    vertical-scrollbar: ignoreListScrollBar
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    height: 150
+    width: 230
+    margin-bottom: 10
+    margin-top: 3
+    padding: 1
+    focusable: false
+
+  TextEdit
+    id: ignoreNameEdit
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    width: 110
+    margin-top: 5
+
+  UIButton
+    id: buttonIgnoreAdd
+    !text: tr('+')
+    image-source: images/button.png
+    image-border: 20
+    width: 48
+    height: 24
+    margin-left: 5
+    anchors.top: prev.top
+    anchors.left: prev.right
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonIgnoreRemove
+    !text: tr('-')
+    image-source: images/button.png
+    image-border: 20
+    width: 64
+    height: 24
+    margin-left: 5
+    anchors.top: prev.top
+    anchors.left: prev.right
+
+    $hover:
+      image-source: images/button_hover.png
+
+  Label
+    text: Configurações globais para ignorar
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-top: 20
+
+  RuleCheckBox
+    id: checkboxIgnorePrivateMessages
+    text: Ignorar mensagens privadas
+    text-offset: 25 1
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    width: 180
+    margin-top: 5
+
+  RuleCheckBox
+    id: checkboxIgnoreYelling
+    text: Ignorar gritos
+    text-offset: 25 1
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    width: 180
+    margin-top: 5
+
+  RuleCheckBox
+    id: checkboxUseWhiteList
+    text: Ativar lista de permissÃµes
+    text-offset: 25 1
+    anchors.top: parent.top
+    anchors.left: ignoreList.right
+    margin-left: 20
+    width: 180
+
+  Label
+    !text: tr('Jogadores permitidos') .. ':'
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 10
+
+  TextList
+    id: whiteList
+    vertical-scrollbar: whiteListScrollBar
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    height: 150
+    width: 230
+    margin-bottom: 10
+    margin-top: 3
+    padding: 1
+    focusable: false
+
+  TextEdit
+    id: whitelistNameEdit
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    width: 110
+    margin-top: 5
+
+  UIButton
+    id: buttonWhitelistAdd
+    !text: tr('+')
+    image-source: images/button.png
+    image-border: 20
+    width: 48
+    height: 24
+    margin-left: 5
+    anchors.top: prev.top
+    anchors.left: prev.right
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonWhitelistRemove
+    !text: tr('-')
+    image-source: images/button.png
+    image-border: 20
+    width: 64
+    height: 24
+    margin-left: 5
+    anchors.top: prev.top
+    anchors.left: prev.right
+
+    $hover:
+      image-source: images/button_hover.png
+
+  Label
+    !text: tr('Configurações globais de permissões')
+    anchors.left: whiteList.left
+    anchors.top: prev.bottom
+    margin-top: 20
+
+  RuleCheckBox
+    id: checkboxAllowVIPs
+    text: Permitir mensagens de vips
+    text-offset: 25 1
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    width: 180
+    margin-top: 5
+
+  Panel
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 30
+
+    Panel
+      size: 160 30
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      UIButton
+        id: buttonSave
+        !text: tr('Salvar')
+        image-source: images/button.png
+        image-border: 20
+        width: 64
+        height: 24
+        anchors.top: parent.top
+        anchors.left: parent.left
+
+        $hover:
+          image-source: images/button_hover.png
+
+      UIButton
+        id: buttonCancel
+        !text: tr('Cancelar')
+        image-source: images/button.png
+        image-border: 20
+        width: 64
+        height: 24
+        anchors.top: parent.top
+        anchors.left: prev.right
+        margin-left: 10
+
+        $hover:
+          image-source: images/button_hover.png
+
+  VerticalScrollBar
+    id: ignoreListScrollBar
+    anchors.top: ignoreList.top
+    anchors.bottom: ignoreList.bottom
+    anchors.right: ignoreList.right
+    step: 14
+    pixels-scroll: true
+
+  VerticalScrollBar
+    id: whiteListScrollBar
+    anchors.top: whiteList.top
+    anchors.bottom: whiteList.bottom
+    anchors.right: whiteList.right
+    step: 14
+    pixels-scroll: true

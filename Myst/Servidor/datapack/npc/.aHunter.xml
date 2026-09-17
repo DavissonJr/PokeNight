@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<npc name="Hunter" script=".aHunter.lua" walkinterval="0" floorchange="0" speed="0">
+<health now="1500" max="1500"/>
+<look type="1015" head="114" body="119" legs="114" feet="114" corpse="3058"/>
+
+<parameters>
+
+</parameters>
+</npc>

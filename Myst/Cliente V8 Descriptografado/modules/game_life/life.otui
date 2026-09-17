@@ -1,0 +1,57 @@
+UIWindow
+  id: lifeBarWindow
+  size: 595 80
+  anchors.left: parent.left
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  margin-top: 90
+  margin-left: 110
+  draggable: false
+
+  UIButton
+    id: lifeBar
+    size: 345 51
+    image-source: images/top.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 15
+
+  ProgressBar
+    id: life
+    color: green
+    size: 288 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 40
+    margin-left: 50
+
+  UICreature
+    id: boss
+    size: 25 25
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 30
+    margin-left: 13
+
+  Label
+    id: bossName
+    text-auto-resize: true
+    color: white
+    font: verdana-11px-rounded
+    text: Demon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 27
+    margin-left: 55
+
+  Label
+    id: bossLife
+    color: white
+    font: verdana-11px-rounded
+    text: 100%
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 35
+    margin-left: 26
+    anchors.centerIn: parent
+    visible: false

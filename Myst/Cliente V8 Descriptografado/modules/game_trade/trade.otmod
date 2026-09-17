@@ -1,0 +1,9 @@
+Module
+  name: game_trade
+  description: Iniciar Trade Automatico
+  author: Thalles Vitor
+  website: www.thallesdev.com
+  scripts: [ trade ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

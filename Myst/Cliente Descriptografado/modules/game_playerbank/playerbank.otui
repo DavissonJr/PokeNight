@@ -1,0 +1,322 @@
+BankEdit < UITextEdit
+  font: verdana-11px-antialised
+  color: white
+  size: 86 22
+  text-align: center
+  opacity: 1
+  padding: 4
+  image-border: 1
+  selection-color: #272727
+  selection-background-color: #cccccc
+  $disabled:
+    color: white
+    opacity: 0.5
+
+HeadlessWindow
+  id: bankWindow
+  image-source: images/window.png
+  size: 584 332
+  anchors.centerIn: parent
+
+  Label
+    id: welcomeMessage
+    text: BEM VINDO ???, SEU SALDO É 0 CENTS (~0 HD)
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 21
+
+  UIButton
+    id: depositBtn
+    size: 50 52
+    image-source: images/deposit.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 75
+    margin-left: 34
+    @onClick: changeCategory(self:getId())
+
+  Label
+    id: deposit_text
+    font: sans-bold-16px
+    text: DEPOSITAR
+    text-auto-resize: true
+    anchors.top: depositBtn.top
+    anchors.left: depositBtn.left
+    margin-top: 16
+    margin-left: 65
+    opacity: 0.60
+
+  UIButton
+    id: withdrawBtn
+    size: 50 52
+    image-source: images/withdraw.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 135
+    margin-left: 65
+    @onClick: changeCategory(self:getId())
+
+  Label
+    id: withdraw_text
+    font: sans-bold-16px
+    text: SACAR
+    text-auto-resize: true
+    anchors.top: withdrawBtn.top
+    anchors.left: withdrawBtn.left
+    margin-top: 16
+    margin-left: 65
+    opacity: 0.60
+
+  UIButton
+    id: transferBtn
+    size: 50 52
+    image-source: images/transfer.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 195
+    margin-left: 96
+    @onClick: changeCategory(self:getId())
+
+  Label
+    id: transfer_text
+    font: sans-bold-16px
+    text: TRANSFERIR
+    text-auto-resize: true
+    anchors.top: transferBtn.top
+    anchors.left: transferBtn.left
+    margin-top: 16
+    margin-left: 65
+    opacity: 0.60
+
+  UIButton
+    id: extractBtn
+    size: 50 52
+    image-source: images/extract.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 255
+    margin-left: 127
+    @onClick: changeCategory(self:getId())
+
+  Label
+    id: extract_text
+    font: sans-bold-16px
+    text: EXTRATO
+    text-auto-resize: true
+    anchors.top: extractBtn.top
+    anchors.left: extractBtn.left
+    margin-top: 16
+    margin-left: 65
+    opacity: 0.60
+
+  UIButton
+    id: closeBtn
+    size: 12 11
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: prev.left
+    margin-top: 10
+    margin-left: 350
+    @onClick: naoexibir()
+
+  UIButton
+    id: categoryBtn
+    size: 32 32
+    image-source: images/deposit.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 6
+    margin-left: 498
+    visible: false
+
+  UIButton
+    id: backBtn
+    size: 23 31
+    image-source: images/back.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 73
+    margin-left: 18
+    visible: false
+    @onClick: changeCategory("none")
+
+  Label
+    id: backBtn_text
+    font: sans-bold-16px
+    text: VOLTAR
+    text-auto-resize: true
+    anchors.top: backBtn.top
+    anchors.left: backBtn.left
+    margin-top: 6
+    margin-left: 32
+    opacity: 0.60
+    visible: false
+
+  Label
+    id: valueLabel
+    font: sans-bold-16px
+    text: VALOR
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 135
+    margin-left: 240
+    visible: false
+
+  BankEdit
+    id: value
+    size: 140 22
+    anchors.top: valueLabel.top
+    anchors.left: valueLabel.left
+    margin-top: 21
+    margin-left: -37
+    visible: false
+
+  UIButton
+    id: value_separator
+    size: 132 2
+    background-color: white
+    anchors.top: value.top
+    anchors.left: value.left
+    margin-top: 22
+    visible: false
+
+  Label
+    id: moneyCountLabel
+    text: Você tem 0 cents (~0 hds)
+    text-auto-resize: true
+    anchors.top: value_separator.top
+    anchors.left: value_separator.left
+    margin-top: 22
+    margin-left: -15
+    visible: false
+
+  UIButton
+    id: confirmDepositBtn
+    size: 141 31
+    font: sans-bold-16px
+    text: DEPOSITAR
+    image-source: images/button.png
+    anchors.top: moneyCountLabel.top
+    anchors.left: moneyCountLabel.left
+    margin-top: 35
+    margin-left: 9
+    visible: false
+
+    $hover:
+      image-source: images/button_hover.png
+
+    $pressed:
+      image-source: images/button_pressed.png
+
+  Label
+    id: valueLabel_Transfer
+    font: sans-bold-16px
+    text: VALOR
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 85
+    margin-left: 240
+    visible: false
+
+  BankEdit
+    id: value_transfer
+    size: 140 22
+    anchors.top: valueLabel_Transfer.top
+    anchors.left: valueLabel_Transfer.left
+    margin-top: 21
+    margin-left: -37
+    visible: false
+
+  UIButton
+    id: value_transfer_separator
+    size: 132 2
+    background-color: white
+    anchors.top: value_transfer.top
+    anchors.left: value_transfer.left
+    margin-top: 22
+    visible: false
+
+  Label
+    id: moneyCountLabel_Transfer
+    text: Você tem 0 cents (~0 hds)
+    text-auto-resize: true
+    anchors.top: value_transfer_separator.top
+    anchors.left: value_transfer_separator.left
+    margin-top: 22
+    margin-left: -15
+    visible: false
+
+  Label
+    id: toLabel
+    font: sans-bold-16px
+    text: PARA
+    text-auto-resize: true
+    anchors.top: moneyCountLabel_Transfer.top
+    anchors.left: moneyCountLabel_Transfer.left
+    margin-top: 35
+    margin-left: 54
+    visible: false
+
+  BankEdit
+    id: value_transferTo
+    size: 140 22
+    anchors.top: toLabel.top
+    anchors.left: toLabel.left
+    margin-top: 19
+    margin-left: -45
+    visible: false
+
+  UIButton
+    id: value_transferTo_separator
+    size: 132 2
+    background-color: white
+    anchors.top: value_transferTo.top
+    anchors.left: value_transferTo.left
+    margin-top: 22
+    visible: false
+
+  UIButton
+    id: confirmTransferBtn
+    size: 141 31
+    font: sans-bold-16px
+    text: TRANSFERIR
+    image-source: images/button.png
+    anchors.top: value_transferTo_separator.top
+    anchors.left: value_transferTo_separator.left
+    margin-top: 25
+    margin-left: -2
+    visible: false
+
+    $hover:
+      image-source: images/button_hover.png
+
+    $pressed:
+      image-source: images/button_pressed.png
+
+  ScrollablePanel
+    id: extractList
+    size: 519 193
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 112
+    margin-left: 22
+    visible: false
+    vertical-scrollbar: extractScrollBar
+
+  VerticalScrollBar
+    id: extractScrollBar
+    anchors.top: extractList.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: -15
+    margin-bottom: -2
+    margin-right: 25
+    step: 78
+    pixels-scroll: true
+    visible: false
+      $!on:
+        width: 0

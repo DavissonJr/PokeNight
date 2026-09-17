@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rhyhorn" nameDescription="a rhyhorn" race="ground" experience="2800" speed="142" manacost="0">
+    <health now="90" max="90"/>
+    <look type="428" head="30" body="50" legs="95" feet="113" corpse="11955"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="21"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+		<attack name="Iron Tail" interval="2758" chance="30" range="1"/>
+        <attack name="Horn Attack" interval="2758" chance="30" range="1"/>
+        <attack name="Stomp" interval="3052" chance="29" range="3"/>
+        <attack name="Horn Drill" interval="2805" chance="29" range="2"/>
+        <attack name="Rock Drill" interval="3393" chance="28" range="4"/>
+        <attack name="Shockwave" interval="3040" chance="28" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="RHYHORN!"/>
+    </voices>
+    <loot>
+        <item id="12337" chance="20000" chance1="1" countmax="100"/>
+        <item id="12177" chance="10000" countmax="2"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

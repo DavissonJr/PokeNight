@@ -1,0 +1,48 @@
+OptionPanel
+  OptionCheckBox
+    id: classicControl
+    text: Controle Clássico
+
+    $mobile:
+      visible: false
+
+  OptionCheckBox
+    id: autoChaseOverride
+    text: Permitir substituição de perseguição automática
+
+  OptionCheckBox
+    id: displayText
+    text: Exibir mensagens de texto
+
+  OptionCheckBox
+    id: showMoveBar
+    text: Mostrar Barra de Ataques
+
+  OptionCheckBox
+    id: wsadWalking
+    text: Ativar caminhada do WSAD
+    tooltip: Desative o bate-papo e permita a caminhada usando as chaves WSAD
+    $mobile:
+      visible: false
+
+  OptionCheckBox
+    id: dash
+    text: Ativar caminhada rápida (DASH)
+    tooltip: Permite executar o próximo movimento sem confirmação do servidor do anterior
+
+  OptionCheckBox
+    id: smartWalk
+    text: Ative a caminhada inteligente
+    tooltip: Detectará quando usar o passo diagonal com base nas teclas\nque você está pressionando
+
+  OptionCheckBox
+    id: displayNames
+    text: Exibir nomes de criaturas
+
+  OptionCheckBox
+    id: displayHealth
+    text: Exibir barras de vida das criaturas
+
+  OptionCheckBox
+    id: hidePlayerBars
+    text: Mostrar barra de vida do jogador

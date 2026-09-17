@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Padre" script="datapack/npc/scripts/padre.lua" walkinterval="2000" floorchange="0" skull="0">
+<health now="100" max="100"/>
+<look type="9" head="79" body="83" legs="86" feet="114" addons="0"/>
+<parameters>
+	<parameter key="message_greet" value="Olá |PLAYERNAME|, você quer se casar? diga {marriage}, se você quiser se divorciar diga {divorce}. " />
+</parameters>
+</npc>

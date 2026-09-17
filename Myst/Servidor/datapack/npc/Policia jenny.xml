@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Policial jenny" script="default.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="533" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="module_travel" value="1"/>
+<!--<parameter key="message_greet" value="Quest ainda não está ativada |PLAYERNAME|."/> -->
+<parameter key="message_greet" value="Estamos fazendo um combate a incêndio no centro de treinamento da Polícia Pokémon, se o seu grupo tiver quatro pessoas, puxe a alavanca!" />
+<!-- <parameter key="travel_destinations" value="participar,1039,563,7,0;"/>   -->
+</parameters>
+</npc>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Xatu" nameDescription="a xatu" race="psychic" experience="0" speed="167" manacost="0">
+  <health now="40" max="40"/>
+  <look type="889" head="33" body="57" legs="95" feet="113" corpse="4758"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-16" max="-20"/>
+		 
+        <attack name="Quick Attack" interval="2711" chance="30" range="2"/>
+        <attack name="Wing Attack" interval="2805" chance="29" range="4"/>
+        <attack name="Confusion" interval="3048" chance="18" range="6"/>
+        <attack name="Drill Peck" interval="2684" chance="19" range="1"/>
+		<attack name="Psychic" interval="2852" chance="29" range="6"/>
+		<attack name="Tornado" interval="3452" chance="29" range="6"/>
+		<attack name="Double Team" interval="3452" chance="29" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="XAAA!"/>
+<voice sentence="TUUU!"/>
+<voice sentence="XATU!"/>
+  </voices>
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

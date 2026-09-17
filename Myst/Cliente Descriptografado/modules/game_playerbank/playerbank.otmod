@@ -1,0 +1,9 @@
+Module
+  name: game_playerbank
+  description: Bank do Player - Transferencias/Saque/Extrato
+  author: Thalles Vitor
+  website: https://www.thallesdev.com
+  sandboxed: true
+  scripts: [ playerbank ]
+  @onLoad: init()
+  @onUnload: terminate()

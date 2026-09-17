@@ -1,0 +1,92 @@
+ItemLabel < Label
+  text-auto-resize: true
+
+HeadlessWindow
+  id: shppWindow
+  image-source: images/window2.png
+  size: 624 426
+  anchors.centerIn: parent
+
+  UIButton
+    id: titleTab
+    size: 494 33
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    opacity: 0.40
+
+  Label
+    id: shopLabel
+    color: #cda953
+    font: sans-bold-16px
+    text-auto-resize: true
+    text: Mysterious Shop
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 235
+
+  UIButton
+    id: closeButton
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-top: 2
+    margin-left: -25
+    @onClick: exibir()
+
+    $hover:
+      image-source: images/close_hover.png
+
+  Panel
+    id: categoryPanel
+    size: 106 378
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 35
+    margin-left: 9
+    layout:
+      type: grid
+      cell-size: 101 32
+      flow: false
+
+  ScrollablePanel
+    id: itemsPanel
+    size: 398 264
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 55
+    margin-left: 170
+    layout:
+      type: grid
+      cell-size: 102 135
+      cell-spacing: 15
+      flow: true
+    vertical-scrollbar: itemsScrollBar
+
+  VerticalScrollBar
+    id: itemsScrollBar
+    anchors.top: itemsPanel.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: 9
+    margin-bottom: -1
+    margin-right: 30
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0
+
+  Label
+    id: pointsLabel
+    color: #cda953
+    font: lucida-11px-rounded
+    text-auto-resize: true
+    text: Seus Pontos: 0
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 390
+    margin-left: 15

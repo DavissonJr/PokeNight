@@ -1,0 +1,9 @@
+Module
+  name: game_evolution
+  description: Sistema de Janela de Evolucao
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ evolution ]
+  @onLoad: init()
+  @onUnload: terminate()

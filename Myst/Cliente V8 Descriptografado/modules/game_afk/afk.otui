@@ -1,0 +1,33 @@
+MainWindow
+  id: afkWindow
+  text: Aviso de AFK do Sistema
+  size: 497 145
+  anchors.centerIn: parent
+  @onEnter: btn()
+
+  Label
+    id: text_numero
+    text: Digite o numero: 0 na caixa de texto abaixo para nao ser deslogado
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 24
+    margin-top: 15
+
+  TextEdit
+    id: numero_text
+    size: 143 19
+    color: black
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 35
+    margin-left: 152
+
+  Button
+    id: confirmar_btn
+    text: Confirmar
+    size: 82 22
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 79
+    margin-left: 385
+    @onClick: btn()

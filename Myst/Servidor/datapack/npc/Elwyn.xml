@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<npc name="Elwyn" script="datapack/npc/scripts/travel/train_celadon.lua" walkinterval="2000" floorchange="0"> 
+    <health now="100" max="100"/> 
+    <look type="510" head="100" body="4" legs="20" feet="96" addons="3" corpse="2212"/> 
+    <parameters> 
+        <parameter key="message_greet" value="Olá |PLAYERNAME|. Eu vendo passagens para viajar de trem. Apenas me diga {ticket}."/> 
+    </parameters> 
+
+</npc>

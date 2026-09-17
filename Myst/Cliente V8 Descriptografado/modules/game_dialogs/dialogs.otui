@@ -1,0 +1,113 @@
+DialogButton < UIButton
+  font: terminus-10px
+  color: white
+  size: 106 23
+  text-offset: 0 0
+  image-source: images/button
+  image-color: #dfdfdf
+  image-clip: 0 0 20 20
+  image-border: 3
+  padding: 5 10 5 10
+
+  $hover !disabled:
+    image-clip: 0 20 20 20
+
+  $pressed:
+    image-clip: 0 40 20 20
+    text-offset: 1 1
+
+  $disabled:
+    color: #dfdfdf88
+    opacity: 0.8
+
+HeadlessWindow
+  id: dialogWindow
+  image-source: /images/ui/window_headless
+  size: 582 233
+  font: verdana-11px-antialised
+  opacity: 1
+  color: #dfdfdf
+  text-offset: 0 1
+  image-border: 8
+  text-align: top
+  anchors.centerIn: parent
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-left: -25
+    margin-top: 4
+    @onClick: naoexibir()
+
+    $hover:
+      image-source: images/close_hover.png
+
+  UICreature
+    id: npc_outfit
+    size: 120 120
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 0
+
+  UIButton
+    id: npc_name2
+    image-source: images/name
+    size: 106 25
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -5
+    margin-left: 21
+    visible: false
+
+  Label
+    id: npc_name
+    color: #cda953
+    font: terminus-14px-bold
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 14
+
+  Label
+    id: npc_dialogText
+    color: #cda953
+    font: terminus-14px-bold
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 90
+    margin-left: 120
+
+  ScrollablePanel
+    id: buttons_list
+    size: 573 20
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 190
+    margin-left: 8
+    layout:
+      type: grid
+      cell-size: 72 22
+      cell-spacing: 5
+      flow: true
+    vertical-scrollbar: buttonScrollBar
+
+  VerticalScrollBar
+    id: buttonScrollBar
+    anchors.top: buttons_list.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: -40
+    margin-bottom: 50
+    margin-right: 8
+    step: 78
+    pixels-scroll: true
+    visible: false
+      $!on:
+        width: 0

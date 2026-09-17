@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Beautifly" nameDescription="a Beautifly" race="bug" experience="276" speed="136" manacost="0">
+  <health now="80" max="80"/>
+  <look type="1654" head="45" body="65" legs="95" feet="113" corpse="12737"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+<flag passive="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="22"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="String Shot" interval="2570" chance="31" range="3">
+        </attack>
+        <attack name="Confuse Ray" interval="4638" chance="20" range="4">
+        </attack>
+        <attack name="Headbutt" interval="2758" chance="30" range="1">
+        </attack>
+        <attack name="Whirlwind" interval="3040" chance="28" range="6">
+        </attack>
+        <attack name="Psybeam" interval="3134" chance="27" range="6">
+        </attack>
+        <attack name="Confusion" interval="2899" chance="29" range="6">
+        </attack>
+        <attack name="Sleep Powder" interval="5766" chance="18" range="6">
+        </attack>
+        <attack name="Stun Spore" interval="5061" chance="20" range="6">
+        </attack>
+        <attack name="melee" interval="5343" chance="19" range="6">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Beautifly!"/>
+ </voices>
+
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

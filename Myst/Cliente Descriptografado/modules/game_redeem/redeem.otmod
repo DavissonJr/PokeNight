@@ -1,0 +1,9 @@
+Module
+  name: game_redeem
+  description: Sistema de Resgatar Recompensa
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ redeem ]
+  @onLoad: init()
+  @onUnload: terminate()

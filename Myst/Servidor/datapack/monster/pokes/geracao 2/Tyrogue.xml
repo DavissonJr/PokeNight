@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tyrogue" nameDescription="a tyrogue" race="fighting" experience="0" speed="190" manacost="0">
+  <health now="40" max="40"/>
+  <look type="735" head="28" body="57" legs="95" feet="113" corpse="4455"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-38" max="-59"/>
+		<attack name="Triple Punch" interval="2852" chance="29" range="1"/>
+        <attack name="Mega Punch" interval="2758" chance="30" range="1"/>
+        <attack name="Multi-Punch" interval="2993" chance="28" range="6"/>
+        <attack name="Mega Kick" interval="2711" chance="30" range="1"/>
+		<attack name="Multi-Kick" interval="2993" chance="28" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="TYYY!"/>
+<voice sentence="ROOOGUE!"/>
+<voice sentence="TYROGUE!"/>
+  </voices>
+  <loot>
+ <item id="12195" chance="10000" countmax="2"/>
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

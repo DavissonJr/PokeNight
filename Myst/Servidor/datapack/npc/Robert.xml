@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<npc name="Robert" script="santadoll2.lua" walkinterval="2000" floorchange="0">
+          <health now="150" max="150" />
+          <look type="134" head="57" body="59" legs="40" feet="76" corpse="2212" />
+          <parameters>
+                    <parameter key="message_greet" value="Eu vendo backpack of holding quer comprar? Vai te custar 10 Santa Doll." />
+                    <parameter key="message_farewell" value="Obrigado. Boa sorte!" />
+          </parameters>
+</npc>

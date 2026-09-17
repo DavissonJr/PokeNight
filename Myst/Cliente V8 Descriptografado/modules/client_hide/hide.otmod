@@ -1,0 +1,9 @@
+Module
+  name: client_hide
+  description: Botao de Esconder Menu
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ hide ]
+  @onLoad: init()
+  @onUnload: terminate()

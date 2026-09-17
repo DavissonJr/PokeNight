@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Evolution" nameDescription="" race="electric" experience="0" speed="0" manacost="0">
+  <health now="1000" max="1000"/>
+  <look type="100" head="15" body="20" legs="95" feet="113" corpse="0"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="0"/>
+ <flag hostile="0"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="0"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+</flags>
+
+<attacks>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+  <loot>
+  </loot>
+
+</monster>

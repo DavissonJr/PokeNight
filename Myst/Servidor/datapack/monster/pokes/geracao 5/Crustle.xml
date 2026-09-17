@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Crustle" nameDescription="a Crustle" race="bug" experience="100" speed="110" manacost="0">
+    <health now="30" max="30"/>
+    <look type="2798" head="1" body="10" legs="95" feet="113" corpse="21808"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Rock Blast" interval="2570" chance="25" range="3"/>
+        <attack name="Smack Down" interval="2570" chance="30" range="2"/>
+        <attack name="Rock Slide" interval="2758" chance="20" range="3"/>
+        <attack name="Slash" interval="2758" chance="30" range="2"/>
+        <attack name="X-Scissor" interval="2758" chance="20" range="4"/>
+        <attack name="Sandstorm" interval="2758" chance="25" range="3"/>
+        <attack name="Stone Edge" interval="2758" chance="20" range="5"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Crustleee!"/>
+    </voices>
+    <loot>
+        <item id="12171" chance="3500" count="1" countmax="80"/> --pot of moss bug
+        <item id="12183" chance="3500" count="1" countmax="1"/> --some mushroom
+        <item id="12185" chance="3500" count="1" countmax="1"/> --bug venom
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

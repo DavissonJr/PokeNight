@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Munna" nameDescription="a Munna" race="psychic" experience="250" speed="204" manacost="0">
+    <health now="30" max="30"/>
+    <look type="2751" head="10" body="30" legs="95" feet="113" corpse="21728"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="100"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="physical" interval="2000" chance="100" range="4" min="-50" max="-100">
+            <attribute key="shootEffect" value="eartharrow"/>
+        </attack>
+        <attack name="Psywave" interval="2617" chance="25" range="3"/>
+        <attack name="Defense Curl" interval="4920" chance="15" range="1"/>
+        <attack name="Yawn" interval="2852" chance="15" range="1"/>
+        <attack name="Hypnosis" interval="3040" chance="15" range="1"/>
+        <attack name="Zen Headbutt" interval="3040" chance="25" range="4"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Munnaaaa!"/>
+    </voices>
+    <loot>
+        <item id="12194" chance="3000" count="1" countmax="5"/> --future orb
+		        <item id="13785" chance="10000" countmax="80"/> --enchanted gem
+        <item id="12193" chance="3000" count="1" countmax="5"/> --twisted spoon
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

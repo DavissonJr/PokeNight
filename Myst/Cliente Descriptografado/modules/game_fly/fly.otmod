@@ -1,0 +1,9 @@
+Module
+  name: game_fly
+  description: Feito por Thalles Vitor - FLY
+  author: Thalles Vitor
+  website: https://www.thallesdev.com
+  sandboxed: true
+  scripts: [ fly ]
+  @onLoad: init()
+  @onUnload: terminate()

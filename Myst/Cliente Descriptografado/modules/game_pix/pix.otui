@@ -1,0 +1,108 @@
+HeadlessWindow
+  id: pixWindow
+  image-source: images/window2.png
+  size: 403 305
+  anchors.centerIn: parent
+
+  UIButton
+    id: titleTab
+    size: 212 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -130
+
+  Label
+    id: donateLabel
+    color: #cda953
+    text: Doação via PIX
+    text-auto-resize: true
+    font: sans-bold-16px
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 147
+    margin-top: 6
+
+  Label
+    id: donateText1
+    color: #cda953
+    text: Obrigado pelo interesse em doar.
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 60
+    margin-left: 100
+
+  Label
+    id: donateText2
+    color: #cda953
+    text: Sua doação é de extrema importância para o nosso projeto!
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 76
+    margin-left: 20
+
+  UIButton
+    id: qrCode
+    size: 102 102
+    image-source: images/qrcode.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: 6
+
+  Label
+    id: donateText3
+    color: #cda953
+    text: Ao doar você concorda com nossos Termos e Regras Gerais.
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 220
+    margin-left: 20
+
+  Label
+    id: donateText4
+    color: #cda953
+    text: Envie o comprovante para algum Administrador ou STAFF Online.
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 235
+    margin-left: 6
+
+  HorizontalSeparator
+    id: donateSeparator
+    width: 366
+    image-color: green
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 255
+    margin-left: 12
+
+  UIButton
+    id: confirmButton
+    text: Confirmar
+    size: 122 27
+    image-source: images/button.png
+    image-border: 10
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 265
+    margin-left: 135
+    @onClick: exibir()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: closeButton
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-top: 2
+    margin-left: -25
+    @onClick: exibir()
+
+    $hover:
+      image-source: images/close_hover.png

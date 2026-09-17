@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Ronaldinho" script="Ronaldinho.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="108" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Salve |PLAYERNAME|. Eu era um antigo jogador, como me aposentei agora eu resolvi vir para Russia para resgatar o pikachu desaparecido do treinador Tite, para isso preciso que traga items para me ajudar, diga  {rochas} para ver oque eu compro!"/>
+<parameter key="message_farewell" value="Adeus, caro amigo!"/>
+</parameters>
+</npc>

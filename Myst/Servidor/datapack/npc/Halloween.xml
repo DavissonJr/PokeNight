@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mewtwo X" script="Halloween Token.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="2996" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME|. Eu troco {Shiny Stone} em troca de {Halloween Token} caso tenha interesse diga, {trocar}."/>
+<parameter key="message_farewell" value="Até mais monaliso."/>
+</parameters>
+</npc>

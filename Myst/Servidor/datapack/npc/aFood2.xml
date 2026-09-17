@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Tomy" script="default.lua" walkinterval="350000" floorchange="0" speed="0">
+<health now="150" max="150"/>
+<look type="510" head="57" body="122" legs="122" feet="57"/>
+<parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME|. Aqui você encontra os melhores churros de toda a cidade."/>
+<parameter key="message_farewell" value="Até mais, |PLAYERNAME|!"/>
+<parameter key="message_idletimeout" value="Até mais, |PLAYERNAME|!"/>
+<parameter key="message_walkaway" value="Até mais, |PLAYERNAME|!"/>
+<parameter key="module_shop" value="1"/>
+<parameter key="shop_buyable" value="big eggs,12211,500;japanese foods,12213,900;french friess,12214,700;hot dogs,12215,800;cups of lemonade,12216,500;brownies,12217,600;cheeseburguers,12218,700;chocolate curries,12219,800;caramel churries,12220,500;vanilla churries,12221,300;pizzas,12222,400;"/>
+</parameters>
+</npc>

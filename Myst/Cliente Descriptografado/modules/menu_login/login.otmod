@@ -1,0 +1,19 @@
+Module
+  name: menu_login
+  description: Manages enter game and character list windows
+  author: edubart
+  website: www.otclient.info
+
+  load-later:
+    - game_things
+    - game_features
+
+  @onLoad: |
+    dofile 'login'
+    dofile 'characterlist'
+    EnterGame.init()
+    init()
+
+  @onUnload: |
+    EnterGame.terminate()
+    terminate()

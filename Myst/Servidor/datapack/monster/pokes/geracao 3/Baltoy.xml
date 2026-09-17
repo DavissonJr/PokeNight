@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Baltoy" nameDescription="a baltoy" race="normal" experience="910" speed="200" manacost="0">
+  <health now="160" max="160"/>
+  <look type="1653" head="35" body="45" legs="95" feet="113" corpse="12767"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Confusion" interval="2758" chance="30" range="6"/>
+        <attack name="Psychic" interval="3228" chance="27" range="6"/>
+        <attack name="Zap Cannon" interval="3510" chance="25" range="5"/>
+        <attack name="Restore" interval="6330" chance="17" range="6"/>
+        <attack name="Shockwave" interval="2825" chance="28" range="1"/>
+        <attack name="Epicenter" interval="2505" chance="32" range="1"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="BALLL!"/>
+<voice sentence="Toyy!"/>
+<voice sentence="Baltoyy!"/>
+  </voices>
+  <loot>
+        <item id="12194" chance="4000" count="1" countmax="1"/>
+        <item id="11452" chance="1" count="1" countmax="1"/>
+				<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

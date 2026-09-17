@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Hippopotas" nameDescription="a Hippopotas" race="ground" experience="376" speed="122" manacost="0">
+    <health now="120" max="120"/>
+    <look type="1613" head="30" body="55" legs="95" feet="113" corpse="239"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        
+		<attack name="Slash" interval="2505" chance="29" range="1"/>
+        <attack name="Mud Shot" interval="2805" chance="29" range="3"/>
+        <attack name="Mud Slap" interval="2805" chance="22" range="3"/>
+        <attack name="Earthshock" interval="3087" chance="28" range="6"/>
+		<attack name="Shockwave" interval="3287" chance="28" range="6"/>
+		<attack name="Earthquake" interval="5087" chance="21" range="6"/>
+		<attack name="rage" interval="3487" chance="28" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0">
+    </defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="Hippopotas!"/>
+    </voices>
+    <loot>
+        <item id="12337" chance="10000" countmax="50"/>
+        <item id="12177" chance="4000" count="1" countmax="1"/>
+        <item id="11451" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

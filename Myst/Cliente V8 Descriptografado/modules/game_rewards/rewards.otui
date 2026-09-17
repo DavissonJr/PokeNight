@@ -1,0 +1,38 @@
+HeadlessWindow
+  id: rewardWindow
+  image-source: window.png
+  size: 483 240
+  anchors.centerIn: parent
+  draggable: false
+
+  UIButton
+    id: reinvidicar
+    text: Reivindicar
+    size: 140 49
+    image-source: images/button.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 190
+    margin-left: 165
+  
+  Panel
+    id: rewardsPanel
+    size: 386 173
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 45
+    margin-left: 50
+    layout:
+      type: grid
+      cell-size: 37 37
+      flow: true
+
+  UIButton
+    id: info
+    size: 25 25
+    image-source: images/question.png
+    tooltip: Faça login todos os dias para resgatar uma recompensa.
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 14
+    margin-left: 15

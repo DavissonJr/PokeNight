@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<npc name="andre" walkinterval="0" script="datapack/npc/scripts/default.lua" floorchange="0" access="1" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="614" head="123" body="31" legs="7" feet="231" addons="0" corpse="0"/>
+<parameters>
+<parameter key="module_travel" value="1"/>
+<parameter key="message_greet" value="Olá |PLAYERNAME|, estou indo em uma viagem gelada para o norte deseja ir para o {norte}?" />
+<parameter key="travel_destinations" value="norte,603,3033,7,100000;"/>
+</parameters>
+</npc>

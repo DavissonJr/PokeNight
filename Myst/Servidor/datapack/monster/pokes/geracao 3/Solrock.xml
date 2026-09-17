@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Solrock" nameDescription="a solrock" race="psychic" experience="400" speed="162" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1718" head="60" body="80" legs="95" feet="113" corpse="12755"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag passive="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-62" max="-91"/>
+        <attack name="Headbutt" interval="2711" chance="30" range="3"/>
+        <attack name="Confusion" interval="2805" chance="29" range="3"/>
+        <attack name="Psywave" interval="6048" chance="18" range="6"/>
+        <attack name="Hypnosis" interval="5061" chance="20" range="3"/>
+        <attack name="Psyshock" interval="7035" chance="16" range="3"/>
+        <attack name="Psychic" interval="3040" chance="28" range="1"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="Sol!"/>
+<voice sentence="rock!"/>
+<voice sentence="Solrock!"/>
+  </voices>
+  <loot>
+  				<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="First Items" version="1.0" author="The Forgotten Server" contact="otland.net" enabled="yes">
+
+	<config name="firstitems_config">
+<![CDATA[		config = {
+			storage = 30001,
+			items = {1988, 1987, 2382, 28204, 2580, 2550, 2395, 2547}
+			-- 2395 (portfoil)  ok
+			-- 2382	(pokedex)	ok
+			-- 2547 (coin case)	ok
+			-- 2550 (order)		ok
+			-- 1987 (bag)		ok
+			-- 1988 (badge case)	ok
+			-- 28204 (rope)		ok
+			-- 2580 (fishing rod)	ok
+		}
+	]]>
+</config>
+	<event type="login" name="FirstItems" event="script">
+<![CDATA[
+
+		domodlib('firstitems_config')
+
+		function onLogin(cid)
+
+
+			if getCreatureName(cid) == "Account Manager" then
+				doSetCreatureOutfit(cid, {lookType = 655}, -1)
+			return true
+			end
+
+			if getPlayerSlotItem(cid, CONST_SLOT_ARMOR).itemid > 0 then
+			return true
+			end
+
+			doPlayerSetMaxCapacity(cid, 6)
+			for _, id in ipairs(config.items) do
+				doPlayerAddItem(cid, id, 1)
+			end
+			local bag = getPlayerItemById(cid, false, 1988).uid
+			doAddContainerItem(bag, 12267, 1)
+			doAddContainerItem(bag, 12266, 1)
+			doAddContainerItem(bag, 12264, 1)
+			doAddContainerItem(bag, 12265, 1)
+			doAddContainerItem(bag, 12263, 1)
+			doAddContainerItem(bag, 12262, 1)
+			doAddContainerItem(bag, 12261, 1)
+			doAddContainerItem(bag, 12260, 1)
+
+			local pos = {x=1042, y=1021, z=8}
+			addEvent(doTeleportThing, 10, cid, pos)
+			return true
+		end
+	]]></event>
+</mod>

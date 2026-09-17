@@ -1,0 +1,9 @@
+<npc name="Captain Kloud" script="datapack/npc/scripts/default.lua" floorchange="0" access="5" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="152" head="39" body="53" legs="93" feet="5" addons="2" corpse="2212"/>
+<parameters>
+<parameter key="module_travel" value="1"/>
+<parameter key="message_greet" value="Hello |PLAYERNAME|. Oi quer teleportar para o torneio? digite {saffron}." />
+<parameter key="travel_destinations" value="saffron,1037,1035,7,200000;"/>
+</parameters>
+</npc>

@@ -1,0 +1,90 @@
+MainWindow
+  size: 360 160
+  @onEscape: modules.game_actionbar.closeEditHotkeyWindow()
+
+  UIButton
+    id: titleTab
+    size: 180 28
+    image-source: images/titleTab.png
+    color: #cda953
+    font: sans-bold-16px
+    text: Editar Atalho
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -73
+
+  FlatPanel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    height: 25
+    Label
+      id: comboPreview
+      !text: tr('Atalho para trocar: %s', 'none')
+      color: white
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      text-auto-resize: true
+      text-align: left
+
+  Label
+    !text: tr('Clique em confirmar para aplicar o atalho.')
+    color: white
+    anchors.top: prev.bottom
+    margin-top: 10
+    text-auto-resize: true
+
+  Label
+    id: errorLabel
+    text: "Esse atalho já está em uso e pode ser sobrescrevido."
+    color: red
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: prev.bottom
+    margin-top: 10
+    visible: false
+
+  HorizontalSeparator
+    id: separator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 10
+
+  UIButton
+    id: applyButton
+    !text: tr('Confirmar')
+    anchors.left: parent.left
+    size: 106 24
+    image-source: images/button.png
+    anchors.bottom: parent.bottom
+    enabled: false
+    @onClick: modules.game_actionbar.hotkeyCaptureOk(self:getParent(), self:getParent():recursiveGetChildById('comboPreview').keyCombo)
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: clearButton
+    !text: tr('Limpar')
+    size: 106 24
+    image-source: images/button.png
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_actionbar.hotkeyClear(self:getParent())
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: cancelButton
+    !text: tr('Cancelar')
+    size: 106 24
+    image-source: images/button.png
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_actionbar.closeEditHotkeyWindow()
+
+    $hover:
+      image-source: images/button_hover.png

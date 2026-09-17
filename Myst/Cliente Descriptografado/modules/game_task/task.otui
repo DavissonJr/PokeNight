@@ -1,0 +1,100 @@
+ItemsPanelTask < Panel
+  size: 189 37
+  layout:
+    type: horizontalBox
+    flow: true
+
+HeadlessWindow
+  id: taskWindow
+  size: 444 373
+  image-source: images/window.png
+  image-border: 70
+  anchors.centerIn: parent
+
+  ScrollablePanel
+    id: taskPanel
+    size: 415 276
+    image-source: images/panel.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 80
+    margin-left: 3
+    layout:
+      type: verticalBox
+      flow: true
+    vertical-scrollbar: taskScrollBar
+
+  VerticalScrollBar
+    id: taskScrollBar
+    anchors.top: taskPanel.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: -1
+    margin-bottom: -1
+    margin-right: 0
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0
+
+  UIButton
+    id: tab1
+    color: #cda953
+    font: verdana-10px
+    text-offset: -10 0
+    text: Tasks
+    size: 74 15
+    image-source: images/tab.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 66
+    margin-left: 3
+    @onClick: changeCategory(self:getId())
+    opacity: 0.87
+
+  UIButton
+    id: tab2
+    color: #cda953
+    font: verdana-10px
+    text-offset: -5 2
+    text: Especial
+    size: 74 16
+    image-source: images/tab2.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 64
+    margin-left: 66
+    @onClick: changeCategory(self:getId())
+    opacity: 0.87
+
+  UIButton
+    id: pointsImage
+    size: 28 26
+    image-source: images/points.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-top: 30
+    margin-left: -56
+
+  Label
+    id: pointsLabel
+    color: white
+    font: otpfont
+    text: 0
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-top: 38
+    margin-left: -25
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-left: -25
+    @onClick: exibir()
+
+    $hover:
+      image-source: images/close_hover.png

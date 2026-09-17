@@ -1,0 +1,85 @@
+CountWindow < MainWindow
+  id: countWindow
+  image-source: images/window.png
+  size: 196 90
+
+  UIButton
+    id: titleTab
+    size: 130 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -38
+    margin-left: 3
+
+  Label
+    id: donateLabel
+    color: #cda953
+    text: Mover item
+    text-auto-resize: true
+    font: sans-bold-16px
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 37
+    margin-top: -29
+
+  SpinBox
+    id: spinBox
+    anchors.left: parent.left
+    anchors.top: parent.top
+    width: 1
+    height: 1
+    phantom: true
+    margin-top: 2
+    focusable: true
+    visible: false
+
+  Item
+    id: item
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 2
+    margin-left: -4
+    focusable: false
+    virtual: true
+
+  HorizontalScrollBar
+    id: countScrollBar
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.top: prev.top
+    margin-left: 10
+    margin-top: -2
+    focusable: false
+
+  UIButton
+    id: buttonCancel
+    size: 60 24
+    image-source: images/button.png
+    image-border: 20
+    !text: tr('Cancel')
+    anchors.left: countScrollBar.horizontalCenter
+    anchors.right: countScrollBar.right
+    anchors.top: countScrollBar.bottom
+    margin-top: 7
+    focusable: false
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonOk
+    size: 60 24
+    image-source: images/button.png
+    image-border: 20
+    !text: tr('Ok')
+    anchors.right: countScrollBar.horizontalCenter
+    anchors.left: countScrollBar.left
+    anchors.top: countScrollBar.bottom
+    margin-top: 7
+    margin-right: 6
+    focusable: false
+
+    $hover:
+      image-source: images/button_hover.png

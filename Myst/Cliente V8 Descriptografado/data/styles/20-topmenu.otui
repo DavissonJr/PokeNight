@@ -1,0 +1,25 @@
+TopButton < UIButton
+  size: 32 32
+
+TopToggleButton < UIButton
+  size: 32 32
+
+TopMenuButtonsPanel < Panel
+  layout:
+    type: horizontalBox
+    fit-children: true
+
+TopMenuPanel < UIButton
+  height: 37
+  focusable: false
+  color: alpha
+  background-color: alpha
+
+TopMenuFrameCounterLabel < Label
+  font: verdana-11px-rounded
+  color: white
+  margin-top: 4
+  margin-left: 5
+
+TopMenuPingLabel < Label
+  font: verdana-11px-rounded

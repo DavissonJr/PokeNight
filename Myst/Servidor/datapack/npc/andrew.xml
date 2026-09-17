@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Banco Itau" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="2124" head="91" body="102" legs="83" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Bem-vindo, |PLAYERNAME|! Infelizmente o Banco está em manutenção em breve voltamos!"/>
+<parameter key="message_alreadyfocused" value="Você está bêbado? Eu falo com você."/>
+<parameter key="message_farewell" value="Adeus. Eu quero ver seu dinheiro... ah, você de novo."/>
+</parameters>
+</npc>

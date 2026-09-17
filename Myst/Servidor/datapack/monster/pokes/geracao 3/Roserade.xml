@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Roserade" nameDescription="a Roserade" race="grass" experience="284" speed="124" manacost="0">
+  <health now="80" max="80"/>
+  <look type="3247" head="67" body="87" legs="95" feet="113" corpse="591"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+<flag passive="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="22"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="Razor Leaf" interval="2664" chance="30" range="4">
+        </attack>
+        <attack name="Slash" interval="2758" chance="30" range="1">
+        </attack>
+        <attack name="Acid" interval="2758" chance="30" range="3">
+        </attack>
+        <attack name="Vine Whip" interval="2899" chance="29" range="6">
+        </attack>
+        <attack name="Poison Bomb" interval="2852" chance="29" range="3">
+        </attack>
+        <attack name="melee" interval="5625" chance="18" range="6">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Roserade!"/>
+ </voices>
+
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

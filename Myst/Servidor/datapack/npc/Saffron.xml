@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Marcelo" script="datapack/npc/scripts/Saffron.lua" walkinterval="350000" floorchange="0" speed="0">
+          <health now="150" max="150"/>
+          <look type="108" head="114" body="12" legs="57" feet="114" addons="0" />
+	  <parameters>
+<parameter key="message_greet" value="Você quer ir para Saffron ? diga {quero}"/>
+        </parameters>
+
+       </npc>

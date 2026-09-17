@@ -1,0 +1,257 @@
+HeadlessWindow
+  id: pokedexWindow
+  size: 767 492
+  image-source: images/background
+  anchors.centerIn: parent
+
+  UIButton
+    id: informations
+    size: 336 31
+    image-source: images/info
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 32
+    margin-left: 283
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 20 21
+    image-source: images/close
+    anchors.left: parent.right
+    anchors.top: parent.top
+    margin-left: -64
+    margin-top: 457
+    @onClick: naoexibir()
+
+  Label
+    id: pokemonName
+    color: white
+    text: ???
+    text-auto-resize: true
+    font: sans-bold-16px
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 44
+    margin-left: 60
+
+  UICreature
+    id: pokemon
+    size: 82 92
+    fixed-creature-size: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 76
+    margin-left: 98
+
+  Label
+    id: pokemonNumber
+    color: white
+    text: #000
+    anchors.top: pokemonName.top
+    anchors.left: pokemonName.left
+    margin-top: 20
+
+  ScrollablePanel
+    id: pokemonsPanel
+    size: 199 115
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 325
+    margin-left: 34
+    layout:
+      type: grid
+      cell-size: 206 57
+      flow: false
+    vertical-scrollbar: verticalScrollBarPokemons
+
+    UIButton
+      id: informationsPokemon
+      size: 206 57
+      image-source: images/pokedex
+      @onClick: changeCategory("informations")
+
+    UIButton
+      id: habilitiesPokemon
+      size: 206 57
+      image-source: images/abilities
+      opacity: 0.60
+      @onClick: changeCategory("habilities")
+
+    UIButton
+      id: typesPokemon
+      size: 206 57
+      image-source: images/type
+      opacity: 0.60
+      @onClick: changeCategory("types")
+
+  GODzruVerticalScrollBar
+    id: verticalScrollBarPokemons
+    anchors.top: pokemonsPanel.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: -5
+    margin-bottom: 16
+    margin-right: 490
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0
+
+  ScrollablePanel
+    id: pokemonPanel
+    size: 439 348
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 280
+    margin-top: 80
+
+  UIButton
+    id: element1
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 50
+    margin-left: 220
+
+  UIButton
+    id: element2
+    size: 32 32
+    anchors.top: element1.top
+    anchors.left: element1.left
+    margin-top: 35
+    margin-left: 0
+
+  UICreature
+    id: evolve1
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 209
+    margin-left: 65
+    fixed-creature-size: true
+
+  UICreature
+    id: evolve2
+    size: 32 32
+    anchors.top: evolve1.top
+    anchors.left: evolve1.left
+    margin-top: 0
+    margin-left: 59
+    fixed-creature-size: true
+
+  UICreature
+    id: evolve3
+    size: 32 32
+    anchors.top: evolve2.top
+    anchors.left: evolve2.left
+    margin-top: 0
+    margin-left: 59
+    fixed-creature-size: true
+
+  UICreature
+    id: evolve4
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 265
+    margin-left: 65
+    fixed-creature-size: true
+
+  UICreature
+    id: evolve5
+    size: 32 32
+    anchors.top: evolve4.top
+    anchors.left: evolve4.left
+    margin-top: 0
+    margin-left: 59
+    fixed-creature-size: true
+
+  UICreature
+    id: evolve6
+    size: 32 32
+    anchors.top: evolve5.top
+    anchors.left: evolve5.left
+    margin-top: 0
+    margin-left: 59
+    fixed-creature-size: true
+
+  UIButton
+    id: habilitiesTab
+    size: 453 51
+    image-source: images/typebar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 75
+    margin-left: 280
+    visible: false
+
+  ScrollablePanel
+    id: habilitiesTabPanel
+    size: 447 311
+    anchors.top: habilitiesTab.top
+    anchors.left: habilitiesTab.left
+    margin-top: 47
+    margin-left: 2
+    visible: false
+    layout:
+      type: grid
+      cell-size: 447 44
+      flow: false
+    vertical-scrollbar: habilitiesScrollBar
+
+  GODzruVerticalScrollBar
+    id: habilitiesScrollBar
+    anchors.top: habilitiesTab.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: -5
+    margin-bottom: -5
+    margin-right: 10
+    visible: false
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0
+
+  Label
+    id: weakLabel
+    text: Weakness:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 80
+    margin-left: 297
+    visible: false
+
+  Panel
+    id: weakPanel
+    size: 367 35
+    anchors.top: weakLabel.top
+    anchors.left: weakLabel.left
+    margin-left: 70
+    layout:
+      type: grid
+      cell-size: 32 32
+      flow: true
+    visible: false
+
+  Label
+    id: superLabel
+    text: Super:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 297
+    visible: false
+
+  Panel
+    id: superPanel
+    size: 367 35
+    anchors.top: superLabel.top
+    anchors.left: superLabel.left
+    margin-left: 70
+    layout:
+      type: grid
+      cell-size: 32 32
+      flow: true
+    visible: false

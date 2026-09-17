@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Tropius" nameDescription="a Shiny tropius" race="grass" experience="0" speed="467" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1894" head="90" body="105" legs="95" feet="113" corpse="4294"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag passive="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-35" max="-60"/>  
+        <attack name="Quick Attack" interval="2852" chance="29" range="1"/>
+        <attack name="Razor Leaf" interval="2758" chance="30" range="4"/>
+        <attack name="Slash" interval="2993" chance="28" range="6"/>
+        <attack name="Vine Whip" interval="2711" chance="30" range="1"/>
+        <attack name="Headbutt" interval="3557" chance="25" range="4"/>
+        <attack name="Absorb" interval="4779" chance="17" range="6"/>
+        <attack name="Bullet Seed" interval="5766" chance="18" range="6"/>
+        <attack name="Solar Beam" interval="4497" chance="21" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="Trooo!"/>
+<voice sentence="PIUSS!"/>
+<voice sentence="TROPIUS!"/>
+  </voices>
+  <loot>
+        <item id="12163" chance="1000" countmax="50"/>
+        <item id="12155" chance="5000" count="1" countmax="1"/>
+        <item id="12153" chance="5000" count="1" countmax="1"/>
+						<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

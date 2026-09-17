@@ -1,0 +1,26 @@
+UIWindow
+  id: flyWindow
+  size: 180 468
+  anchors.centerIn: parent
+  focusable: false
+  draggable: false
+
+  UIButton
+    id: upButton
+    image-source: images/up.png
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 90
+    margin-left: 60
+    @onClick: g_game.talk("h1")
+
+  UIButton
+    id: downButton
+    image-source: images/down.png
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 280
+    margin-left: 60
+    @onClick: g_game.talk("h2")

@@ -1,0 +1,9 @@
+Module
+  name: game_addons
+  description: Sistema de Janela de Addons
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ addons ]
+  @onLoad: init()
+  @onUnload: terminate()

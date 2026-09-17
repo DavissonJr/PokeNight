@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Sammy" script="mark.lua" walkinterval="350000" floorchange="0" speed="0">
+<health now="150" max="150"/>
+<look type="606" head="91" body="114" legs="86" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá querido cliente! Você está aqui para ver minhas ofertas? Vamos, vamos diga {trade}!"/>
+<parameter key="message_farewell" value="Até mais!"/>
+<parameter key="message_idletimeout" value="Até mais!"/>
+<parameter key="message_walkaway" value="Até mais!"/>
+<parameter key="module_shop" value="1"/>
+<parameter key="shop_buyable" value="poke ball,2394,500;great ball,2391,2000;super ball,2393,5000;ultra ball,2392,12000;small potion,12347,400;great potion,12348,1000;ultra potion,12346,2200;hyper potion,12345,5000;medicine,12349,800;recording camera,12330,100000;red pokemon bag,12325,1000;white pokemon bag,12326,1000;yellow pokemon bag,12327,1000;green pokemon bag,12328,1000;blue pokemon bag,12329,1000;"/>
+<parameter key="shop_sellable" value="venom stone,11443,100000;earth stone,11451,100000;water stone,11442,100000;leaf stone,11441,100000;heart stone,11453,100000;thunder stone,11444,100000;coccon stone,11448,100000;rock stone,11445,100000;enigma stone,11452,100000;Darkness stone,11450,100000;crystal stone,11449,100000;punch stone,11446,100000;fire stone,11447,100000;essence of fire,12162,200;small stone,12337,90;pot of moss bug,12171,250;screw,12164,85;straw,2694,65;water gems,12161,20;remains of magikarp,12334,100;teeth,12175,100;bottle of poison,12165,100;water pendant,12170,800;feather,12200,500;seed,12163,25;pair of leaves,12155,500;apple bite,12173,450;blue vines,12341,1000;bat wing,12182,550;"/>
+</parameters>
+</npc>

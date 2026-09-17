@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Eelektross" nameDescription="a Eelektross" race="electric" experience="1000" speed="237" manacost="0">
+    <health now="130" max="130"/>
+    <look type="2849" head="55" body="80" legs="95" feet="113" corpse="21900"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Toxic" interval="2946" chance="29" range="1"/>
+        <attack name="Thunder Wave" interval="2993" chance="25" range="6"/>
+        <attack name="Spark" interval="2852" chance="29" range="2"/>
+        <attack name="Charge Beam" interval="3040" chance="20" range="2"/>
+        <attack name="Discharge" interval="3933" chance="22" range="4"/>
+        <attack name="Thunderbolt" interval="4309" chance="20" range="4"/>
+        <attack name="Zap Cannon" interval="4309" chance="25" range="6"/>
+        <attack name="Thunder Punch" interval="4309" chance="27" range="3"/>
+        <attack name="Thunder" interval="4309" chance="20" range="6"/>	
+    </attacks>
+    <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="Eelektroooss!"/>
+    </voices>
+    <loot>
+        <item id="12198" chance="4000" count="1" countmax="1"/> --imans
+        <item id="12164" chance="10000" countmax="80"/> --screw
+        <item id="12176" chance="4000" countmax="1"/> --electric box
+        <item id="11444" chance="150" count="1" countmax="1"/>
+        <item id="12169" chance="500" count="1" countmax="1"/>
+        <item id="12244" chance="70" count="1" countmax="1"/> --ancient stone
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Claydol" nameDescription="a Shiny Claydol" race="psychic" experience="876" speed="117" manacost="0">
+  <health now="120" max="120"/>
+  <look type="2167" head="80" body="100" legs="95" feet="113" corpse="12753"/>
+  <targetchange interval="0" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="5"/>
+ <flag staticattack="100"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="20"/>
+</flags>
+
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+       
+		<attack name="Slash" interval="2505" chance="29" range="1"/>
+        <attack name="Mud Shot" interval="2805" chance="29" range="3"/>
+        <attack name="Mud Slap" interval="2805" chance="22" range="3"/>
+        <attack name="Earthshock" interval="3087" chance="28" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Claydol!"/>
+    </voices>
+    <loot>
+        <item id="12337" chance="10000" countmax="50"/>
+        <item id="12177" chance="4000" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

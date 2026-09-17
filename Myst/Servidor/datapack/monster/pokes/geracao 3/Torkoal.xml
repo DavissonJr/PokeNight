@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Torkoal" nameDescription="a Torkoal" race="fire" experience="536" speed="164" manacost="0">
+  <health now="140" max="140"/>
+  <look type="1754" head="55" body="70" legs="95" feet="113" corpse="12724"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="19"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="Quick Attack" interval="2570" chance="31" range="2">
+        </attack>
+        <attack name="Ember" interval="2664" chance="30" range="3">
+        </attack>
+        <attack name="Stomp" interval="2805" chance="29" range="1">
+        </attack>
+        <attack name="Headbutt" interval="2805" chance="29" range="1">
+        </attack>
+        <attack name="Fireball" interval="2946" chance="28" range="4">
+        </attack>
+        <attack name="Flamethrower" interval="3416" chance="26" range="6">
+        </attack>
+        <attack name="Horn Attack" interval="2899" chance="29" range="1">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Torkoal!"/>
+ </voices>
+
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

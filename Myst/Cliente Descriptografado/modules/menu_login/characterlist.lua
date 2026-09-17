@@ -1,0 +1,490 @@
+CharacterList = {}
+
+-- private variables
+local charactersWindow
+local loadBox
+local characterList
+local errorBox
+local waitingWindow
+local updateWaitEvent
+local resendWaitEvent
+local loginEvent
+local outfitCreatureBox
+
+-- private functions
+local function tryLogin(charInfo, tries)
+    tries = tries or 1
+
+    if tries > 50 then
+        return
+    end
+
+    if g_game.isOnline() then
+        if tries == 1 then
+            g_game.safeLogout()
+			if loginEvent then
+				removeEvent(loginEvent)
+				loginEvent = nil
+			end
+        end
+        loginEvent = scheduleEvent(function()
+            tryLogin(charInfo, tries + 1)
+        end, 100)
+        return
+    end
+
+    hide()
+
+    g_game.loginWorld(G.account, G.password, charInfo.worldName, charInfo.worldHost, charInfo.worldPort,
+                      charInfo.characterName, G.authenticatorToken, G.sessionKey)
+
+    loadBox = displayCancelBox(tr('Please wait'), tr('Connecting to game server...'))
+    connect(loadBox, {
+        onCancel = function()
+            loadBox = nil
+            g_game.cancelLogin()
+            show()
+        end
+    })
+
+    -- save last used character
+    g_settings.set('last-used-character', charInfo.characterName)
+    g_settings.set('last-used-world', charInfo.worldName)
+end
+
+local function updateWait(timeStart, timeEnd)
+    if waitingWindow then
+        local time = g_clock.seconds()
+        if time <= timeEnd then
+            local percent = ((time - timeStart) / (timeEnd - timeStart)) * 100
+            local timeStr = string.format('%.0f', timeEnd - time)
+
+            local progressBar = waitingWindow:getChildById('progressBar')
+            progressBar:setPercent(percent)
+
+            local label = waitingWindow:getChildById('timeLabel')
+            label:setText(tr('Trying to reconnect in %s seconds.', timeStr))
+
+            updateWaitEvent = scheduleEvent(function()
+                updateWait(timeStart, timeEnd)
+            end, 1000 * progressBar:getPercentPixels() / 100 * (timeEnd - timeStart))
+            return true
+        end
+    end
+
+    if updateWaitEvent then
+        updateWaitEvent:cancel()
+        updateWaitEvent = nil
+    end
+end
+
+local function resendWait()
+    if waitingWindow then
+        waitingWindow:destroy()
+        waitingWindow = nil
+
+        if updateWaitEvent then
+            updateWaitEvent:cancel()
+            updateWaitEvent = nil
+        end
+
+        if charactersWindow then
+            local selected = characterList:getFocusedChild()
+            if selected then
+                local charInfo = {
+                    worldHost = selected.worldHost,
+                    worldPort = selected.worldPort,
+                    worldName = selected.worldName,
+                    characterName = selected.characterName,
+                    characterLevel = selected.characterLevel,
+                    main = selected.main,
+                    dailyreward = selected.dailyreward,
+                    hidden = selected.hidden,
+                    outfitid = selected.outfitid,
+                    headcolor = selected.headcolor,
+                    torsocolor = selected.torsocolor,
+                    legscolor = selected.legscolor,
+                    detailcolor = selected.detailcolor,
+                    addonsflags = selected.addonsflags,
+                    characterVocation = selected.characterVocation
+                }
+                tryLogin(charInfo)
+            end
+        end
+    end
+end
+
+local function onLoginWait(message, time)
+    destroyLoadBox()
+
+    waitingWindow = g_ui.displayUI('waitinglist')
+
+    local label = waitingWindow:getChildById('infoLabel')
+    label:setText(message)
+
+    updateWaitEvent = scheduleEvent(function()
+        updateWait(g_clock.seconds(), g_clock.seconds() + time)
+    end, 0)
+    resendWaitEvent = scheduleEvent(resendWait, time * 1000)
+end
+
+function onGameLoginError(message)
+    destroyLoadBox()
+    errorBox = displayErrorBox(tr('Error'), message)
+    errorBox.onOk = function()
+        errorBox = nil
+        showAgain()
+    end
+end
+
+function onGameSessionEnd(reason)
+    destroyLoadBox()
+    showAgain()
+end
+
+function onGameConnectionError(message, code)
+    destroyLoadBox()
+    local text = translateNetworkError(code, g_game.getProtocolGame() and g_game.getProtocolGame():isConnecting(),
+                                       message)
+    errorBox = displayErrorBox(tr('Error'), text)
+    errorBox.onOk = function()
+        errorBox = nil
+        showAgain()
+    end
+end
+
+function onGameUpdateNeeded(signature)
+    destroyLoadBox()
+    errorBox = displayErrorBox(tr('Update needed'), tr('Enter with your account again to update your client.'))
+    errorBox.onOk = function()
+        errorBox = nil
+        showAgain()
+    end
+end
+
+-- public functions
+function init()
+    connect(g_game, {
+        onLoginError = onGameLoginError
+    })
+    connect(g_game, {
+        onSessionEnd = onGameSessionEnd
+    })
+    connect(g_game, {
+        onUpdateNeeded = onGameUpdateNeeded
+    })
+    connect(g_game, {
+        onConnectionError = onGameConnectionError
+    })
+    connect(g_game, {
+        onGameStart = destroyLoadBox
+    })
+    connect(g_game, {
+        onLoginWait = onLoginWait
+    })
+    connect(g_game, {
+        onGameEnd = showAgain
+    })
+
+    if G.characters then
+        create(G.characters, G.characterAccount)
+    end
+end
+
+function terminate()
+    disconnect(g_game, {
+        onLoginError = onGameLoginError
+    })
+    disconnect(g_game, {
+        onSessionEnd = onGameSessionEnd
+    })
+    disconnect(g_game, {
+        onUpdateNeeded = onGameUpdateNeeded
+    })
+    disconnect(g_game, {
+        onConnectionError = onGameConnectionError
+    })
+    disconnect(g_game, {
+        onGameStart = destroyLoadBox
+    })
+    disconnect(g_game, {
+        onLoginWait = onLoginWait
+    })
+    disconnect(g_game, {
+        onGameEnd = showAgain
+    })
+
+    if charactersWindow then
+        characterList = nil
+        charactersWindow:destroy()
+        charactersWindow = nil
+    end
+
+    if loadBox then
+        g_game.cancelLogin()
+        loadBox:destroy()
+        loadBox = nil
+    end
+
+    if waitingWindow then
+        waitingWindow:destroy()
+        waitingWindow = nil
+    end
+
+    if updateWaitEvent then
+        removeEvent(updateWaitEvent)
+        updateWaitEvent = nil
+    end
+
+    if resendWaitEvent then
+        removeEvent(resendWaitEvent)
+        resendWaitEvent = nil
+    end
+
+    if loginEvent then
+        removeEvent(loginEvent)
+        loginEvent = nil
+    end
+
+    CharacterList = nil
+end
+
+function create(characters, account, otui)
+    if not otui then
+        otui = 'characterlist'
+    end
+
+    if charactersWindow then
+        charactersWindow:destroy()
+    end
+
+    charactersWindow = g_ui.displayUI(otui)
+    characterList = charactersWindow:getChildById('characters')
+
+    -- characters
+    G.characters = characters
+    G.characterAccount = account
+
+    characterList:destroyChildren()
+    local accountStatusLabel = charactersWindow:getChildById('accountStatusLabel')
+    local accountStatusIcon = nil
+    if g_game.getFeature(GameEnterGameShowAppearance) then
+        accountStatusIcon = charactersWindow:getChildById('accountStatusIcon')
+    end
+
+    local focusLabel
+    for i, characterInfo in ipairs(characters) do
+        local widget = g_ui.createWidget('CharacterWidget', characterList)
+        for key, value in pairs(characterInfo) do
+            local subWidget = widget:getChildById(key)
+            if subWidget then
+                if key == 'outfit' then -- it's an exception
+                    subWidget:setOutfit(value)
+                else
+                    local text = value
+                    if subWidget.baseText and subWidget.baseTranslate then
+                        text = tr(subWidget.baseText, text)
+                    elseif subWidget.baseText then
+                        text = string.format(subWidget.baseText, text)
+                    end
+                    subWidget:setText(text)
+                end
+            end
+        end
+
+        if g_game.getFeature(GameEnterGameShowAppearance) then
+            local creatureDisplay = widget:getChildById('outfitCreatureBox', characterList)
+            creatureDisplay:setSize("64 64")
+            local creature = Creature.create()
+            local outfit = {type = characterInfo.outfitid, head = characterInfo.headcolor, body = characterInfo.torsocolor, legs = characterInfo.legscolor, feet = characterInfo.detailcolor, addons = characterInfo.addonsflags}
+            creature:setOutfit(outfit)
+            creature:setDirection(2)
+            creatureDisplay:setCreature(creature)
+
+            local mainCharacter = widget:getChildById('mainCharacter', characterList)
+            if characterInfo.main then
+                mainCharacter:setImageSource('/images/game/entergame/maincharacter')
+            else
+                mainCharacter:setImageSource('')
+            end
+
+            local statusDailyReward = widget:getChildById('statusDailyReward', characterList)
+            if characterInfo.dailyreward == 0 then
+                statusDailyReward:setImageSource('/images/game/entergame/dailyreward_collected')
+            else
+                statusDailyReward:setImageSource('/images/game/entergame/dailyreward_notcollected')
+            end
+
+            local statusHidden = widget:getChildById('statusHidden', characterList)
+            if characterInfo.hidden then
+                statusHidden:setImageSource('/images/game/entergame/hidden')
+            else
+                statusHidden:setImageSource('')
+            end
+        end
+
+        -- these are used by login
+        widget.characterName = characterInfo.name
+        widget.worldName = characterInfo.worldName
+        widget.worldHost = characterInfo.worldIp
+        widget.worldPort = characterInfo.worldPort
+
+        connect(widget, {
+            onDoubleClick = function()
+                doLogin()
+                return true
+            end
+        })
+
+        if i == 1 or
+            (g_settings.get('last-used-character') == widget.characterName and g_settings.get('last-used-world') ==
+                widget.worldName) then
+            focusLabel = widget
+        end
+    end
+
+    if focusLabel then
+        characterList:focusChild(focusLabel, KeyboardFocusReason)
+        addEvent(function()
+            characterList:ensureChildVisible(focusLabel)
+        end)
+    end
+
+    -- account
+    local status = ''
+    if account.status == AccountStatus.Frozen then
+        status = tr(' (Frozen)')
+    elseif account.status == AccountStatus.Suspended then
+        status = tr(' (Suspended)')
+    end
+
+    if account.subStatus == SubscriptionStatus.Free then
+        accountStatusLabel:setText(('%s%s'):format(tr('Conta Grátis'), status))
+        if accountStatusIcon ~= nil then
+            accountStatusIcon:setImageSource('/images/game/entergame/nopremium')
+        end
+    elseif account.subStatus == SubscriptionStatus.Premium then
+        if account.premDays == 0 or account.premDays == 65535 then
+            accountStatusLabel:setText(('%s%s'):format(tr('Gratis Premium Account'), status))
+        else
+            accountStatusLabel:setText(('%s%s'):format(tr('(%s) dias de vip restando', account.premDays), status))
+        end
+        if accountStatusIcon ~= nil then
+            accountStatusIcon:setImageSource('/images/game/entergame/premium')
+        end
+    end
+
+    if account.premDays > 0 and account.premDays <= 7 then
+        accountStatusLabel:setOn(true)
+    else
+        accountStatusLabel:setOn(false)
+    end
+end
+
+function destroy()
+    hide(true)
+
+    if charactersWindow then
+        characterList = nil
+        charactersWindow:destroy()
+        charactersWindow = nil
+    end
+end
+
+function show()
+    if loadBox or errorBox or not charactersWindow then
+        return
+    end
+    charactersWindow:show()
+    charactersWindow:raise()
+    charactersWindow:focus()
+end
+
+function hide(showLogin)
+    showLogin = showLogin or false
+    charactersWindow:hide()
+
+    if showLogin and EnterGame and not g_game.isOnline() then
+        EnterGame.show()
+    end
+end
+
+function showAgain()
+    if characterList and characterList:hasChildren() then
+        show()
+    end
+end
+
+function isVisible()
+    if charactersWindow and charactersWindow:isVisible() then
+        return true
+    end
+    return false
+end
+
+function doLogin()
+    local selected = characterList:getFocusedChild()
+    if selected then
+        local charInfo = {
+            worldHost = selected.worldHost,
+            worldPort = selected.worldPort,
+            worldName = selected.worldName,
+            characterName = selected.characterName
+        }
+        charactersWindow:hide()
+        if loginEvent then
+            removeEvent(loginEvent)
+            loginEvent = nil
+        end
+        tryLogin(charInfo)
+    else
+        displayErrorBox(tr('Error'), tr('You must select a character to login!'))
+    end
+end
+
+function CharacterList.doLogin()
+    local selected = characterList:getFocusedChild()
+    if selected then
+        local charInfo = {
+            worldHost = selected.worldHost,
+            worldPort = selected.worldPort,
+            worldName = selected.worldName,
+            characterName = selected.characterName
+        }
+        charactersWindow:hide()
+        if loginEvent then
+            removeEvent(loginEvent)
+            loginEvent = nil
+        end
+        tryLogin(charInfo)
+    else
+        displayErrorBox(tr('Error'), tr('You must select a character to login!'))
+    end
+end
+
+function destroyLoadBox()
+    if loadBox then
+        loadBox:destroy()
+        loadBox = nil
+    end
+end
+
+function cancelWait()
+    if waitingWindow then
+        waitingWindow:destroy()
+        waitingWindow = nil
+    end
+
+    if updateWaitEvent then
+        removeEvent(updateWaitEvent)
+        updateWaitEvent = nil
+    end
+
+    if resendWaitEvent then
+        removeEvent(resendWaitEvent)
+        resendWaitEvent = nil
+    end
+
+    destroyLoadBox()
+    showAgain()
+end

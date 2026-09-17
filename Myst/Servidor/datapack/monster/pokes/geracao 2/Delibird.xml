@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Delibird" nameDescription="a delibird" race="ice" experience="0" speed="196" manacost="0">
+  <health now="40" max="40"/>
+  <look type="937" head="42" body="57" legs="95" feet="113" corpse="3282"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-83"/>
+		<attack name="Quick Attack" interval="2852" chance="29" range="1"/>
+		<attack name="Ice Beam" interval="3040" chance="28" range="5"/>
+		<attack name="Ice Shards" interval="2758" chance="30" range="4"/>
+		<attack name="Icy Wind" interval="2852" chance="29" range="6"/>
+		<attack name="Whirlwind" interval="3275" chance="26" range="6"/>
+		<attack name="Drill Peck" interval="3322" chance="26" range="1"/>
+  </attacks>
+  <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="DELII!"/>
+<voice sentence="BIIRD!"/>
+<voice sentence="DELIBIRD!"/>
+  </voices>
+  <loot>
+
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

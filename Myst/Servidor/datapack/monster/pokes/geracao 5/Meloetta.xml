@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Meloetta" nameDescription="a Meloetta" race="normal" experience="650" speed="217" manacost="0">
+    <health now="140" max="140"/>
+    <look type="2901" head="45" body="70" legs="95" feet="113" corpse="21988"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag passive="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Sing" interval="2617" chance="80" range="6"/>
+        <attack name="Confusion" interval="2899" chance="80" range="7"/>
+        <attack name="Psybeam" interval="2946" chance="80" range="6"/>
+        <attack name="Echoed Voice" interval="4134" chance="80" range="8"/>
+        <attack name="Psychic" interval="5120" chance="80" range="7"/>
+        <attack name="Hyper Voice" interval="5120" chance="80" range="6"/>
+        <attack name="Last Resort" interval="5120" chance="80" range="7"/>
+        <attack name="Psyshock" interval="5120" chance="80" range="8"/>
+        <attack name="Light Screen" interval="5120" chance="80" range="6"/>
+        <attack name="Dazzling Gleam" interval="5120" chance="80" range="7"/>
+        <attack name="Calm Mind" interval="5120" chance="80" range="8"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Meloettaaa!"/>
+    </voices>
+    <loot>
+        <item id="11453" chance="150" count="1" countmax="1"/> --heart stone
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

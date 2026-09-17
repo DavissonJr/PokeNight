@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Quagsire" nameDescription="a quagsire" race="water" experience="0" speed="168" manacost="0">
+  <health now="40" max="40"/>
+  <look type="29" head="34" body="57" legs="95" feet="113" corpse="4425"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-28" max="-44"/>
+        <attack name="Mud Shot" interval="2570" chance="31" range="3"/>
+        <attack name="Water Pulse" interval="2805" chance="29" range="3"/>
+        <attack name="Water Gun" interval="5202" chance="19" range="6"/>
+        <attack name="Body Slam" interval="2946" chance="28" range="1"/>
+        <attack name="Waterball" interval="2993" chance="28" range="6"/>
+		<attack name="Earthshock" interval="2993" chance="28" range="6"/>
+		<attack name="Shockwave" interval="3193" chance="28" range="6"/>
+   </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="QUAAG!"/>
+<voice sentence="SIIRE!"/>
+<voice sentence="QUAGSIRE!"/>
+  </voices>
+  <loot>
+	<item id="12161" countmax="100" chance="100000"/> -- water gem
+	<item id="12170" countmax="4" chance="50000"/> -- water pendant
+	<item id="11442" countmax="1" chance="3500"/> -- water stone
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

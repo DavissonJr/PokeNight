@@ -1,0 +1,12 @@
+Menu < UIWidget
+  id: menu
+  size: 186 66
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 3
+  margin-left: 12
+  draggable: false
+  
+Exit < UIButton
+  id: exit
+  image-source: images/exit

@@ -1,0 +1,9 @@
+Module
+  name: game_rewards
+  description: Recompensa Diaria
+  author: Thalles Vitor
+  website: www.pokediamond.com.br
+  sandboxed: true
+  scripts: [ rewards ]
+  @onLoad: init()
+  @onUnload: terminate()

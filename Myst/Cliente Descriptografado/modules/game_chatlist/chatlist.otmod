@@ -1,0 +1,9 @@
+Module
+  name: game_chatlist
+  description: Mostrar a Lista de Chats
+  author: Thalles Vitor
+  website: www.thallesdev.com
+  scripts: [ chatlist ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

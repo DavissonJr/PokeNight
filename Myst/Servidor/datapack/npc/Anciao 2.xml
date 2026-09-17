@@ -1,0 +1,9 @@
+
+<npc name="Struip Guardian" script="script2.lua" walkinterval="0" floorchange="0" speed="0">
+    <health now="150" max="150"/>
+    <look type="1031" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+    <parameters>
+<parameter key="message_greet" value="Olá Treinador, Eu posso te ajudar a encontrar o grande poder da Ilha do Elemento do trovão, me Entregue {400x imam}, para completar o {ritual}! Você tem esses Items?"/>
+    </parameters>
+
+</npc>

@@ -1,0 +1,59 @@
+Panel
+  margin-top: -8
+  OptionCheckBox
+    id: classicControl
+    text: Controle Clássico
+
+  OptionCheckBox
+    id: autoChaseOverride
+    text: Permitir substituição de perseguição automática
+
+  OptionCheckBox
+    id: moveStack
+    text: Mover stacks diretamente
+
+  OptionCheckBox
+    id: movePokemon
+    text: Perguntar antes de derrubar uma pokébola
+
+  OptionCheckBox
+    id: smartWalk
+    text: Ativar a caminhada inteligente
+    tooltip: Detectará quando usar o passo diagonal com base nas teclas\nque você está pressionando
+
+  OptionCheckBox
+    id: showMoveBar
+    text: Mostrar Barra de Ataques
+
+  OptionCheckBox
+    id: showItemMove
+    text: Mostrar no cursor o item quando movido
+
+  OptionCheckBox
+    id: displayNames
+    text: Exibir nomes de criaturas
+
+  OptionCheckBox
+    id: displayHealth
+    text: Exibir barras de vida das criaturas
+
+  OptionCheckBox
+    id: displayText
+    text: Exibir mensagens de texto
+
+  OptionCheckBox
+    id: disableColors
+    text: Desativar cores do nome do pokemon
+
+  OptionCheckBox
+    id: shopQuestion
+    text: Não perguntar ao comprar no Shop
+
+  OptionCheckBox
+    id: hideActionBar
+    text: Exibir a Action Bar
+
+  OptionCheckBox
+    id: emblemas
+    tooltip: Emblemas como: VIP, Level 666, Etc.
+    text: Não exibir emblemas

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Matheus" script="sex.lua" walkinterval="0" floorchange="0">
+<health now="150" max="150"/>
+<look type="507" head="20" body="100" legs="50" feet="99" corpse="2212"/>
+<parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME|. quer trocar de sexo virar um traveco?, diga {sex change}"/>
+        </parameters>
+</npc>

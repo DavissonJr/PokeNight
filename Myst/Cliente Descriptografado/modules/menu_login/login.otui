@@ -1,0 +1,240 @@
+EnterGameWindow < UIButton
+  image-source: images/window
+  size: 372 314
+
+ServerListButton < UIButton
+  size: 17 17
+  image-source: //images/topbuttons/minimap
+  image-color: #ffffffff
+
+  $hover !disabled:
+    image-color: #ffffff99
+
+  $pressed:
+    image-color: #ffffff44
+
+  $disabled:
+    image-color: #ffffff55
+
+EnterGameWindow
+  id: enterGame
+  anchors.centerIn: parent
+  focusable: true
+
+  UIButton
+    id: account
+    text-offset: -112 -19
+    text: Nome da Conta
+    font: sans-bold-16px
+    color: #e5be5e
+    size: 343 33
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 86
+    margin-left: 20
+    draggable: false
+
+  UIButton
+    id: password
+    text-offset: -140 -21
+    text: Senha
+    font: sans-bold-16px
+    color: #e5be5e
+    size: 343 33
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 144
+    margin-left: 14
+    draggable: false
+
+  PasswordTextEdit
+    id: accountNameTextEdit
+    size: 196 26
+    color: black
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 95
+    margin-left: 19
+    margin-right: 15
+    focusable: true
+
+  PasswordTextEdit
+    id: accountPasswordTextEdit
+    size: 196 26
+    color: black
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 149
+    margin-left: 19
+    margin-right: 15
+    text-hidden: true
+    focusable: true
+
+  UIButton
+    id: entrar
+    color: white
+    text-offset: -6 -3
+    text: Entrar
+    image-source: images/btn_loggin.png
+    size: 129 40
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 299
+    margin-left: 129
+    @onClick: EnterGame.doLogin()
+
+    $hover:
+      image-source: images/btn_loggin_hover.png
+
+  EnterGameCheckBox
+    id: lembrarSenha
+    tooltip: Lembrar conta e senha quando iniciar o cliente
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 190
+    margin-left: 20
+    @onCheckChange: self:getParent():getChildById('entrarAutomac'):setEnabled(self:isChecked())
+
+  Label
+    id: lembrarSenhaText
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: Lembrar Senha
+    color: #e5be5e
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 190
+    margin-left: 44
+
+  EnterGameCheckBox
+    id: entrarAutomac
+    enabled: false
+    tooltip: Abrir lista de personagens ao iniciar o cliente
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 221
+    margin-left: 20
+
+  Label
+    id: entrarAutomacText
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: Entrar automaticamente
+    color: #e5be5e
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 221
+    margin-left: 44
+
+  MenuLabel
+    id: authenticatorTokenLabel
+    !text: tr('Authenticator Token')
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    text-auto-resize: true
+    margin-top: -12
+    visible: false
+
+    $on:
+      visible: true
+      margin-top: 8
+
+  TextEdit
+    id: authenticatorTokenTextEdit
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: -22
+    visible: false
+    max-length: 8
+
+    $on:
+      visible: true
+      margin-top: 2
+
+  CheckBox
+    id: stayLoggedBox
+    !text: tr('Stay logged during session')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 6
+    margin-top: -16
+    visible: false
+
+    $on:
+      visible: true
+      margin-top: 8
+
+  MenuLabel
+    id: serverLabel
+    !text: tr('Server')
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    margin-top: 8
+    text-auto-resize: true
+
+  ServerListButton
+    id: serverListButton
+    !tooltip: tr('Server list')
+    anchors.right: parent.right
+    anchors.top: serverLabel.bottom
+    margin-top: 3
+    @onClick: ServerList.show()
+
+  TextEdit
+    id: serverHostTextEdit
+    !tooltip: tr('Make sure that your client uses\nthe correct game client version')
+    anchors.left: parent.left
+    anchors.right: serverListButton.left
+    anchors.top: serverLabel.bottom
+    margin-top: 2
+    margin-right: 4
+
+  MenuLabel
+    id: clientLabel
+    !text: tr('Client Version')
+    anchors.left: parent.left
+    anchors.top: serverHostTextEdit.bottom
+    text-auto-resize: true
+    margin-right: 10
+    margin-top: 8
+
+  ComboBox
+    id: clientComboBox
+    anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
+    anchors.top: clientLabel.bottom
+    margin-top: 2
+    margin-right: 3
+    width: 90
+    menu-scroll: true
+    menu-height: 125
+    menu-scroll-step: 25
+
+  MenuLabel
+    id: portLabel
+    !text: tr('Port')
+    anchors.left: serverPortTextEdit.left
+    anchors.top: serverHostTextEdit.bottom
+    margin-top: 8
+    text-auto-resize: true
+
+  TextEdit
+    id: serverPortTextEdit
+    text: 7171
+    anchors.right: parent.right
+    anchors.left: parent.horizontalCenter
+    anchors.top: clientComboBox.top
+    margin-left: 3
+
+  Label
+    id: serverInfoLabel
+    font: verdana-11px-rounded
+    anchors.top: prev.top
+    anchors.left: parent.left
+    margin-top: 5
+    color: green
+    text-auto-resize: true

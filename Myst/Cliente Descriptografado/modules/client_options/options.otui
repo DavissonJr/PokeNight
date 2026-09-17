@@ -1,0 +1,78 @@
+OptionCheckBox < CheckBox
+  font: sans-bold-16px
+  @onCheckChange: modules.client_options.setOption(self:getId(), self:isChecked())
+  height: 16
+  text-offset: 22 2
+
+  $first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+
+  $!first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 7
+
+OptionScrollbar < HorizontalScrollBar
+  step: 1
+  @onValueChange: modules.client_options.setOption(self:getId(), self:getValue())
+
+HeadlessWindow
+  id: optionsWindow
+  image-source: /images/ui/window
+  size: 542 382
+  anchors.centerIn: parent
+
+  @onEnter: modules.client_options.hide()
+  @onEscape: modules.client_options.hide()
+
+  UIButton
+    id: titleTab
+    color: #cda953
+    text: Opções
+    font: sans-bold-16px
+    size: 212 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    margin-top: -170
+    anchors.centerIn: parent
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-left: -25
+    @onClick: modules.client_options.hide()
+
+    $hover:
+      image-source: images/close_hover.png
+
+  TabBarVertical
+    id: optionsTabBar
+    size: 92 334
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 25
+    margin-left: 8
+
+  Panel
+    id: optionsTabContent
+    anchors.top: optionsTabBar.top
+    anchors.left: optionsTabBar.right
+    anchors.right: parent.right
+    anchors.bottom: optionsTabBar.bottom
+    margin-left: 14
+    margin-top: 15
+
+  Button
+    !text: tr('Ok')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.client_options.hide()
+    visible: false

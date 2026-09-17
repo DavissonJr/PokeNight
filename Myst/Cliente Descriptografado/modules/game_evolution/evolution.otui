@@ -1,0 +1,89 @@
+HeadlessWindow
+  id: evolutionWindow
+  size: 483 226
+  image-source: images/window.png
+  anchors.centerIn: parent
+
+  UIButton
+    id: titleTab
+    color: #cda953
+    text: Evoluir
+    font: sans-bold-16px
+    size: 212 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    margin-top: -90
+    anchors.centerIn: parent
+
+  Label
+    id: evolveText
+    color: #cda953
+    text-auto-resize: true
+    text-align: center
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 100
+
+  Item
+    id: portrait1
+    size: 35 35
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 80
+    margin-left: 170
+
+  Item
+    id: portrait2
+    size: 35 35
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 80
+    margin-left: 260
+
+  UIButton
+    id: arrow
+    size: 32 32
+    image-source: images/arrow.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 81
+    margin-left: 218
+
+  UIButton
+    id: confirmEvolve
+    color: white
+    size: 86 22
+    text: Confirmar
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 190
+    margin-left: 135
+
+    $hover:
+      image-source: images/button_hover
+
+  UIButton
+    id: cancel
+    color: white
+    size: 86 22
+    text: Cancelar
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 190
+    margin-left: 242
+    @onClick: naoexibir()
+
+    $hover:
+      image-source: images/button_hover
+
+  Label
+    id: needText
+    color: #d1ad55
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 150
+    margin-left: 145
+    text-auto-resize: true

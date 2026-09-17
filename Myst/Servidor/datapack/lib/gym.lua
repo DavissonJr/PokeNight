@@ -1,0 +1,9 @@
+gymbadges = {
+["Brock"] = 12252,
+["Misty"] = 12253,
+["Surge"] = 12254,
+["Erika"] = 12255,
+["Sabrina"] = 12256,
+["Koga"] = 12257,
+["Blaine"] = 12258,
+["Kira"] = 12259}   --alterado v1.5

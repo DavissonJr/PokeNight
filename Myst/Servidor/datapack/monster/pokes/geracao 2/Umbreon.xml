@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Umbreon" nameDescription="an umbreon" race="dark" experience="0" speed="175" manacost="0">
+  <health now="40" max="40"/>
+  <look type="920" head="42" body="57" legs="95" feet="113" corpse="4567"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-78" max="-124"/>
+        <attack name="Quick Attack" interval="2852" chance="29" range="1"/>
+        <attack name="Shadow Ball" interval="2758" chance="26" range="4"/>
+        <attack name="Bite" interval="2993" chance="28" range="6"/>
+        <attack name="Night Shade" interval="2711" chance="24" range="6"/>
+        <attack name="Iron Tail" interval="3087" chance="28" range="5"/>
+        <attack name="Hypnosis" interval="3557" chance="25" range="4"/>
+        <attack name="Fear" interval="4779" chance="17" range="6"/>
+        <attack name="Nightmare" interval="5766" chance="18" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="UUMBRE!"/>
+<voice sentence="BREOON!"/>
+<voice sentence="UMBREON!"/>
+  </voices>
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

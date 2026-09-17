@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups>
+	<group id="1" name="Player"/>
+
+	<group id="20" name="Player" flags="32768"/>
+	<group id="19" name="Player" flags="32768"/>
+	<group id="18" name="Player" flags="32768"/>
+
+
+
+	<group id="3" name="Help" flags="68736352256" customFlags="14" access="2" violationReasons="10" nameViolationFlags="2" statementViolationFlags="63" maxVips="200"/>
+
+	<group id="4" name="Tutor" flags="68736352256" customFlags="14" access="2" violationReasons="10" nameViolationFlags="2" statementViolationFlags="63" maxVips="200"/>
+
+	<group id="5" name="GameMaster" flags="3840774348794" customFlags="562911" access="5" violationReasons="19" nameViolationFlags="10" statementViolationFlags="69" depotLimit="3000" maxVips="300"/>
+
+	<group id="6" name="God" flags="338646913753080" customFlags="91805663" access="6" violationReasons="23" nameViolationFlags="426" statementViolationFlags="469" depotLimit="5000" maxVips="500"/>
+
+	<group id="8" name="Pokemon" flags="8304" customFlags="8192" violationReasons="4" nameViolationFlags="2"/>
+
+	<group id="11" name="Watching TV" flags="13196790358799" customFlags="0"/>
+</groups>

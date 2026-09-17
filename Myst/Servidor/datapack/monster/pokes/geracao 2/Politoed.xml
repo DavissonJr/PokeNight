@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Politoed" nameDescription="a politoed" race="water" experience="696" speed="130" manacost="0">
+    <health now="190" max="190"/>
+  <look type="901" head="60" body="80" legs="95" feet="113" corpse="4422"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+ <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Doubleslap" interval="2476" chance="31" range="1"/>
+        <attack name="Bubbles" interval="2570" chance="31" range="3"/>
+        <attack name="Water Gun" interval="2758" chance="30" range="6"/>
+        <attack name="Dizzy Punch" interval="4664" chance="30" range="1"/>
+		<attack name="Mega Punch" interval="2564" chance="30" range="1"/>
+		<attack name="Bubblebeam" interval="2764" chance="20" range="3"/>
+		<attack name="Ice Beam" interval="3164" chance="30" range="4"/>
+        <attack name="Hypnosis" interval="4920" chance="20" range="3"/>
+		<attack name="Mud Shot" interval="3920" chance="20" range="3"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="POLII!"/>
+<voice sentence="TOEED!"/>
+<voice sentence="POLITOED!"/>
+  </voices>
+  <loot>
+        <item id="12161" chance="4000" countmax="50"/>
+        <item id="12170" chance="4000" count="1" countmax="1"/>
+        <item id="11442" chance="50" count="1" countmax="1"/>
+        <item id="11446" chance="50" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

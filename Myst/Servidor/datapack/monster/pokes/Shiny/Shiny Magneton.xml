@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Magneton" nameDescription="a shiny magneton" race="electric" experience="356" speed="165" manacost="0">
+    <health now="130" max="130"/>
+    <look type="1494" head="35" body="55" legs="95" feet="113" corpse="12599"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="2"/>
+        <flag staticattack="100"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="0"/>
+    </flags>
+    <attacks>
+        <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">
+            <attribute key="shootEffect" value="eartharrow"/>
+        </attack>
+        <attack name="Thunder Shock" interval="2664" chance="30" range="5"/>
+        <attack name="Thunder Wave" interval="2852" chance="29" range="6"/>
+        <attack name="Super Sonic" interval="4625" chance="18" range="5"/>
+        <attack name="Thunder Bolt" interval="2993" chance="28" range="5"/>
+        <attack name="Sonicboom" interval="3040" chance="28" range="5"/>
+        <attack name="Electric Storm" interval="4128" chance="27" range="6"/>
+        <attack name="Thunder" interval="4033" chance="22" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="MAGNETON!"/>
+    </voices>
+    <loot>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

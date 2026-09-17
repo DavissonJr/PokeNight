@@ -1,0 +1,9 @@
+Module
+  name: game_pix
+  description: Pix do Jogo
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ pix ]
+  @onLoad: init()
+  @onUnload: terminate()

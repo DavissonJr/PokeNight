@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spells>
+
+	<instant name="Quick Attack" words="spell000" lvl="1000" mana="0" event="script" value="ps/Quick Attack.lua"></instant>
+	<instant name="Razor Leaf" words="spell001" lvl="1000" mana="0" event="script" value="ps/Razor Leaf.lua"></instant>
+	<instant name="Vine Whip" words="spell002" lvl="1000" mana="0" event="script" value="ps/Vine Whip.lua"></instant>
+	<instant name="Headbutt" words="spell003" lvl="1000" mana="0" event="script" value="ps/Headbutt.lua"></instant>
+	<instant name="Leech Seed" words="spell004" lvl="1000" mana="0" event="script" value="ps/Leech Seed.lua"></instant>
+	<instant name="Solar Beam" words="spell005" lvl="1000" mana="0" event="script" value="ps/Solar Beam.lua"></instant>
+	<instant name="Sleep Powder" words="spell006" lvl="1000" mana="0" event="script" value="ps/Sleep Powder.lua"></instant>
+	<instant name="Stun Spore" words="spell007" lvl="1000" mana="0" event="script" value="ps/Stun Spore.lua"></instant>
+	<instant name="Poison Powder" words="spell008" lvl="1000" mana="0" event="script" value="ps/Poison Powder.lua"></instant>
+	<instant name="Bullet Seed" words="spell009" lvl="1000" mana="0" event="script" value="ps/Bullet Seed.lua"></instant>
+	<instant name="Body Slam" words="spell010" lvl="1000" mana="0" event="script" value="ps/Body Slam.lua"></instant>
+	<instant name="Leaf Storm" words="spell011" lvl="1000" mana="0" event="script" value="ps/Leaf Storm.lua"></instant>
+	<instant name="Scratch" words="spell012" lvl="1000" mana="0" event="script" value="ps/Scratch.lua"></instant>
+	<instant name="Ember" words="spell013" lvl="1000" mana="0" event="script" value="ps/Ember.lua"></instant>
+	<instant name="Flamethrower" words="spell014" lvl="1000" mana="0" event="script" value="ps/Flamethrower.lua"></instant>
+	<instant name="Fireball" words="spell015" lvl="1000" mana="0" event="script" value="ps/Fireball.lua"></instant>
+	<instant name="Fire Fang" words="spell016" lvl="1000" mana="0" event="script" value="ps/Fire Fang.lua"></instant>
+	<instant name="Fire Blast" words="spell017" lvl="1000" mana="0" event="script" value="ps/Fire Blast.lua"></instant>
+	<instant name="Rage" words="spell018" lvl="1000" mana="0" event="script" value="ps/Rage.lua"></instant>
+	<instant name="Raging Blast" words="spell019" lvl="1000" mana="0" event="script" value="ps/Raging Blast.lua"></instant>
+	<instant name="Dragon Claw" words="spell020" lvl="1000" mana="0" event="script" value="ps/Dragon Claw.lua"></instant>
+	<instant name="Wing Attack" words="spell021" lvl="1000" mana="0" event="script" value="ps/Wing Attack.lua"></instant>
+	<instant name="Magma Storm" words="spell022" lvl="1000" mana="0" event="script" value="ps/Magma Storm.lua"></instant>
+	<instant name="Bubbles" words="spell023" lvl="1000" mana="0" event="script" value="ps/Bubbles.lua"></instant>
+	<instant name="Water Gun" words="spell024" lvl="1000" mana="0" event="script" value="ps/Water Gun.lua"></instant>
+	<instant name="Waterball" words="spell025" lvl="1000" mana="0" event="script" value="ps/Waterball.lua"></instant>
+	<instant name="Aqua Tail" words="spell026" lvl="1000" mana="0" event="script" value="ps/Aqua Tail.lua"></instant>
+	<instant name="Hydro Cannon" words="spell027" lvl="1000" mana="0" event="script" value="ps/Hydro Cannon.lua"></instant>
+	<instant name="Harden" words="spell028" lvl="1000" mana="0" event="script" value="ps/Harden.lua"></instant>
+	<instant name="Calm Mind" words="spell029" lvl="1000" mana="0" event="script" value="ps/Calm Mind.lua"></instant>
+	<instant name="Bubble Blast" words="spell030" lvl="1000" mana="0" event="script" value="ps/Bubble Blast.lua"></instant>
+	<instant name="Skull Bash" words="spell0031" lvl="1000" mana="0" event="script" value="ps/Skull Bash.lua"></instant>
+	<instant name="Hydropump" words="spell0032" lvl="1000" mana="0" event="script" value="ps/Hydropump.lua"></instant>
+	<instant name="String Shot" words="spell033" lvl="1000" mana="0" event="script" value="ps/String Shot.lua"></instant>
+	<instant name="Bug Bite" words="spell034" lvl="1000" mana="0" event="script" value="ps/Bug Bite.lua"></instant>
+	<instant name="Super Sonic" words="spell035" lvl="1000" mana="0" event="script" value="ps/Super Sonic.lua"></instant>
+	<instant name="Psybeam" words="spell036" lvl="1000" mana="0" event="script" value="ps/Psybeam.lua"></instant>
+	<instant name="Confusion" words="spell037" lvl="1000" mana="0" event="script" value="ps/Confusion.lua"></instant>
+	<instant name="Horn Attack" words="spell038" lvl="1000" mana="0" event="script" value="ps/Horn Attack.lua"></instant>
+	<instant name="Poison Sting" words="spell039" lvl="1000" mana="0" event="script" value="ps/Poison Sting.lua"></instant>
+	<instant name="Fury Cutter" words="spell040" lvl="1000" mana="0" event="script" value="ps/Fury Cutter.lua"></instant>
+	<instant name="Pin Missile" words="spell041" lvl="1000" mana="0" event="script" value="ps/Pin Missile.lua"></instant>
+	<instant name="Strafe" words="spell042" lvl="1000" mana="0" event="script" value="ps/Strafe.lua"></instant>
+	<instant name="Agility" words="spell043" lvl="1000" mana="0" event="script" value="ps/Agility.lua"></instant>
+	<instant name="Furia do Dragao" words="spell044" lvl="1000" mana="0" event="script" value="ps/Furia do Dragao.lua"></instant>
+	<instant name="Gust" words="spell045" lvl="1000" mana="0" event="script" value="ps/Gust.lua"></instant>
+	<instant name="Whirlwind" words="spell046" lvl="1000" mana="0" event="script" value="ps/Whirlwind.lua"></instant>
+	<instant name="Drill Peck" words="spell047" lvl="1000" mana="0" event="script" value="ps/Drill Peck.lua"></instant>
+	<instant name="Tornado" words="spell048" lvl="1000" mana="0" event="script" value="ps/Tornado.lua"></instant>
+	<instant name="Bite" words="spell049" lvl="1000" mana="0" event="script" value="ps/Bite.lua"></instant>
+	<instant name="Super Fang" words="spell050" lvl="1000" mana="0" event="script" value="ps/Super Fang.lua"></instant>
+	<instant name="Poison Fang" words="spell051" lvl="1000" mana="0" event="script" value="ps/Poison Fang.lua"></instant>
+	<instant name="Sting Gun" words="spell052" lvl="1000" mana="0" event="script" value="ps/Sting Gun.lua"></instant>
+	<instant name="Acid" words="spell053" lvl="1000" mana="0" event="script" value="ps/Acid.lua"></instant>
+	<instant name="Fear" words="spell054" lvl="1000" mana="0" event="script" value="ps/Fear.lua"></instant>
+	<instant name="Roar" words="spell055" lvl="1000" mana="0" event="script" value="ps/Roar.lua"></instant>
+	<instant name="Iron Tail" words="spell056" lvl="1000" mana="0" event="script" value="ps/Iron Tail.lua"></instant>
+	<instant name="Thunder Shock" words="spell057" lvl="1000" mana="0" event="script" value="ps/Thunder Shock.lua"></instant>
+	<instant name="Thunder Bolt" words="spell058" lvl="1000" mana="0" event="script" value="ps/Thunder Bolt.lua"></instant>
+	<instant name="Thunder Wave" words="spell059" lvl="1000" mana="0" event="script" value="ps/Thunder Wave.lua"></instant>
+	<instant name="Thunder" words="spell060" lvl="1000" mana="0" event="script" value="ps/Thunder.lua"></instant>
+	<instant name="Mega Kick" words="spell061" lvl="1000" mana="0" event="script" value="ps/Mega Kick.lua"></instant>
+	<instant name="Thunder Punch" words="spell062" lvl="1000" mana="0" event="script" value="ps/Thunder Punch.lua"></instant>
+	<instant name="Electric Storm" words="spell063" lvl="1000" mana="0" event="script" value="ps/Electric Storm.lua"></instant>
+	<instant name="Mud Shot" words="spell064" lvl="1000" mana="0" event="script" value="ps/Mud Shot.lua"></instant>
+	<instant name="Mud Slap" words="spell065" lvl="1000" mana="0" event="script" value="ps/Mud Slap.lua"></instant>
+	<instant name="Rollout" words="spell066" lvl="1000" mana="0" event="script" value="ps/Rollout.lua"></instant>
+	<instant name="Shockwave" words="spell067" lvl="1000" mana="0" event="script" value="ps/Shockwave.lua"></instant>
+	<instant name="Earthshock" words="spell068" lvl="1000" mana="0" event="script" value="ps/Earthshock.lua"></instant>
+	<instant name="Earthquake" words="spell069" lvl="1000" mana="0" event="script" value="ps/Earthquake.lua"></instant>
+	<instant name="Stomp" words="spell070" lvl="1000" mana="0" event="script" value="ps/Stomp.lua"></instant>
+	<instant name="Toxic Spikes" words="spell071" lvl="1000" mana="0" event="script" value="ps/Toxic Spikes.lua"></instant>
+	<instant name="Horn Drill" words="spell072" lvl="1000" mana="0" event="script" value="ps/Horn Drill.lua"></instant>
+	<instant name="Doubleslap" words="spell073" lvl="1000" mana="0" event="script" value="ps/Doubleslap.lua"></instant>
+	<instant name="Lovely Kiss" words="spell074" lvl="1000" mana="0" event="script" value="ps/Lovely Kiss.lua"></instant>
+	<instant name="Sing" words="spell075" lvl="1000" mana="0" event="script" value="ps/Sing.lua"></instant>
+	<instant name="Selfheal" words="spell076" lvl="1000" mana="0" event="script" value="ps/Selfheal.lua"></instant>
+	<instant name="Restore" words="spell077" lvl="1000" mana="0" event="script" value="ps/Restore.lua"></instant>
+	<instant name="Multislap" words="spell078" lvl="1000" mana="0" event="script" value="ps/Multislap.lua"></instant>
+	<instant name="Metronome" words="spell079" lvl="1000" mana="0" event="script" value="ps/Metronome.lua"></instant>
+	<instant name="Focus" words="spell080" lvl="1000" mana="0" event="script" value="ps/Focus.lua"></instant>
+	<instant name="Flame Wheel" words="spell081" lvl="1000" mana="0" event="script" value="ps/Flame Wheel.lua"></instant>
+	<instant name="Hyper Voice" words="spell082" lvl="1000" mana="0" event="script" value="ps/Hyper Voice.lua"></instant>
+	<instant name="Healarea" words="spell083" lvl="1000" mana="0" event="script" value="ps/Healarea.lua"></instant>
+	<instant name="Toxic" words="spell084" lvl="1000" mana="0" event="script" value="ps/Toxic.lua"></instant>
+	<instant name="Absorb" words="spell085" lvl="1000" mana="0" event="script" value="ps/Absorb.lua"></instant>
+	<instant name="Poison Bomb" words="spell086" lvl="1000" mana="0" event="script" value="ps/Poison Bomb.lua"></instant>
+	<instant name="Poison Gas" words="spell087" lvl="1000" mana="0" event="script" value="ps/Poison Gas.lua"></instant>
+	<instant name="Petal Dance" words="spell088" lvl="1000" mana="0" event="script" value="ps/Petal Dance.lua"></instant>
+	<instant name="Slash" words="spell089" lvl="1000" mana="0" event="script" value="ps/Slash.lua"></instant>
+	<instant name="X-Scissor" words="spell090" lvl="1000" mana="0" event="script" value="ps/X-Scissor.lua"></instant>
+	<instant name="Psychic" words="spell091" lvl="1000" mana="0" event="script" value="ps/Psychic.lua"></instant>
+	<instant name="Pay Day" words="spell092" lvl="1000" mana="0" event="script" value="ps/Pay Day.lua"></instant>
+	<instant name="Psywave" words="spell093" lvl="1000" mana="0" event="script" value="ps/Psywave.lua"></instant>
+	<instant name="Triple Kick" words="spell094" lvl="1000" mana="0" event="script" value="ps/Triple Kick.lua"></instant>
+	<instant name="Triple Kick Lee" words="spell095" lvl="1000" mana="0" event="script" value="ps/Triple Kick Lee.lua"></instant>
+	<instant name="Karate Chop" words="spell096" lvl="1000" mana="0" event="script" value="ps/Karate Chop.lua"></instant>
+	<instant name="Cross Chop" words="spell097" lvl="1000" mana="0" event="script" value="ps/Cross Chop.lua"></instant>
+	<instant name="Mega Punch" words="spell098" lvl="1000" mana="0" event="script" value="ps/Mega Punch.lua"></instant>
+	<instant name="Tri Flames" words="spell099" lvl="1000" mana="0" event="script" value="ps/Tri Flames.lua"></instant>
+	<instant name="War Dog" words="spell100" lvl="1000" mana="0" event="script" value="ps/War Dog.lua"></instant>
+	<instant name="Hypnosis" words="spell101" lvl="1000" mana="0" event="script" value="ps/Hypnosis.lua"></instant>
+	<instant name="Dizzy Punch" words="spell102" lvl="1000" mana="0" event="script" value="ps/Dizzy Punch.lua"></instant>
+	<instant name="Ice Punch" words="spell103" lvl="1000" mana="0" event="script" value="ps/Ice Punch.lua"></instant>
+	<instant name="Ice Beam" words="spell104" lvl="1000" mana="0" event="script" value="ps/Ice Beam.lua"></instant>
+	<instant name="Psy Pulse" words="spell105" lvl="1000" mana="0" event="script" value="ps/Psy Pulse.lua"></instant>
+	<instant name="Reflect" words="spell106" lvl="1000" mana="0" event="script" value="ps/Reflect.lua"></instant>
+	<instant name="Psyusion" words="spell107" lvl="1000" mana="0" event="script" value="ps/Psyusion.lua"></instant>
+	<instant name="Triple Punch" words="spell108" lvl="1000" mana="0" event="script" value="ps/Triple Punch.lua"></instant>
+	<instant name="Fist Machine" words="spell109" lvl="1000" mana="0" event="script" value="ps/Fist Machine.lua"></instant>
+	<instant name="Destroyer Hand" words="spell110" lvl="1000" mana="0" event="script" value="ps/Destroyer Hand.lua"></instant>
+	<instant name="Rock Throw" words="spell111" lvl="1000" mana="0" event="script" value="ps/Rock Throw.lua"></instant>
+	<instant name="Rock Slide" words="spell112" lvl="1000" mana="0" event="script" value="ps/Rock Slide.lua"></instant>
+	<instant name="Falling Rocks" words="spell113" lvl="1000" mana="0" event="script" value="ps/Falling Rocks.lua"></instant>
+	<instant name="Selfdestruct" words="spell114" lvl="1000" mana="0" event="script" value="ps/Selfdestruct.lua"></instant>
+	<instant name="Crusher Stomp" words="spell115" lvl="1000" mana="0" event="script" value="ps/Crusher Stomp.lua"></instant>
+	<instant name="Water Pulse" words="spell116" lvl="1000" mana="0" event="script" value="ps/Water Pulse.lua"></instant>
+	<instant name="Sonicboom" words="spell117" lvl="1000" mana="0" event="script" value="ps/Sonicboom.lua"></instant>
+	<instant name="Stickmerang" words="spell118" lvl="1000" mana="0" event="script" value="ps/Stickmerang.lua"></instant>
+	<instant name="Stickslash" words="spell119" lvl="1000" mana="0" event="script" value="ps/Stickslash.lua"></instant>
+	<instant name="Pluck" words="spell120" lvl="1000" mana="0" event="script" value="ps/Pluck.lua"></instant>
+	<instant name="Tri-Attack" words="spell121" lvl="1000" mana="0" event="script" value="ps/Tri-Attack.lua"></instant>
+	<instant name="Ice Shards" words="spell122" lvl="1000" mana="0" event="script" value="ps/Ice Shards.lua"></instant>
+	<instant name="Icy Wind" words="spell123" lvl="1000" mana="0" event="script" value="ps/Icy Wind.lua"></instant>
+	<instant name="Aurora Beam" words="spell124" lvl="1000" mana="0" event="script" value="ps/Aurora Beam.lua"></instant>
+	<instant name="Rest" words="spell125" lvl="1000" mana="0" event="script" value="ps/Rest.lua"></instant>
+	<instant name="Sludge" words="spell126" lvl="1000" mana="0" event="script" value="ps/Sludge.lua"></instant>
+	<instant name="Sludge Rain" words="spell127" lvl="1000" mana="0" event="script" value="ps/Sludge Rain.lua"></instant>
+	<instant name="Mud Bomb" words="spell128" lvl="1000" mana="0" event="script" value="ps/Mud Bomb.lua"></instant>
+	<instant name="Mortal Gas" words="spell129" lvl="1000" mana="0" event="script" value="ps/Mortal Gas.lua"></instant>
+	<instant name="Egg Bomb" words="spell131" lvl="1000" mana="0" event="script" value="ps/Egg Bomb.lua"></instant>
+	<instant name="Super Vines" words="spell132" lvl="1000" mana="0" event="script" value="ps/Super Vines.lua"></instant>
+	<instant name="Epicenter" words="spell133" lvl="1000" mana="0" event="script" value="ps/Epicenter.lua"></instant>
+	<instant name="Bubblebeam" words="spell134" lvl="1000" mana="0" event="script" value="ps/Bubblebeam.lua"></instant>
+	<instant name="Mimic Wall" words="spell135" lvl="1000" mana="0" event="script" value="ps/Mimic Wall.lua"></instant>
+	<instant name="Swift" words="spell136" lvl="1000" mana="0" event="script" value="ps/Swift.lua"></instant>
+	<instant name="Shredder Team" words="spell137" lvl="1000" mana="0" event="script" value="ps/Shredder Team.lua"></instant>
+	<instant name="Team Slice" words="spell138" lvl="1000" mana="0" event="script" value="ps/Team Slice.lua"></instant>
+	<instant name="Blizzard" words="spell139" lvl="1000" mana="0" event="script" value="ps/Blizzard.lua"></instant>
+	<instant name="Great Love" words="spell140" lvl="1000" mana="0" event="script" value="ps/Great Love.lua"></instant>
+	<instant name="Fire Punch" words="spell141" lvl="1000" mana="0" event="script" value="ps/Fire Punch.lua"></instant>
+	<instant name="Guillotine" words="spell142" lvl="1000" mana="0" event="script" value="ps/Guillotine.lua"></instant>
+	<instant name="Hyper Beam" words="spell143" lvl="1000" mana="0" event="script" value="ps/Hyper Beam.lua"></instant>
+	<instant name="Thrash" words="spell144" lvl="1000" mana="0" event="script" value="ps/Thrash.lua"></instant>
+	<instant name="Splash" words="spell145" lvl="1000" mana="0" event="script" value="ps/Splash.lua"></instant>
+	<instant name="Dragon Breath" words="spell146" lvl="1000" mana="0" event="script" value="ps/Dragon Breath.lua"></instant>
+	<instant name="Muddy Water" words="spell147" lvl="1000" mana="0" event="script" value="ps/Muddy Water.lua"></instant>
+	<instant name="Venom Motion" words="spell148" lvl="1000" mana="0" event="script" value="ps/Venom Motion.lua"></instant>
+	<instant name="Thunder Fang" words="spell149" lvl="1000" mana="0" event="script" value="ps/Thunder Fang.lua"></instant>
+	<instant name="Sacred Fire" words="spell150" lvl="1000" mana="0" event="script" value="ps/Sacred Fire.lua"></instant>
+	<instant name="Blaze Kick" words="spell160" lvl="1000" mana="0" event="script" value="ps/Blaze Kick.lua"></instant>
+	<instant name="Overheat" words="spell161" lvl="1000" mana="0" event="script" value="ps/Overheat.lua"></instant>
+	<instant name="Cyber Pulse" words="spell162" lvl="1000" mana="0" event="script" value="ps/Cyber Pulse.lua"></instant>
+	<instant name="Zap Cannon" words="spell163" lvl="1000" mana="0" event="script" value="ps/Zap Cannon.lua"></instant>
+	<instant name="Magic Coat" words="spell164" lvl="1000" mana="0" event="script" value="ps/Magic Coat.lua"></instant>
+	<instant name="Ancient Power" words="spell165" lvl="1000" mana="0" event="script" value="ps/Ancient Power.lua"></instant>
+	<instant name="Twister" words="spell166" lvl="1000" mana="0" event="script" value="ps/Twister.lua"></instant>
+	<instant name="Multi-Kick" words="spell167" lvl="1000" mana="0" event="script" value="ps/Multi-Kick.lua"></instant>
+	<instant name="Multi-Punch" words="spell168" lvl="1000" mana="0" event="script" value="ps/Multi-Punch.lua"></instant>
+	<instant name="Squisky Licking" words="spell169" lvl="1000" mana="0" event="script" value="ps/Squisky Licking.lua"></instant>
+	<instant name="Lick" words="spell170" lvl="10000" mana="0" event="script" value="ps/Lick.lua"></instant>
+	<instant name="Bonemerang" words="spell171" lvl="1000" mana="0" event="script" value="ps/Bonemerang.lua"></instant>
+	<instant name="Bone Club" words="spell172" lvl="1000" mana="0" event="script" value="ps/Bone Club.lua"></instant>
+	<instant name="Bone Slash" words="spell173" lvl="1000" mana="0" event="script" value="ps/Bone Slash.lua"></instant>
+	<instant name="Furious Legs" words="spell174" lvl="1000" mana="0" event="script" value="ps/Furious Legs.lua"></instant>
+	<instant name="Ultimate Champion" words="spell175" lvl="1000" mana="0" event="script" value="ps/Ultimate Champion.lua"></instant>
+	<instant name="Shadow Ball" words="spell176" lvl="1000" mana="0" event="script" value="ps/Shadow Ball.lua"></instant>
+	<instant name="Shadow Punch" words="spell177" lvl="1000" mana="0" event="script" value="ps/Shadow Punch.lua"></instant>
+	<instant name="Shadow Storm" words="spell178" lvl="1000" mana="0" event="script" value="ps/Shadow Storm.lua"></instant>
+	<instant name="InvisibleGhost" words="spell179" lvl="1000" mana="0" event="script" value="ps/InvisibleGhost.lua"></instant>
+	<instant name="Nightmare" words="spell180" lvl="1000" mana="0" event="script" value="ps/Nightmare.lua"></instant>
+	<instant name="Night Shade" words="spell181" lvl="1000" mana="0" event="script" value="ps/Night Shade.lua"></instant>
+	<instant name="Dream Eater" words="spell182" lvl="1000" mana="0" event="script" value="ps/Dream Eater.lua"></instant>
+	<instant name="Dark Eye" words="spell183" lvl="1000" mana="0" event="script" value="ps/Dark Eye.lua"></instant>
+	<instant name="Crabhammer" words="spell184" lvl="1000" mana="0" event="script" value="ps/Crabhammer.lua"></instant>
+	<instant name="Ancient Fury" words="spell185" lvl="1000" mana="0" event="script" value="ps/Ancient Fury.lua"></instant>
+	<instant name="Divine Punishment" words="spell186" lvl="1000" mana="0" event="script" value="ps/Divine Punishment.lua"></instant>
+	<instant name="Ground Chop" words="spell187" lvl="1000" mana="0" event="script" value="ps/Ground Chop.lua"></instant>
+	<instant name="Stick Throw" words="spell188" lvl="1000" mana="0" event="script" value="ps/Stick Throw.lua"></instant>
+	<instant name="Clamp" words="spell189" lvl="1000" mana="0" event="script" value="ps/Clamp.lua"></instant>
+	<instant name="Spark" words="spell190" lvl="1000" mana="0" event="script" value="ps/Spark.lua"></instant>
+	<instant name="Charge Beam" words="spell191" lvl="1000" mana="0" event="script" value="ps/Charge Beam.lua"></instant>
+	<instant name="Fury Attack" words="spell192" lvl="1000" mana="0" event="script" value="ps/Fury Attack.lua"></instant>
+
+    <instant name="Acid Armor" words="spell193" lvl="1000" mana="0" event="script" value="ps/Acid Armor.lua"></instant>
+	<instant name="Air Cutter" words="spell194" lvl="1000" mana="0" event="script" value="ps/Air Cutter.lua"></instant>
+	<instant name="Air Slash" words="spell195" lvl="1000" mana="0" event="script" value="ps/Air Slash.lua"></instant>
+	<instant name="Aromateraphy" words="spell196" lvl="1000" mana="0" event="script" value="ps/Aromateraphy.lua"></instant>
+	<instant name="Assurance" words="spell197" lvl="1000" mana="0" event="script" value="ps/Assurance.lua"></instant>
+	<instant name="Bug Fighter" words="spell198" lvl="1000" mana="0" event="script" value="ps/Bug Fighter.lua"></instant>
+	<instant name="Camuflage" words="spell199" lvl="1000" mana="0" event="script" value="ps/Camuflage.lua"></instant>
+	<instant name="Charge" words="spell200" lvl="1000" mana="0" event="script" value="ps/Charge.lua"></instant>
+	<instant name="Charm" words="spell201" lvl="1000" mana="0" event="script" value="ps/Charm.lua"></instant>
+	<instant name="Confuse Ray" words="spell202" lvl="1000" mana="0" event="script" value="ps/Confuse Ray.lua"></instant>
+	<instant name="Cotton Spore" words="spell203" lvl="1000" mana="0" event="script" value="ps/Cotton Spore.lua"></instant>
+	<instant name="Crunch" words="spell204" lvl="1000" mana="0" event="script" value="ps/Crunch.lua"></instant>
+	<instant name="Defense Curl" words="spell205" lvl="1000" mana="0" event="script" value="ps/Defense Curl.lua"></instant>
+	<instant name="Double Team" words="spell206" lvl="1000" mana="0" event="script" value="ps/Double Team.lua"></instant>
+	<instant name="Draco Meteor" words="spell207" lvl="1000" mana="0" event="script" value="ps/Draco Meteor.lua"></instant>
+	<instant name="Dragon Pulse" words="spell208" lvl="1000" mana="0" event="script" value="ps/Dragon Pulse.lua"></instant>
+	<instant name="Egg Rain" words="spell209" lvl="1000" mana="0" event="script" value="ps/Egg Rain.lua"></instant>
+	<instant name="Elecball" words="spell210" lvl="1000" mana="0" event="script" value="ps/Elecball.lua"></instant>
+	<instant name="Emergency Call" words="spell211" lvl="1000" mana="0" event="script" value="ps/Emergency Call.lua"></instant>
+	<instant name="Eruption" words="spell212" lvl="1000" mana="0" event="script" value="ps/Eruption.lua"></instant>
+	<instant name="ExtremeSpeed" words="spell213" lvl="1000" mana="0" event="script" value="ps/ExtremeSpeed.lua"></instant>
+	<instant name="Faint Attack" words="spell214" lvl="1000" mana="0" event="script" value="ps/Faint Attack.lua"></instant>
+	<instant name="Feather Dance" words="spell215" lvl="1000" mana="0" event="script" value="ps/Feather Dance.lua"></instant>
+	<instant name="Fighter Spirit" words="spell216" lvl="1000" mana="0" event="script" value="ps/Fighter Spirit.lua"></instant>
+	<instant name="Future Sight" words="spell217" lvl="1000" mana="0" event="script" value="ps/Future Sight.lua"></instant>
+	<instant name="Giga Drain" words="spell218" lvl="1000" mana="0" event="script" value="ps/Giga Drain.lua"></instant>
+	<instant name="Hurricane" words="spell219" lvl="1000" mana="0" event="script" value="ps/Hurricane.lua"></instant>
+	<instant name="Ice Fang" words="spell220" lvl="1000" mana="0" event="script" value="ps/Ice Fang.lua"></instant>
+	<instant name="Iron Defense" words="spell221" lvl="1000" mana="0" event="script" value="ps/Iron Defense.lua"></instant>
+	<instant name="Leaf Blade" words="spell222" lvl="1000" mana="0" event="script" value="ps/Leaf Blade.lua"></instant>
+	<instant name="Magical Leaf" words="spell223" lvl="1000" mana="0" event="script" value="ps/Magical Leaf.lua"></instant>
+	<instant name="Megahorn" words="spell224" lvl="1000" mana="0" event="script" value="ps/Megahorn.lua"></instant>
+	<instant name="Metal Claw" words="spell225" lvl="1000" mana="0" event="script" value="ps/Metal Claw.lua"></instant>
+	<instant name="Meteor Smash" words="spell226" lvl="1000" mana="0" event="script" value="ps/Meteor Smash.lua"></instant>
+	<instant name="Minimize" words="spell227" lvl="1000" mana="0" event="script" value="ps/Minimize.lua"></instant>
+	<instant name="Miracle Eye" words="spell228" lvl="1000" mana="0" event="script" value="ps/Miracle Eye.lua"></instant>
+	<instant name="Night Daze" words="spell229" lvl="1000" mana="0" event="script" value="ps/Night Daze.lua"></instant>
+	<instant name="Octazooka" words="spell230" lvl="1000" mana="0" event="script" value="ps/Octazooka.lua"></instant>
+	<instant name="Peck" words="spell231" lvl="1000" mana="0" event="script" value="ps/Peck.lua"></instant>
+	<instant name="Power Gem" words="spell232" lvl="1000" mana="0" event="script" value="ps/Power Gem.lua"></instant>
+	<instant name="Psy Ball" words="spell233" lvl="1000" mana="0" event="script" value="ps/Psy Ball.lua"></instant>
+	<instant name="Psyshock" words="spell234" lvl="1000" mana="0" event="script" value="ps/Psyshock.lua"></instant>
+	<instant name="Pursuit" words="spell235" lvl="1000" mana="0" event="script" value="ps/Pursuit.lua"></instant>
+	<instant name="Red Fury" words="spell236" lvl="1000" mana="0" event="script" value="ps/Red Fury.lua"></instant>
+	<instant name="Rock Blast" words="spell237" lvl="1000" mana="0" event="script" value="ps/Rock Blast.lua"></instant>
+	<instant name="Roost" words="spell238" lvl="1000" mana="0" event="script" value="ps/Roost.lua"></instant>
+	<instant name="Safeguard" words="spell239" lvl="1000" mana="0" event="script" value="ps/Safeguard.lua"></instant>
+	<instant name="Scary Face" words="spell240" lvl="1000" mana="0" event="script" value="ps/Scary Face.lua"></instant>
+	<instant name="Shadowave" words="spell241" lvl="1000" mana="0" event="script" value="ps/Shadowave.lua"></instant>
+	<instant name="SmokeScreen" words="spell242" lvl="1000" mana="0" event="script" value="ps/SmokeScreen.lua"></instant>
+	<instant name="Steel Wing" words="spell243" lvl="1000" mana="0" event="script" value="ps/Steel Wing.lua"></instant>
+	<instant name="Stone Edge" words="spell244" lvl="1000" mana="0" event="script" value="ps/Stone Edge.lua"></instant>
+	<instant name="Sunny Day" words="spell245" lvl="1000" mana="0" event="script" value="ps/Sunny Day.lua"></instant>
+	<instant name="Surf" words="spell246" lvl="1000" mana="0" event="script" value="ps/Surf.lua"></instant>
+	<instant name="Swords Dance" words="spell247" lvl="1000" mana="0" event="script" value="ps/Swords Dance.lua"></instant>
+	<instant name="Synthesis" words="spell248" lvl="1000" mana="0" event="script" value="ps/Synthesis.lua"></instant>
+	<instant name="Tackle" words="spell249" lvl="1000" mana="0" event="script" value="ps/Tackle.lua"></instant>
+	<instant name="Tailwind" words="spell250" lvl="1000" mana="0" event="script" value="ps/Tailwind.lua"></instant>
+	<instant name="Take Down" words="spell251" lvl="1000" mana="0" event="script" value="ps/Take Down.lua"></instant>
+	<instant name="Team Claw" words="spell252" lvl="1000" mana="0" event="script" value="ps/Team Claw.lua"></instant>
+	<instant name="Tongue Grap" words="spell253" lvl="1000" mana="0" event="script" value="ps/Tongue Grap.lua"></instant>
+	<instant name="Tongue Hook" words="spell254" lvl="1000" mana="0" event="script" value="ps/Tongue Hook.lua"></instant>
+	<instant name="U-Turn" words="spell255" lvl="1000" mana="0" event="script" value="ps/U-Turn.lua"></instant>
+	<instant name="Venom Gale" words="spell256" lvl="1000" mana="0" event="script" value="ps/Venom Gale.lua"></instant>
+	<instant name="Yawn" words="spell257" lvl="1000" mana="0" event="script" value="ps/Yawn.lua"></instant>
+	<instant name="Rock Drill" words="spell258" lvl="1000" mana="0" event="script" value="ps/Rock Drill.lua"></instant>
+
+	<instant name="Sucker Punch" words="spell259" lvl="1000" mana="0" event="script" value="ps/Sucker Punch.lua"></instant>
+	<instant name="Present" words="spell260" lvl="1000" mana="0" event="script" value="ps/Present.lua"></instant>
+	<instant name="Low Kick" words="spell261" lvl="1000" mana="0" event="script" value="ps/Low Kick.lua"></instant>
+	<instant name="Struggle Bug" words="spell262" lvl="1000" mana="0" event="script" value="ps/Struggle Bug.lua"></instant>
+	<instant name="Shell Attack" words="spell263" lvl="1000" mana="0" event="script" value="ps/Shell Attack.lua"></instant>
+	<instant name="Inferno" words="spell264" lvl="1000" mana="0" event="script" value="ps/Inferno.lua"></instant>
+	<instant name="Fissure" words="spell265" lvl="1000" mana="0" event="script" value="ps/Fissure.lua"></instant>
+	<instant name="Wrap" words="spell266" lvl="1000" mana="0" event="script" value="ps/Wrap.lua"></instant>
+	<instant name="Rock n'Roll" words="spell267" lvl="1000" mana="0" event="script" value="ps/Rock n'Roll.lua"></instant>
+	<instant name="Power Wave" words="spell268" lvl="1000" mana="0" event="script" value="ps/Power Wave.lua"></instant>
+	<instant name="Psy Impact" words="spell269" lvl="1000" mana="0" event="script" value="ps/Psy Impact.lua"></instant>
+	<instant name="Ground Crusher" words="spell270" lvl="1000" mana="0" event="script" value="ps/Ground Crusher.lua"></instant>
+	<instant name="Last Resort" words="spell271" lvl="1000" mana="0" event="script" value="ps/Last Resort.lua"></instant>
+	<instant name="Two Face Shock" words="spell272" lvl="1000" mana="0" event="script" value="ps/Two Face Shock.lua"></instant>
+	<instant name="Aerial Ace" words="spell273" lvl="1000" mana="0" event="script" value="ps/Aerial Ace.lua"></instant>
+	<instant name="Echoed Voice" words="spell274" lvl="1000" mana="0" event="script" value="ps/Echoed Voice.lua"></instant>
+	<instant name="Electro Field" words="spell275" lvl="1000" mana="0" event="script" value="ps/Electro Field.lua"></instant>
+	<instant name="Petal Tornado" words="spell276" lvl="1000" mana="0" event="script" value="ps/Petal Tornado.lua"></instant>
+	<instant name="Seed Bomb" words="spell277" lvl="1000" mana="0" event="script" value="ps/Seed Bomb.lua"></instant>
+	<instant name="Demon Kicker" words="spell278" lvl="1000" mana="0" event="script" value="passivas/Demon Kicker.lua"></instant>
+	<instant name="Demon Puncher" words="spell279" lvl="1000" mana="0" event="script" value="passivas/Demon Puncher.lua"></instant>
+	<instant name="Cross Poison" words="spell280" lvl="1000" mana="0" event="script" value="ps/Cross Poison.lua"></instant>
+	<instant name="Fury Swipes" words="spell281" lvl="1000" mana="0" event="script" value="ps/Fury Swipes.lua"></instant>
+	<instant name="Gyro Ball" words="spell282" lvl="1000" mana="0" event="script" value="ps/Gyro Ball.lua"></instant>
+	<instant name="Hydro Dance" words="spell283" lvl="1000" mana="0" event="script" value="ps/Hydro Dance.lua"></instant>
+	<instant name="Jump Kick" words="spell284" lvl="1000" mana="0" event="script" value="ps/Jump Kick.lua"></instant>
+	<instant name="Night Slash" words="spell285" lvl="1000" mana="0" event="script" value="ps/Night Slash.lua"></instant>
+	<instant name="Poison Jab" words="spell286" lvl="1000" mana="0" event="script" value="ps/Poison Jab.lua"></instant>
+	<instant name="Rain Dance" words="spell287" lvl="1000" mana="0" event="script" value="ps/Rain Dance.lua"></instant>
+	<instant name="Reverse Earthshock" words="spell288" lvl="1000" mana="0" event="script" value="ps/Reverse Earthshock.lua"></instant>
+	<instant name="Rock Tomb" words="spell289" lvl="1000" mana="0" event="script" value="ps/Rock Tomb.lua"></instant>
+	<instant name="Sand Tomb" words="spell290" lvl="1000" mana="0" event="script" value="ps/Sand Tomb.lua"></instant>
+	<instant name="Waterfall" words="spell291" lvl="1000" mana="0" event="script" value="ps/Waterfall.lua"></instant>
+	<instant name="Wild Charge" words="spell292" lvl="1000" mana="0" event="script" value="ps/Wild Charge.lua"></instant>
+
+	<instant name="Lava Plume" words="spell293" lvl="1000" mana="0" event="script" value="ps/Lava Plume.lua"></instant>
+	<instant name="Silver Wind" words="spell294" lvl="1000" mana="0" event="script" value="ps/Silver Wind.lua"></instant>
+	<instant name="Bug Buzz" words="spell295" lvl="1000" mana="0" event="script" value="ps/Bug Buzz.lua"></instant>
+	<instant name="Whirlpool" words="spell296" lvl="1000" mana="0" event="script" value="ps/Whirlpool.lua"></instant>
+	<instant name="Iron Head" words="spell297" lvl="1000" mana="0" event="script" value="ps/Iron Head.lua"></instant>
+	<instant name="Brick Beak" words="spell298" lvl="1000" mana="0" event="script" value="ps/Brick Beak.lua"></instant>
+	<instant name="Volcano Burst" words="spell299" lvl="1000" mana="0" event="script" value="ps/Volcano Burst.lua"></instant>
+	<instant name="Hammer Arm" words="spell300" lvl="1000" mana="0" event="script" value="ps/Hammer Arm.lua"></instant>
+	<instant name="Paranoic Mind" words="spell301" lvl="1000" mana="0" event="script" value="ps/Paranoic Mind.lua"></instant>
+	<instant name="Dazzling Gleam" words="spell302" lvl="1000" mana="0" event="script" value="ps/Dazzling Gleam.lua"></instant>
+	<instant name="Polish Rock" words="spell303" lvl="1000" mana="0" event="script" value="ps/Polish Rock.lua"></instant>
+	<instant name="Moonblast" words="spell304" lvl="1000" mana="0" event="script" value="ps/Moonblast.lua"></instant>
+	<instant name="Dragon Dance" words="spell305" lvl="1000" mana="0" event="script" value="ps/Dragon Dance.lua"></instant>
+	<instant name="Dragon Spit" words="spell306" lvl="1000" mana="0" event="script" value="ps/Dragon Spit.lua"></instant>
+	<instant name="Windstorm" words="spell307" lvl="1000" mana="0" event="script" value="ps/Windstorm.lua"></instant>
+	<instant name="Water Spout" words="spell308" lvl="1000" mana="0" event="script" value="ps/Water Spout.lua"></instant>
+	<instant name="Water Explosion" words="spell309" lvl="1000" mana="0" event="script" value="ps/Water Explosion.lua"></instant>
+	<instant name="Intense Rain" words="spell310" lvl="1000" mana="0" event="script" value="ps/Intense Rain.lua"></instant>
+	<instant name="Electrical Burning" words="spell311" lvl="1000" mana="0" event="script" value="ps/Electrical Burning.lua"></instant>
+	<instant name="Mean Look" words="spell312" lvl="1000" mana="0" event="script" value="ps/Mean Look.lua"></instant>
+	<instant name="Draining Kiss" words="spell313" lvl="1000" mana="0" event="script" value="ps/Draining Kiss.lua"></instant>
+	<instant name="Aero Crash" words="spell314" lvl="1000" mana="0" event="script" value="ps/Aero Crash.lua"></instant>
+	<instant name="Wind Rage" words="spell315" lvl="1000" mana="0" event="script" value="ps/Wind Rage.lua"></instant>
+	
+	<instant name="Damange Stom" words="spell316" lvl="100" mana="0" event="script" value="ps/Damange Stom.lua"></instant>
+	<instant name="Univers loon" words="spell317" lvl="100" mana="0" event="script" value="ps/Univers loon.lua"></instant>
+	<instant name="Meteor Fire" words="spell318" lvl="100" mana="0" event="script" value="ps/Meteor Fire.lua"></instant>
+        <instant name="Aura Sphere" words="spell319" lvl="100" mana="0" event="script" value="ps/Aura Sphere.lua"></instant>
+        <instant name="Primordial Attack" words="spell320" lvl="100" mana="0" event="script" value="ps/Primordial Attack.lua"></instant>
+        <instant name="Soccer Aura" words="spell321" lvl="100" mana="0" event="script" value="ps/Soccer Aura.lua"></instant>
+        <instant name="Fury Thunder" words="spell322" lvl="100" mana="0" event="script" value="ps/Fury Thunder.lua"></instant>      
+        <instant name="Water Tornado" words="spell324" lvl="100" mana="0" event="script" value="ps/Water Tornado.lua"></instant>
+        <instant name="Revenge" words="spell325" lvl="100" mana="0" event="script" value="ps/Revenge.lua"></instant>
+        <instant name="Leaf Rage" words="spell326" lvl="100" mana="0" event="script" value="ps/Leaf Rage.lua"></instant>
+        <instant name="Outrage" words="spell327" lvl="100" mana="0" event="script" value="ps/Outrage.lua"></instant>
+        <instant name="Freezing" words="spell328" lvl="100" mana="0" event="script" value="ps/Freezing.lua"></instant>
+        <instant name="Scorching Meteor" words="spell329" lvl="100" mana="0" event="script" value="ps/Scorching Meteor.lua"></instant>
+        <instant name="Scratching Ice" words="spell330" lvl="100" mana="0" event="script" value="ps/Scratching Ice.lua"></instant>
+        <instant name="Scratching Fire" words="spell331" lvl="100" mana="0" event="script" value="ps/Scratching Fire.lua"></instant>
+        <instant name="Scratching Dragon" words="spell332" lvl="100" mana="0" event="script" value="ps/Scratching Dragon.lua"></instant>
+        <instant name="Ilusion" words="spell333" lvl="100" mana="0" event="script" value="ps/Ilusion.lua"></instant>
+        <instant name="Sun Blast" words="spell334" lvl="100" mana="0" event="script" value="ps/Sun Blast.lua"></instant>
+        <instant name="Eletric Claw" words="spell335" lvl="100" mana="0" event="script" value="ps/Eletric Claw.lua"></instant>
+        <instant name="Ancestral Power" words="spell336" lvl="100" mana="0" event="script" value="ps/Ancestral Power.lua"></instant>
+        <instant name="Flying High" words="spell337" lvl="100" mana="0" event="script" value="ps/Flying High.lua"></instant>
+        <instant name="Bug Power" words="spell338" lvl="100" mana="0" event="script" value="ps/Bug Power.lua"></instant>
+        <instant name="Combined Attack" words="spell339" lvl="100" mana="0" event="script" value="ps/Combined Attack.lua"></instant>
+        <instant name="Seaquake" words="spell340" lvl="100" mana="0" event="script" value="ps/Seaquake.lua"></instant>
+        <instant name="Torment" words="spell341" lvl="100" mana="0" event="script" value="ps/Torment.lua"></instant>
+        <instant name="Fly" words="spell342" lvl="100" mana="0" event="script" value="ps/Fly.lua"></instant>
+        <instant name="Punch Fly" words="spell343" lvl="100" mana="0" event="script" value="ps/Punch Fly.lua"></instant>
+        <instant name="Eternal Punch" words="spell344" lvl="100" mana="0" event="script" value="ps/Eternal Punch.lua"></instant>
+        <instant name="Punch Right" words="spell345" lvl="100" mana="0" event="script" value="ps/Punch Right.lua"></instant>
+        <instant name="Intubate" words="spell346" lvl="100" mana="0" event="script" value="ps/Intubate.lua"></instant>
+        <instant name="Healing Rain" words="spell348" lvl="100" mana="0" event="script" value="ps/Healing Rain.lua"></instant>
+        <instant name="Infected Cloud" words="spell349" lvl="100" mana="0" event="script" value="ps/Infected Cloud.lua"></instant>
+        <instant name="Poison Rain" words="spell350" lvl="100" mana="0" event="script" value="ps/Poison Rain.lua"></instant>
+        <instant name="Quick Jump" words="spell351" lvl="100" mana="0" event="script" value="ps/Quick Jump.lua"></instant>
+        <instant name="Punch Darkness" words="spell352" lvl="100" mana="0" event="script" value="ps/Punch Darkness.lua"></instant>
+        <instant name="Scizor Attack" words="spell353" lvl="100" mana="0" event="script" value="ps/Scizor Attack.lua"></instant>
+        <instant name="Giant Punch" words="spell354" lvl="100" mana="0" event="script" value="ps/Giant Punch.lua"></instant>
+        <instant name="Emotional" words="spell355" lvl="100" mana="0" event="script" value="ps/Emotional.lua"></instant>
+		<instant name="Uproar" words="spell356" lvl="100" mana="0" event="script" value="ps/Uproar.lua"></instant>
+	<!-- <instant name="Strong Haste" words="correr" lvl="0" mana="0" prem="0" aggressive="0" selftarget="1" exhaustion="3500"  event="script" value="ps/strong haste.lua"></instant> -->
+</spells>

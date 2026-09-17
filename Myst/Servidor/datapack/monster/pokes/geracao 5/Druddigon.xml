@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Druddigon" nameDescription="a Druddigon" race="dragon" experience="1200" speed="207" manacost="0">
+    <health now="270" max="270"/>
+    <look type="2867" head="90" body="100" legs="95" feet="113" corpse="21934"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Dragon Rage" interval="2805" chance="20" range="5"/>
+		<attack name="Dragon Claw" interval="2705" chance="25" range="4"/>
+        <attack name="Outrage" interval="3040" chance="20" range="6"/>
+        <attack name="Dragon Tail" interval="2899" chance="25" range="2"/>
+        <attack name="Dragon Pulse" interval="2993" chance="18" range="4"/>
+        <attack name="Draco Meteor" interval="2852" chance="20" range="6"/>
+        <attack name="Iron Head" interval="3040" chance="25" range="4"/>
+		<attack name="Iron Tail" interval="2752" chance="20" range="5"/>
+    </attacks>
+     <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="Druddigooon!"/>
+    </voices>
+    <loot>
+        <item id="11449" chance="150" count="1" countmax="1"/>
+        <item id="12159" chance="3000" count="1" countmax="1"/>
+		        <item id="13794" chance="10000" countmax="80"/> --snowball
+        <item id="12275" chance="3000" count="1" countmax="1"/>
+        <item id="12244" chance="70" count="1" countmax="1"/>
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

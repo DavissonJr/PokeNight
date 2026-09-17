@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Darkrai" nameDescription="a Darkrai" race="ghost" experience="976" speed="727" manacost="0">
+    <health now="130" max="130"/>
+    <look type="4332" head="65" body="90" legs="95" feet="113" corpse="135"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="physical" interval="10" chance="1000" range="5" min="-1" max="-100">
+		<attack name="Icy Wind" interval="10" chance="16" range="6"/>
+        <attack name="Aurora Beam" interval="1" chance="27" range="6"/>
+        <attack name="Wing Attack" interval="10" chance="27" range="5"/>
+        <attack name="Blizzard" interval="4403" chance="20" range="6"/>
+            <attribute key="shootEffect" value="eartharrow"/>
+     </attack>
+        <attack name="Fire Blast" interval="2570" chance="23" range="1"/>
+        <attack name="Electric Storm" interval="2570" chance="23" range="1"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Darkrai!"/>
+    </voices>
+    <loot>
+        <item id="12204" chance="8000" count="1" countmax="1"/>
+        <item id="12194" chance="4000" count="1" countmax="1"/>
+        <item id="11450" chance="100" count="1" countmax="1"/>
+    </loot>
+	<!-- <event name="Pesadelo"/>  -->
+    <script>
+        <event name="Spawn"/>
+		
+    </script>
+</monster>

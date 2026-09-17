@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ralts" nameDescription="a Ralts" race="psychic" experience="204" speed="104" manacost="0">
+  <health now="30" max="30"/>
+  <look type="1692" head="20" body="30" legs="95" feet="113" corpse="12695"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="0"/>
+ <flag staticattack="100"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="24"/>
+</flags>
+
+<attacks>
+        <attack name="physical" interval="2000" chance="100" range="4" min="-50" max="-100">
+        <attribute key="shootEffect" value="eartharrow"/>
+        </attack>
+        <attack name="Confusion" interval="2617" chance="30" range="6">
+        </attack>
+        <attack name="Restore" interval="4920" chance="20" range="6">
+        </attack>
+        <attack name="Psy Pulse" interval="2852" chance="29" range="4">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Ralts!"/>
+ </voices>
+
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

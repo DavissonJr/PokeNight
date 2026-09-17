@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Hypno" nameDescription="a hypno" race="psychic" experience="3451" speed="367" manacost="0">
+    <health now="140" max="140"/>
+    <look type="470" head="45" body="65" legs="95" feet="113" corpse="11893"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Psybeam" interval="2570" chance="31" range="1"/>
+        <attack name="Headbutt" interval="2711" chance="30" range="1"/>
+        <attack name="Confusion" interval="2805" chance="29" range="6"/>
+		<attack name="Psywave" interval="2605" chance="29" range="6"/>
+		<attack name="Psychic" interval="3005" chance="25" range="6"/>
+        <attack name="Dream Eater" interval="5070" chance="28" range="6"/>
+        <attack name="Focus" interval="4920" chance="20" range="3"/>
+        <attack name="Hypnosis" interval="5061" chance="20" range="3"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="HYPNO!"/>
+    </voices>
+    <loot>
+        <item id="12194" chance="3000" count="1" countmax="1"/>
+        <item id="11452" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Panpour" nameDescription="a Panpour" race="water" experience="250" speed="234" manacost="0">
+    <health now="110" max="110"/>
+    <look type="2748" head="35" body="55" legs="95" feet="113" corpse="21724"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Scratch" interval="2570" chance="31" range="2"/>
+	    <attack name="Lick" interval="4252" chance="28" range="2"/>
+        <attack name="Water Gun" interval="2758" chance="25" range="4"/>
+        <attack name="Fury Swipes" interval="2899" chance="29" range="2"/>
+        <attack name="Bite" interval="2852" chance="28" range="2"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Panpooour!"/>
+    </voices>
+    <loot>
+        <item id="12161" chance="10000" countmax="80"/> --water gem
+        <item id="13864" chance="4000" countmax="1"/> --water gem
+        <item id="12170" chance="5000" count="1" countmax="1"/> --water pendant
+        <item id="11442" chance="150" count="1" countmax="1"/> --water stone
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

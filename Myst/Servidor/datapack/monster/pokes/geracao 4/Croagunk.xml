@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Croagunk" nameDescription="a Croagunk" race="poison" experience="276" speed="148" manacost="0">
+    <health now="90" max="90"/>
+    <look type="1533" head="25" body="40" legs="95" feet="113" corpse="247"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="21"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="String Shot" interval="2664" chance="30" range="3"/>
+        <attack name="Poison Sting" interval="2570" chance="31" range="1"/>
+        <attack name="Fury Cutter" interval="2852" chance="29" range="4"/>
+        <attack name="Pin Missile" interval="2946" chance="28" range="4"/>
+        <attack name="Rage" interval="2946" chance="28" range="4"/>
+		<attack name="Strafe" interval="2946" chance="28" range="4"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Croagunk!"/>
+    </voices>
+    <loot>
+        <item id="12171" chance="10000" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

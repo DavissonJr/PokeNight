@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dustox" nameDescription="a Dustox" race="bug" experience="276" speed="148" manacost="0">
+  <health now="90" max="90"/>
+  <look type="1833" head="35" body="50" legs="95" feet="113" corpse="12738"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="21"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="String Shot" interval="2570" chance="31" range="3">
+        </attack>
+        <attack name="Fury Attack" interval="2852" chance="29" range="1">
+        </attack>
+        <attack name="Pin Missile" interval="2946" chance="28" range="1">
+        </attack>
+        <attack name="Psybeam" interval="3275" chance="26" range="6">
+        </attack>
+        <attack name="Psychic" interval="3510" chance="25" range="6">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Dustox!"/>
+ </voices>
+
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

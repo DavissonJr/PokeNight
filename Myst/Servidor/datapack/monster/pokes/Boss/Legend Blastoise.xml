@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Legend Blastoise" nameDescription="a Legend Blastoise" race="water" experience="15000" speed="727" manacost="0">
+  <health now="3000000" max="3000000"/>
+  <look type="2936" head="80" body="90" legs="95" feet="113" corpse="11846"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="12"/>
+</flags>
+
+<attacks>
+       <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Headbutt" interval="2617" chance="30" range="1"/>
+        <attack name="Bubbles" interval="2570" chance="31" range="4"/>
+        <attack name="Water Gun" interval="2993" chance="28" range="6"/>
+		<attack name="Waterball" interval="2946" chance="28" range="4"/>
+        <attack name="Aqua Tail" interval="2758" chance="30" range="1"/>
+		<attack name="Bubble Blast" interval="3880" chance="27" range="4"/>
+		<attack name="Hydro Cannon" interval="4058" chance="21" range="5"/>
+		<attack name="Skull Bash" interval="4058" chance="21" range="6"/>
+		<attack name="Hydropump" interval="5158" chance="18" range="5"/>
+        <attack name="Ancient Fury" interval="5625" chance="18" range="6"/>
+</attacks>
+
+
+    <defenses armor="0" defense="0">
+    </defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="LEGENDDD!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="aparecertp"/>
+<event name="tpf"/>
+</script>
+</monster>

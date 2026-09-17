@@ -1,0 +1,19 @@
+Creature < UICreature
+  size: 80 80
+  padding: 1
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  border-width: 1
+  border-color: alpha
+
+Player < UICreature
+  icon-size: 145 145
+  size: 100 100
+  padding: 10 0
+
+OutfitBox < UICreature
+  size: 95 95
+  icon-size: 150 150
+  padding: 1
+  icon: /images/ui/box
+  border-color: alpha

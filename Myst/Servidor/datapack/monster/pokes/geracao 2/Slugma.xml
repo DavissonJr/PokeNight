@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Slugma" nameDescription="a slugma" race="fire2" experience="148" speed="135" manacost="0">
+    <health now="40" max="40"/>
+  <look type="934" head="10" body="30" legs="95" feet="113" corpse="04436"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Rock Throw" interval="2570" chance="31" range="3"/>
+        <attack name="Ember" interval="2664" chance="30" range="4"/>
+        <attack name="Rock Slide" interval="3040" chance="28" range="4"/>
+        <attack name="Flame Wheel" interval="2852" chance="29" range="4"/>
+        <attack name="Flamethrower" interval="3246" chance="28" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="SLUUG!"/>
+<voice sentence="MAAA!"/>
+<voice sentence="SLUGMA!"/>
+  </voices>
+  <loot>
+        <item id="12152" chance="4000" count="1" countmax="1"/>
+        <item id="12162" chance="5000" countmax="50"/>
+        <item id="12157" chance="4000" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

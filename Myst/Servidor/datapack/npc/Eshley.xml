@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<npc name="Othon" walkinterval="0" script="datapack/npc/scripts/default.lua" floorchange="0" access="1" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="588" head="91" body="72" legs="114" feet="19"/>
+<parameters>
+<parameter key="module_travel" value="1"/>
+<parameter key="message_greet" value="Olá |PLAYERNAME|, eu achei um caminho secreto onde leva até onde o lugia descansa, ele e incrivel, se quiser posso te levar para ver o lugia tambem mais eu cobro 100 notas azuis para te levar lá, você quer que eu te leve?" />
+<parameter key="travel_destinations" value="sim,612,2839,11,100000000;"/>
+</parameters>
+</npc>

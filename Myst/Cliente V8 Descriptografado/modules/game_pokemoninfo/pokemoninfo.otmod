@@ -1,0 +1,9 @@
+Module
+  name: game_pokemoninfo
+  description: Carregar informacoes do pokemon ao soltar em uma window
+  author: Thalles Vitor
+  website: www.pokemonalthough.com - nullptr
+  sandboxed: true
+  scripts: [ pokemoninfo ]
+  @onLoad: init()
+  @onUnload: terminate()

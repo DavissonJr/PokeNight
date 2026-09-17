@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Togepi" nameDescription="a Togepi" race="flying" experience="124" speed="132" manacost="0">
+    <health now="40" max="40"/>
+    <look type="886" head="5" body="25" legs="95" feet="113" corpse="4450"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag passive="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="24"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2570" chance="31" range="1"/>
+        <attack name="Lovely Kiss" interval="3105" chance="29" range="3"/>
+        <attack name="Metronome" interval="3246" chance="28" range="5"/>
+        <attack name="Hyper Voice" interval="2664" chance="30" range="5"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="TOGEPI!"/>
+    </voices>
+    <loot>
+        <item id="12172" chance="2000" countmax="1"/>
+        <item id="12200" chance="4000" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>
+

@@ -1,0 +1,9 @@
+Module
+  name: game_afk
+  description: Mostrar janela caso o jogador fique inativo por mais de 30 minutos.
+  author: Thalles Vitor
+  website: www.thallesdev.store
+  sandboxed: true
+  scripts: [ afk ]
+  @onLoad: init()
+  @onUnload: terminate()

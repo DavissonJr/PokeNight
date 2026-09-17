@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Girafarig" nameDescription="a girafarig" race="psychic" experience="0" speed="192" manacost="0">
+  <health now="40" max="40"/>
+  <look type="904" head="61" body="77" legs="95" feet="113" corpse="3292"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="Confusion" interval="2617" chance="30" range="6"/>
+        <attack name="Psywave" interval="3040" chance="28" range="5"/>
+        <attack name="Quick Attack" interval="2625" chance="25" range="1"/>
+        <attack name="Psychic" interval="3510" chance="25" range="6"/>
+		<attack name="Stomp" interval="4510" chance="25" range="3"/>
+		<attack name="Psyusion" interval="4610" chance="25" range="4"/>
+		<attack name="Reflect" interval="4510" chance="20" range="6"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="GIRAA!"/>
+<voice sentence="FARIIG!"/>
+<voice sentence="GIRAFARIG!"/>
+  </voices>
+  <loot>
+	<item id="12194" countmax="1" chance="55500"/> -- future orb
+	<item id="11452" countmax="1" chance="1200"/> -- enigma stone
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

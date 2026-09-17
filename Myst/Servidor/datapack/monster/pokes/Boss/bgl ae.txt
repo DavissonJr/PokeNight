@@ -1,0 +1,23 @@
+
+	               <!-- Outros Sistemas -->
+	<globalevent name="serverstart" type="start" event="script" value="start.lua"/>
+	<globalevent name="playersrecord" type="record" event="script" value="record.lua"/>
+	<globalevent name="autobroadcast" interval="600" event="script" value="cbar.lua"/> 
+	<!-- Sitemas Exclusivos -->
+	<globalevent type="startup" name="doCheckHouses" script="doCheckHouses.lua" />
+<globalevent name="SaveAndClose" interval="60" event="script" value="GlobalSave.lua"/>
+<globalevent name="SaveAndClose2" interval="60" event="script" value="GlobalSave2.lua"/>
+<globalevent name="shop" interval="200" script="shop.lua"/>
+<!-- Pokekill -->
+<globalevent name="Monster Hunter Event" time="21:49" event="script" value="Monster Hunter.lua"/>
+	<!-- 150 + -->
+	<globalevent name="TournamentStart1" time="09:01" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart2" time="12:31" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart3" time="19:01" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart4" time="23:01" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart5" time="15:01" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart6" time="01:01" event="script" value="torneio.lua"/>
+	<globalevent name="msg torneio" interval="60" event="script" value="msgtorneio.lua"/>
+	<!-- Outros -->
+	<globalevent name="lottery" interval="60" event="script" value="loteria.lua"/>
+	 <globalevent name="texto" interval="2" script="texto.lua" />

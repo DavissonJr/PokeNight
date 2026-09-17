@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Professor Burton" script="profburton.lua" floorchange="0" speed="0">
+	<health now="150" max="150"/>
+	<look type="522" head="97" body="114" legs="114" feet="0"/>
+</npc>

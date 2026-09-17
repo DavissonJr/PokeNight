@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Ariados" nameDescription="an shiny ariados" race="bug" experience="484" speed="130" manacost="0">
+  <health now="90" max="90"/>
+  <look type="1493" head="40" body="60" legs="95" feet="113" corpse="12598"/>
+	<targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="21"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Scratch" interval="2570" chance="31" range="1"/>
+		<attack name="Poison Sting" interval="2805" chance="29" range="1"/>
+        <attack name="Sleep Powder" interval="5164" chance="20" range="1"/>
+        <attack name="Slash" interval="2805" chance="29" range="1"/>
+        <attack name="Stun Spore" interval="4920" chance="20" range="6"/>
+        <attack name="melee" interval="2946" chance="28" range="1"/>
+		<attack name="Absorb" interval="2805" chance="29" range="1"/>
+		<attack name="Poison Bomb" interval="2805" chance="23" range="4"/>
+		<attack name="Fury Cutter" interval="3105" chance="25" range="4"/>
+		<attack name="X-Scissor" interval="3805" chance="25" range="5"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="ARII!"/>
+<voice sentence="RIAADOS!"/>
+<voice sentence="ARIADOS!"/>
+ </voices>
+    <loot>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>
+

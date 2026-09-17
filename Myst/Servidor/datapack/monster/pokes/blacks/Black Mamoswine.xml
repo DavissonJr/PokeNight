@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Black Mamoswine" nameDescription="a Black Mamoswine" race="ice" experience="976" speed="127" manacost="0">
+  <health now="130" max="130"/>
+  <look type="3157" head="80" body="90" legs="95" feet="113" corpse="12513"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="19"/>
+</flags>
+
+<attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-162" max="-221"/>
+</attacks>
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Mamoswine!!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

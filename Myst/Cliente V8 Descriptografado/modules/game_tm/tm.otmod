@@ -1,0 +1,9 @@
+Module
+  name: game_tm
+  description: Troque a posicao dos ataques do seu pokemon ou troque por novos ataques a seu favor
+  author: Thalles Vitor
+  website: tem nao
+  sandboxed: true
+  scripts: [ tm ]
+  @onLoad: init()
+  @onUnload: terminate()

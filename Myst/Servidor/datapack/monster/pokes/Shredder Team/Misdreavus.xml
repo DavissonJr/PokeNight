@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Misdreavus" nameDescription="a misdreavus" race="ghost" experience="976" speed="127" manacost="0">
+    <health now="130" max="130"/>
+  <look type="908" head="65" body="90" legs="95" feet="113" corpse="0"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+	  <attacks>
+      </attacks>
+    <defenses armor="0" defense="0"/>
+<voices interval="5000" chance="10">
+	<voice sentence="MIIIS!"/>
+<voice sentence="DREAAVUS!"/>
+<voice sentence="MISDREAVUS!"/>
+  </voices>
+  <loot>
+        <item id="12204" chance="8000" count="1" countmax="1"/>
+        <item id="12194" chance="4000" count="1" countmax="1"/>
+        <item id="11450" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>
+

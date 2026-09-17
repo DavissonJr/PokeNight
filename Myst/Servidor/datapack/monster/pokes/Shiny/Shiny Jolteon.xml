@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Jolteon" nameDescription="a Shiny jolteon" race="electric" experience="580" speed="162" manacost="0">
+  <health now="110" max="110"/>
+  <look type="1329" head="40" body="60" legs="95" feet="113" corpse="0"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="20"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2617" chance="30" range="2"/>
+        <attack name="Bite" interval="2852" chance="29" range="1"/>
+        <attack name="Thunder Fang" interval="3040" chance="28" range="1"/>
+        <attack name="Pin Missile" interval="2852" chance="29" range="4"/>
+        <attack name="Thunder Bolt" interval="3228" chance="27" range="4"/>
+        <attack name="Thunder Wave" interval="2993" chance="28" range="6"/>
+        <attack name="Zap Cannon" interval="4240" chance="28" range="5"/>
+        <attack name="Thunder" interval="4168" chance="21" range="6"/>
+		<attack name="Electric Storm" interval="4968" chance="21" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="JOLTEON!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

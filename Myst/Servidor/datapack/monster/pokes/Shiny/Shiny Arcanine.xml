@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Arcanine" nameDescription="a Shiny arcanine" race="fire" experience="752" speed="207" manacost="0">
+  <health now="160" max="160"/>
+  <look type="1253" head="125" body="150" legs="95" feet="113" corpse="12478"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="17"/>
+</flags>
+
+<attacks>
+         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2523" chance="31" range="2"/>
+        <attack name="Ember" interval="2664" chance="30" range="3"/>
+        <attack name="Bite" interval="2758" chance="30" range="1"/>
+        <attack name="Rage" interval="4005" chance="29" range="4"/>
+		<attack name="Roar" interval="5005" chance="21" range="2"/>
+        <attack name="Fireball" interval="2993" chance="28" range="4"/>
+        <attack name="Flamethrower" interval="3369" chance="26" range="6"/>
+		<attack name="Fire Fang" interval="3093" chance="28" range="1"/>
+		<attack name="Fire Blast" interval="4093" chance="28" range="4"/>
+		<attack name="Tri Flames" interval="4293" chance="21" range="4"/>
+		<attack name="War Dog" interval="3993" chance="22" range="4"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="ARCANINE!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<outfits>
+<!-- NORMAL -->
+
+<outfit id="1">
+<list gender="0" lookType="511" name="Trainer"/>
+<list gender="1" lookType="63" name="Trainer"/>
+</outfit>
+<!-- <outfit id="2"premium="yes" quest="6756755"> -->
+<!-- <list gender="0" lookType="615" name="Elite Trainer"/> -->
+<!-- <list gender="1" lookType="614" name="Elite Trainer"/> -->
+<!-- </outfit> -->
+<outfit id="2" premium="yes" quest="6756755">
+<list gender="0" lookType="615" name="Elite Trainer"/>
+<list gender="1" lookType="614" name="Elite Trainer"/>
+</outfit>
+<outfit id="3">
+<list gender="0" lookType="512" name="Rapper"/>
+<list gender="1" lookType="545" name="Rapper"/>
+</outfit>
+<outfit id="4">
+<list gender="0" lookType="588" name="Jamaican"/>
+<list gender="1" lookType="587" name="Jamaican"/>
+</outfit>
+<outfit id="5">
+<list gender="0" lookType="586" name="Oriental"/>
+<list gender="1" lookType="585" name="Oriental"/>
+</outfit>
+<outfit id="6">
+<list gender="0" lookType="605" name="Rocket"/>
+<list gender="1" lookType="604" name="Rocket"/>
+</outfit>
+<outfit id="7">
+<list gender="0" lookType="495" name="Adventurer"/>
+<list gender="1" lookType="494" name="Adventurer"/>
+</outfit>
+<outfit id="8">
+<list gender="0" lookType="513" name="Bussiness"/>
+<list gender="1" lookType="1419" name="Bussiness"/>
+</outfit>
+<outfit id="9">
+<list gender="0" lookType="517" name="Atletic"/>
+<list gender="1" lookType="516" name="Atletic"/>
+</outfit>
+<outfit id="10">
+<list gender="0" lookType="519" name="Punk"/>
+<list gender="1" lookType="518" name="Punk"/>
+</outfit>
+<outfit id="11">
+<list gender="0" lookType="521" name="Fisher"/>
+<list gender="1" lookType="520" name="Fisher"/>
+</outfit>
+<outfit id="12">
+<list gender="0" lookType="524" name="Mercenary"/>
+<list gender="1" lookType="522" name="Mercenary"/>
+</outfit>
+<outfit id="13">
+<list gender="0" lookType="525" name="Hiker"/>
+<list gender="1" lookType="523" name="Hiker"/>
+</outfit>
+<outfit id="14">
+<list gender="0" lookType="1929" name="Pikachu"/>
+<list gender="1" lookType="1929" name="Pikachu"/>
+</outfit>
+<outfit id="15">
+<list gender="0" lookType="53" name="Aventure"/>
+<list gender="1" lookType="51" name="Aventure"/>
+</outfit>
+<outfit id="16">
+<list gender="0" lookType="57" name="Aventure News"/>
+<list gender="1" lookType="510" name="Aventure News"/>
+</outfit>
+<outfit id="17">
+<list gender="0" lookType="65" name="Pescadora"/>
+<list gender="1" lookType="64" name="Pescador"/>
+</outfit>
+<outfit id="18">
+<list gender="0" lookType="3041" name="Homer"/>
+<list gender="1" lookType="3041" name="Homer"/>
+</outfit>
+<outfit id="19">
+<list gender="0" lookType="1016" name="Cachorro"/>
+<list gender="1" lookType="1015" name="Cachorro"/>
+</outfit>
+<outfit id="20">
+<list gender="0" lookType="2365" name="Catcher"/>
+<list gender="1" lookType="2366" name="Catcher"/>
+</outfit>
+<outfit id="21">
+<list gender="0" lookType="3082" name="Alerquina"/>
+</outfit>
+<outfit id="22">
+<list gender="0" lookType="3055" name="Eevee"/>
+<list gender="1" lookType="3055" name="Eevee"/>
+</outfit>
+<outfit id="23">
+<list gender="0" lookType="3056" name="Articuno"/>
+<list gender="1" lookType="3056" name="Articuno"/>
+</outfit>
+<outfit id="24">
+<list gender="0" lookType="3049" name="Vaporeon"/>
+<list gender="1" lookType="3049" name="Vaporeon"/>
+</outfit>
+<outfit id="25">
+<list gender="0" lookType="1408" name="Esquiadora"/>
+<list gender="1" lookType="1408" name="Esquiadora"/>
+</outfit>
+<outfit id="26">
+<list gender="0" lookType="2092" name="Mago"/>
+<list gender="1" lookType="2092" name="Mago"/>
+</outfit>
+
+
+<!-- NATAL -->
+<!-- <outfit id="42"> -->
+<!-- <list gender="0" lookType="661" name="Christmas"/> -->
+<!-- <list gender="1" lookType="662" name="Christmas"/> -->
+<!-- </outfit> -->
+<outfit id="42">
+<list gender="0" lookType="661" name="Christmas"/>
+<list gender="1" lookType="662" name="Christmas"/>
+</outfit>
+<outfit id="43" quest="181640">
+<list gender="0" lookType="1084" name="Christmas 2"/>
+<list gender="1" lookType="1083" name="Christmas 2"/>
+</outfit>
+
+<!-- HALLOWEEN -->
+
+<outfit id="44" quest="181641">
+<list gender="0-3" lookType="1140" name="Mummy"/>
+</outfit>
+<outfit id="45">
+<list gender="0" lookType="1190" name="Bruxa"/>
+<list gender="1" lookType="1191" name="Dracula"/>
+</outfit>
+<outfit id="46">
+<list gender="0" lookType="1188" name="Caveira"/>
+<list gender="1" lookType="1189" name="Diaba"/>
+</outfit>
+
+
+<!-- ESPECIAIS -->
+<outfit id="49" quest="181646">
+<list gender="0" lookType="1035" name="Mergulhadora"/>
+<list gender="1" lookType="1034" name="Mergulhador"/>
+</outfit>
+<outfit id="50" quest="181647">
+<list gender="0" lookType="1408" name="Esquiadora"/>
+<list gender="1" lookType="1407" name="Esquiador"/>
+</outfit>
+<outfit id="51" quest="181648">
+<list gender="1" lookType="1441" name="Slash"/>
+</outfit>
+<outfit id="52" quest="181649">
+<list gender="0" lookType="1442" name="Playboy"/>
+</outfit>
+<outfit id="53" quest="181650">
+<list gender="1" lookType="1443" name="Vinganca"/>
+</outfit>
+<outfit id="54" quest="181651">
+<list gender="1" lookType="1444" name="House"/>
+</outfit>
+<outfit id="55" quest="181652">
+<list gender="0" lookType="1184" name="Police Officer"/>
+<list gender="1" lookType="1183" name="Police Officer"/>
+</outfit>
+<outfit id="56" quest="181653">
+<list gender="0" lookType="1466" name="Veteran Trainer"/>
+<list gender="1" lookType="1465" name="Veteran Trainer"/>
+</outfit>
+<outfit id="57" quest="181654">
+<list gender="0" lookType="1469" name="Assassin"/>
+<list gender="1" lookType="1470" name="Assassin"/>
+</outfit>
+<outfit id="58" quest="181655">
+<list gender="0" lookType="1498" name="Natal"/>
+<list gender="1" lookType="1497" name="Natal"/>
+</outfit>
+
+<outfit id="61" quest="150420">
+<list gender="0" lookType="329" name="Noiva"/>
+<list gender="1" lookType="328" name="Noivo"/>
+</outfit>
+<outfit id="64" quest="150431">
+<list gender="0" lookType="2126" name="Jogadora"/>
+<list gender="1" lookType="2125" name="Jogador"/>
+</outfit>
+
+<outfit id="62" access="5">
+<list gender="0-3" lookType="1163" name="Deadpool"/>
+</outfit>
+<outfit id="63" access="5">
+<list gender="0-3" lookType="2124" name="GM"/>
+
+</outfit>
+<outfit id="65" access="6">
+<list gender="0" lookType="11" name="Adminstradora"/>
+<list gender="1" lookType="10" name="Adminstrador"/>
+</outfit>
+<outfit id="66" access="3">
+<list gender="0" lookType="3" name="ZardEvil"/>
+<list gender="1" lookType="4" name="ZardEvil"/>
+</outfit>
+<outfit id="67" access="3">
+<list gender="0" lookType="6" name="ArcaEvil"/>
+<list gender="1" lookType="5" name="ArcaEvil"/>
+</outfit>
+
+<outfit id="68">
+<list gender="0" lookType="1110" name="Policial"/>
+<list gender="1" lookType="1111" name="Policial"/>
+</outfit>
+<outfit id="69" quest="4741215">
+<list gender="0-3" lookType="2163" name="Poks"/>
+</outfit>
+
+<outfit id="71" quest="44224">
+<list gender="0" lookType="3128" name="Coelhinha"/>
+<list gender="1" lookType="3133" name="Mimikyu"/>
+</outfit>
+
+<outfit id="72" quest="44223">
+<list gender="0" lookType="2100" name="Psychic"/>
+<list gender="1" lookType="2101" name="Psychic"/>
+</outfit>
+
+<outfit id="73" quest="44225">
+<list gender="0" lookType="3064" name="Death"/>
+<list gender="1" lookType="3064" name="Death"/>
+</outfit>
+
+<outfit id="74" quest="44226">
+<list gender="0" lookType="3078" name="Rias Gremory"/>
+<list gender="1" lookType="3065" name="Demon"/>
+</outfit>
+
+<outfit id="75" quest="44227">
+<list gender="0" lookType="3099" name="Astronauta"/>
+<list gender="1" lookType="3099" name="Astronauta"/>
+</outfit>
+
+<outfit id="76" quest="44228">
+<list gender="0" lookType="3082" name="Arlequina"/>
+<list gender="1" lookType="3095" name="Nove Caudas"/>
+</outfit>
+
+<outfit id="77" quest="44229">
+<list gender="0" lookType="3007" name="Goku"/>
+<list gender="1" lookType="3007" name="Goku"/>
+</outfit>
+
+<outfit id="78" quest="44230">
+<list gender="0" lookType="2092" name="Mage" addons="2"/>
+<list gender="1" lookType="2092" name="Mage" addons="2"/>
+</outfit>
+</outfits>

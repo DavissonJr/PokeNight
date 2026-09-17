@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gabriela" script="ritual.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="504" head="123" body="74" legs="123" feet="0" addons="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME|, Preciso de {50x coccon} para meu ritual você tem elas? se tiver diga {ritual} ."/>
+</parameters>
+</npc>

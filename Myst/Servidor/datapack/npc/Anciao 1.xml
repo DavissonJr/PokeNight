@@ -1,0 +1,9 @@
+
+<npc name="Adrian Guardian" script="script.lua" walkinterval="0" floorchange="0" speed="0">
+    <health now="150" max="150"/>
+    <look type="1031" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+    <parameters>
+<parameter key="message_greet" value="Olá Treinador, Eu posso te ajudar a encontrar o grande poder da Ilha de Fogo, me Entregue {1000x essences of fire}, para completar o {ritual}!"/>
+    </parameters>
+
+</npc>

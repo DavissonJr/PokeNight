@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Grumpig" nameDescription="a Grumpig" race="psychic" experience="408" speed="127" manacost="0">
+  <health now="140" max="140"/>
+  <look type="1711" head="45" body="55" legs="95" feet="113" corpse="12719"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="19"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="Headbutt" interval="2711" chance="30" range="1">
+        </attack>
+        <attack name="Confusion" interval="2805" chance="29" range="6">
+        </attack>
+        <attack name="Psywave" interval="2946" chance="28" range="6">
+        </attack>
+        <attack name="Hypnosis" interval="5061" chance="20" range="3">
+        </attack>
+        <attack name="Psyshock" interval="3322" chance="26" range="6">
+        </attack>
+        <attack name="Psychic" interval="3463" chance="25" range="6">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Grumpig!"/>
+ </voices>
+
+  <loot>
+  		<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

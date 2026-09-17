@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Pascoa 2024" script="taskscarab.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="2978" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá tudo bem |PLAYERNAME|. Estou dando uma skin exclusiva de páscoa em troca de 5 scarab coin diga {trocar} caso tenha interesse."/>
+<parameter key="message_farewell" value="Até mais"/>
+</parameters>
+</npc>

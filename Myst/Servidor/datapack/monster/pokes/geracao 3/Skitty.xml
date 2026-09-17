@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Skitty" nameDescription="a Skitty" race="normal" experience="172" speed="127" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1699" head="29" body="47" legs="95" feet="113" corpse="12709"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="23"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="Slash" interval="2711" chance="30" range="1">
+        </attack>
+        <attack name="Scratch" interval="2617" chance="30" range="1">
+        </attack>
+        <attack name="Bite" interval="2758" chance="30" range="1">
+        </attack>
+        <attack name="Pay Day" interval="2899" chance="29" range="3">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="Skitty!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

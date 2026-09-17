@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Espeon" nameDescription="an shiny espeon" race="psychic" experience="580" speed="162" manacost="0">
+  <health now="110" max="110"/>
+  <look type="1489" head="50" body="65" legs="95" feet="113" corpse="12600"/>
+	 <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="21"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Confusion" interval="2617" chance="30" range="6"/>
+        <attack name="Restore" interval="4920" chance="20" range="6"/>
+        <attack name="Psy Pulse" interval="2852" chance="29" range="6"/>
+        <attack name="Psywave" interval="3040" chance="28" range="5"/>
+        <attack name="Psybeam" interval="3275" chance="26" range="6"/>
+        <attack name="Calm Mind" interval="5625" chance="18" range="6"/>
+        <attack name="Psychic" interval="3510" chance="25" range="6"/>
+		<attack name="Hypnosis" interval="5510" chance="25" range="3"/>
+		<attack name="Reflect" interval="4510" chance="20" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="ESPEE!"/>
+      <voice sentence="PEOON!"/>
+      <voice sentence="ESPEON!"/>
+  </voices>
+    <loot>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>
+
+

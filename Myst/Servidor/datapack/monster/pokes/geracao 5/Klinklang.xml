@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Klinklang" nameDescription="a Klinklang" race="steel" experience="1100" speed="299" manacost="0">
+  <health now="40" max="40"/>
+  <look type="2846" head="70" body="88" legs="95" feet="113" corpse="21894"/>
+	<targetchange interval="2000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Charge" interval="2852" chance="15" range="1"/>
+        <attack name="Metal Sound" interval="2852" chance="25" range="4"/>
+        <attack name="Zap Cannon" interval="2805" chance="20" range="6"/>
+        <attack name="Hyper Beam" interval="2993" chance="20" range="6"/>
+        <attack name="Flash Cannon" interval="3040" chance="25" range="4"/>
+        <attack name="Charge Beam" interval="3416" chance="28" range="2"/>
+        <attack name="Discharge" interval="4745" chance="25" range="4"/>
+        <attack name="Sandstorm" interval="5625" chance="28" range="3"/>
+		<attack name="Rest" interval="3040" chance="8" range="6"/>
+		<attack name="Signal Beam" interval="3040" chance="28" range="3"/>		
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="Klinklang!"/>
+<voice sentence="Klink!"/>
+<voice sentence="lang!"/>
+  </voices>
+  <loot>
+        <item id="12337" chance="10000" countmax="80"/> --small stone
+        <item id="12205" chance="500" count="1" countmax="1"/> --onix tail
+        <item id="12196" chance="5000" countmax="1"/> --stone orb
+        <item id="11445" chance="150" count="1" countmax="1"/> --rock stone
+        <item id="12250" chance="2000" count="1" countmax="1"/> --steel ore
+        <item id="12232" chance="10000" count="1" countmax="1"/> --metal coat
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+        <item id="13867" chance="4000" count="1" countmax="1"/> --strange rock
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

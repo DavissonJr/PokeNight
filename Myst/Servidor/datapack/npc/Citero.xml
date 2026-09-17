@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<npc name="Citero" script="datapack/npc/scripts/citero.lua" walkinterval="50000" floorchange="0">
+<health now="1000" max="1000"/>
+<look type="494" head="0" body="114" legs="114" feet="0" addons="0"/>
+<parameters>
+</parameters>
+</npc>

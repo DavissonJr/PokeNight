@@ -1,0 +1,161 @@
+Panel
+  OptionCheckBox
+    id: vsync
+    text: Habilitar sincronização vertical
+    tooltip: Limita seu fps com base na taxa de atualização do monitor
+
+  OptionCheckBox
+    id: showFps
+    text: Exibir FPS
+
+  OptionCheckBox
+    id: optimizeFps
+    text: Otimização de FPS
+    tooltip: Tente otimizar quando a taxa de quadros estiver abaixo de 60. PROBLEMAS VISUAIS PODEM OCORRER
+
+  OptionCheckBox
+    id: fullscreen
+    text: Tela Cheia
+    tooltip: Ctrl+Shift+F
+
+  OptionCheckBox
+    id: disableEffects
+    text: Desativar Efeitos
+    tooltip: Desativar Efeitos
+
+  OptionCheckBox
+    id: disableMissiles
+    text: Desativar Missiles
+    tooltip: Desativar efeitos misseis
+
+  Label
+    id: floorViewModeLabel
+    !text: tr('Floor View Mode')..':'
+    phantom: false
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    margin-top: 13
+    visible: false
+
+  ComboBox
+    id: floorViewMode
+    width: 180
+    anchors.left: prev.right
+    anchors.top: prev.top
+    margin-top: -4
+    margin-left: 5
+    mouse-scroll: false
+    visible: false
+
+  Label
+    id: antialiasingModeLabel
+    font: sans-bold-16px
+    text-auto-resize: true
+    color: #cda953
+    !text: tr('Antialiasing')..':'
+    phantom: false
+    anchors.left: floorViewModeLabel.left
+    anchors.top: prev.bottom
+    anchors.bottom: parent.bottom
+    margin-top: 17
+    margin-bottom: -15
+
+  ComboBox
+    id: antialiasingMode
+    width: 120
+    anchors.left: prev.right
+    anchors.top: prev.top
+    margin-top: -1
+    margin-left: 5
+    mouse-scroll: false
+
+  Label
+    id: ambientLightLabel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: antialiasingModeLabel.top
+    margin-top: 25
+    visible: false
+    @onSetup: |
+      local value = modules.client_options.getOption('ambientLight')
+      self:setText(tr('Ambient light: %s%%', value))
+
+  OptionScrollbar
+    id: ambientLight
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 0
+    maximum: 100
+    visible: false
+
+  Label
+    id: shadowFloorIntensityLevel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 12
+    visible: false
+    @onSetup: |
+      local value = modules.client_options.getOption('shadowFloorIntensity')
+      self:setText(tr('Floor Shadowing Intensity: %s%%', value))
+
+  OptionScrollbar
+    id: shadowFloorIntensity
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 0
+    maximum: 100
+    visible: false
+
+  Label
+    id: floorFadingLabel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 12
+    visible: false
+    @onSetup: |
+      local value = modules.client_options.getOption('floorFading')
+      self:setText(tr('Floor Fading: %s ms', value))
+
+  OptionScrollbar
+    id: floorFading
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 0
+    maximum: 1000
+    visible: false
+
+  Label
+    id: backgroundFrameRateLabel
+    font: sans-bold-16px
+    text-auto-resize: true
+    color: #cda953
+    !text: tr('Limite de taxa de quadros do jogo: %s', 'max')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: -170
+    @onSetup: |
+      local value = modules.client_options.getOption('backgroundFrameRate')
+      local text = value
+      if value <= 0 or value >= 201 then
+        text = 'max'
+      end
+
+      self:setText(tr('Limite de taxa de quadros do jogo: %s', text))
+
+  OptionScrollbar
+    id: backgroundFrameRate
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 1
+    minimum: 10
+    maximum: 201

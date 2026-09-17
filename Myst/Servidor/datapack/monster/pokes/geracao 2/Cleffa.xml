@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cleffa" nameDescription="a cleffa" race="normal" experience="80" speed="134" manacost="0">
+  <health now="40" max="40"/>
+  <look type="885" head="10" body="20" legs="95" feet="113" corpse="3277"/>
+	<targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag passive="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="23"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Doubleslap" interval="2617" chance="30" range="1"/>
+		<attack name="Lovely Kiss" interval="3217" chance="20" range="3"/>
+        <attack name="Sing" interval="3470" chance="31" range="3"/>
+        <attack name="Selfheal" interval="4920" chance="20" range="4"/>
+        <attack name="Metronome" interval="5625" chance="18" range="6"/>
+</attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="CLEE!"/>
+<voice sentence="FFAA!"/>
+<voice sentence="CLEFFA!"/>
+ </voices>
+    <loot>
+        <item id="12179" chance="2000" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

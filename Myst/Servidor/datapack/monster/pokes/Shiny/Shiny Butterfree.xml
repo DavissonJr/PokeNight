@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Butterfree" nameDescription="a Shiny butterfree" race="bug" experience="276" speed="136" manacost="0">
+  <health now="80" max="80"/>
+  <look type="1206" head="35" body="50" legs="95" feet="113" corpse="12431"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+<flag passive="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="2"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="22"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="String Shot" interval="2570" chance="31" range="3"/>
+        <attack name="Super Sonic" interval="4638" chance="20" range="3"/>
+        <attack name="Headbutt" interval="2758" chance="30" range="1"/>
+        <attack name="Whirlwind" interval="3040" chance="28" range="6"/>
+        <attack name="Psybeam" interval="3134" chance="27" range="6"/>
+        <attack name="Confusion" interval="2899" chance="29" range="6"/>
+        <attack name="Sleep Powder" interval="5766" chance="18" range="6"/>
+        <attack name="Stun Spore" interval="5061" chance="20" range="6"/>
+        <attack name="melee" interval="5343" chance="19" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="BUTTERFREE!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

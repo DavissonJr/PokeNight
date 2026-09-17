@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Articuno" nameDescription="a articuno" race="ice" experience="35590" speed="147" manacost="0">
+    <health now="220" max="220"/>
+    <look type="634" head="100" body="100" legs="95" feet="113" corpse="11843"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="15"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2899" chance="29" range="1"/>
+        <attack name="Ice Shards" interval="3197" chance="21" range="4"/>
+        <attack name="Ice Beam" interval="3510" chance="25" range="6"/>
+        <attack name="Icy Wind" interval="3635" chance="16" range="6"/>
+        <attack name="Aurora Beam" interval="3134" chance="27" range="6"/>
+        <attack name="Wing Attack" interval="4128" chance="27" range="5"/>
+        <attack name="Blizzard" interval="4403" chance="20" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="ARTICUNO!"/>
+    </voices>
+    <loot>
+        <item id="12201" chance="7000" count="1" countmax="1"/>  --Ice Orb
+        <item id="11442" chance="100" count="1" countmax="1"/>  --Water Stone
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

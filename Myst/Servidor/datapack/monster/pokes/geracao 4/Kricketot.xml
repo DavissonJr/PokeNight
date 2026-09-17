@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Kricketot" nameDescription="a Kricketot" race="bug" experience="0" speed="168" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1608" head="13" body="34" legs="95" feet="113" corpse="155"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-41"/>
+		<attack name="Headbutt" interval="2852" chance="29" range="1"/>
+        <attack name="String Shot" interval="2758" chance="30" range="4"/>
+        <attack name="Bug Bite" interval="2993" chance="28" range="6"/>
+        <attack name="Harden" interval="2711" chance="30" range="1"/>
+  </attacks>
+<defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="PIII!"/>
+<voice sentence="NECOO!"/>
+<voice sentence="PINECO!"/>
+  </voices>
+  <loot>
+	<item id="12171" countmax="100" chance="10000"/><!-- Pot of moss bug -->
+	<item id="11443" countmax="1" chance="1600"/> -- venom stone
+      <item id="11451" countmax="1" chance="1290"/> -- earth stone
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

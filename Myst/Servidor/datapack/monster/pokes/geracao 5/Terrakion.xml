@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Terrakion" nameDescription="a Terrakion" race="rock" experience="1200" speed="237" manacost="0">
+    <health now="170" max="170"/>
+    <look type="2890" head="90" body="100" legs="95" feet="113" corpse="21970"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Close Combat" interval="2899" chance="80" range="7"/>
+        <attack name="Double Kick" interval="3999" chance="80" range="6"/>
+        <attack name="Smack Down" interval="4199" chance="80" range="7"/>
+        <attack name="Rock Slide" interval="3040" chance="80" range="9"/>
+        <attack name="Stone Edge" interval="2899" chance="80" range="6"/>
+        <attack name="Superpower" interval="2946" chance="80" range="8"/>
+	    <attack name="Rock Throw" interval="2946" chance="80" range="7"/>
+        <attack name="Sandstorm" interval="3040" chance="80" range="6"/>
+        <attack name="Focus Blast" interval="3651" chance="80" range="7"/>
+        <attack name="Hyper Beam" interval="3510" chance="80" range="9"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Terrakioooon!"/>
+    </voices>
+    <loot>
+        <item id="11445" chance="500" count="1"/>
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+        <event name="tp8"/>
+    </script>
+</monster>

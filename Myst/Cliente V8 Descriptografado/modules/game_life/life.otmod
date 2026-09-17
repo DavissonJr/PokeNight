@@ -1,0 +1,9 @@
+Module
+  name: game_life
+  description: Barra de Boss
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ life ]
+  @onLoad: init()
+  @onUnload: terminate()

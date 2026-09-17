@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Nurse Joy" script="heal.lua" walkinterval="350000" floorchange="0" speed="0" skull="0">
+	<health now="150" max="150"/>
+	<look type="532" head="91" body="102" legs="83" feet="0"/>
+	<parameters>
+			<parameter key="message_greet" value="Bem-vindo ao Centro Pokémon! podemos {heal} seus pokémons aqui!"/>
+			<parameter key="message_farewell" value="Lembre-se sempre de tratar bem seus pokémons!"/>
+			<parameter key="message_idletimeout" value="Tenha um bom dia."/>
+			<parameter key="message_walkaway" value="Adeus jovem treinador!"/>
+	</parameters>
+</npc>

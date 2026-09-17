@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Beldum" nameDescription="a beldum" race="steel" experience="0" speed="199" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1778" head="35" body="45" legs="95" feet="113" corpse="12744"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-162" max="-221"/>
+        <attack name="Iron Tail" interval="5625" chance="18" range="3"/>
+        <attack name="Rock Throw" interval="3275" chance="26" range="8"/>
+        <attack name="Rock Slide" interval="3228" chance="27" range="6"/>
+        <attack name="Earthshock" interval="3510" chance="25" range="5"/>
+        <attack name="Falling Rocks" interval="6330" chance="17" range="6"/>
+        <attack name="Harden" interval="3275" chance="26" range="1"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="Bel!"/>
+<voice sentence="dum!"/>
+<voice sentence="Beldum!"/>
+  </voices>
+  <loot>
+        <item id="12337" chance="2000" countmax="100"/>
+        <item id="12205" chance="6000" count="1" countmax="1"/>
+        <item id="12196" chance="1000" countmax="2"/>
+        <item id="11445" chance="1" count="1" countmax="1"/>
+				<item id="12779" chance="50" countmax="50"/>
+		<item id="12778" chance="25" countmax="50"/>
+		<item id="12785" chance="5" countmax="50"/>
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

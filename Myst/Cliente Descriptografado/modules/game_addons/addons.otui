@@ -1,0 +1,75 @@
+AddonWindow
+  id: pokemonAddon_window
+  text: Selecionar Addon do Pokémon
+  color: #e8c05e
+  font: lucida-11px-rounded
+  anchors.centerIn: parent
+  image-source: /images/ui/window_headless
+
+  Creature
+    id: pokemonAddon
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 15
+    margin-right: 75
+    padding: 4 4 4 4
+    fixed-creature-size: true
+
+  Label
+    id: addonName
+    text-auto-resize: true
+    font: lucida-11px-rounded
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 98
+    margin-left: 62
+
+  NextButton
+    id: outfitNextButton
+    anchors.left: pokemonAddon.right
+    anchors.verticalCenter: pokemonAddon.verticalCenter
+    margin-left: 3
+    enabled: true
+    @onClick: nextOutfit()
+
+  PreviousButton
+    id: outfitPrevButton
+    anchors.right: pokemonAddon.left
+    anchors.verticalCenter: pokemonAddon.verticalCenter
+    margin-right: 3
+    enabled: true
+    @onClick: previousOutfit()
+
+  UIButton
+    id: ok
+    size: 94 24
+    image-source: images/button.png
+    font: lucida-11px-rounded
+    color: #e8c05e
+    text: Ok
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 131
+    margin-left: 20
+    @onClick: changeAddon()
+
+    $hover:
+      image-source: images/button_hover.png
+      color: white
+
+  UIButton
+    id: cancelar
+    size: 94 24
+    image-source: images/button.png
+    font: lucida-11px-rounded
+    color: #e8c05e
+    text: Cancelar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 131
+    margin-left: 120
+    @onClick: naoexibir()
+
+    $hover:
+      image-source: images/button_hover.png
+      color: white

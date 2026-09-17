@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Wigglytuff" nameDescription="a wigglytuff" race="normal" experience="600" speed="117" manacost="0">
+    <health now="130" max="130"/>
+    <look type="415" head="60" body="80" legs="95" feet="113" corpse="11986"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Doubleslap" interval="2617" chance="30" range="1"/>
+        <attack name="Sing" interval="5625" chance="31" range="6"/>
+        <attack name="Hyper Voice" interval="3920" chance="20" range="4"/>
+		<attack name="Lovely Kiss" interval="3920" chance="20" range="3"/>
+        <attack name="Selfheal" interval="5625" chance="18" range="6"/>
+		<attack name="Healarea" interval="5625" chance="18" range="6"/>
+		<attack name="Focus" interval="4625" chance="18" range="6"/>
+        <attack name="Metronome" interval="6330" chance="17" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="WIGGLYTUFF!"/>
+    </voices>
+    <loot>
+        <item id="12179" chance="4000" count="1" countmax="1"/>
+        <item id="11453" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

@@ -1,0 +1,174 @@
+InventoryItem < Item
+HeadSlot < InventoryItem
+  id: slot1
+  &position: {x=65535, y=1, z=0}
+
+BodySlot < InventoryItem
+  id: slot4
+
+LegSlot < InventoryItem
+  id: slot7
+  &position: {x=65535, y=7, z=0}
+
+FeetSlot < InventoryItem
+  id: slot8
+  image-source: /images/game/slots/feet
+  &position: {x=65535, y=8, z=0}
+
+NeckSlot < InventoryItem
+  id: slot2
+  &position: {x=65535, y=2, z=0}
+
+LeftSlot < InventoryItem
+  id: slot6
+  &position: {x=65535, y=6, z=0}
+
+FingerSlot < InventoryItem
+  id: slot9
+  &position: {x=65535, y=9, z=0}
+
+BackSlot < InventoryItem
+  id: slot3
+  &position: {x=65535, y=3, z=0}
+
+RightSlot < InventoryItem
+  id: slot5
+  &position: {x=65535, y=5, z=0}
+
+AmmoSlot < InventoryItem
+  id: slot10
+  &position: {x=65535, y=10, z=0}
+
+CatchBag < InventoryItem
+  id: slot13
+  image-source: /images/ui/item
+  &position: {x=65535, y=13, z=0}
+  $on:
+    image-source: /images/ui/item
+
+MiniWindow
+  id: inventoryWindow
+  text: Inventário
+  icon: /images/topbuttons/inventory
+  size: 190 180
+  @onClose: modules.game_inventory.onMiniWindowClose()
+  &save: true
+
+  MiniWindowContents
+    HeadSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 85
+      margin-right: 7
+
+    CatchBag
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 121
+      margin-right: 7
+
+    UIWidget
+      id: slot15
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.left: parent.left
+      margin-top: -7
+      margin-left: 71
+
+    BodySlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 85
+      margin-right: -67
+
+    LegSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 85
+      margin-right: -30
+
+    FeetSlot
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+      margin-top: 3
+
+    NeckSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 10
+      margin-right: -15
+
+    LeftSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 120
+      margin-right: -67
+
+    FingerSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 10
+      margin-right: -54
+
+    BackSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 48
+      margin-right: 7
+
+    RightSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 48
+      margin-right: -67
+
+    AmmoSlot
+      anchors.top: slot15.top
+      anchors.right: slot15.left
+      margin-top: 48
+      margin-right: -30
+
+    UIButton
+      id: dittoBtn
+      tooltip: Ditto Memory
+      image-source: ditto.png
+      size: 25 25
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 6
+      margin-left: 9
+      @onClick: modules.game_memory.show()
+      visible: false
+
+    UIButton
+      id: tradeBtn
+      tooltip: Trocar Pontos
+      image-source: tradepoints.png
+      size: 30 33
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 0
+      margin-left: 143
+      @onClick: modules.game_points.exibir()
+
+    UIButton
+      id: lojaBtn
+      tooltip: Loja
+      image-source: loja.png
+      size: 25 25
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 41
+      margin-left: 143
+      @onClick: modules.game_marketplayer.exibir()
+
+    UIButton
+      id: ropeBtn
+      tooltip: Rope
+      image-source: rope.png
+      size: 25 25
+      anchors.top: lojaBtn.top
+      anchors.left: parent.left
+      margin-top: 40
+      margin-left: 143
+      @onClick: useRope()

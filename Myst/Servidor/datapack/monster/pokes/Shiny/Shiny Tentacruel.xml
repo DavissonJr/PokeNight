@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Tentacruel" nameDescription="a Shiny tentacruel" race="water" experience="820" speed="127" manacost="0">
+  <health now="170" max="170"/>
+  <look type="1267" head="65" body="80" legs="95" feet="113" corpse="12492"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="17"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Acid" interval="2664" chance="30" range="4"/>
+        <attack name="Waterball" interval="2852" chance="29" range="4"/>
+        <attack name="Poison Sting" interval="2711" chance="30" range="1"/>
+        <attack name="Mud Shot" interval="2758" chance="30" range="3"/>
+        <attack name="Super Sonic" interval="4920" chance="20" range="3"/>
+        <attack name="Psy Pulse" interval="2946" chance="28" range="3"/>
+        <attack name="Poison Bomb" interval="2946" chance="28" range="3"/>
+        <attack name="Bubbles" interval="2993" chance="28" range="4"/>
+        <attack name="Psywave" interval="2604" chance="24" range="5"/>
+        <attack name="Hydropump" interval="4356" chance="20" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="TENTACRUEL!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

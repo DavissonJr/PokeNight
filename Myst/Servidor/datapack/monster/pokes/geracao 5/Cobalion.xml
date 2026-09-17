@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cobalion" nameDescription="a Cobalion" race="steel" experience="1100" speed="299" manacost="0">
+  <health now="40" max="40"/>
+  <look type="2888" head="70" body="88" legs="95" feet="113" corpse="21968"/>
+	<targetchange interval="2000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Close Combat" interval="2852" chance="80" range="7"/>
+        <attack name="Iron Head" interval="2852" chance="80" range="8"/>
+        <attack name="Superpower" interval="2805" chance="80" range="7"/>
+        <attack name="Focus Blast" interval="2993" chance="80" range="6"/>
+        <attack name="Flash Cannon" interval="3040" chance="80" range="8"/>
+        <attack name="Metal Claw" interval="3416" chance="80" range="7"/>
+        <attack name="Double Kick" interval="4745" chance="80" range="8"/>
+        <attack name="Swords Dance" interval="5625" chance="80" range="6"/>
+		<attack name="Take Down" interval="3040" chance="80" range="7"/>
+		<attack name="Hyper Beam" interval="3040" chance="80" range="6"/>
+		<attack name="Zen Headbutt" interval="3040" chance="80" range="9"/>		
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="Cobalion!"/>
+<voice sentence="Cobaaalion!"/>
+<voice sentence="Cobalioooon!"/>
+  </voices>
+  <loot>
+        <item id="11445" chance="150" count="1" countmax="1"/> --rock stone
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+  </loot>
+<script>
+<event name="Spawn"/>
+<event name="tp10"/>
+</script>
+</monster>

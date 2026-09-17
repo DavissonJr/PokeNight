@@ -1,0 +1,131 @@
+PreviewItem < UIItem
+  size: 85 85
+  //background-color: gray
+  padding: 10
+  image-source: /images/game/actionbar/1pixel-down-frame
+
+MainWindow
+  id: assignWindow
+  image-source: images/window.png
+  size: 260 208
+  @onEnter: modules.game_actionbar.objectAssignAccept()
+
+  UIButton
+    id: titleTab
+    size: 180 28
+    image-source: images/titleTab.png
+    color: #cda953
+    font: sans-bold-16px
+    text: Selecionar objeto
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -98
+
+  PreviewItem
+    id: previewItem
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 12
+
+  CheckBox
+    id: useOnYourselfCheckbox
+    anchors.left: prev.right
+    anchors.top: prev.top
+    text: Usar em si mesmo
+    text-offset: 21 2
+    text-auto-resize: true
+    margin-left: 5
+    enabled: false
+
+  CheckBox
+    id: useOnTargetCheckbox
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    text: Usar com mira
+    text-offset: 21 2
+    text-auto-resize: true
+    margin-top: 5
+    enabled: false
+
+  CheckBox
+    id: useWithCrosshairCheckbox
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    text: Use with crosshair
+    text-offset: 21 2
+    text-auto-resize: true
+    margin-top: 5
+    enabled: false
+    visible: false
+
+  CheckBox
+    id: equipCheckbox
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    text: Equipar/desequipar
+    text-offset: 21 2
+    text-auto-resize: true
+    margin-top: -13
+    enabled: false
+
+  CheckBox
+    id: useCheckbox
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    text: Usar
+    text-offset: 21 2
+    text-auto-resize: true
+    margin-top: 5
+    enabled: false
+
+  UIButton
+    id: selectObjectButton
+    size: 104 26
+    image-source: images/button.png
+    anchors.left: parent.left
+    anchors.top: previewItem.bottom
+    anchors.right: previewItem.right
+    text: Selecionar
+    margin-top: 39
+    @onClick: modules.game_actionbar.startChooseItem()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    height: 2
+    margin-top: -32
+
+  UIButton
+    id: applyButton
+    size: 65 26
+    image-source: images/button.png
+    image-border: 20
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: -5
+    margin-left: 90
+    text: Confirmar
+    @onClick: modules.game_actionbar.objectAssignAccept()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: cancelButton
+    size: 65 26
+    image-source: images/button.png
+    image-border: 20
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: -5
+    margin-left: 160
+    text: Voltar
+    @onClick: modules.game_actionbar.closeObjectAssignWindow()
+
+    $hover:
+      image-source: images/button_hover.png

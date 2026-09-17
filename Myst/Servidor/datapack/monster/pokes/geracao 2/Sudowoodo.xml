@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sudowoodo" nameDescription="a sudowoodo" race="rock" experience="712" speed="137" manacost="0">
+    <health now="200" max="200"/>
+  <look type="902" head="60" body="80" legs="95" feet="113" corpse="4444"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+ <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Rock Slide" interval="2758" chance="30" range="3"/>
+        <attack name="Mega Punch" interval="2852" chance="29" range="1"/>
+        <attack name="Rock Throw" interval="2805" chance="29" range="3"/>
+        <attack name="Earthshock" interval="3040" chance="28" range="6"/>
+        <attack name="Falling Rocks" interval="3980" chance="22" range="6"/>
+        <attack name="Shockwave" interval="3322" chance="26" range="6"/>
+      </attacks>
+    <defenses armor="0" defense="0"/>
+  <voices interval="5000" chance="10">
+	<voice sentence="SUDOOO!"/>
+<voice sentence="WOODOOO!"/>
+<voice sentence="SUDOWOODO!"/>
+  </voices>
+  <loot>
+        <item id="11451" chance="100" count="1" countmax="1"/>
+        <item id="12337" chance="20000" countmax="100"/>
+        <item id="12177" chance="10000" countmax="2"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

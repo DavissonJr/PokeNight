@@ -1,0 +1,9 @@
+Module
+  name: game_talktype
+  description: Mostrar mensagens em laranja/nao laranja
+  author: Cosmic Programmer - Thalles Vitor
+  website: tem nao mano so discord
+  sandboxed: true
+  scripts: [ talktype ]
+  @onLoad: init()
+  @onUnload: terminate()

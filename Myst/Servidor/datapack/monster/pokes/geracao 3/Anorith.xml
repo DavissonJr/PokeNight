@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Anorith" nameDescription="a Anorith" race="ground" experience="0" speed="162" manacost="0">
+  <health now="40" max="40"/>
+  <look type="1628" head="38" body="47" legs="95" feet="113" corpse="592"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+	  <attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-36"/>
+        <attack name="Scratch" interval="2852" chance="29" range="1"/>
+        <attack name="Mud Shot" interval="2758" chance="30" range="4"/>
+                <attack name="Mud Slap" interval="2711" chance="30" range="1"/>
+        <attack name="Earthshock" interval="3087" chance="28" range="5"/>
+  </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="SHUU!"/>
+<voice sentence="Anor!"/>
+<voice sentence="Anorith!"/>
+  </voices>
+  <loot>
+	<item id="12165" countmax="48" chance="80000"/> -- bottle of poison
+	<item id="8309" countmax="1" chance="32000"/> -- nail
+		<item id="12779" chance="100" countmax="50"/>
+		<item id="12778" chance="50" countmax="50"/>
+		<item id="12785" chance="10" countmax="50"/>
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

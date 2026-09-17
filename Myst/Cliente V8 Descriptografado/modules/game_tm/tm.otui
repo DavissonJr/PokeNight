@@ -1,0 +1,221 @@
+HeadlessWindow
+  id: tmWindow
+  font: sans-bold-16px
+  text: Technical Machine
+  text-offset: 0 15
+  anchors.centerIn: parent
+  image-source: images/tmWindow
+  icon: images/separator2
+  icon-size: 329 17
+  icon-offset: 59 31
+  size: 473 432
+
+  Label
+    id: moves
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 200
+    font: sans-bold-16px
+    text: Moves
+    color: #e8c05e
+    draggable: false
+
+  UIButton
+    id: movesWindow
+    text-offset: -120 0
+    text-auto-resize: true
+    font: sans-bold-16px
+    image-source: images/movesWindow
+    size: 36 36
+    anchors.top: parent.top
+    anchors.left: prev.left
+    margin-top: 70
+    margin-left: 9
+    draggable: false
+    layout:
+      type: grid
+      cell-spacing: 4
+      cell-size: 32 32
+      flow: true
+
+  UIButton
+    id: left
+    opacity: 0.40
+    image-source: images/left
+    size: 45 45
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 123
+    margin-left: 189
+    draggable: false
+
+    $hover on:
+      opacity: 100
+
+  UIButton
+    id: right
+    opacity: 0.40
+    image-source: images/right
+    size: 45 45
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 124
+    margin-left: 226
+    draggable: false
+
+    $hover on:
+      opacity: 100
+
+  UIButton
+    id: up
+    opacity: 0.40
+    image-source: images/up
+    size: 45 45
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 178
+    margin-left: 42
+    draggable: false
+    visible: false
+
+    $hover on:
+      opacity: 100
+
+  UIImageView
+    id: separator
+    size: 330 11
+    image-source: images/separator
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 185
+    margin-left: 78
+    draggable: false
+
+  UIButton
+    id: reset
+    tooltip: Volta todos os ataques e sequùncia para o original
+    icon: images/warning
+    icon-size: 28 34
+    icon-offset: 5 0
+    text: Resetar
+    color: #e8c05e
+    size: 109 32
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 155
+    margin-left: 322
+    draggable: false
+
+    $hover:
+      image-source: images/button_hover
+
+  Label
+    id: movesReady
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: Moves disponÌveis
+    color: #e8c05e
+    margin-top: 194
+    margin-left: 150
+    draggable: false
+
+  UIWindow
+    id: allMovesWindow
+    image-source: images/moves_ready
+    size: 392 153
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 210
+    margin-left: 39
+    draggable: false
+    layout:
+      type: grid
+      cell-spacing: 1
+      cell-size: 32 32
+      flow: true
+
+  UIImageView
+    id: separatorFinal
+    size: 329 17
+    image-source: images/separator2
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 365
+    margin-left: 68
+    draggable: false
+
+  UIImageView
+    id: showAllTMS
+    tooltip: Mostrar todos os TMs ativados
+    opacity: 0.65
+    size: 32 32
+    image-source: images/showTms
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 372
+    margin-left: 18
+    draggable: false
+    @onClick: showAllTMS()
+
+    $hover:
+      opacity: 100
+
+  UIButton
+    id: confirm
+    opacity: 0.40
+    icon: images/confirm
+    icon-size: 20 20
+    icon-offset: 9 5
+    text-offset: 6 0
+    text: Confirmar
+    color: #e8c05e
+    size: 109 32
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 379
+    margin-left: 239
+    draggable: false
+
+    $hover on:
+      image-source: images/button_hover
+
+  UIButton
+    id: cancel
+    icon: images/cancel
+    icon-size: 20 20
+    icon-offset: 9 6
+    text: Cancelar
+    color: #e8c05e
+    size: 109 32
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 379
+    margin-left: 336
+    @onClick: naoexibir()
+    draggable: false
+
+    $hover:
+      image-source: images/button_hover
+
+  UIWindow
+    id: allMovesAvailables
+    image-source: images/tmWindow
+    size: 380 325
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 60
+    margin-left: 39
+    draggable: false
+    visible: false
+    layout:
+      type: grid
+      cell-spacing: 1
+      cell-size: 32 32
+      flow: true

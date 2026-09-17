@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mamae" script="Mamae.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="1028" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Bem-vindo(a) |PLAYERNAME|. Sou a mamãe do administrador, você pode trocar diamantes em item, como Shiny Stone, Bike Box e VIP de 30 dias, vamos lá diga {presente}."/>
+<parameter key="message_farewell" value="Tchau! Vejo você na próxima vez."/>
+</parameters>
+</npc>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Trubbish" nameDescription="a Trubbish" race="poison" experience="250" speed="234" manacost="0">
+    <health now="120" max="120"/>
+    <look type="2809" head="25" body="45" legs="95" feet="113" corpse="21828"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Pound" interval="2664" chance="30" range="2"/>
+        <attack name="Poison Gas" interval="2523" chance="20" range="1"/>
+        <attack name="Toxic Spikes" interval="2758" chance="28" range="2"/>
+        <attack name="Double Slap" interval="2711" chance="30" range="2"/>
+        <attack name="Toxic" interval="2946" chance="28" range="2"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Trubbiiish!"/>
+    </voices>
+    <loot>
+        <item id="12157" chance="1500" count="1" countmax="1"/>
+        <item id="11443" chance="150" count="1" countmax="1"/> --venom stone
+        <item id="12165" chance="10000" countmax="80"/> --bottles of poison
+        <item id="12282" chance="5000" countmax="1"/> --venom pendant
+		<item id="13795" chance="6000" countmax="1"/> --venom piece
+		        <item id="13789" chance="3000" countmax="1"/> --horn
+        <item id="12202" chance="5000" countmax="1"/> --gosme
+		        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

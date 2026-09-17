@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Agustinho" script="datapack/npc/scripts/joinida.lua" walkinterval="350000" floorchange="0" speed="0">
+          <health now="150" max="150"/>
+          <look type="2141" head="114" body="12" legs="57" feet="114" addons="0" />
+	  <parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME| você quer ir para Join Avenue? diga {quero}."/>
+        </parameters>
+
+       </npc>

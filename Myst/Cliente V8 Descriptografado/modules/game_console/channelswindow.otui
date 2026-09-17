@@ -1,0 +1,98 @@
+ChannelListLabel < Label
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 2 0
+  focusable: true
+
+  $focus:
+    background-color: #ffffff22
+    color: white
+
+  $!focus:
+    color: #cda953
+
+MainWindow
+  id: channelsWindow
+  size: 302 323
+  @onEscape: self:destroy()
+
+  UIButton
+    id: titleTab
+    size: 212 28
+    image-source: /images/ui/titleTab.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -27
+    margin-left: 28
+
+  Label
+    id: name
+    text-auto-resize: true
+    text: Canais
+    color: #cda953
+    font: sans-bold-16px
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -22
+    margin-left: 110
+
+  TextList
+    id: channelList
+    size: 275 154
+    vertical-scrollbar: channelsScrollBar
+    anchors.bottom: next.top
+    margin-bottom: 10
+    padding: 1
+    focusable: false
+
+  Label
+    id: openPrivateChannelWithLabel
+    color: #cda953
+    !text: tr('Abrir um canal privado') .. ':'
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    text-align: center
+    margin-bottom: 9
+
+  TextEdit
+    id: openPrivateChannelWith
+    image-source: /images/ui/textedit
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 10
+
+  UIButton
+    id: buttonOpen
+    !text: tr('Abrir')
+    size: 100 26
+    image-source: images/button.png
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    margin-right: 9
+    @onClick: self:getParent():onEnter()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonCancel
+    !text: tr('Cancelar')
+    size: 100 26
+    image-source: images/button.png
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 34
+    @onClick: self:getParent():destroy()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  VerticalScrollBar
+    id: channelsScrollBar
+    anchors.top: channelList.top
+    anchors.bottom: channelList.bottom
+    anchors.right: channelList.right
+    step: 14
+    pixels-scroll: true

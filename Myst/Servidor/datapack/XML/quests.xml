@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	<quest name="First Stone" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest First Stone" storageid="31441546" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest First Stone"/>     
+<missionstate id="1" description="Quest First Stone"/>
+
+		</mission>
+		
+	</quest>
+	
+	
+	<quest name="Earth Stone" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Venom Stone" storageid="2353463" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Earth Stone"/>     
+<missionstate id="1" description="Quest Earth Stone"/>
+
+		</mission>
+		
+	</quest>
+	
+	
+	<quest name="Venom Stone" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Venom Stone" storageid="2353465" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Venom Stone"/>     
+<missionstate id="1" description="Quest Venom Stone"/>
+
+		</mission>
+		
+	</quest>
+	
+	<quest name="Darkness Stone" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Darkness Stone" storageid="2353462" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Darkness Stone"/>     
+<missionstate id="1" description="Quest Darkness Stone"/>
+
+		</mission>
+		
+	</quest>
+	
+	<quest name="Punch Stone" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Punch Stone" storageid="2353461" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Punch Stone"/>     
+<missionstate id="1" description="Quest Punch Stone"/>
+
+		</mission>
+		
+	</quest>
+	
+	
+	<quest name="Rayquaza" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Rayquaza" storageid="243243" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Rayquaza"/>     
+<missionstate id="1" description="Quest Rayquaza"/>
+
+		</mission>
+		
+	</quest>
+	
+	
+	<quest name="Rock Stone" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Rock Stone" storageid="2353464" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Rock Stone"/>     
+<missionstate id="1" description="Quest Rock Stone"/>
+
+		</mission>
+		
+	</quest>
+	
+	<quest name="Boost Free" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Boost Free" storageid="2353468" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Boost Free"/>     
+<missionstate id="1" description="Quest Boost Free"/>
+
+		</mission>
+		
+	</quest>
+	
+	<quest name="Boost Hell" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Boost Hell" storageid="2353467" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Boost Hell"/>     
+<missionstate id="1" description="Quest Boost Hell"/>
+
+		</mission>
+		
+	</quest>
+	
+	
+	<quest name="Boost Ice" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest Boost Ice" storageid="2353466" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest Boost Ice"/>     
+<missionstate id="1" description="Quest Boost Ice"/>
+
+		</mission>
+		
+	</quest>
+	
+	
+	<quest name="20 HDS" startstorageid="111" startstoragevalue="1">
+		<mission name="Quest 20 HDS" storageid="4234563" startvalue="0" endvalue="1">
+            <missionstate id="0" description="Quest 20 HDS"/>     
+<missionstate id="1" description="Quest 20 HDS"/>
+
+		</mission>
+		
+	</quest>
+</quests>

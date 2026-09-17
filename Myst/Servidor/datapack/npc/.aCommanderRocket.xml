@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<npc name="Commander Rocket" script=".aCommanderRocket.lua" walkinterval="0" floorchange="0" access="5" level="100" maglevel="1">
+<health now="15" max="15"/>
+<look type="604" head="114" body="119" legs="114" feet="114" corpse="3058"/>
+
+<parameters>
+
+</parameters>
+</npc>

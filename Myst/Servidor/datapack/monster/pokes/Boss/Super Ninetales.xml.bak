@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Super Ninetales" nameDescription="a Super Ninetales" race="fire" experience="90200" speed="147" manacost="0">
+  <health now="170" max="170"/>
+  <look type="2934" head="80" body="95" legs="95" feet="113" corpse="12597"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="17"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2570" chance="31" range="1"/>
+        <attack name="Iron Tail" interval="2664" chance="30" range="4"/>
+        <attack name="Flamethrower" interval="3580" chance="28" range="4"/>
+		<attack name="Fireball" interval="3040" chance="28" range="4"/>
+        <attack name="Fire Fang" interval="2852" chance="29" range="1"/>
+        <attack name="Ember" interval="3846" chance="28" range="4"/>
+        <attack name="Fire Blast" interval="4128" chance="27" range="5"/>
+        <attack name="Wing Attack" interval="4128" chance="27" range="5"/>
+		<attack name="Magma Storm" interval="5128" chance="18" range="5"/>
+		<attack name="Flame Wheel" interval="3510" chance="25" range="1"/>
+		<attack name="Flame Wheel" interval="3500" chance="10" range="1"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="CHARIZARD!"/>
+ </voices>
+
+  <loot>
+  <item id="2145" chance="2000" count="1" countmax="5"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

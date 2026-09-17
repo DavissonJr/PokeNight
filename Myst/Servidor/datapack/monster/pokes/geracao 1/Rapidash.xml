@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rapidash" nameDescription="a rapidash" race="fire" experience="1400" speed="164" manacost="0">
+    <health now="140" max="140"/>
+    <look type="571" head="50" body="70" legs="95" feet="113" corpse="11951"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Quick Attack" interval="2570" chance="31" range="2"/>
+        <attack name="Ember" interval="2664" chance="30" range="3"/>
+        <attack name="Stomp" interval="2805" chance="29" range="1"/>
+        <attack name="Flamethrower" interval="2805" chance="29" range="5"/>
+        <attack name="Fireball" interval="2946" chance="28" range="4"/>
+		<attack name="Horn Attack" interval="2946" chance="28" range="2"/>
+		<attack name="Crusher Stomp" interval="4946" chance="24" range="4"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="RAPIDASH!"/>
+    </voices>
+    <loot>
+        <item id="12152" chance="4000" count="1" countmax="1"/>
+        <item id="12162" chance="5000" countmax="50"/>
+        <item id="11447" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

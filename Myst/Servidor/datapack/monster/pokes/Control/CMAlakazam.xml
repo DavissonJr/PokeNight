@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<monster name="Control Alakazam" nameDescription="a Control Alakazam" race="normal" experience="0" speed="0" manacost="0">
+	<health now="30000" max="30000"/>
+	<look type="608" head="0" body="0" legs="0" feet="0" corpse="0"/>
+	<targetchange interval="5000" chance="20"/>
+	<strategy attack="100" defense="0"/>
+
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="0"/>
+		<flag hostile="0"/>
+		<flag illusionable="0"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="100"/>
+		<flag hidehealth="1"/>
+	</flags>
+
+	<attacks>
+	</attacks>
+	<defenses armor="1" defense="1"/>
+
+	<loot>
+	</loot>
+
+</monster>

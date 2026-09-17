@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Tiuzepi" script="default.lua" walkinterval="32000000" speed="0" walkradius="4" floorchange="0" speechbubble="1">
+	<health max="150" now="150"/>
+	<look type="1419" head="115" body="94" legs="114" feet="0" addons="3" mount="0"/>
+	<parameters>
+		<!--MESSAGES-->
+		<parameter key="message_greet" value="Olá, eu vendo objetos raros, diga trade {trade}."/>
+		<parameter key="message_farewell" value="Até mais!"/>
+		<parameter key="message_idletimeout" value="Até mais!"/>
+		<parameter key="message_walkaway_male" value="Até mais!"/>
+		<parameter key="message_walkaway_female" value="Até mais!"/>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="metalstone,12232,500000;kingstone,12244,500000"/>
+	</parameters>
+</npc>

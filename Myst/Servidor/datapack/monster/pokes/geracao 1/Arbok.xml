@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Arbok" nameDescription="a arbok" race="poison" experience="1240" speed="467" manacost="0">
+    <health now="130" max="130"/>
+    <look type="390" head="25" body="45" legs="95" feet="113" corpse="11841"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Bite" interval="2711" chance="30" range="1"/>
+        <attack name="Poison Fang" interval="2946" chance="28" range="1"/>
+        <attack name="Sting Gun" interval="2899" chance="29" range="1"/>
+        <attack name="Acid" interval="2758" chance="30" range="3"/>
+		<attack name="Pin Missile" interval="2758" chance="20" range="3"/>
+        <attack name="Fear" interval="5625" chance="18" range="3"/>
+        <attack name="Iron Tail" interval="3040" chance="28" range="1"/>
+        <attack name="Rage" interval="3651" chance="24" range="1"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="ARBOK!"/>
+    </voices>
+    <loot>
+        <item id="12165" chance="5000" count="0" countmax="50"/>
+        <item id="11443" chance="249" count="1" countmax="1"/>
+        <item id="28240" chance="67" count="1" countmax="1"/> --TM09 - Toxic
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

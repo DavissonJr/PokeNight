@@ -1,0 +1,8 @@
+<npc name="Ratatouille" script="script3.lua" walkinterval="0" floorchange="0" speed="0">
+    <health now="150" max="150"/>
+    <look type="1748" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+    <parameters>
+<parameter key="message_greet" value="Salve, quer entrar no lugar mais profundo?, diga {ritual}."/>
+    </parameters>
+
+</npc>

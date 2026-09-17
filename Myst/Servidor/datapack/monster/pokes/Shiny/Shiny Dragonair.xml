@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Dragonair" nameDescription="a Shiny dragonair" race="dragon" experience="672" speed="137" manacost="0">
+  <health now="140" max="140"/>
+  <look type="1342" head="60" body="75" legs="95" feet="113" corpse="12568"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="18"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Aqua Tail" interval="2805" chance="29" range="1"/>
+		<attack name="Headbutt" interval="2705" chance="29" range="1"/>
+        <attack name="Dragon Breath" interval="3040" chance="28" range="6"/>
+        <attack name="Hyper Beam" interval="2899" chance="29" range="5"/>
+        <attack name="Thunder Wave" interval="2993" chance="28" range="6"/>
+        <attack name="Twister" interval="2852" chance="29" range="3"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+	</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="DRAGONAIR!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

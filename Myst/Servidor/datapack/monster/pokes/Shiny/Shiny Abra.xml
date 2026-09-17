@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Abra" nameDescription="a abra" race="psychic" experience="204" speed="104" manacost="0">
+  <health now="30" max="30"/>
+  <look type="1257" head="20" body="30" legs="95" feet="113" corpse="12482"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="2"/>
+ <flag staticattack="100"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="24"/>
+</flags>
+
+<attacks>
+        <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">
+            <attribute key="shootEffect" value="eartharrow"/>
+        </attack>
+        <attack name="Night Shade" interval="2617" chance="30" range="6"/>
+        <attack name="Restore" interval="4920" chance="20" range="6"/>
+        <attack name="Psy Pulse" interval="2852" chance="29" range="6"/>
+        <attack name="Psywave" interval="3040" chance="28" range="5"/>
+        <attack name="Psybeam" interval="3275" chance="26" range="6"/>
+        <attack name="InvisibleGhost" interval="3925" chance="18" range="6"/>
+        <attack name="Psychic" interval="3510" chance="25" range="6"/>
+		<attack name="Hypnosis" interval="5510" chance="25" range="3"/>
+		<attack name="Nightmare" interval="5610" chance="25" range="4"/>
+		<attack name="Reflect" interval="4510" chance="20" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="ABRA!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

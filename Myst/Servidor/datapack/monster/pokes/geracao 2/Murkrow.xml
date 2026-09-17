@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Murkrow" nameDescription="a murkrow" race="dark" experience="0" speed="170" manacost="0">
+  <health now="40" max="40"/>
+  <look type="905" head="33" body="57" legs="95" feet="113" corpse="3579"/>
+	<targetchange interval="10000" chance="0"/>
+<strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+   <flag hungerdelay="15"/>
+</flags>
+  <attacks>
+		<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-70"/>
+        <attack name="Quick Attack" interval="2570" chance="31" range="1"/>
+        <attack name="Whirlwind" interval="2711" chance="30" range="6"/>
+        <attack name="Wing Attack" interval="3005" chance="29" range="6"/>
+        <attack name="Drill Peck" interval="2948" chance="18" range="1"/>
+        <attack name="Night Shade" interval="3184" chance="19" range="6"/>
+        <attack name="Hypnosis" interval="5061" chance="20" range="3"/>
+        <attack name="Fear" interval="7035" chance="16" range="3"/>
+   </attacks>
+  <defenses armor="0" defense="0">
+  </defenses>
+  <voices interval="5000" chance="10">
+	<voice sentence="MUURK!"/>
+<voice sentence="KROOOW!"/>
+<voice sentence="MURKROW!"/>
+  </voices>
+  <loot>
+	<item id="12194" countmax="1" chance="32500"/>-- future orb
+  </loot>
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

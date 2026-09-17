@@ -1,0 +1,9 @@
+Module
+  name: game_task
+  description: Sistema de Task - Thalles
+  author: Thalles Vitor
+  website: https://www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ task ]
+  @onLoad: init()
+  @onUnload: terminate()

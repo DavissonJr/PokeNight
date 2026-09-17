@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Anita" script="Remenbrance.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="881" head="123" body="74" legs="123" feet="0" addons="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME|, um pokémon malvado roubou meu pokémon, e agora preciso abrir um portal para poder pega-lo de volta poderia me ajudar? preciso dos seguintes items: poisonous tail, Winds tail, yellow eye, Volcanos plume, Dark Wing's. Caso tenho todos eles diga {portal} para abrir!"/>
+</parameters>
+</npc>

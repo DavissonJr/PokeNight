@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Yamask" nameDescription="a Yamask" race="ghost" experience="250" speed="217" manacost="0">
+    <health now="40" max="40"/>
+    <look type="2803" head="15" body="35" legs="95" feet="113" corpse="21816"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="physical" interval="2000" chance="100" range="3" min="-50" max="-100">
+            <attribute key="shootEffect" value="eartharrow"/>
+        </attack>
+        <attack name="Night Shade" interval="2711" chance="26" range="4"/>
+        <attack name="Hex" interval="2805" chance="25" range="4"/>
+        <attack name="Ominous Wind" interval="5048" chance="29" range="2"/>
+        <attack name="Shadow Ball" interval="5484" chance="20" range="4"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Yamaaask!"/>
+    </voices>
+    <loot>
+        <item id="12204" chance="3000" count="1" countmax="1"/>
+        <item id="12745" chance="10000" countmax="80"/> --darkness gem
+        <item id="12206" chance="10000" countmax="80"/> --essence of dark
+        <item id="12194" chance="500" count="1" countmax="1"/>
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

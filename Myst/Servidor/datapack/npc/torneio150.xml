@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Antonio" script="torneio.lua" walkinterval="0" floorchange="0">
+<health now="150" max="150"/>
+<look type="125" head="114" body="109" legs="95" feet="114"/>
+<!-- <look type="125" head="96" body="95" legs="95" feet="114"/> -->
+<parameters>
+<parameter key="message_greet" value="Sou o chefe do torneio Johto Pokémon. Diga {torneio} para saber mais."/>
+        </parameters>
+</npc>

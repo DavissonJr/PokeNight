@@ -1,0 +1,32 @@
+Panel
+  OptionCheckBox
+    id: showInfoMessagesInConsole
+    text: Mostrar mensagens informativas no console
+
+  OptionCheckBox
+    id: showEventMessagesInConsole
+    text: Mostrar mensagens de eventos no console
+
+  OptionCheckBox
+    id: showStatusMessagesInConsole
+    text: Mostrar mensagens de status no console
+
+  OptionCheckBox
+    id: showTimestampsInConsole
+    text: Mostrar data/hora no console
+
+  OptionCheckBox
+    id: showLevelsInConsole
+    text: Mostrar níveis no console
+
+  OptionCheckBox
+    id: showPrivateMessagesInConsole
+    text: Mostrar mensagens privadas no console
+
+  OptionCheckBox
+    id: showPrivateMessagesOnScreen
+    text: Mostrar mensagens privadas na tela
+
+  OptionCheckBox
+    id: showOrangeMessages
+    text: Mostrar mensagens laranjas

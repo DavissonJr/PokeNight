@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Landorus" nameDescription="a Landorus" race="ground" experience="100" speed="207" manacost="0">
+    <health now="60" max="60"/>
+    <look type="2898" head="10" body="30" legs="95" feet="113" corpse="21982"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Fissure" interval="2664" chance="80" range="7"/>
+        <attack name="Bulldoze" interval="2852" chance="80" range="8"/>
+        <attack name="Earth Power" interval="2805" chance="80" range="6"/>
+        <attack name="Earthquake" interval="2899" chance="80" range="7"/>
+        <attack name="Sandstorm" interval="5625" chance="80" range="8"/>
+        <attack name="Fly" interval="5625" chance="80" range="7"/>
+        <attack name="Outrage" interval="5725" chance="80" range="9"/>
+        <attack name="Hammer Arm" interval="5025" chance="80" range="8"/>
+        <attack name="Stone Edge" interval="5325" chance="80" range="6"/>
+        <attack name="Iron Tail" interval="5725" chance="80" range="8"/>
+        <attack name="Superpower" interval="5025" chance="80" range="7"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Landoruuus!"/>
+    </voices>
+    <loot>
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

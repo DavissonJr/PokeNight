@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Starmie" nameDescription="a starmie" race="water" experience="670" speed="117" manacost="0">
+    <health now="140" max="140"/>
+    <look type="600" head="35" body="60" legs="95" feet="113" corpse="11968"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="19"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Swift" interval="2758" chance="30" range="3"/>
+        <attack name="Slash" interval="2852" chance="29" range="1"/>
+        <attack name="Water Gun" interval="2899" chance="29" range="6"/>
+        <attack name="Bubbles" interval="2343" chance="25" range="3"/>
+        <attack name="Waterball" interval="2946" chance="28" range="3"/>
+        <attack name="Restore" interval="6330" chance="17" range="6"/>
+		<attack name="Psybeam" interval="2430" chance="26" range="6"/>
+		<attack name="Thunder Wave" interval="2630" chance="24" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="STARMIE!"/>
+    </voices>
+    <loot>
+        <item id="12161" chance="4000" countmax="50"/>
+        <item id="12170" chance="4000" count="1" countmax="1"/>
+        <item id="11442" chance="100" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

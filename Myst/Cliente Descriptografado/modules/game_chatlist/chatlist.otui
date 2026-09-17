@@ -1,0 +1,35 @@
+HeadlessWindow
+  id: chatList
+  image-source: /images/ui/menubox
+  size: 305 305
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 222
+  margin-left: 198
+  draggable: false
+  focusable: true
+
+  ScrollablePanel
+    id: chatListPanel
+    size: 288 292
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 3
+    vertical-scrollbar: chatListScrollBar
+    layout:
+      type: grid
+      cell-size: 270 46
+      flow: false
+
+  VerticalScrollBar
+    id: chatListScrollBar
+    anchors.top: chatListPanel.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: 7
+    margin-bottom: 16
+    margin-right: 5
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0

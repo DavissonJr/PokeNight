@@ -1,0 +1,79 @@
+Button < UIButton
+  font: verdana-11px-antialised
+  color: #ffffff
+  size: 106 20
+  text-offset: 0 0
+  image-source: /images/ui/button
+  image-color: white
+  image-clip: 0 0 20 20
+  image-border: 4
+  padding: 5 10 5 10
+
+  $hover !disabled:
+    image-clip: 0 20 20 20
+
+  $pressed:
+    image-clip: 0 40 20 20
+    text-offset: 1 1
+
+  $disabled:
+    color: #f0ad4d88
+
+TabButton < UIButton
+  size: 20 20
+  image-source: /images/ui/tabbutton_rounded
+  image-color: white
+  image-clip: 0 0 20 20
+  image-border: 3
+  icon-color: white
+  color: #aaaaaa
+
+  $hover !on:
+    image-clip: 0 20 20 20
+    color: white
+
+  $disabled:
+    image-color: #ffffff66
+    icon-color: #888888
+
+  $on:
+    image-clip: 0 40 20 20
+    color: #80c7f8
+
+NextButton < UIButton
+  size: 45 45
+  image-source: /images/ui/right
+  image-color: #ffffff
+  text-offset: 0 1
+  change-cursor-image: true
+  cursor: pointer
+
+  $disabled:
+    image-color: #dfdfdf88
+    change-cursor-image: false
+
+PreviousButton < UIButton
+  size: 45 45
+  image-source: /images/ui/left
+  image-color: #ffffff
+  text-offset: 0 1
+  change-cursor-image: true
+  cursor: pointer
+
+  $disabled:
+    image-color: #dfdfdf88
+    change-cursor-image: false
+
+AddButton < UIButton
+  size: 20 20
+  image-source: /images/ui/icon_add
+  image-color: #ffffffff
+
+  $hover !disabled:
+    image-color: #ffffff99
+
+  $pressed:
+    image-color: #ffffff44
+
+  $disabled:
+    image-color: #ffffff55

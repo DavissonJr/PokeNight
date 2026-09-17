@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tornadus" nameDescription="a Tornadus" race="flying" experience="100" speed="227" manacost="0">
+    <health now="30" max="30"/>
+    <look type="2894" head="1" body="10" legs="95" feet="113" corpse="21974"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag passive="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Hurricane" interval="2617" chance="30" range="9"/>
+        <attack name="Gust" interval="2476" chance="31" range="6"/>
+        <attack name="Air Cutter" interval="2758" chance="30" range="9"/>
+        <attack name="Air Slash" interval="2852" chance="80" range="8"/>
+        <attack name="Tailwind" interval="2652" chance="80" range="6"/>
+        <attack name="Aerial Ace" interval="2872" chance="80" range="7"/>
+        <attack name="Fly" interval="2882" chance="80" range="7"/>
+        <attack name="Thrash" interval="2952" chance="80" range="6"/>
+        <attack name="Hammer Arm" interval="3852" chance="80" range="8"/>
+        <attack name="Dark Pulse" interval="4852" chance="80" range="6"/>
+        <attack name="Rain Dance" interval="5852" chance="80" range="7"/>		
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Tornaduuus!"/>
+    </voices>
+    <loot>
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

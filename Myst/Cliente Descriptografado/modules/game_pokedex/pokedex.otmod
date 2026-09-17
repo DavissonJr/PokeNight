@@ -1,0 +1,9 @@
+Module
+  name: game_pokedex
+  description: Sistema de Pokedex
+  author: Thalles Vitor
+  website: www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ pokedex ]
+  @onLoad: init()
+  @onUnload: terminate()

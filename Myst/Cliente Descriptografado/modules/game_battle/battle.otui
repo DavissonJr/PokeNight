@@ -1,0 +1,148 @@
+BattleIcon < UICheckBox
+  size: 23 23
+
+BattlePlayers < BattleIcon
+  image-source: img/player
+
+BattleNPCs < BattleIcon
+  image-source: img/npc
+
+BattleMonsters < BattleIcon
+  image-source: img/pokemon
+
+BattleSkulls < BattleIcon
+  image-source: img/pokemon2
+
+BattleParty < BattleIcon
+  image-source: img/party
+
+MiniWindow
+  id: battleWindow
+  !text: tr('Battle')
+  height: 166
+  icon: /images/topbuttons/battle
+  @onOpen: onOpen()
+  @onClose: onClose()
+  &save: true
+
+  Panel
+    id: filterPanel
+    margin-top: 26
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: miniwindowScrollBar.left
+    height: 45
+
+    Panel
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-left: -7
+      height: 24
+      width: 120
+      layout:
+        type: horizontalBox
+        spacing: 5
+
+      BattlePlayers
+        id: hidePlayers
+        !tooltip: tr('Esconder jogadores')
+        @onCheckChange: modules.game_battle.checkCreatures()
+
+        $checked:
+          image-source: img/player_off
+
+      BattleNPCs
+        id: hideNPCs
+        !tooltip: tr('Esconder NPCs')
+        @onCheckChange: modules.game_battle.checkCreatures()
+
+        $checked:
+          image-source: img/npc_off
+
+      BattleMonsters
+        id: hideMonsters
+        !tooltip: tr('Esconder Pokémon Selvagem')
+        @onCheckChange: modules.game_battle.checkCreatures()
+
+        $checked:
+          image-source: img/pokemon_off
+
+      BattleSkulls
+        id: hideSkulls
+        !tooltip: tr('Esconder Pokémon de Jogadores')
+        @onCheckChange: modules.game_battle.checkCreatures()
+
+        $checked:
+          image-source: img/pokemon2_off
+
+      BattleParty
+        id: hideParty
+        !tooltip: tr('Esconder membros do grupo')
+        @onCheckChange: modules.game_battle.checkCreatures()
+
+        $checked:
+          image-source: img/party_off
+
+    Panel
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      height: 20
+      width: 128
+      margin-top: 6
+
+      ComboBox
+        id: sortTypeBox
+        width: 74
+        anchors.top: parent.top
+        anchors.left: prev.right
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-left: -28
+        visible: false
+
+      ComboBox
+        id: sortOrderBox
+        width: 54
+        anchors.top: parent.top
+        anchors.left: prev.right
+        margin-left: 4
+        visible: false
+
+  Panel
+    height: 18
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: miniwindowScrollBar.left
+    margin-top: -24
+
+    UIWidget
+      id: toggleFilterButton
+      anchors.top: prev.top
+      width: 21
+      anchors.horizontalCenter: parent.horizontalCenter
+      image-rect: 0 0 21 12
+      image-clip: 21 0 21 12
+      @onClick: modules.game_battle.toggleFilterPanel()
+      phantom: false
+
+  HorizontalSeparator
+    anchors.top: prev.top
+    anchors.left: parent.left
+    anchors.right: miniwindowScrollBar.left
+    margin-right: 1
+    margin-top: 11
+
+  MiniWindowContents
+    anchors.top: prev.bottom
+    margin-top: 5
+
+    Panel
+      id: battlePanel
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      margin-top: 5
+      padding-right: 5
+      layout:
+        type: verticalBox
+        fit-children: true

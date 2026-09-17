@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<globalevents>
+	<!-- Thalles Vitor - Shop -->
+	<globalevent name="Shop" interval="10" event="script" value="shop.lua"/>
+	<!-- Outros Sistemas -->
+	<globalevent name="serverstart" type="start" event="script" value="start.lua"/>
+
+	<!-- Mensagens -->
+	<globalevent name="BroadcastMessages" interval="200" event="script" value="cbar.lua"/>
+
+   <!-- Pokekill -->
+	<globalevent name="Monster Hunter Event" time="09:31" event="script" value="Monster Hunter.lua"/> 
+	<globalevent name="Monster Hunter Event2" time="13:30" event="script" value="Monster Hunter.lua"/> 
+	<globalevent name="Monster Hunter Event3" time="16:31" event="script" value="Monster Hunter.lua"/> 
+	<globalevent name="Monster Hunter Event4" time="19:31" event="script" value="Monster Hunter.lua"/> 
+	<globalevent name="Monster Hunter Event5" time="22:15" event="script" value="Monster Hunter.lua"/> 
+	<globalevent name="Monster Hunter Event6" time="00:05" event="script" value="Monster Hunter.lua"/>  
+	<globalevent name="Monster Hunter Event7" time="04:53" event="script" value="Monster Hunter.lua"/> 
+
+  <!-- 150 + -->
+	<globalevent name="TournamentStart1" time="09:01" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart2" time="12:31" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart3" time="19:01" event="script" value="torneio.lua"/>
+	<globalevent name="TournamentStart4" time="23:01" event="script" value="torneio.lua"/>
+	<globalevent name="msg torneio" interval="60" event="script" value="msgtorneio.lua"/>
+	
+	<!-- -150 -->
+	<globalevent name="TournamentStart1150" time="09:02" event="script" value="torneio150.lua"/>
+	<globalevent name="TournamentStart2150" time="12:32" event="script" value="torneio150.lua"/>
+	<globalevent name="TournamentStart3150" time="19:02" event="script" value="torneio150.lua"/>
+	<globalevent name="TournamentStart4150" time="23:02" event="script" value="torneio150.lua"/>
+	<globalevent name="msg torneio2" interval="55" event="script" value="msgtorneio150.lua"/>
+	
+	<!-- Kanto -->
+	 <globalevent name="TournamentStart1jt" time="09:00" event="script" value="torneiojt.lua"/>
+	<globalevent name="TournamentStart2jt" time="12:30" event="script" value="torneiojt.lua"/> 
+	<globalevent name="TournamentStart3jt" time="19:00" event="script" value="torneiojt.lua"/> 
+	<globalevent name="TournamentStart4jt" time="23:00" event="script" value="torneiojt.lua"/> 
+	<globalevent name="msg torneiojt" interval="50" event="script" value="msgtorneiojt.lua"/> 
+	<!-- Outros -->
+</globalevents>

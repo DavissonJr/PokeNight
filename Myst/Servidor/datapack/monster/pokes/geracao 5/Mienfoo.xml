@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mienfoo" nameDescription="a Mienfoo" race="fighting" experience="100" speed="217" manacost="0">
+    <health now="50" max="50"/>
+    <look type="2865" head="15" body="35" legs="95" feet="113" corpse="21930"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Pound" interval="2758" chance="30" range="2"/>
+        <attack name="Meditate" interval="2805" chance="15" range="1"/>
+        <attack name="Double Slap" interval="2805" chance="29" range="2"/>
+        <attack name="Jump Kick" interval="4852" chance="25" range="5"/>
+        <attack name="High Jump Kick" interval="4779" chance="20" range="6"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Mienfoooo!"/>
+    </voices>
+    <loot>
+	    <item id="12195" chance="1000" countmax="1"/> --champion belt
+        <item id="12337" chance="10000" countmax="80"/>
+        <item id="12192" chance="5000" countmax="1"/> --iron bracelet
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

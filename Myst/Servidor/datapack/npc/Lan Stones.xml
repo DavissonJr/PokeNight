@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Ghosting Stones" script="default.lua" walkinterval="32000000" speed="0" walkradius="4" floorchange="0" speechbubble="1">
+	<health max="150" now="150"/>
+	<look type="55" head="115" body="94" legs="114" feet="0" addons="3" mount="0"/>
+	<parameters>
+		<!--MESSAGES-->
+		<parameter key="message_greet" value="Olá, eu vendo stones, tem interesse? diga {trade}!"/>
+		<parameter key="message_farewell" value="Até mais!"/>
+		<parameter key="message_idletimeout" value="Até mais!"/>
+		<parameter key="message_walkaway_male" value="Até mais!"/>
+		<parameter key="message_walkaway_female" value="Até mais!"/>
+		<!--SHOP-->
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_sellable" value="sunstone,12242,200000;metalstone,12232,200000;kingstone,12244,200000;icestone,11454,200000;punchstone,11446,200000;crystalstone,11449,200000;venomstone,11443,200000;earthstone,11451,200000;waterstone,11442,200000;leafstone,11441,200000;heartstone,11453,200000;thunderstone,11444,200000;cocconstone,11448,200000;rockstone,11445,200000;Enigmastone,11452,200000;Darknessstone,11450,200000;Firestone,11447,200000"/>
+	</parameters>
+</npc>

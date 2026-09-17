@@ -1,0 +1,57 @@
+DeathWindow < MainWindow
+  id: deathWindow
+  image-source: /images/ui/window
+  &baseWidth: 350
+  &baseHeight: 15
+
+  UIButton
+    id: titleTab
+    size: 180 28
+    image-source: images/titleTab.png
+    color: #cda953
+    font: sans-bold-16px
+    text: Você está morto
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-top: -68
+
+  Label
+    id: labelText
+    color: white
+    width: 550
+    height: 140
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 10
+    margin-top: 13
+
+  UIButton
+    id: buttonOk
+    !text: tr('Reviver')
+    color: green
+    size: 106 24
+    image-source: images/button.png
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: -5
+    margin-left: 40
+    @onClick: deathFunc()
+
+    $hover:
+      image-source: images/button_hover.png
+
+  UIButton
+    id: buttonCancel
+    !text: tr('Desistir')
+    color: red
+    size: 106 24
+    image-source: images/button.png
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    margin-bottom: -5
+    margin-left: 15
+    @onClick: self:getParent():destroy()
+
+    $hover:
+      image-source: images/button_hover.png

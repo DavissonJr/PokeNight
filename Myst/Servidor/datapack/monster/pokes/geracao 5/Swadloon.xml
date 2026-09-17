@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Swadloon" nameDescription="a Swadloon" race="bug" experience="100" speed="110" manacost="0">
+    <health now="30" max="30"/>
+    <look type="2781" head="1" body="10" legs="95" feet="113" corpse="21774"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+       
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Tackle" interval="2570" chance="31" range="2"/>
+        <attack name="String Shot" interval="2570" chance="15" range="1"/>
+        <attack name="Bug Bite" interval="2758" chance="29" range="2"/>
+        <attack name="Razor Leaf" interval="2758" chance="26" range="2"/>
+        <attack name="Struggle Bug" interval="2758" chance="28" range="2"/>
+        <attack name="Silver Wind" interval="2758" chance="28" range="2"/>
+    </attacks>
+    <defenses armor="0" defense="0"/>
+    <voices interval="5000" chance="10">
+        <voice sentence="Swadlooooon!"/>
+    </voices>
+    <loot>
+        <item id="12171" chance="3500" count="1" countmax="80"/> --pot of moss bug
+        <item id="12183" chance="3500" count="1" countmax="1"/> --some mushroom
+        <item id="12185" chance="3500" count="1" countmax="1"/> --bug venom
+        <item id="12338" chance="10" count="1"/> --bag box --bag box
+    </loot>
+    <script>
+        <event name="Spawn"/>
+    </script>
+</monster>

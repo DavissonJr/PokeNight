@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servers>
+	<server id="0" name="Gold" versionMin="854" versionMax="854" address="127.0.0.1" port="7179"/>;
+</servers>

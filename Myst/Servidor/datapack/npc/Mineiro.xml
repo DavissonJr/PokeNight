@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mineiro" script="Mineiro.lua" walkinterval="0" floorchange="0" access="5" >
+<health now="150" max="150"/>
+<look type="650" head="0" body="114" legs="114" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Suavi na navi? |PLAYERNAME| Eu era um antigo mineiro, como me aposentei agora eu compro os minerais, diga {rochas} para ver oque eu compro!."/>
+<parameter key="message_farewell" value="Adeus, caro energumenuzinho!."/>
+</parameters>
+</npc>

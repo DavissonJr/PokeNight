@@ -1,0 +1,8 @@
+UIButton
+  id: hideTopMenuBtn
+  size: 62 27
+  image-source: /images/ui/show.png
+  anchors.horizontalCenter: parent.horizontalCenter
+  anchors.top: parent.top
+  margin-top: 1
+  @onClick: modules.client_topmenu.toggle()

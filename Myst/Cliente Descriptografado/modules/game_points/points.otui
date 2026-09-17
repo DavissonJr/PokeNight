@@ -1,0 +1,194 @@
+PointsHorizontalScrollBar < UIScrollBar
+  orientation: horizontal
+  height: 13
+  width: 39
+  image-source: images/scrollbar
+
+  UIButton
+    id: decrementButton
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  UIButton
+    id: incrementButton
+    size: 32 32
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+
+  PointsHorizontalScrollBarSlider
+
+  PointsScrollBarValueLabel
+
+PointsHorizontalScrollBarSlider < UIButton
+  id: sliderButton
+  anchors.centerIn: parent
+  size: 32 32
+  image-source: images/button_circle
+
+PointsScrollBarValueLabel < Label
+  id: valueLabel
+  color: white
+  text-align: center
+
+HeadlessWindow
+  id: pointsWindow
+  size: 398 298
+  image-source: images/window.png
+  anchors.centerIn: parent
+
+  UIButton
+    id: tabBar
+    size: 212 28
+    image-source: images/titleTab.png
+    anchors.top: parent.top
+    margin-top: -130
+    anchors.centerIn: parent
+
+  Label
+    id: trocarPontos
+    color: #d1ad55
+    font: sans-bold-16px
+    text-auto-resize: true
+    text: Trocar Pontos
+    anchors.top: parent.top
+    margin-top: -130
+    anchors.centerIn: parent
+
+  Label
+    id: pontosDisponiveis
+    color: #d1ad55
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: Pontos Disponíveis:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 15
+    margin-top: 55
+
+  Label
+    id: pontos
+    color: white
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: 0
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 175
+    margin-top: 55
+
+  Label
+    id: inserirNome
+    color: white
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: Insira o nome do jogador
+    anchors.top: parent.top
+    margin-top: -30
+    anchors.centerIn: parent
+
+  TextEdit
+    id: nome
+    size: 251 28
+    image-source: /images/ui/textedit2.png
+    anchors.top: parent.top
+    margin-top: -1
+    anchors.centerIn: parent
+
+  Label
+    id: inserirQuantidade
+    color: white
+    text-auto-resize: true
+    font: sans-bold-16px
+    text: Insira a quantidade de pontos:
+    anchors.top: parent.top
+    margin-top: 40
+    anchors.centerIn: parent
+
+  HorizontalScrollBar
+    id: pointsScrollBar
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 70
+    margin-right: 60
+    margin-left: 55
+    step: 14
+    pixels-scroll: true
+
+  UIButton
+    id: addPoints
+    size: 32 32
+    image-source: images/add
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 195
+    margin-left: 10
+    @onClick: addPoint()
+    visible: false
+
+  UIButton
+    id: removePoints
+    size: 32 32
+    image-source: images/remove
+    anchors.top: parent.top
+    anchors.left: parent.right
+    margin-top: 195
+    margin-left: -45
+    @onClick: removePoint()
+    visible: false
+
+  UIButton
+    id: pointsLabel
+    text: 0
+    text-align: center
+    size: 188 24
+    image-source: images/value
+    anchors.top: parent.top
+    margin-top: 97
+    anchors.centerIn: parent
+
+  UIButton
+    id: startTrade
+    color: #d1ad55
+    size: 86 22
+    text: Transferir
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 132
+    margin-left: -55
+    anchors.centerIn: parent
+    opacity: 0.60
+
+    $hover:
+      image-source: images/button_hover
+
+  UIButton
+    id: cancel
+    color: #d1ad55
+    size: 86 22
+    text: Cancelar
+    image-source: images/button
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 132
+    margin-left: 40
+    anchors.centerIn: parent
+    @onClick: naoexibir()
+
+    $hover:
+      image-source: images/button_hover
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 24 24
+    image-source: images/close.png
+    anchors.left: parent.right
+    anchors.top: parent.top
+    margin-left: -22
+    @onClick: naoexibir()
+
+    $hover:
+      image-source: images/close_hover.png

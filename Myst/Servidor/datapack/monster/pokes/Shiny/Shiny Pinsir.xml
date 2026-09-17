@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Pinsir" nameDescription="a Shiny pinsir" race="bug" experience="492" speed="125" manacost="0">
+  <health now="160" max="160"/>
+  <look type="1321" head="40" body="60" legs="95" feet="113" corpse="12547"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="18"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Scratch" interval="2805" chance="29" range="1"/>
+        <attack name="Slash" interval="2946" chance="28" range="1"/>
+        <attack name="Bug Bite" interval="2805" chance="29" range="1"/>
+        <attack name="Guillotine" interval="3510" chance="25" range="1"/>
+        <attack name="Harden" interval="5625" chance="18" range="6"/>
+        <attack name="X-Scissor" interval="3369" chance="26" range="3"/>
+		<attack name="Fury Cutter" interval="3569" chance="26" range="3"/>
+        <attack name="Rage" interval="4510" chance="18" range="1"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="PINSIR!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

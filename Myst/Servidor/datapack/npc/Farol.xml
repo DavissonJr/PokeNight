@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Janine" script="Farol.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="504" head="123" body="74" legs="123" feet="0" addons="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá |PLAYERNAME|, Preciso dos seguintes ingredientes: 500 Water gems;100 Bat Wing;300 Apple Bite;200 Bottle of Poison;200 Pot of moss bug, se caso você tiver diga {farol}."/>
+</parameters>
+</npc>

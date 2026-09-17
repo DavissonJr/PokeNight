@@ -1,0 +1,266 @@
+PokemonInfo
+  id: pokeInfo
+  size: 192 165
+  color: #cda953
+  font: terminus-10px
+  text: Pokemon Info
+  image-source: /images/ui/miniwindow
+  icon: icon-window.png
+  &save: true
+  @onClose: modules.game_pokemoninfo.naoexibir()
+  MiniWindowContents
+
+  UIItem
+    id: portrait
+    image-source: images/slot.png
+    size: 42 42
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 25
+    margin-left: 6
+
+  UIButton
+    id: nameCamp
+    image-source: images/nameCamp.png
+    size: 139 20
+    text: -
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 22
+    margin-left: 48
+
+  UIButton
+    id: pokemonLifeImage
+    image-source: images/hp.png
+    size: 135 13
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 41
+    margin-left: 50
+
+  UIButton
+    id: pokemonExpImage
+    image-source: images/exp.png
+    size: 135 13
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 55
+    margin-left: 50
+
+  PokemonInfoLife
+    id: pokemonlife
+    size: 91 7
+    anchors.top: pokemonExpImage.top
+    anchors.left: parent.left
+    margin-left: 66
+    margin-top: -11
+
+  PokemonInfoExperience
+    id: pokemonexperience
+    size: 91 7
+    anchors.top: pokemonExpImage.top
+    anchors.left: parent.left
+    margin-left: 66
+    margin-top: 3
+
+  UIButton
+    id: pokemonCall
+    tooltip: Call Pokemon
+    image-source: images/call.png
+    image-border: 0
+    size: 25 25
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 75
+    margin-left: 5
+    @onClick: callPokemon()
+    visible: false
+
+    $hover:
+      image-source: images/call_hover.png
+
+  UIButton
+    id: pokemonAddons
+    tooltip: Pokemon Addons
+    image-source: images/addon.png
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 72
+    margin-left: 5
+    @onClick: modules.game_addons.exibir()
+
+  UIButton
+    id: playerRun
+    tooltip: Run
+    image-source: images/correr.png
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 72
+    margin-left: 39
+    @onClick: g_game.talk('correr')
+
+    $hover:
+      image-source: images/correr_hover.png
+
+  UIButton
+    id: pokemonTM
+    tooltip: Technical Machines
+    image-source: images/tmButton.png
+    size: 30 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 74
+    margin-left: 69
+    @onClick: modules.game_tm.exibir2()
+
+    $hover:
+      image-source: images/tmButton_hover.png
+
+  UIButton
+    id: habilitiesTab
+    image-source: images/habilities_tab.png
+    size: 176 19
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 142
+    margin-left: 7
+
+  UIButton
+    id: seta_esquerda
+    tooltip: Turn to West
+    image-source: images/left.png
+    size: 22 22
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 94
+    margin-left: 116
+    @onClick: g_game.talk('a3')
+
+  UIButton
+    id: seta_direita
+    tooltip: Turn to East
+    image-source: images/right.png
+    size: 22 22
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 94
+    margin-left: 162
+    @onClick: g_game.talk('a1')
+
+  UIButton
+    id: pokemonOrder
+    tooltip: Order Pokemon
+    image-source: images/order.png
+    size: 22 22
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 94
+    margin-left: 139
+
+  UIButton
+    id: seta_acima
+    tooltip: Turn to North
+    image-source: images/up.png
+    size: 22 22
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 71
+    margin-left: 139
+    @onClick: g_game.talk('a0')
+
+  UIButton
+    id: seta_abaixo
+    tooltip: Turn to South
+    image-source: images/down.png
+    size: 22 22
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 117
+    margin-left: 139
+    @onClick: g_game.talk('a2')
+
+  Label
+    id: pokemonLevel
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    text: Level: 000
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 105
+    margin-left: 10
+
+  Label
+    id: pokemonNature
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    text: Nature: ???
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 122
+    margin-left: 10
+
+  Label
+    id: pokemonHealthText
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    text: 0%
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 41
+    margin-left: 160
+
+  Label
+    id: pokemonExperienceText
+    text-auto-resize: true
+    font: terminus-10px
+    color: #cda953
+    text: 0%
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 55
+    margin-left: 160
+
+  UIButton
+    id: habilitie1
+    size: 16 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 12
+
+  UIButton
+    id: habilitie2
+    size: 16 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 32
+
+  UIButton
+    id: habilitie3
+    size: 16 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 52
+
+  UIButton
+    id: habilitie4
+    size: 16 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 72
+
+  UIButton
+    id: habilitie5
+    size: 16 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 92

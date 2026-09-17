@@ -1,0 +1,7 @@
+<npc name="Papai Noel" script="natal.lua" floorchange="0" access="5" level="1" maglevel="1">
+<health now="150" max="150"/>
+<look type="2924" head="39" body="53" legs="93" feet="5" addons="2" corpse="2212"/>
+<parameters>
+<parameter key="message_greet" value="Hou Hou Hou |PLAYERNAME|. Gostaria de me ajudar neste natal?, diga {natal}!" />
+</parameters>
+</npc>

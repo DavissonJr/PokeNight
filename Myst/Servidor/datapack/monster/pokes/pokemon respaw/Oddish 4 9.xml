@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Oddish" nameDescription="a oddish" race="grass" experience="72" speed="108" manacost="0">
+  <health now="30" max="30"/>
+  <look type="407" head="4" body="9" legs="95" feet="113" corpse="11931"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+<flag passive="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="24"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>
+        <attack name="Absorb" interval="2711" chance="30" range="1">
+        </attack>
+        <attack name="Acid" interval="2758" chance="30" range="3">
+        </attack>
+        <attack name="Leech Seed" interval="3040" chance="28" range="3">
+        </attack>
+        <attack name="Sleep Powder" interval="5625" chance="18" range="6">
+        </attack>
+        <attack name="Poison Powder" interval="5625" chance="18" range="6">
+        </attack>
+        <attack name="Stun Spore" interval="5625" chance="18" range="6">
+        </attack>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="ODDISH!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Vendedor de Tapeçaria" script="default.lua" walkinterval="0" floorchange="0" speed="0">
+<health now="150" max="150"/>
+<look type="507" head="91" body="114" legs="86" feet="0"/>
+<parameters>
+<parameter key="message_greet" value="Olá eu vendo cortinas, para olhar minha lista diga {trade}!"/>
+<parameter key="message_farewell" value="Até mais!"/>
+<parameter key="message_idletimeout" value="Até mais!"/>
+<parameter key="message_walkaway" value="Até mais!"/>
+<parameter key="module_shop" value="1"/>
+<parameter key="shop_buyable" value="Red,1869,1500000;Blue,1872,1500000;Yellow,1863,1500000;Orange,13132,1500000;Orange,1866,1500000;Black,13130,2000000;Cake,13129,10000000;Blue,13131,1500000;Yellow,13133,1500000;White,1880,1500000;Japonese,11540,10000000;Purple,1857,1500000;Green,1860,1500000"/>
+</parameters>
+</npc>

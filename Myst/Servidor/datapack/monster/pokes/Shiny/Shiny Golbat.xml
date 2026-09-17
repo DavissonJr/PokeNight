@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shiny Golbat" nameDescription="a Shiny golbat" race="poison" experience="284" speed="135" manacost="0">
+  <health now="90" max="90"/>
+  <look type="1236" head="40" body="60" legs="95" feet="113" corpse="12461"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="21"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Bite" interval="2664" chance="30" range="1"/>
+        <attack name="Absorb" interval="2758" chance="30" range="1"/>
+        <attack name="Toxic" interval="2805" chance="29" range="6"/>
+        <attack name="Super Sonic" interval="4920" chance="20" range="6"/>
+        <attack name="Poison Fang" interval="2993" chance="28" range="1"/>
+        <attack name="Whirlwind" interval="3181" chance="27" range="6"/>
+        <attack name="Wing Attack" interval="3322" chance="26" range="6"/>
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="GOLBAT!"/>
+ </voices>
+
+  <loot>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>

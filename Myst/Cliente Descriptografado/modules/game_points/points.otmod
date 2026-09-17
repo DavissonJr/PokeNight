@@ -1,0 +1,9 @@
+Module
+  name: game_points
+  description: Janela de Pontos
+  author: Thalles Vitor
+  website: https://www.thallesdev.com.br
+  sandboxed: true
+  scripts: [ points ]
+  @onLoad: init()
+  @onUnload: terminate()
