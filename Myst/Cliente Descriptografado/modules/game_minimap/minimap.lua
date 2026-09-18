@@ -46,7 +46,26 @@ function updateCameraPosition()
     minimapWidget:setCrossPosition(pos)
 end
 
+-- Botao X do modo tela cheia, criado sob demanda (ver toggleFullMap).
+local fullmapCloseButton = nil
+
+--- O mapa esta ocupando a tela inteira?
+local function isFullMap()
+    local w = controller.ui.contentsPanel.minimap or
+              modules.game_interface.getRootPanel().minimap
+    return w ~= nil and w.fullMapView == true
+end
+
 local function toggle()
+    -- Em tela cheia o widget do minimapa foi reparentado para o rootPanel,
+    -- entao esconder controller.ui nao esconde mapa nenhum -- era assim que
+    -- o mapa ficava preso na tela sem forma de sair. Aqui Ctrl+M passa a
+    -- significar "sair da tela cheia" enquanto ela estiver ativa.
+    if isFullMap() then
+        toggleFullMap()
+        return
+    end
+
     if controller.ui:isVisible() then
         controller.ui:hide()
         minimapButton:setOn(false)
@@ -74,11 +93,30 @@ function toggleFullMap()
         minimapWidget:fill('parent')
         controller.ui:show(true)
         zoom = minimapWidget.zoomMinimap
+
+        -- Saindo da tela cheia: remove o X e devolve o Esc ao jogo.
+        if fullmapCloseButton then
+            fullmapCloseButton:destroy()
+            fullmapCloseButton = nil
+        end
+        g_keyboard.unbindKeyDown('Escape', rootPanel)
     else
         controller.ui:hide(true)
         minimapWidget:setParent(rootPanel)
         minimapWidget:fill('parent')
         zoom = minimapWidget.zoomFullmap
+
+        -- Entrando na tela cheia: sem uma saida visivel o jogador fica
+        -- preso, entao criamos o X sobre o mapa e ligamos o Esc.
+        fullmapCloseButton = g_ui.createWidget('MinimapCloseButton', minimapWidget)
+        fullmapCloseButton.onClick = function()
+            toggleFullMap()
+        end
+        g_keyboard.bindKeyDown('Escape', function()
+            if isFullMap() then
+                toggleFullMap()
+            end
+        end, rootPanel)
     end
 
     minimapWidget.fullMapView = not minimapWidget.fullMapView

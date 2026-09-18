@@ -99,6 +99,30 @@ MinimapScreenButton < UIButton
   $hover:
     image-source:  /images/game/minimap/button_hover
 
+// Botao de fechar o mapa em tela cheia.
+// So existe enquanto o fullMapView esta ativo: criado e destruido em
+// minimap.lua, porque nesse modo o widget do minimapa e reparentado para
+// o rootPanel e precisa levar o botao junto.
+MinimapCloseButton < UIButton
+  tooltip: Fechar o mapa (Esc ou Ctrl+M)
+  text: X
+  font: sans-bold-16px
+  color: #ff7a18
+  size: 30 30
+  anchors.top: parent.top
+  anchors.right: parent.right
+  margin-top: 10
+  margin-right: 10
+  image-source: /images/game/minimap/button
+  image-border: 3
+
+  $hover:
+    image-source: /images/game/minimap/button_hover
+    color: #ffa24d
+
+  $pressed:
+    color: #e0680f
+
 TPLabel < Label
   color: white
   font: verdana-11px-rounded
