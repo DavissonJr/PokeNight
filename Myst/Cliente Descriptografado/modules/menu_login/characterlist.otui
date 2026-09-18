@@ -1,3 +1,12 @@
+// O estilo Creature padrao (data/styles/10-creatures.otui) traz
+// image-source: /images/ui/panel_flat -- era esse painel que aparecia como
+// um quadrado escuro atras do personagem. Herdando direto de UICreature
+// nao ha imagem nenhuma por baixo.
+CardCreature < UICreature
+  creature-center: true
+  fixed-creature-size: true
+  phantom: true
+
 // Cartao de personagem: retrato, nome, level e mundo.
 // Substitui a linha de lista antiga -- a tela agora e uma fileira
 // horizontal de cartoes, como na referencia do PXG.
@@ -27,13 +36,10 @@ CharacterWidget < UIWidget
     margin: 2 2 0 2
     phantom: true
 
-  Creature
+  CardCreature
     id: outfitCreatureBox
     size: 80 80
     anchors.centerIn: portraitBg
-    creature-center: true
-    fixed-creature-size: true
-    phantom: true
 
   // Estrela de VIP, no canto do retrato.
   Label
@@ -103,18 +109,15 @@ PokeTeamSlot < UIWidget
   border-width: 1
   border-color: #2a2a2e
 
-  Creature
+  CardCreature
     id: pokeCreature
     size: 52 52
     anchors.centerIn: parent
-    creature-center: true
-    fixed-creature-size: true
-    phantom: true
 MainWindow
   id: charactersWindow
   !text: tr('Selecionar Personagem')
   visible: false
-  size: 700 430
+  size: 700 470
   @onEnter: doLogin()
   @onEscape: hide(true)
   @onSetup: |
@@ -175,9 +178,9 @@ MainWindow
   Label
     id: accountStatusIcon
     size: 12 12
-    anchors.top: teamRow.bottom
+    anchors.bottom: buttonCancel.top
     anchors.left: characters.left
-    margin-top: 12
+    margin-bottom: 10
 
   Label
     id: accountStatusLabel
