@@ -34,6 +34,10 @@ services:
       - ./Myst/Servidor:/srv
       # Sobrepoe so o config.lua, sem tocar no arquivo original do repo.
       - ./docker/config.local.lua:/srv/config.lua:ro
+      # Montado (em vez de embutido na imagem) porque o BuildKit nao
+      # consegue ler o contexto de build dentro do OneDrive. Assim editar
+      # o entrypoint.sh vale na proxima subida, sem rebuild.
+      - ./docker/entrypoint.sh:/entrypoint.sh:ro
     ports:
       - "7183:7183"   # login / status
       - "7172:7172"   # game
