@@ -95,6 +95,7 @@
 	<!-- Fim -->
 	
 	<!-- Auto Loot System - Thalles Vitor -->
+		<event type="extendedopcode" name="LootAll" script="lootall.lua"/>
 		<event type="extendedopcode" name="AutoLootReceive" script="autoloot/autoloot.lua"/>
 		<event type="extendedopcode" name="AutoLootChangeCategory" script="autoloot/changecategory.lua"/>
 		<event type="extendedopcode" name="AutoLootAdd" script="autoloot/add.lua"/>

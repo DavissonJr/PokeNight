@@ -44,6 +44,7 @@ function updateCameraPosition()
     end
 
     minimapWidget:setCrossPosition(pos)
+    refreshTownLabels()
 end
 
 -- Botao X do modo tela cheia, criado sob demanda (ver toggleFullMap).
@@ -78,6 +79,102 @@ end
 function closeWindow()
     controller.ui:hide()
     minimapButton:setOn(false)
+end
+
+-- ---------------------------------------------------------------------
+-- Rotulos das regioes
+--
+-- O minimapa do cliente nao tem API de marcacao exposta ao Lua (g_minimap
+-- so oferece clean/load/save). Entao os nomes sao Labels comuns criados
+-- sobre o widget do mapa, reposicionados com getTilePoint() sempre que a
+-- camera, o zoom ou o andar mudam.
+--
+-- Os nomes saem do proprio OTBM (design/gen_towns.py -> minimap_towns.lua).
+-- Rotas e cavernas nao existem no mapa como dado; para essas, acrescente
+-- entradas em minimapExtraLabels abaixo.
+-- ---------------------------------------------------------------------
+
+-- Pontos que o OTBM nao tem. Mesmo formato: name, x, y, z.
+minimapExtraLabels = minimapExtraLabels or {}
+
+local townLabels = {}
+
+--- Quantos tiles cabem por pixel; abaixo de certo zoom os nomes viram
+--- poluicao visual, entao somem.
+local MIN_SCALE_FOR_LABELS = 0.8
+
+local function clearTownLabels()
+    for _, w in pairs(townLabels) do
+        if w and not w:isDestroyed() then
+            w:destroy()
+        end
+    end
+    townLabels = {}
+end
+
+function refreshTownLabels()
+    local widget = minimapWidget
+    if not widget or widget:isDestroyed() then
+        return clearTownLabels()
+    end
+
+    -- Sem a tabela carregada nao ha o que desenhar.
+    if not MinimapTowns then
+        return clearTownLabels()
+    end
+
+    local scale = widget:getScale()
+    if not scale or scale < MIN_SCALE_FOR_LABELS then
+        return clearTownLabels()
+    end
+
+    local camera = widget:getCameraPosition()
+    if not camera then
+        return clearTownLabels()
+    end
+
+    local size = widget:getSize()
+    local shown = {}
+
+    local function place(entry, index)
+        if entry.z ~= camera.z then
+            return
+        end
+        local point = widget:getTilePoint({ x = entry.x, y = entry.y, z = entry.z })
+        if not point then
+            return
+        end
+        -- Fora da area visivel: nao cria widget para nao gastar a toa.
+        if point.x < 0 or point.y < 0 or point.x > size.width or point.y > size.height then
+            return
+        end
+
+        local label = townLabels[index]
+        if not label or label:isDestroyed() then
+            label = g_ui.createWidget('MinimapTownLabel', widget)
+            townLabels[index] = label
+        end
+        label:setText(entry.name)
+        local w = label:getWidth()
+        label:setPosition({ x = point.x - w / 2, y = point.y - 8 })
+        label:setVisible(true)
+        shown[index] = true
+    end
+
+    for i, entry in ipairs(MinimapTowns) do
+        place(entry, 'town' .. i)
+    end
+    for i, entry in ipairs(minimapExtraLabels) do
+        place(entry, 'extra' .. i)
+    end
+
+    -- Esconde o que saiu de vista sem destruir, para nao recriar a cada
+    -- passo do jogador.
+    for index, w in pairs(townLabels) do
+        if not shown[index] and w and not w:isDestroyed() then
+            w:setVisible(false)
+        end
+    end
 end
 
 function toggleFullMap()
@@ -232,20 +329,25 @@ end
 
 function zoomInn()
     minimapWidget:zoomIn()
+    refreshTownLabels()
 end
 
 function zoomOutt()
     minimapWidget:zoomOut()
+    refreshTownLabels()
 end
 
 function resett()
     minimapWidget:reset()
+    refreshTownLabels()
 end
 
 function floorUpp()
     minimapWidget:floorUp(1)
+    refreshTownLabels()
 end
 
 function floorDownn()
     minimapWidget:floorDown(1)
+    refreshTownLabels()
 end

@@ -161,6 +161,7 @@ function bindKeys()
     g_keyboard.bindKeyPress('Ctrl+-', function()
         gameMapPanel:zoomOut()
     end, gameRootPanel)
+    g_keyboard.bindKeyDown('E', function() lootAll() end, gameRootPanel)
     g_keyboard.bindKeyDown('Ctrl+Q', function()
         tryLogout(false)
     end, gameRootPanel)
@@ -1131,6 +1132,21 @@ end
 --- Aplica as quatro opcoes de painel lateral e reflete nos botoes.
 -- Chamada pelas opcoes e ao entrar no jogo, para o estado sobreviver a
 -- reabertura do cliente (g_settings ja persiste as opcoes por si).
+--- Loot em area: recolhe de uma vez o que caiu dos pokemons por perto.
+-- O trabalho e todo do servidor (creaturescripts/scripts/lootall.lua);
+-- aqui so avisamos pelo mesmo canal que o autoloot ja usa.
+LOOT_ALL_OPCODE = 150
+
+function lootAll()
+    if not g_game.isOnline() then
+        return
+    end
+    local protocol = g_game.getProtocolGame()
+    if protocol then
+        protocol:sendExtendedOpcode(LOOT_ALL_OPCODE, "")
+    end
+end
+
 function applySidePanels()
     local opt = modules.client_options.getOption
 

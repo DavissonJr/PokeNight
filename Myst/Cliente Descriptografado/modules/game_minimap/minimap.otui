@@ -123,6 +123,14 @@ MinimapCloseButton < UIButton
   $pressed:
     color: #e0680f
 
+// Rotulo de regiao desenhado sobre o minimapa. phantom para nao roubar o
+// clique do mapa (arrastar, marcar posicao) por baixo dele.
+MinimapTownLabel < Label
+  font: verdana-11px-antialised
+  color: #ffd9b8
+  text-auto-resize: true
+  phantom: true
+
 TPLabel < Label
   color: white
   font: verdana-11px-rounded

@@ -308,7 +308,6 @@ local function unbindMovingKeys()
     gameInterface.unbindWalkKey('S')
     gameInterface.unbindWalkKey('A')
 
-    gameInterface.unbindWalkKey('E')
     gameInterface.unbindWalkKey('Q')
     gameInterface.unbindWalkKey('C')
     gameInterface.unbindWalkKey('Z')
@@ -326,7 +325,9 @@ local function bindMovingKeys()
     gameInterface.bindWalkKey('S', South)
     gameInterface.bindWalkKey('A', West)
 
-    gameInterface.bindWalkKey('E', NorthEast)
+    -- E fica reservado para o loot em area (game_interface.lootAll).
+    -- Ligar as duas coisas na mesma tecla faria o personagem andar toda
+    -- vez que recolhesse; para o nordeste, use W + D.
     gameInterface.bindWalkKey('Q', NorthWest)
     gameInterface.bindWalkKey('C', SouthEast)
     gameInterface.bindWalkKey('Z', SouthWest)

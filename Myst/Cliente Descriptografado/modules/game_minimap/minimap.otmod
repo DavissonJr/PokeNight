@@ -4,6 +4,6 @@ Module
   author: edubart, BeniS
   website: https://github.com/edubart/otclient
   sandboxed: true
-  scripts: [ minimap ]
+  scripts: [ minimap_towns, minimap ]
   @onLoad: controller:init()
   @onUnload: controller:terminate()
