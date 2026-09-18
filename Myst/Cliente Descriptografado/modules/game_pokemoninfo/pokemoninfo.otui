@@ -1,7 +1,7 @@
 PokemonInfo
   id: pokeInfo
   size: 192 165
-  color: #cda953
+  color: #e0680f
   font: terminus-10px
   text: Pokemon Info
   image-source: /images/ui/miniwindow
@@ -186,7 +186,7 @@ PokemonInfo
     id: pokemonLevel
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     text: Level: 000
     anchors.top: parent.top
     anchors.left: parent.left
@@ -197,7 +197,7 @@ PokemonInfo
     id: pokemonNature
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     text: Nature: ???
     anchors.top: parent.top
     anchors.left: parent.left
@@ -208,7 +208,7 @@ PokemonInfo
     id: pokemonHealthText
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     text: 0%
     anchors.top: parent.top
     anchors.left: parent.left
@@ -219,7 +219,7 @@ PokemonInfo
     id: pokemonExperienceText
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     text: 0%
     anchors.top: parent.top
     anchors.left: parent.left

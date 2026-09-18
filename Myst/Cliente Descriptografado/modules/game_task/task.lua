@@ -119,7 +119,7 @@ ProtocolGame.registerExtendedOpcode(TASKWINDOW_OPCODE, function(protocol, opcode
     nameMission:setMarginTop(10)
     nameMission:setMarginLeft(70)
     --[[ nameMission:setFont("lucida-11px-rounded") ]]
-    nameMission:setColor("#cda953")
+    nameMission:setColor("#e0680f")
 
     local pointsMission = g_ui.createWidget("UIButton", button)
     pointsMission:setSize("25 25")

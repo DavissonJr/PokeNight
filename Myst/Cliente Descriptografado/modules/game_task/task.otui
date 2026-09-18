@@ -39,7 +39,7 @@ HeadlessWindow
 
   UIButton
     id: tab1
-    color: #cda953
+    color: #e0680f
     font: verdana-10px
     text-offset: -10 0
     text: Tasks
@@ -54,7 +54,7 @@ HeadlessWindow
 
   UIButton
     id: tab2
-    color: #cda953
+    color: #e0680f
     font: verdana-10px
     text-offset: -5 2
     text: Especial

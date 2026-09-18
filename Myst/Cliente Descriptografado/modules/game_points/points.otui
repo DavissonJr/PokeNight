@@ -47,7 +47,7 @@ HeadlessWindow
 
   Label
     id: trocarPontos
-    color: #d1ad55
+    color: #ff7a18
     font: sans-bold-16px
     text-auto-resize: true
     text: Trocar Pontos
@@ -57,7 +57,7 @@ HeadlessWindow
 
   Label
     id: pontosDisponiveis
-    color: #d1ad55
+    color: #ff7a18
     text-auto-resize: true
     font: sans-bold-16px
     text: Pontos Disponíveis:
@@ -150,7 +150,7 @@ HeadlessWindow
 
   UIButton
     id: startTrade
-    color: #d1ad55
+    color: #ff7a18
     size: 86 22
     text: Transferir
     image-source: images/button
@@ -166,7 +166,7 @@ HeadlessWindow
 
   UIButton
     id: cancel
-    color: #d1ad55
+    color: #ff7a18
     size: 86 22
     text: Cancelar
     image-source: images/button

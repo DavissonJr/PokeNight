@@ -18,7 +18,7 @@ HeadlessWindow
 
   Label
     id: shopLabel
-    color: #cda953
+    color: #e0680f
     font: sans-bold-16px
     text-auto-resize: true
     text: Night Shop
@@ -82,7 +82,7 @@ HeadlessWindow
 
   Label
     id: pointsLabel
-    color: #cda953
+    color: #e0680f
     text-auto-resize: true
     text: Seus Pontos: 0
     anchors.top: parent.top

@@ -1,6 +1,6 @@
 MiniWindow < UIMiniWindow
   font: terminus-10px
-  color: #d1ad55
+  color: #ff7a18
   icon-rect: 4 4 16 16
   width: 215
   height: 200
@@ -200,7 +200,7 @@ NewMiniWindow < UIMiniWindow
   UILabel
     id: text
     font: lucida-11px-rounded
-    color: #dbfbff
+    color: #ffd9b8
     height: 16
     anchors.verticalCenter: iconBackground.verticalCenter
     anchors.left: iconBackground.right
@@ -277,7 +277,7 @@ WaloxMiniWindow < UIMiniWindow
   UILabel
     id: text
     font: lucida-11px-rounded
-    color: #dbfbff
+    color: #ffd9b8
     height: 16
     anchors.verticalCenter: iconBackground.verticalCenter
     anchors.left: iconBackground.right

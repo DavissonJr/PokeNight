@@ -38,7 +38,7 @@ MinimapFloorDownButton < UIButton
     image-source:  /images/game/minimap/button_hover
 
 MinimapZoomInButton < UIButton
-  color: #d1ad55
+  color: #ff7a18
   text: +
   size: 23 25
   margin-right: 32
@@ -54,7 +54,7 @@ MinimapZoomInButton < UIButton
     image-source:  /images/game/minimap/button_hover
 
 MinimapZoomOutButton < UIButton
-  color: #d1ad55
+  color: #ff7a18
   text: -
   size: 23 25
   margin-right: 4

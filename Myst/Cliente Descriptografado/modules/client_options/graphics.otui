@@ -51,7 +51,7 @@ Panel
     id: antialiasingModeLabel
     font: sans-bold-16px
     text-auto-resize: true
-    color: #cda953
+    color: #e0680f
     !text: tr('Antialiasing')..':'
     phantom: false
     anchors.left: floorViewModeLabel.left
@@ -136,7 +136,7 @@ Panel
     id: backgroundFrameRateLabel
     font: sans-bold-16px
     text-auto-resize: true
-    color: #cda953
+    color: #e0680f
     !text: tr('Limite de taxa de quadros do jogo: %s', 'max')
     anchors.left: parent.left
     anchors.right: parent.right

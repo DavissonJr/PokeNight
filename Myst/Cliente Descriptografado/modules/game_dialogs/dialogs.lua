@@ -81,7 +81,7 @@ ProtocolGame.registerExtendedOpcode(124, function(protocol, opcode, buffer) -- r
 	button:setSize("72 22")
 	button:setImageSource("images/button2")
 	button:setText(buttons)
-	button:setColor("#d1ad55")
+	button:setColor("#ff7a18")
 	button:setFont("damas")
 	button.onClick = function() 
 		if string.lower(buttons) == "fechar" then
@@ -97,7 +97,7 @@ ProtocolGame.registerExtendedOpcode(124, function(protocol, opcode, buffer) -- r
 			button:setColor("white")
 			button:setImageSource("images/button2")
 		else
-			button:setColor("#d1ad55")
+			button:setColor("#ff7a18")
 			button:setImageSource("images/button2")
 		end
 	end

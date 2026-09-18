@@ -2,13 +2,13 @@ CheckBox < UICheckBox
   size: 20 16
   text-align: left
   text-offset: 18 1
-  color: #d1ad55
+  color: #ff7a18
   image-color: #dfdfdfff
   image-rect: 0 0 19 19
   image-source: /images/ui/checkbox1
 
   $hover !disabled:
-    color: #d1ad55
+    color: #ff7a18
 
   $!checked:
     image-clip: 0 20 19 19
@@ -17,18 +17,18 @@ CheckBox < UICheckBox
     image-clip: 0 20 19 19
 
   $checked:
-    color: #cda953
+    color: #e0680f
     image-clip: 0 40 19 19
     opacity: 100
 
   $hover checked:
-    color: #cda953
+    color: #e0680f
     image-clip: 0 59 19 19
     opacity: 100
 
   $disabled:
     image-color: #dfdfdf88
-    color: #d1ad55
+    color: #ff7a18
     opacity: 0.60
 
 EnterGameCheckBox < UICheckBox

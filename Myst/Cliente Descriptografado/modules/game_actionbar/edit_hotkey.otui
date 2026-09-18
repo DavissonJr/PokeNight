@@ -6,7 +6,7 @@ MainWindow
     id: titleTab
     size: 180 28
     image-source: images/titleTab.png
-    color: #cda953
+    color: #e0680f
     font: sans-bold-16px
     text: Editar Atalho
     anchors.top: parent.top

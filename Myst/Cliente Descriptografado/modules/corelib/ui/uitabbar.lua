@@ -44,7 +44,7 @@ function UITabBar:addTab(text, panel, icon)
     tab.tabBar = self
     tab:setId('tab')
     tab:setText(text)
-    tab:setColor("#cda953")
+    tab:setColor("#e0680f")
     tab:setTextOffset("0 10")
     tab:setWidth(tab:getTextSize().width + tab:getPaddingLeft() + tab:getPaddingRight())
     tab.onClick = onTabClick

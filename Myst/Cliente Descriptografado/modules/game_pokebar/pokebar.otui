@@ -1,7 +1,7 @@
 UIWindow
   id: pokeBar
   font: terminus-10px
-  color: #cda953
+  color: #e0680f
   text-offset: -40 10
   size: 198 319
   anchors.top: parent.top
@@ -190,7 +190,7 @@ UIWindow
     id: pokeName1
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 37
@@ -201,7 +201,7 @@ UIWindow
     id: pokeName2
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 84
@@ -212,7 +212,7 @@ UIWindow
     id: pokeName3
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 131
@@ -223,7 +223,7 @@ UIWindow
     id: pokeName4
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 178
@@ -234,7 +234,7 @@ UIWindow
     id: pokeName5
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 225
@@ -245,7 +245,7 @@ UIWindow
     id: pokeName6
     text-auto-resize: true
     font: terminus-10px
-    color: #cda953
+    color: #e0680f
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 272

@@ -81,7 +81,7 @@ ProtocolGame.registerExtendedOpcode(SHOP_CATEGORYOPCODE, function(protocol, opco
   buttonOption:setText(option)
   buttonOption:setMarginTop(2)
   buttonOption:setFont("sans-bold-16px")
-  buttonOption:setColor("#cda953")
+  buttonOption:setColor("#e0680f")
 
   if option ~= "Doar" and option ~= "Promoções" then
     buttonOption.onClick = function() -- change category
@@ -162,7 +162,7 @@ ProtocolGame.registerExtendedOpcode(SHOP_OPENOPCODE, function(protocol, opcode, 
   button:setSize("100 26")
   button:setText("Comprar")
   --[[ button:setFont("sans-bold-16px") ]]
-  button:setColor("#cda953")
+  button:setColor("#e0680f")
   button:setMarginTop(78)
   button:setMarginLeft(-7)
   button.onClick = function() -- buy product

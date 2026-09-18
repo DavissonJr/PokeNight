@@ -15,7 +15,7 @@ HeadlessWindow
 
   Label
     id: donateLabel
-    color: #cda953
+    color: #e0680f
     text: Doação via PIX
     text-auto-resize: true
     font: sans-bold-16px
@@ -26,7 +26,7 @@ HeadlessWindow
 
   Label
     id: donateText1
-    color: #cda953
+    color: #e0680f
     text: Obrigado pelo interesse em doar.
     anchors.top: parent.top
     anchors.left: parent.left
@@ -35,7 +35,7 @@ HeadlessWindow
 
   Label
     id: donateText2
-    color: #cda953
+    color: #e0680f
     text: Sua doação é de extrema importância para o nosso projeto!
     anchors.top: parent.top
     anchors.left: parent.left
@@ -53,7 +53,7 @@ HeadlessWindow
 
   Label
     id: donateText3
-    color: #cda953
+    color: #e0680f
     text: Ao doar você concorda com nossos Termos e Regras Gerais.
     anchors.top: parent.top
     anchors.left: parent.left
@@ -62,7 +62,7 @@ HeadlessWindow
 
   Label
     id: donateText4
-    color: #cda953
+    color: #e0680f
     text: Envie o comprovante para algum Administrador ou STAFF Online.
     anchors.top: parent.top
     anchors.left: parent.left

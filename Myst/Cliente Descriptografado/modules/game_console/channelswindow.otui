@@ -9,7 +9,7 @@ ChannelListLabel < Label
     color: white
 
   $!focus:
-    color: #cda953
+    color: #e0680f
 
 MainWindow
   id: channelsWindow
@@ -29,7 +29,7 @@ MainWindow
     id: name
     text-auto-resize: true
     text: Canais
-    color: #cda953
+    color: #e0680f
     font: sans-bold-16px
     anchors.top: parent.top
     anchors.left: parent.left
@@ -47,7 +47,7 @@ MainWindow
 
   Label
     id: openPrivateChannelWithLabel
-    color: #cda953
+    color: #e0680f
     !text: tr('Abrir um canal privado') .. ':'
     anchors.left: parent.left
     anchors.right: parent.right

@@ -1,6 +1,6 @@
 TextList < UIScrollArea
   layout: verticalBox
-  color: #cda953
+  color: #e0680f
   border-width: 1
   border-color: #272727
   background-color: #121212

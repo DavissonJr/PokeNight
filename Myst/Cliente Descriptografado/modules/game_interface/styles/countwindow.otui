@@ -15,7 +15,7 @@ CountWindow < MainWindow
 
   Label
     id: donateLabel
-    color: #cda953
+    color: #e0680f
     text: Mover item
     text-auto-resize: true
     font: sans-bold-16px

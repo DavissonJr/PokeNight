@@ -30,7 +30,7 @@ HeadlessWindow
 
   UIButton
     id: titleTab
-    color: #cda953
+    color: #e0680f
     text: Opções
     font: sans-bold-16px
     size: 212 28

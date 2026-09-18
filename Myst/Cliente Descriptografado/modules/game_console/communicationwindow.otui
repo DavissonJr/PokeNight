@@ -38,7 +38,7 @@ MainWindow
 
   Label
     id: ignoredLabel
-    color: #cda953
+    color: #e0680f
     text: Lista de Ignorados
     text-auto-resize: true
     font: sans-bold-16px

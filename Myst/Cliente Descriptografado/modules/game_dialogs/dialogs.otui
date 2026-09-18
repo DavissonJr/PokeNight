@@ -66,7 +66,7 @@ HeadlessWindow
 
   Label
     id: npc_name
-    color: #cda953
+    color: #e0680f
     font: terminus-14px-bold
     text-auto-resize: true
     anchors.top: parent.top
@@ -76,7 +76,7 @@ HeadlessWindow
 
   Label
     id: npc_dialogText
-    color: #cda953
+    color: #e0680f
     font: terminus-14px-bold
     text-auto-resize: true
     anchors.top: parent.top

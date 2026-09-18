@@ -27,7 +27,7 @@ HeadlessWindow
 
   Label
     id: autoLootLabel
-    color: #cda953
+    color: #e0680f
     text: Auto Loot
     text-auto-resize: true
     font: sans-bold-16px

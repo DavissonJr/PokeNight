@@ -1751,7 +1751,7 @@ function onChannelList(channelList)
             local label = g_ui.createWidget('ChannelListLabel', channelListPanel)
             label.channelId = channelId
             label:setText(channelName)
-            label:setColor("#cda953")
+            label:setColor("#e0680f")
 
             label:setPhantom(false)
             label.onDoubleClick = doChannelListSubmit

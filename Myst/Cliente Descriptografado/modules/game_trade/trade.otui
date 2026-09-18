@@ -1,6 +1,6 @@
 HeadlessWindow
   id: tradeWindow
-  color: #d1ad55
+  color: #ff7a18
   image-source: images/window
   size: 554 231
   anchors.centerIn: parent
@@ -8,7 +8,7 @@ HeadlessWindow
   UIButton
     id: title
     font: sans-bold-16px
-    color: #d1ad55
+    color: #ff7a18
     text: Trade
     image-source: images/titleTab
     size: 212 28
@@ -18,7 +18,7 @@ HeadlessWindow
 
   Label
     id: messageLabel
-    color: #d1ad55
+    color: #ff7a18
     text: Escreva a mensagem aqui:
     anchors.top: parent.top
     anchors.left: parent.left
@@ -40,7 +40,7 @@ HeadlessWindow
   Label
     id: textLength
     text: 255
-    color: #d1ad55
+    color: #ff7a18
     anchors.top: parent.top
     anchors.left: parent.left
     margin-top: 155
@@ -48,7 +48,7 @@ HeadlessWindow
 
   Label
     id: warning
-    color: #d1ad55
+    color: #ff7a18
     text: A mensagem será enviada a cada 2 minutos
     anchors.top: parent.top
     anchors.left: parent.left

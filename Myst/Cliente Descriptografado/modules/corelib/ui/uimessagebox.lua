@@ -37,7 +37,7 @@ function UIMessageBox.display(title, message, buttons, onEnterCallback, onEscape
     messageTitle:setSize("140 28")
     messageTitle:setImageSource("images/titleTab.png")
     messageTitle:setText(title)
-    messageTitle:setColor("#cda953")
+    messageTitle:setColor("#e0680f")
     messageTitle:setFont("sans-bold-16px")
 
     local messageLabel = g_ui.createWidget('MessageBoxLabel', messageBox)
