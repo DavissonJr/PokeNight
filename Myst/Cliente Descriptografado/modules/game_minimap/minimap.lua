@@ -112,6 +112,32 @@ local function clearTownLabels()
     townLabels = {}
 end
 
+-- O arraste do mapa e tratado em C++ e nao emite evento nenhum ao Lua --
+-- nem UIMinimap nem o binding tem onDrag/onMouseMove. Sem um tique
+-- periodico os rotulos so se reposicionavam quando o jogador andava ou o
+-- zoom mudava: arrastando, o terreno deslizava por baixo e os nomes
+-- ficavam parados na tela.
+local labelTicker = nil
+local LABEL_TICK_MS = 80
+
+function startTownLabelTicker()
+    if labelTicker then
+        return
+    end
+    local function tick()
+        refreshTownLabels()
+        labelTicker = scheduleEvent(tick, LABEL_TICK_MS)
+    end
+    labelTicker = scheduleEvent(tick, LABEL_TICK_MS)
+end
+
+function stopTownLabelTicker()
+    if labelTicker then
+        removeEvent(labelTicker)
+        labelTicker = nil
+    end
+end
+
 function refreshTownLabels()
     local widget = minimapWidget
     if not widget or widget:isDestroyed() then
@@ -262,6 +288,7 @@ end
 function controller:onGameStart()
     self.ui:setupOnStart() -- load character window configuration
     self.ui:hide()
+    startTownLabelTicker()
 
     -- Load Map
     local minimapFile = '/minimap'
@@ -296,6 +323,8 @@ function controller:onGameStart()
 end
 
 function controller:onGameEnd()
+    -- Sem isso o tique continua rodando com a janela ja destruida.
+    stopTownLabelTicker()
     self.ui:setParent(nil, true)
 
     -- Save Map

@@ -308,10 +308,6 @@ local function unbindMovingKeys()
     gameInterface.unbindWalkKey('S')
     gameInterface.unbindWalkKey('A')
 
-    gameInterface.unbindWalkKey('Q')
-    gameInterface.unbindWalkKey('C')
-    gameInterface.unbindWalkKey('Z')
-
     gameInterface.unbindTurnKey('Ctrl+W')
     gameInterface.unbindTurnKey('Ctrl+D')
     gameInterface.unbindTurnKey('Ctrl+S')
@@ -325,12 +321,13 @@ local function bindMovingKeys()
     gameInterface.bindWalkKey('S', South)
     gameInterface.bindWalkKey('A', West)
 
-    -- E fica reservado para o loot em area (game_interface.lootAll).
-    -- Ligar as duas coisas na mesma tecla faria o personagem andar toda
-    -- vez que recolhesse; para o nordeste, use W + D.
-    gameInterface.bindWalkKey('Q', NorthWest)
-    gameInterface.bindWalkKey('C', SouthEast)
-    gameInterface.bindWalkKey('Z', SouthWest)
+    -- Sem teclas dedicadas para diagonal: elas saem da combinacao das
+    -- proprias WASD (W+D nordeste, W+A noroeste, S+A sudoeste, S+D
+    -- sudeste), pelo smartWalk. Isso libera Q, E, Z e C -- o E vai para o
+    -- loot em area (game_interface.lootAll), e os outros ficam livres.
+    --
+    -- Depende de "Ativar a caminhada inteligente" estar ligado nas opcoes;
+    -- com ela desligada nao ha diagonal por teclado.
 
     gameInterface.bindTurnKey('Ctrl+W', North)
     gameInterface.bindTurnKey('Ctrl+D', East)
