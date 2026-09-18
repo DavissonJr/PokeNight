@@ -1,152 +1,115 @@
+// Cartao de personagem: retrato, nome, level e mundo.
+// Substitui a linha de lista antiga -- a tela agora e uma fileira
+// horizontal de cartoes, como na referencia do PXG.
 CharacterWidget < UIWidget
-  height: 14
-  background-color: alpha
-  &updateOnStates: |
-    function(self)
-      local children = self:getChildren()
-      for i=1,#children do
-        children[i]:setOn(self:isFocused())
-      end
-    end
-  @onFocusChange: self:updateOnStates()
-  @onSetup: |
-    self:updateOnStates()
-    if g_game.getFeature(GameEnterGameShowAppearance) then
-      self:setHeight(64)
-    end
+  size: 152 198
+  background-color: #14141600
+  border-width: 2
+  border-color: #2a2a2e
+  focusable: true
 
   $focus:
-    background-color: #ffffff22
+    background-color: #1f1f22
+    border-color: #ff7a18
+
+  $hover !focus:
+    border-color: #3d3d44
+
+  // Fundo do retrato, para o outfit nao flutuar no vazio.
+  UIWidget
+    id: portraitBg
+    height: 116
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 2 2 0 2
+    background-color: #0e0e10
+    phantom: true
 
   Creature
     id: outfitCreatureBox
-    size: 64 64
-    anchors.top: parent.top
-    anchors.left: parent.left
-    padding-left: 10
-    padding-bottom: 5
-    creatureDisplay:setCreature(creature)
+    size: 80 80
+    anchors.centerIn: portraitBg
+    creature-center: true
     fixed-creature-size: true
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
+    phantom: true
+
+  // Estrela de VIP, no canto do retrato.
+  Label
+    id: mainCharacter
+    text: *
+    font: sans-bold-16px
+    color: #ff7a18
+    text-auto-resize: true
+    visible: false
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 6
+    margin-right: 8
+    phantom: true
 
   Label
     id: name
-    color: #bbbbbb
-    anchors.top: parent.top
+    font: sans-bold-16px
+    color: #f5f5f6
+    text-align: center
+    text-wrap: true
+    height: 34
+    anchors.top: portraitBg.bottom
     anchors.left: parent.left
-    font: verdana-11px-monochrome
-    text-auto-resize: true
-    background-color: alpha
-    text-offset: 2 0
-    @onSetup: |
-      if g_game.getFeature(GameEnterGameShowAppearance) then
-        self:setMarginLeft(65)
-      end
-
-    $on:
-      color: #ffffff
-
-  Label
-    id: mainCharacter
-    size: 9 8
-    anchors.top: parent.top
-    anchors.left: prev.right
-    margin-left: 6
-    margin-top: 2
-    image-source: /images/game/entergame/maincharacter
-    image-clip: 0 0 9 8
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  Label
-    id: statusDailyReward
-    size: 11 19
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin-left: 252
-    margin-top: 2
-    image-source: /images/game/entergame/dailyreward_collected
-    image-clip: 0 0 11 19
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  Label
-    id: statusHidden
-    size: 11 19
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin-left: 267
-    margin-top: 2
-    image-source: /images/game/entergame/hidden
-    image-clip: 0 0 11 19
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
+    anchors.right: parent.right
+    margin: 6 4 0 4
+    phantom: true
 
   Label
     id: level
-    color: #bbbbbb
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin-left: 300
-    font: verdana-11px-monochrome
+    font: verdana-11px-antialised
+    color: #ff7a18
+    text-align: center
     text-auto-resize: true
-    background-color: alpha
-    text-offset: 2 0
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-    $on:
-      color: #ffffff
-
-  Label
-    id: vocation
-    color: #bbbbbb
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin-left: 350
-    font: verdana-11px-monochrome
-    text-auto-resize: true
-    background-color: alpha
-    text-offset: 2 0
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-    $on:
-      color: #ffffff
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    phantom: true
 
   Label
     id: worldName
-    color: #bbbbbb
-    anchors.top: parent.top
-    font: verdana-11px-monochrome
+    font: verdana-11px-antialised
+    color: #8a8a92
+    text-align: center
     text-auto-resize: true
-    background-color: alpha
-    &baseText: '(%s)'
-    @onSetup: |
-      if g_game.getFeature(GameEnterGameShowAppearance) then
-        self:addAnchor(AnchorLeft, 'parent', AnchorLeft)
-        self:setMarginLeft(502)
-        self.baseText = '%s'
-      else
-        self:addAnchor(AnchorRight, 'parent', AnchorRight)
-        self:setMarginRight(5)
-      end
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 8
+    phantom: true
 
-    $on:
-      color: #ffffff
+  // Mantidos por compatibilidade com characterlist.lua, que os procura
+  // por id quando GameEnterGameShowAppearance esta ligada.
+  Label
+    id: vocation
+    visible: false
+
+  Label
+    id: statusDailyReward
+    visible: false
+
+  Label
+    id: statusHidden
+    visible: false
+
+// Slot do time, abaixo dos cartoes. Um por pokemon da mochila.
+PokeTeamSlot < UIWidget
+  size: 62 62
+  background-color: #0e0e10
+  border-width: 1
+  border-color: #2a2a2e
+
+  Creature
+    id: pokeCreature
+    size: 52 52
+    anchors.centerIn: parent
+    creature-center: true
+    fixed-creature-size: true
+    phantom: true
 
 MainWindow
   id: charactersWindow
@@ -155,17 +118,13 @@ MainWindow
   @onEnter: doLogin()
   @onEscape: hide(true)
   @onSetup: |
-    g_keyboard.bindKeyPress('Up', function() self:getChildById('characters'):focusPreviousChild(KeyboardFocusReason) end, self)
-    g_keyboard.bindKeyPress('Down', function() self:getChildById('characters'):focusNextChild(KeyboardFocusReason) end, self)
-    if g_game.getFeature(GamePreviewState) then
-      if g_game.getFeature(GameEnterGameShowAppearance) then
-        self:setSize({width = 745, height = 430})
-      else
-        self:setSize({width = 350, height = 400})
-      end
-    else
-      self:setSize({width = 310, height = 323})
-    end
+    -- Setas passam a andar na horizontal: os personagens agora ficam lado
+    -- a lado, nao empilhados.
+    g_keyboard.bindKeyPress('Left', function() self:getChildById('characters'):focusPreviousChild(KeyboardFocusReason) end, self)
+    g_keyboard.bindKeyPress('Right', function() self:getChildById('characters'):focusNextChild(KeyboardFocusReason) end, self)
+    -- Tamanho fixo: a tela nova nao depende mais das features de versao,
+    -- porque os dados (level, outfit, time) vem da API e nao do protocolo.
+    self:setSize({width = 700, height = 470})
 
   UIButton
     id: titleTab
@@ -187,21 +146,72 @@ MainWindow
     margin-top: -29
     margin-left: 87
 
-  TextList
+  ScrollablePanel
     id: characters
-    size: 275 154
+    height: 206
     anchors.top: parent.top
     anchors.left: parent.left
-    anchors.bottom: accountStatusCaption.top
-    margin-bottom: -15
-    padding: 1
+    anchors.right: parent.right
+    margin: 10 14 0 14
+    padding: 2
     focusable: false
-    vertical-scrollbar: characterListScrollBar
+    horizontal-scrollbar: characterListScrollBar
     auto-focus: first
-    @onSetup: |
-      if g_game.getFeature(GameEnterGameShowAppearance) then
-        self:setPaddingTop(20)
-      end
+    layout:
+      type: grid
+      cell-size: 152 198
+      cell-spacing: 8
+      flow: false
+
+  HorizontalScrollBar
+    id: characterListScrollBar
+    anchors.top: characters.bottom
+    anchors.left: characters.left
+    anchors.right: characters.right
+    margin-top: 2
+    step: 80
+    pixels-scroll: true
+
+  Label
+    id: teamCaption
+    !text: tr('Time')
+    font: verdana-11px-antialised
+    color: #8a8a92
+    text-auto-resize: true
+    anchors.top: characterListScrollBar.bottom
+    anchors.left: parent.left
+    margin-top: 12
+    margin-left: 16
+
+  UIWidget
+    id: teamRow
+    height: 62
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 6
+    width: 410
+    layout:
+      type: horizontalBox
+      spacing: 8
+
+  Button
+    id: playButton
+    !text: tr('JOGAR!')
+    font: sans-bold-16px
+    color: #0a0a0b
+    background-color: #ff7a18
+    height: 44
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 0 60 16 60
+    @onClick: doLogin()
+
+    $hover:
+      background-color: #ffa24d
+
+    $pressed:
+      background-color: #e0680f
 
 
   FlatLabel

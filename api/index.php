@@ -9,6 +9,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/db.php';
+require __DIR__ . '/itemattrs.php';
 $CFG = require __DIR__ . '/config.php';
 
 header('Content-Type: application/json; charset=utf-8');
@@ -82,6 +83,93 @@ switch ($route) {
         $st = $db->prepare('SELECT 1 FROM players WHERE name = ? LIMIT 1');
         $st->execute([$name]);
         reply(['ok' => true, 'available' => $st->fetchColumn() === false]);
+
+    // ---- POST /?r=characters ---------------------------------------------
+    // Detalhes que a lista de personagens do protocolo nao carrega: level,
+    // VIP e o time. Usado pela tela de selecao do cliente.
+    case 'characters':
+        if ($method !== 'POST') {
+            fail('Metodo invalido.', 405);
+        }
+        $in   = input();
+        $acc  = trim((string) ($in['account'] ?? ''));
+        $pass = (string) ($in['password'] ?? '');
+
+        $st = $db->prepare('SELECT id, premdays, vipDays FROM accounts WHERE name = ? AND password = ? LIMIT 1');
+        $st->execute([$acc, sha1($pass)]);
+        $account = $st->fetch();
+        if (!$account) {
+            fail('Conta ou senha incorreta.', 401);
+        }
+
+        // O outfit vem daqui e nao do protocolo: a feature
+        // GameEnterGameShowAppearance so liga em cliente >= 1200, e este e
+        // 854, entao a lista de personagens chega sem aparencia nenhuma.
+        $st = $db->prepare(
+            'SELECT id, name, level, sex, looktype, lookhead, lookbody,
+                    looklegs, lookfeet, lookaddons
+             FROM players WHERE account_id = ? ORDER BY id'
+        );
+        $st->execute([$account['id']]);
+        $players = $st->fetchAll();
+
+        // Uma consulta so para todos os personagens; N+1 aqui ficaria caro
+        // porque cada mochila tem dezenas de itens.
+        $team = [];
+        if ($players) {
+            $ids = array_column($players, 'id');
+            $in_ph = implode(',', array_fill(0, count($ids), '?'));
+            $st = $db->prepare(
+                "SELECT player_id, sid, attributes FROM player_items
+                 WHERE player_id IN ($in_ph) AND LENGTH(attributes) > 0
+                 ORDER BY player_id, sid"
+            );
+            $st->execute($ids);
+            foreach ($st->fetchAll() as $row) {
+                $attrs = pko_parse_item_attributes($row['attributes']);
+                if (empty($attrs['poke'])) {
+                    continue;          // item comum, nao e pokebola
+                }
+                $pid = (int) $row['player_id'];
+                if (!isset($team[$pid])) {
+                    $team[$pid] = [];
+                }
+                if (count($team[$pid]) >= 6) {
+                    continue;          // a tela mostra seis
+                }
+                $team[$pid][] = [
+                    'poke'     => $attrs['poke'],
+                    'level'    => (int) ($attrs['level'] ?? 0),
+                    'portrait' => (int) ($attrs['portrait'] ?? 0),
+                    'nature'   => (string) ($attrs['nature'] ?? ''),
+                ];
+            }
+        }
+
+        $out = [];
+        foreach ($players as $p) {
+            $out[] = [
+                'name'   => $p['name'],
+                'level'  => (int) $p['level'],
+                'sex'    => (int) $p['sex'],
+                'outfit' => [
+                    'type'   => (int) $p['looktype'],
+                    'head'   => (int) $p['lookhead'],
+                    'body'   => (int) $p['lookbody'],
+                    'legs'   => (int) $p['looklegs'],
+                    'feet'   => (int) $p['lookfeet'],
+                    'addons' => (int) $p['lookaddons'],
+                ],
+                'team'   => $team[(int) $p['id']] ?? [],
+            ];
+        }
+
+        reply([
+            'ok'         => true,
+            'premdays'   => (int) $account['premdays'],
+            'vipPending' => (int) $account['vipDays'],
+            'characters' => $out,
+        ]);
 
     // ---- POST /?r=register ----------------------------------------------
     case 'register':

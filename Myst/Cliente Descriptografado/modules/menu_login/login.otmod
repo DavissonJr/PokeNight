@@ -13,6 +13,10 @@ Module
     dofile 'characterlist'
     -- Precisa vir depois de login.lua: estende a tabela EnterGame dele.
     dofile 'pko_register'
+    -- Tabela nome de pokemon -> outfit (design/gen_poke_looktypes.py) e os
+    -- detalhes que o protocolo 8.54 nao manda. Depois de characterlist.
+    dofile 'poke_looktypes'
+    dofile 'charinfo'
     EnterGame.init()
     init()
     EnterGame.refreshOnline()

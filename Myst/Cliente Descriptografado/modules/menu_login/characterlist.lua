@@ -333,6 +333,12 @@ function create(characters, account, otui)
             onDoubleClick = function()
                 doLogin()
                 return true
+            end,
+            -- Trocar de personagem troca o time mostrado embaixo.
+            onFocusChange = function(self, focused)
+                if focused and updateTeamRow then
+                    updateTeamRow(self.characterName)
+                end
             end
         })
 
@@ -348,6 +354,11 @@ function create(characters, account, otui)
         addEvent(function()
             characterList:ensureChildVisible(focusLabel)
         end)
+    end
+
+    -- Level, aparencia e time vem da API: o protocolo 8.54 nao os manda.
+    if loadCharacterDetails then
+        loadCharacterDetails()
     end
 
     -- account
