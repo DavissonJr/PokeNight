@@ -25,6 +25,13 @@ local defaultOptions = {
     floatingEffect = false,
     ambientLight = 100,
     wasdWalking = false,
+    -- gameinterface.lua ja lia estas quatro, mas elas nunca foram
+    -- definidas aqui: getOption devolvia nil e setOn(nil) desligava o
+    -- painel. Os botoes de aumentar/diminuir tambem estavam sem handler.
+    showLeftPanel = true,
+    showLeftExtraPanel = false,
+    showRightPanel = true,
+    showRightExtraPanel = false,
     displayNames = true,
     displayHealth = true,
     displayMana = true,
@@ -347,6 +354,11 @@ function setOption(key, value, force)
         gameMapPanel:setLimitVisibleDimension(value)
     elseif key == 'floatingEffect' then
         g_map.setFloatingEffect(value)
+    elseif key == 'showLeftPanel' or key == 'showLeftExtraPanel'
+            or key == 'showRightPanel' or key == 'showRightExtraPanel' then
+        if g_game.isOnline() and modules.game_interface then
+            modules.game_interface.applySidePanels()
+        end
     elseif key == 'wasdWalking' then
         -- O cliente ja sabe andar de WASD: bindMovingKeys() e chamado por
         -- switchChat(false) no game_console. O que faltava era uma chave

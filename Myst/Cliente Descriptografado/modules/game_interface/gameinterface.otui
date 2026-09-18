@@ -157,6 +157,7 @@ UIWidget
     visible: false
   UIButton
     id: leftIncreaseSidePanels
+    @onClick: modules.game_interface.increaseSidePanels('left')
     anchors.left: gameLeftExtraPanel.right
     anchors.top: parent.top
     image-clip: 27 0 9 27
@@ -164,6 +165,7 @@ UIWidget
 
   UIButton
     id: leftDecreaseSidePanels
+    @onClick: modules.game_interface.decreaseSidePanels('left')
     anchors.left: leftIncreaseSidePanels.left
     anchors.top: leftIncreaseSidePanels.bottom
     image-clip: 0 0 9 27
@@ -171,6 +173,7 @@ UIWidget
 
   UIButton
     id: rightIncreaseSidePanels
+    @onClick: modules.game_interface.increaseSidePanels('right')
     anchors.right: gameRightExtraPanel.left
     anchors.top: parent.top
     image-clip: 27 27 9 27
@@ -178,6 +181,7 @@ UIWidget
 
   UIButton
     id: rightDecreaseSidePanels
+    @onClick: modules.game_interface.decreaseSidePanels('right')
     anchors.right: rightIncreaseSidePanels.right
     anchors.top: rightIncreaseSidePanels.bottom
     image-clip: 0 27 9 27

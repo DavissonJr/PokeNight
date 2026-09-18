@@ -5,6 +5,10 @@ PageButton < Button
 
 ContainerWindow < MiniWindow
   height: 150
+  // Era a unica janela de bag sem persistencia: posicao, altura e estado
+  // minimizado se perdiam a cada reabertura. UIMiniWindow guarda isso por
+  // personagem em CharMiniWindows, mas so quando save esta ligado.
+  &save: true
 
   UIItem
     id: containerItemWidget

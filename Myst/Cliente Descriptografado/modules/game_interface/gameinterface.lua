@@ -1128,6 +1128,66 @@ function getMapPanel()
     return gameMapPanel
 end
 
+--- Aplica as quatro opcoes de painel lateral e reflete nos botoes.
+-- Chamada pelas opcoes e ao entrar no jogo, para o estado sobreviver a
+-- reabertura do cliente (g_settings ja persiste as opcoes por si).
+function applySidePanels()
+    local opt = modules.client_options.getOption
+
+    local left       = opt('showLeftPanel')
+    local leftExtra  = opt('showLeftExtraPanel')
+    local right      = opt('showRightPanel')
+    local rightExtra = opt('showRightExtraPanel')
+
+    if gameLeftPanel then gameLeftPanel:setOn(left) end
+    if gameLeftExtraPanel then gameLeftExtraPanel:setOn(leftExtra) end
+    if gameRightPanel then gameRightPanel:setOn(right) end
+    if gameRightExtraPanel then gameRightExtraPanel:setOn(rightExtra) end
+
+    -- As setinhas so fazem sentido na direcao que ainda da para mexer.
+    if leftIncreaseSidePanels then leftIncreaseSidePanels:setEnabled(not leftExtra) end
+    if leftDecreaseSidePanels then leftDecreaseSidePanels:setEnabled(leftExtra or left) end
+    if rightIncreaseSidePanels then rightIncreaseSidePanels:setEnabled(not rightExtra) end
+    if rightDecreaseSidePanels then rightDecreaseSidePanels:setEnabled(rightExtra or right) end
+end
+
+--- Botoes de aumentar/diminuir: existiam no .otui sem nenhum handler.
+-- Aumentar abre o painel extra daquele lado; diminuir fecha o extra e,
+-- se ele ja estava fechado, fecha o principal.
+function increaseSidePanels(side)
+    local opt = modules.client_options
+    if side == 'left' then
+        if not opt.getOption('showLeftPanel') then
+            opt.setOption('showLeftPanel', true)
+        else
+            opt.setOption('showLeftExtraPanel', true)
+        end
+    else
+        if not opt.getOption('showRightPanel') then
+            opt.setOption('showRightPanel', true)
+        else
+            opt.setOption('showRightExtraPanel', true)
+        end
+    end
+end
+
+function decreaseSidePanels(side)
+    local opt = modules.client_options
+    if side == 'left' then
+        if opt.getOption('showLeftExtraPanel') then
+            opt.setOption('showLeftExtraPanel', false)
+        else
+            opt.setOption('showLeftPanel', false)
+        end
+    else
+        if opt.getOption('showRightExtraPanel') then
+            opt.setOption('showRightExtraPanel', false)
+        else
+            opt.setOption('showRightPanel', false)
+        end
+    end
+end
+
 function getRightPanel()
     return gameRightPanel
 end
@@ -1202,8 +1262,7 @@ function setupViewMode(mode)
         gameMapPanel:addAnchor(AnchorBottom, 'gameBottomPanel', AnchorTop)
         gameRootPanel:setImageColor('white')
         gameRootPanel:setBackgroundColor('alpha')
-        gameLeftPanel:setOn(modules.client_options.getOption('showLeftPanel'))
-        gameRightExtraPanel:setOn(modules.client_options.getOption('showRightExtraPanel'))
+        applySidePanels()
        --[[  gameRightPanel:setMarginTop(modules.client_topmenu.getTopMenu():getHeight() - gameRightPanel:getPaddingTop() + 25) ]]
         gameLeftPanel:setImageColor('white')
         gameRightPanel:setImageColor('white')

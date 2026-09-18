@@ -17,6 +17,22 @@ Panel
     text: Perguntar antes de derrubar uma pokébola
 
   OptionCheckBox
+    id: showLeftPanel
+    text: Barra lateral esquerda
+
+  OptionCheckBox
+    id: showLeftExtraPanel
+    text: Segunda barra a esquerda
+
+  OptionCheckBox
+    id: showRightPanel
+    text: Barra lateral direita
+
+  OptionCheckBox
+    id: showRightExtraPanel
+    text: Segunda barra a direita
+
+  OptionCheckBox
     id: wasdWalking
     text: Andar com WASD
     tooltip: W A S D anda, Q E Z C faz as diagonais. Toque Enter para abrir o chat.
