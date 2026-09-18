@@ -33,6 +33,11 @@ Panel
     text: Segunda barra a direita
 
   OptionCheckBox
+    id: smoothWalk
+    text: Movimento fluido
+    tooltip: Remove a espera de 250 ms apos um passo recusado ou um clique. O ritmo dos passos continua o mesmo.
+
+  OptionCheckBox
     id: wasdWalking
     text: Andar com WASD
     tooltip: W A S D anda, Q E Z C faz as diagonais. Toque Enter para abrir o chat.

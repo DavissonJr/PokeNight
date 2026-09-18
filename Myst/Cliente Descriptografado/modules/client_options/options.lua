@@ -24,6 +24,9 @@ local defaultOptions = {
     limitVisibleDimension = true,
     floatingEffect = false,
     ambientLight = 100,
+    -- Solta a trava de 250 ms que lockWalk() impoe apos um passo recusado
+    -- ou um clique. Ver releaseWalkLock em game_interface.
+    smoothWalk = true,
     wasdWalking = false,
     -- gameinterface.lua ja lia estas quatro, mas elas nunca foram
     -- definidas aqui: getOption devolvia nil e setOn(nil) desligava o

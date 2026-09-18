@@ -434,6 +434,26 @@ function stopSmartWalk()
     smartWalkDir = nil
 end
 
+--- Solta a trava artificial de caminhada.
+--
+-- LocalPlayer::cancelWalk e LocalPlayer::autoWalk chamam lockWalk(), que
+-- prende o personagem por 250 ms. E o que faz o boneco "engasgar" quando o
+-- servidor recusa um passo (comum na diagonal, que dura mais) e o que
+-- atrasa o primeiro passo depois de um clique.
+--
+-- Soltar e seguro: isWalkLocked() so e consultado por canWalk(), que ALEM
+-- disso exige m_walkTimer >= getStepDuration() - 9. O ritmo dos passos
+-- continua valendo; some apenas a espera artificial.
+function releaseWalkLock()
+    if not modules.client_options.getOption('smoothWalk') then
+        return
+    end
+    local player = g_game.getLocalPlayer()
+    if player then
+        player:unlockWalk()
+    end
+end
+
 function onWalkKeyDown(dir)
     if modules.client_options.getOption('autoChaseOverride') then
         if g_game.isAttacking() and g_game.getChaseMode() == ChaseOpponent then
@@ -441,6 +461,7 @@ function onWalkKeyDown(dir)
         end
     end
     firstStep = true
+    releaseWalkLock()
     changeWalkDir(dir)
 end
 
@@ -482,6 +503,7 @@ function smartWalk(dir)
     end
 
     local dire = smartWalkDir or dir
+    releaseWalkLock()
     g_game.walk(dire, firstStep)
     firstStep = false
     lastManualWalk = g_clock.millis()
@@ -1005,6 +1027,9 @@ function processMouseAction(menuPosition, mouseButton, autoWalkPos, lookThing, u
 
     if autoWalkPos and keyboardModifiers == KeyboardNoModifier and mouseButton == MouseLeftButton then
         player:autoWalk(autoWalkPos)
+        -- autoWalk trava 250 ms logo apos iniciar; sem isso o primeiro
+        -- passo do clique sai com atraso visivel.
+        releaseWalkLock()
         if g_game.isAttacking() and g_game.getChaseMode() == ChaseOpponent then
             g_game.setChaseMode(DontChase)
             return true
