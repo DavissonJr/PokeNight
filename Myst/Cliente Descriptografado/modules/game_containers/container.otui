@@ -69,3 +69,34 @@ ContainerWindow < MiniWindow
       type: grid
       cell-size: 32 32
       flow: true
+
+// Tira de bags abertas: um botao por container, para alternar entre eles
+// sem espalhar janelas pela tela.
+BagTabButton < UIItem
+  size: 34 34
+  virtual: true
+  border-width: 2
+  border-color: #2a2a2e
+
+  $hover !checked:
+    border-color: #3d3d44
+
+  $checked:
+    border-color: #ff7a18
+    background-color: #241a10
+
+BagBarWindow < MiniWindow
+  id: bagBarWindow
+  text: Bags
+  height: 60
+  &save: true
+
+  MiniWindowContents
+    UIWidget
+      id: bagBar
+      anchors.fill: parent
+      layout:
+        type: grid
+        cell-size: 34 34
+        cell-spacing: 4
+        flow: true
