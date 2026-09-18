@@ -1,0 +1,44 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: poke-db
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: poke123
+      MARIADB_DATABASE: pokenight
+    volumes:
+      - dbdata:/var/lib/mysql
+      # Importado automaticamente APENAS na primeira subida, quando o
+      # volume dbdata ainda esta vazio.
+      - ./Myst/Servidor/pokenight.sql:/docker-entrypoint-initdb.d/01-pokenight.sql:ro
+    ports:
+      # Exposto no host pra voce abrir no HeidiSQL/DBeaver se quiser.
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+  server:
+    build: ./docker
+    container_name: poke-server
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+    volumes:
+      - ./Myst/Servidor:/srv
+      # Sobrepoe so o config.lua, sem tocar no arquivo original do repo.
+      - ./docker/config.local.lua:/srv/config.lua:ro
+    ports:
+      - "7183:7183"   # login / status
+      - "7172:7172"   # game
+    stdin_open: true
+    tty: true
+
+volumes:
+  dbdata:

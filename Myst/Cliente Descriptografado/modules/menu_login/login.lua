@@ -10,7 +10,7 @@ local clientBox
 local protocolLogin
 local motdEnabled = false
 
-local serverIP = "85.209.93.118"
+local serverIP = "127.0.0.1"
 
 -- private functions
 local function onError(protocol, message, errorCode)
