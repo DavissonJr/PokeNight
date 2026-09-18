@@ -102,12 +102,12 @@ function init()
     optionsTabBar:addTab(tr('Console'), consolePanel, '/images/optionstab/console')
 
     graphicsPanel = g_ui.loadUI('graphics')
-    optionsTabBar:addTab(tr('Grï¿½ficos'), graphicsPanel, '/images/optionstab/graphics')
+    optionsTabBar:addTab(tr('Gráficos'), graphicsPanel, '/images/optionstab/graphics')
 
     --[[ soundPanel = g_ui.loadUI('audio')
     optionsTabBar:addTab(tr('Audio'), soundPanel, '/images/optionstab/audio') ]]
 
-    optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Opï¿½ï¿½es'), '/images/topbuttons/options_hover',
+    optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Opções'), '/images/topbuttons/options_hover',
         toggle)
     --[[ audioButton = modules.client_topmenu.addLeftButton('audioButton', tr('Audio'), '/images/topbuttons/audio', function() toggleOption('enableAudio') end) ]]
 
@@ -133,7 +133,7 @@ function setupComboBox()
 
     antialiasingModeCombobox:addOption('Nenhum', 0)
     antialiasingModeCombobox:addOption('Normal', 1)
-    antialiasingModeCombobox:addOption('Mï¿½dio', 2)
+    antialiasingModeCombobox:addOption('Médio', 2)
 
     antialiasingModeCombobox.onOptionChange = function(comboBox, option)
         setOption('antialiasingMode', comboBox:getCurrentOption().data)
@@ -155,7 +155,7 @@ function setupComboBox()
     local antialiasingOptions = {
         ["0"] = "Nenhum",
         ["1"] = "Normal",
-        ["2"] = "Mï¿½dio",
+        ["2"] = "Médio",
     }
 
     if antialiasingOptions[g_settings.getString('antialiasingMode')] then
