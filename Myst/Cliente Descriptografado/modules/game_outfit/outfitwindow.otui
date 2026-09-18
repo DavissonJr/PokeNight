@@ -1,10 +1,50 @@
+// Celula da grade de outfits: miniatura + nome.
+// A grade substitui a navegacao por setas, que mostrava um outfit por vez.
+OutfitGridCell < UIWidget
+  size: 66 84
+  focusable: true
+  background-color: #14141600
+  border-width: 1
+  border-color: #2a2a2e
+
+  $hover:
+    background-color: #1f1f22
+    border-color: #ff7a18
+
+  $checked:
+    background-color: #241a10
+    border-color: #ff7a18
+
+  Creature
+    id: cellCreature
+    size: 56 56
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 3
+    phantom: true
+    creature-center: true
+    creature-size: 52
+
+  Label
+    id: cellName
+    font: verdana-11px-antialised
+    color: #8a8a92
+    text-align: center
+    text-wrap: true
+    height: 22
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 0 2 2 2
+    phantom: true
+
 NextOutfitButton < NextButton
 PrevOutfitButton < PreviousButton
 NextMountButton < NextButton
 PrevMountButton < PreviousButton
 
 HeadlessWindow
-  size: 330 459
+  size: 636 459
   image-source: /images/ui/options_window
   anchors.centerIn: parent
   @onEnter: modules.game_outfit.accept()
@@ -118,7 +158,7 @@ HeadlessWindow
   Creature
     id: mountCreatureBox
     anchors.top: parent.top
-    anchors.right: parent.right
+    anchors.right: outfitGridPanel.left
     margin-top: 15
     margin-right: 22
     padding: 4 4 4 4
@@ -387,7 +427,7 @@ HeadlessWindow
     !text: tr('Cancel')
     image-source: images/button
     size: 100 26
-    anchors.right: parent.right
+    anchors.right: outfitGridPanel.left
     anchors.bottom: parent.bottom
     @onClick: modules.game_outfit.destroy()
 
@@ -452,3 +492,41 @@ HeadlessWindow
 
     $hover:
       image-source: images/close_hover.png
+
+  // ---- grade com todos os outfits disponiveis --------------------------
+  Label
+    id: outfitGridTitle
+    !text: tr('Suas roupas')
+    font: sans-bold-16px
+    color: #ff7a18
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 44
+    margin-right: 40
+
+  ScrollablePanel
+    id: outfitGridPanel
+    width: 300
+    anchors.top: outfitGridTitle.bottom
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 8
+    margin-right: 22
+    margin-bottom: 14
+    padding: 2
+    vertical-scrollbar: outfitGridScroll
+    layout:
+      type: grid
+      cell-size: 66 84
+      cell-spacing: 4
+      flow: true
+
+  VerticalScrollBar
+    id: outfitGridScroll
+    anchors.top: outfitGridPanel.top
+    anchors.bottom: outfitGridPanel.bottom
+    anchors.right: parent.right
+    margin-right: 4
+    step: 28
+    pixels-scroll: true

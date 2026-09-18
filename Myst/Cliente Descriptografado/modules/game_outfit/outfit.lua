@@ -188,6 +188,7 @@ controller:registerEvents(g_game, {
         end
 
         localPlayerEvent:execute('onOutfitChange')
+        buildOutfitGrid()
     end
 })
 
@@ -227,6 +228,90 @@ function accept()
     destroy()
 end
 
+-- ---------------------------------------------------------------------
+-- Grade de outfits
+--
+-- O servidor ja envia a lista completa em onOpenOutfitWindow; a tela
+-- antiga so mostrava um por vez com setas. Aqui montamos uma celula por
+-- outfit disponivel, como no PXG. As setas continuam funcionando.
+-- ---------------------------------------------------------------------
+
+-- Celulas indexadas pela posicao em `outfits`, para marcar a selecionada
+-- sem varrer os filhos do painel a cada troca.
+local gridCells = {}
+
+--- Marca visualmente qual celula corresponde ao outfit atual.
+function updateOutfitGridSelection()
+    for i, cell in pairs(gridCells) do
+        cell:setChecked(i == currentOutfit)
+    end
+end
+
+--- Clique numa celula: vira o outfit selecionado.
+function selectOutfitIndex(index)
+    if not outfits or not outfits[index] then
+        return
+    end
+
+    currentOutfit = index
+    localPlayerEvent:execute('onOutfitChange')
+    updateOutfitGridSelection()
+end
+
+--- (Re)constroi a grade a partir de `outfits`.
+function buildOutfitGrid()
+    gridCells = {}
+
+    if not outfitWindow then
+        return
+    end
+
+    local panel = outfitWindow:recursiveGetChildById('outfitGridPanel')
+    if not panel then
+        return
+    end
+
+    panel:destroyChildren()
+
+    if not outfits then
+        return
+    end
+
+    -- As cores vem do outfit atual do jogador: a miniatura precisa refletir
+    -- a paleta escolhida, senao a grade nao corresponde ao que ele vera.
+    local base = outfit or {}
+
+    for i = 1, #outfits do
+        local entry = outfits[i]
+        local cell = g_ui.createWidget('OutfitGridCell', panel)
+
+        local preview = {
+            type = entry[1],
+            head = base.head or 0,
+            body = base.body or 0,
+            legs = base.legs or 0,
+            feet = base.feet or 0,
+            addons = entry[3] or 0
+        }
+
+        local creatureBox = cell:getChildById('cellCreature')
+        -- setCenter nao esta exposto ao Lua neste cliente (so setCreature,
+        -- setOutfit, setCreatureSize e getCreature). A centralizacao vai
+        -- pelo creature-center no .otui.
+        creatureBox:setOutfit(preview)
+
+        cell:getChildById('cellName'):setText(entry[2] or '')
+        cell:setTooltip(entry[2] or '')
+        cell.onClick = function()
+            selectOutfitIndex(i)
+        end
+
+        gridCells[i] = cell
+    end
+
+    updateOutfitGridSelection()
+end
+
 function nextOutfitType()
     if not outfits then
         return
@@ -238,6 +323,7 @@ function nextOutfitType()
     end
 
     localPlayerEvent:execute('onOutfitChange')
+    updateOutfitGridSelection()
 end
 
 function previousOutfitType()
@@ -251,6 +337,7 @@ function previousOutfitType()
     end
 
     localPlayerEvent:execute('onOutfitChange')
+    updateOutfitGridSelection()
 end
 
 function nextMountType()
