@@ -180,7 +180,7 @@ MainWindow
     id: titleTabLabel
     text-auto-resize: true
     text: Personagens
-    color: #cda953
+    color: #e0680f
     font: sans-bold-16px
     anchors.top: parent.top
     anchors.left: parent.left
