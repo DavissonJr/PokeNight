@@ -17,6 +17,11 @@ Panel
     text: Perguntar antes de derrubar uma pokébola
 
   OptionCheckBox
+    id: wasdWalking
+    text: Andar com WASD
+    tooltip: W A S D anda, Q E Z C faz as diagonais. Toque Enter para abrir o chat.
+
+  OptionCheckBox
     id: smartWalk
     text: Ativar a caminhada inteligente
     tooltip: Detectará quando usar o passo diagonal com base nas teclas\nque você está pressionando

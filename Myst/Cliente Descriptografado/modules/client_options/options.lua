@@ -24,6 +24,7 @@ local defaultOptions = {
     limitVisibleDimension = true,
     floatingEffect = false,
     ambientLight = 100,
+    wasdWalking = false,
     displayNames = true,
     displayHealth = true,
     displayMana = true,
@@ -101,12 +102,12 @@ function init()
     optionsTabBar:addTab(tr('Console'), consolePanel, '/images/optionstab/console')
 
     graphicsPanel = g_ui.loadUI('graphics')
-    optionsTabBar:addTab(tr('Gráficos'), graphicsPanel, '/images/optionstab/graphics')
+    optionsTabBar:addTab(tr('Grï¿½ficos'), graphicsPanel, '/images/optionstab/graphics')
 
     --[[ soundPanel = g_ui.loadUI('audio')
     optionsTabBar:addTab(tr('Audio'), soundPanel, '/images/optionstab/audio') ]]
 
-    optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Opções'), '/images/topbuttons/options_hover',
+    optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Opï¿½ï¿½es'), '/images/topbuttons/options_hover',
         toggle)
     --[[ audioButton = modules.client_topmenu.addLeftButton('audioButton', tr('Audio'), '/images/topbuttons/audio', function() toggleOption('enableAudio') end) ]]
 
@@ -132,7 +133,7 @@ function setupComboBox()
 
     antialiasingModeCombobox:addOption('Nenhum', 0)
     antialiasingModeCombobox:addOption('Normal', 1)
-    antialiasingModeCombobox:addOption('Médio', 2)
+    antialiasingModeCombobox:addOption('Mï¿½dio', 2)
 
     antialiasingModeCombobox.onOptionChange = function(comboBox, option)
         setOption('antialiasingMode', comboBox:getCurrentOption().data)
@@ -154,7 +155,7 @@ function setupComboBox()
     local antialiasingOptions = {
         ["0"] = "Nenhum",
         ["1"] = "Normal",
-        ["2"] = "Médio",
+        ["2"] = "Mï¿½dio",
     }
 
     if antialiasingOptions[g_settings.getString('antialiasingMode')] then
@@ -346,6 +347,21 @@ function setOption(key, value, force)
         gameMapPanel:setLimitVisibleDimension(value)
     elseif key == 'floatingEffect' then
         g_map.setFloatingEffect(value)
+    elseif key == 'wasdWalking' then
+        -- O cliente ja sabe andar de WASD: bindMovingKeys() e chamado por
+        -- switchChat(false) no game_console. O que faltava era uma chave
+        -- para o jogador ligar isso pelas opcoes, em vez de descobrir o
+        -- botao de modo chat. Marcar = sair do modo chat (WASD anda);
+        -- desmarcar = voltar ao modo chat (WASD digita).
+        if g_game.isOnline() and modules.game_console then
+            local console = modules.game_console
+            if console.consoleToggleChat then
+                console.consoleToggleChat:setChecked(not value)
+            end
+            if console.switchChat then
+                console.switchChat(not value)
+            end
+        end
     elseif key == 'displayNames' then
         gameMapPanel:setDrawNames(value)
     elseif key == 'displayHealth' then
@@ -440,5 +456,21 @@ function onGameStart()
 
     if modules.client_options.getOption('disableColors') == true then
         g_game.enableFeature(GameeDisableColors)
+    end
+
+    -- setOption roda antes de existir jogo, entao o WASD nao pode ser
+    -- aplicado la. Reaplicamos ao entrar, senao a opcao so valeria depois
+    -- de o jogador desmarcar e marcar de novo.
+    if modules.client_options.getOption('wasdWalking') == true then
+        addEvent(function()
+            local console = modules.game_console
+            if not console then return end
+            if console.consoleToggleChat then
+                console.consoleToggleChat:setChecked(false)
+            end
+            if console.switchChat then
+                console.switchChat(false)
+            end
+        end)
     end
 end
