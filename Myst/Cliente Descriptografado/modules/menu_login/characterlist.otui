@@ -15,7 +15,9 @@ CharacterWidget < UIWidget
   $hover !focus:
     border-color: #3d3d44
 
-  // Fundo do retrato, para o outfit nao flutuar no vazio.
+  // Area do retrato. Sem cor propria: com um tom diferente do cartao ela
+  // aparecia como um quadrado recortado atras do personagem. Serve so de
+  // referencia de ancoragem.
   UIWidget
     id: portraitBg
     height: 116
@@ -23,7 +25,6 @@ CharacterWidget < UIWidget
     anchors.left: parent.left
     anchors.right: parent.right
     margin: 2 2 0 2
-    background-color: #0e0e10
     phantom: true
 
   Creature
@@ -99,7 +100,6 @@ CharacterWidget < UIWidget
 // Slot do time, abaixo dos cartoes. Um por pokemon da mochila.
 PokeTeamSlot < UIWidget
   size: 62 62
-  background-color: #0e0e10
   border-width: 1
   border-color: #2a2a2e
 
@@ -110,41 +110,18 @@ PokeTeamSlot < UIWidget
     creature-center: true
     fixed-creature-size: true
     phantom: true
-
 MainWindow
   id: charactersWindow
-  !text: tr('Character List')
+  !text: tr('Selecionar Personagem')
   visible: false
+  size: 700 430
   @onEnter: doLogin()
   @onEscape: hide(true)
   @onSetup: |
-    -- Setas passam a andar na horizontal: os personagens agora ficam lado
-    -- a lado, nao empilhados.
+    -- Personagens ficam lado a lado agora, entao as setas andam na
+    -- horizontal.
     g_keyboard.bindKeyPress('Left', function() self:getChildById('characters'):focusPreviousChild(KeyboardFocusReason) end, self)
     g_keyboard.bindKeyPress('Right', function() self:getChildById('characters'):focusNextChild(KeyboardFocusReason) end, self)
-    -- Tamanho fixo: a tela nova nao depende mais das features de versao,
-    -- porque os dados (level, outfit, time) vem da API e nao do protocolo.
-    self:setSize({width = 700, height = 470})
-
-  UIButton
-    id: titleTab
-    size: 212 28
-    image-source: /images/ui/titleTab.png
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin-top: -31
-    margin-left: 28
-
-  Label
-    id: titleTabLabel
-    text-auto-resize: true
-    text: Personagens
-    color: #e0680f
-    font: sans-bold-16px
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin-top: -29
-    margin-left: 87
 
   ScrollablePanel
     id: characters
@@ -152,7 +129,9 @@ MainWindow
     anchors.top: parent.top
     anchors.left: parent.left
     anchors.right: parent.right
-    margin: 10 14 0 14
+    margin-top: 8
+    margin-left: 12
+    margin-right: 12
     padding: 2
     focusable: false
     horizontal-scrollbar: characterListScrollBar
@@ -179,32 +158,64 @@ MainWindow
     color: #8a8a92
     text-auto-resize: true
     anchors.top: characterListScrollBar.bottom
-    anchors.left: parent.left
-    margin-top: 12
-    margin-left: 16
+    anchors.left: characters.left
+    margin-top: 10
 
   UIWidget
     id: teamRow
-    height: 62
-    anchors.top: prev.bottom
+    // 6 x 62 + 5 x 8 de espacamento
+    size: 412 62
+    anchors.top: teamCaption.bottom
     anchors.horizontalCenter: parent.horizontalCenter
-    margin-top: 6
-    width: 410
+    margin-top: 4
     layout:
       type: horizontalBox
       spacing: 8
 
-  Button
-    id: playButton
+  Label
+    id: accountStatusIcon
+    size: 12 12
+    anchors.top: teamRow.bottom
+    anchors.left: characters.left
+    margin-top: 12
+
+  Label
+    id: accountStatusLabel
+    !text: tr('Conta Gratis')
+    font: verdana-11px-antialised
+    color: #8a8a92
+    text-auto-resize: true
+    anchors.verticalCenter: accountStatusIcon.verticalCenter
+    anchors.left: accountStatusIcon.right
+    margin-left: 6
+
+  UIButton
+    id: buttonCancel
+    !text: tr('Voltar')
+    font: verdana-11px-antialised
+    color: #f5f5f6
+    size: 110 40
+    anchors.bottom: parent.bottom
+    anchors.left: characters.left
+    margin-bottom: 10
+    background-color: #1f1f22
+    @onClick: hide(true)
+
+    $hover:
+      background-color: #2a2a2e
+
+  UIButton
+    id: buttonOk
     !text: tr('JOGAR!')
     font: sans-bold-16px
     color: #0a0a0b
-    background-color: #ff7a18
-    height: 44
+    height: 40
     anchors.bottom: parent.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin: 0 60 16 60
+    anchors.left: buttonCancel.right
+    anchors.right: characters.right
+    margin-bottom: 10
+    margin-left: 10
+    background-color: #ff7a18
     @onClick: doLogin()
 
     $hover:
@@ -212,199 +223,3 @@ MainWindow
 
     $pressed:
       background-color: #e0680f
-
-
-  FlatLabel
-    width: 250
-    anchors.left: parent.left
-    anchors.top: characters.top
-    !text: tr('Character') .. ''
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  FlatLabel
-    width: 50
-    anchors.left: parent.left
-    anchors.top: characters.top
-    margin-left: 250
-    !text: tr('Status') .. ''
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  FlatLabel
-    width: 50
-    anchors.left: parent.left
-    anchors.top: characters.top
-    margin-left: 300
-    !text: tr('Level') .. ''
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  FlatLabel
-    width: 150
-    anchors.left: parent.left
-    anchors.top: characters.top
-    margin-left: 350
-    !text: tr('Vocation') .. ''
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  FlatLabel
-    width: 201
-    anchors.right: characters.right
-    anchors.top: characters.top
-    !text: tr('World') .. ''
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  VerticalScrollBar
-    id: characterListScrollBar
-    anchors.top: parent.top
-    anchors.bottom: accountStatusCaption.top
-    anchors.right: parent.right
-    margin-bottom: -15
-    margin-right: -10
-    step: 14
-    pixels-scroll: true
-    visible: false
-
-  VerticalSeparator
-    anchors.left: parent.left
-    anchors.top: parent.top
-    anchors.bottom: prev.bottom
-    margin-left: 249
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  VerticalSeparator
-    anchors.left: parent.left
-    anchors.top: parent.top
-    anchors.bottom: prev.bottom
-    margin-left: 299
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  VerticalSeparator
-    anchors.left: parent.left
-    anchors.top: parent.top
-    anchors.bottom: prev.bottom
-    margin-left: 349
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  VerticalSeparator
-    anchors.left: parent.left
-    anchors.top: parent.top
-    anchors.bottom: prev.bottom
-    margin-left: 499
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  Label
-    id: accountStatusCaption
-    !text: tr('Account Status') .. ':'
-    anchors.left: parent.left
-    anchors.right: parent.right
-    anchors.bottom: next.top
-    visible: false
-    @onSetup: |
-      if g_game.getFeature(GameEnterGameShowAppearance) then
-        self:setMarginBottom(5)
-      else
-        self:setMarginBottom(1)
-      end
-
-  Label
-    id: accountStatusIcon
-    size: 22 20
-    anchors.left: parent.left
-    anchors.bottom: next.bottom
-    image-source: /images/game/entergame/premium
-    image-clip: 0 0 22 20
-    @onSetup: |
-      if not(g_game.getFeature(GameEnterGameShowAppearance)) then
-        self:hide()
-      end
-
-  Label
-    id: accountStatusLabel
-    !text: tr('Conta Grátis')
-    anchors.left: parent.left
-    text-auto-resize: true
-    margin-left: 65
-    @onSetup: |
-      if g_game.getFeature(GameEnterGameShowAppearance) then
-        self:setMarginBottom(15)
-        self:setPaddingBottom(2)
-        self:setTextOffset({x = 25, y = 0})
-        self:addAnchor(AnchorBottom, 'next', AnchorBottom)
-      else
-        self:setMarginBottom(5)
-        self:addAnchor(AnchorRight, 'parent', AnchorRight)
-        self:addAnchor(AnchorBottom, 'separator', AnchorTop)
-      end
-
-    $on:
-      color: #FF0000
-
-  HorizontalSeparator
-    id: separator
-    anchors.left: parent.left
-    anchors.right: parent.right
-    anchors.bottom: next.top
-    margin-bottom: 10
-
-  //CheckBox
-  //  id: charAutoLoginBox
-  //  !text: tr('Auto login')
-  //  !tooltip: tr('Auto login selected character on next charlist load')
-  //  anchors.left: parent.left
-  //  anchors.right: parent.right
-  //  anchors.bottom: next.top
-  //  margin-bottom: 6
-  //  margin-left: 18
-  //  margin-right: 18
-
-  UIButton
-    id: buttonOk
-    !text: tr('Entrar')
-    size: 104 26
-    image-source: images/button.png
-    anchors.right: next.left
-    anchors.bottom: parent.bottom
-    margin-right: 20
-    @onClick: doLogin()
-
-    $hover:
-      image-source: images/button_hover.png
-
-  UIButton
-    id: buttonCancel
-    !text: tr('Voltar')
-    size: 104 26
-    image-source: images/button.png
-    anchors.right: parent.right
-    anchors.bottom: parent.bottom
-    @onClick: hide(true)
-    margin-right: 25
-
-    $hover:
-      image-source: images/button_hover.png
