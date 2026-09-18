@@ -430,8 +430,28 @@ function tryLogout(prompt)
 end
 
 function stopSmartWalk()
+    cancelPendingFirstStep()
     smartWalkDirs = {}
     smartWalkDir = nil
+end
+
+-- Primeiro passo adiado, para a diagonal sair certa.
+--
+-- bindKeyDown e bindKeyPress disparam assim que a PRIMEIRA tecla desce.
+-- Como as diagonais agora saem da combinacao (W+D e afins), o passo para
+-- o norte ja foi enviado quando o D chega 30 ms depois -- e o personagem
+-- anda torto e se corrige, que e o solavanco no inicio de toda diagonal.
+--
+-- Segurar so o primeiro passo por um instante resolve. A caminhada
+-- continua nao e afetada: firstStep so vale na largada.
+local pendingFirstStep = nil
+local DIAGONAL_GRACE_MS = 60
+
+local function cancelPendingFirstStep()
+    if pendingFirstStep then
+        removeEvent(pendingFirstStep)
+        pendingFirstStep = nil
+    end
 end
 
 --- Solta a trava artificial de caminhada.
@@ -502,11 +522,30 @@ function smartWalk(dir)
         return false
     end
 
-    local dire = smartWalkDir or dir
-    releaseWalkLock()
-    g_game.walk(dire, firstStep)
-    firstStep = false
-    lastManualWalk = g_clock.millis()
+    local function step()
+        local dire = smartWalkDir or dir
+        releaseWalkLock()
+        g_game.walk(dire, firstStep)
+        firstStep = false
+        lastManualWalk = g_clock.millis()
+    end
+
+    -- So na largada, e so enquanto uma unica direcao esta pressionada:
+    -- se a segunda chegar dentro da janela, smartWalkDir ja sera a
+    -- diagonal quando o passo finalmente sair.
+    if firstStep and #smartWalkDirs == 1
+       and modules.client_options.getOption('diagonalGrace') then
+        if not pendingFirstStep then
+            pendingFirstStep = scheduleEvent(function()
+                pendingFirstStep = nil
+                step()
+            end, DIAGONAL_GRACE_MS)
+        end
+        return true
+    end
+
+    cancelPendingFirstStep()
+    step()
     return true
 end
 

@@ -6,6 +6,14 @@ function onUse(cid, item, fromPos, item2, toPos)
 		return true
 	end
 
+	-- Usar a pokedex no proprio personagem abre a listagem completa no
+	-- cliente, em vez de mostrar dados de um pokemon. O opcode 152 e o
+	-- mesmo que responde quais foram capturados.
+	if item2.uid == cid then
+		doSendPlayerExtendedOpcode(cid, 152, "abrir")
+		return true
+	end
+
 	if tonumber(getPlayerStorageValue(item2.uid, GUARDIAN_STORAGE_ISGUARDIAN)) >= 1 then
 		doPlayerSendTextMessage(cid, 25, "Você não pode usar pokedex em um guardião.")
 		return true

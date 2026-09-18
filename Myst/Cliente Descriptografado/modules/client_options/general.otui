@@ -33,6 +33,11 @@ Panel
     text: Segunda barra a direita
 
   OptionCheckBox
+    id: diagonalGrace
+    text: Diagonal precisa
+    tooltip: Segura o primeiro passo por 60ms para a diagonal sair certa ao combinar duas teclas.
+
+  OptionCheckBox
     id: smoothWalk
     text: Movimento fluido
     tooltip: Remove a espera de 250 ms apos um passo recusado ou um clique. O ritmo dos passos continua o mesmo.

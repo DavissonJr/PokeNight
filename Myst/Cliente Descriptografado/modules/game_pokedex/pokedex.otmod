@@ -4,6 +4,10 @@ Module
   author: Thalles Vitor
   website: www.thallesdev.com.br
   sandboxed: true
-  scripts: [ pokedex ]
-  @onLoad: init()
-  @onUnload: terminate()
+  scripts: [ pokedex_list, dexlist, pokedex ]
+  @onLoad: |
+    init()
+    initDexList()
+  @onUnload: |
+    terminate()
+    terminateDexList()

@@ -27,6 +27,9 @@ local defaultOptions = {
     -- Solta a trava de 250 ms que lockWalk() impoe apos um passo recusado
     -- ou um clique. Ver releaseWalkLock em game_interface.
     smoothWalk = true,
+    -- Segura o primeiro passo por um instante para a diagonal sair certa
+    -- ao combinar duas teclas. Ver smartWalk em game_interface.
+    diagonalGrace = true,
     wasdWalking = false,
     -- gameinterface.lua ja lia estas quatro, mas elas nunca foram
     -- definidas aqui: getOption devolvia nil e setOn(nil) desligava o

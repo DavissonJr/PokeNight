@@ -1,0 +1,132 @@
+// Celula da listagem. O nao capturado fica apagado, para a coleção ser
+// legivel de relance: o que voce tem salta, o que falta recua.
+DexEntry < UIWidget
+  size: 84 96
+  border-width: 1
+  border-color: #2a2a2e
+  focusable: true
+
+  $hover:
+    border-color: #3d3d44
+
+  $focus:
+    border-color: #ff7a18
+    background-color: #1f1f22
+
+  UICreature
+    id: dexCreature
+    size: 58 58
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    creature-center: true
+    fixed-creature-size: true
+    phantom: true
+
+  Label
+    id: dexNumber
+    font: verdana-11px-antialised
+    color: #8a8a92
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin: 3 0 0 4
+    phantom: true
+
+  Label
+    id: dexName
+    font: verdana-11px-antialised
+    color: #f5f5f6
+    text-align: center
+    text-wrap: true
+    height: 28
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 0 2 2 2
+    phantom: true
+
+DexSearchEdit < TextEdit
+  height: 28
+  font: verdana-11px-antialised
+  color: #f5f5f6
+
+DexTab < UIButton
+  height: 28
+  width: 130
+  font: verdana-11px-antialised
+  color: #8a8a92
+  background-color: #141416
+
+  $hover !checked:
+    color: #f5f5f6
+    background-color: #1f1f22
+
+  $checked:
+    color: #ff7a18
+    background-color: #241a10
+
+MainWindow
+  id: dexListWindow
+  !text: tr('Pokedex')
+  size: 640 560
+  visible: false
+  @onEscape: modules.game_pokedex.toggleDexList()
+
+  DexTab
+    id: tabNumbered
+    !text: tr('Pokedex')
+    checked: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 4
+    @onClick: modules.game_pokedex.showSection('numbered')
+
+  DexTab
+    id: tabExtras
+    !text: tr('Shiny e variantes')
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 4
+    @onClick: modules.game_pokedex.showSection('extras')
+
+  Label
+    id: dexProgress
+    font: sans-bold-16px
+    color: #ff7a18
+    text-auto-resize: true
+    anchors.verticalCenter: tabNumbered.verticalCenter
+    anchors.right: parent.right
+    margin-right: 6
+
+  DexSearchEdit
+    id: dexSearch
+    anchors.top: tabNumbered.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 8 6 0 6
+    @onTextChange: modules.game_pokedex.applyFilter()
+
+  ScrollablePanel
+    id: dexGrid
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin: 8 22 8 6
+    padding: 2
+    vertical-scrollbar: dexScrollBar
+    layout:
+      type: grid
+      cell-size: 84 96
+      cell-spacing: 4
+      flow: true
+
+  VerticalScrollBar
+    id: dexScrollBar
+    anchors.top: dexGrid.top
+    anchors.bottom: dexGrid.bottom
+    anchors.right: parent.right
+    margin-right: 2
+    step: 48
+    pixels-scroll: true

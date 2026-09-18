@@ -95,6 +95,7 @@
 	<!-- Fim -->
 	
 	<!-- Auto Loot System - Thalles Vitor -->
+		<event type="extendedopcode" name="PokedexLista" script="pokedex_lista.lua"/>
 		<event type="extendedopcode" name="Cofre" script="cofre.lua"/>
 		<event type="extendedopcode" name="LootAll" script="lootall.lua"/>
 		<event type="extendedopcode" name="AutoLootReceive" script="autoloot/autoloot.lua"/>
