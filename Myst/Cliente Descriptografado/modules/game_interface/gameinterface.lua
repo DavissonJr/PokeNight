@@ -429,12 +429,6 @@ function tryLogout(prompt)
     end
 end
 
-function stopSmartWalk()
-    cancelPendingFirstStep()
-    smartWalkDirs = {}
-    smartWalkDir = nil
-end
-
 -- Primeiro passo adiado, para a diagonal sair certa.
 --
 -- bindKeyDown e bindKeyPress disparam assim que a PRIMEIRA tecla desce.
@@ -452,6 +446,12 @@ local function cancelPendingFirstStep()
         removeEvent(pendingFirstStep)
         pendingFirstStep = nil
     end
+end
+
+function stopSmartWalk()
+    cancelPendingFirstStep()
+    smartWalkDirs = {}
+    smartWalkDir = nil
 end
 
 --- Solta a trava artificial de caminhada.
