@@ -44,5 +44,27 @@ services:
     stdin_open: true
     tty: true
 
+  # API que o cliente consome para criar conta e personagem.
+  # Fica no mesmo network do db, entao conversa com ele por hostname.
+  web:
+    image: php:8.2-apache
+    container_name: pko-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_NAME: pokenight
+      DB_USER: root
+      DB_PASS: poke123
+    volumes:
+      - ./api:/var/www/html
+    ports:
+      - "8088:80"
+    command: >
+      bash -c "docker-php-ext-install pdo_mysql > /dev/null 2>&1 &&
+               apache2-foreground"
+
 volumes:
   dbdata:

@@ -35,7 +35,7 @@ def state(path, idx, cell_h):
     return im.crop((0, idx*cell_h, im.size[0], (idx+1)*cell_h))
 
 W, H = 760, 420
-canvas = Image.new('RGBA', (W, H), (8, 12, 22, 255))
+canvas = Image.new('RGBA', (W, H), (10, 10, 11, 255))
 d = ImageDraw.Draw(canvas)
 
 try:
@@ -45,7 +45,7 @@ try:
 except Exception:
     f = fb = fs = ImageFont.load_default()
 
-TXT = (232, 238, 247); DIM = (138, 154, 176)
+TXT = (245, 245, 246); DIM = (138, 138, 146)
 d.text((24, 20), "PokeOrigin — tema proposto", font=fb, fill=TXT)
 d.text((24, 42), "pecas 9-slice esticadas, como o cliente as usa", font=fs, fill=DIM)
 

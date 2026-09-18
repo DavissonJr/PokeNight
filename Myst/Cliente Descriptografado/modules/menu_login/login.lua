@@ -36,9 +36,9 @@ end
 local function onCharacterList(protocol, characters, account, otui)
   -- Try add server to the server list
   ServerList.add(G.host, G.port, g_game.getProtocolVersion())
-  g_settings.set('staylogged', enterGame:getChildById('stayLoggedBox'):isChecked())
+  g_settings.set('staylogged', enterGame:recursiveGetChildById('stayLoggedBox'):isChecked())
 
-  if enterGame:getChildById('lembrarSenha'):isChecked() then
+  if enterGame:recursiveGetChildById('lembrarSenha'):isChecked() then
     local account = g_crypt.encrypt(G.account)
     local password = g_crypt.encrypt(G.password)
 
@@ -48,7 +48,7 @@ local function onCharacterList(protocol, characters, account, otui)
     ServerList.setServerAccount(G.host, account)
     ServerList.setServerPassword(G.host, password)
 
-    g_settings.set('autologin', enterGame:getChildById('entrarAutomac'):isChecked())
+    g_settings.set('autologin', enterGame:recursiveGetChildById('entrarAutomac'):isChecked())
   else
     -- reset server list account/password
     ServerList.setServerAccount(G.host, '')
@@ -106,11 +106,11 @@ function EnterGame.init()
     EnterGame.setAccountName(account)
     EnterGame.setPassword(password)
 
-    enterGame:getChildById('serverHostTextEdit'):setText(host)
-    enterGame:getChildById('serverPortTextEdit'):setText(port)
-    enterGame:getChildById('entrarAutomac'):setChecked(autologin)
+    enterGame:recursiveGetChildById('serverHostTextEdit'):setText(host)
+    enterGame:recursiveGetChildById('serverPortTextEdit'):setText(port)
+    enterGame:recursiveGetChildById('entrarAutomac'):setChecked(autologin)
 
-    clientBox = enterGame:getChildById('clientComboBox')
+    clientBox = enterGame:recursiveGetChildById('clientComboBox')
 
     for _, proto in pairs(g_game.getSupportedClients()) do
     clientBox:addOption(proto)
@@ -121,11 +121,11 @@ function EnterGame.init()
     enterGame:show()
     EnterGame.setUniqueServer(serverIP, 7183, 854, 389, 354)
 
-    enterGame:getChildById('accountNameTextEdit'):setFocusable(true)
-    enterGame:getChildById('accountPasswordTextEdit'):setFocusable(false)
+    enterGame:recursiveGetChildById('accountNameTextEdit'):setFocusable(true)
+    enterGame:recursiveGetChildById('accountPasswordTextEdit'):setFocusable(false)
 
     addEvent(function()
-      enterGame:getChildById('accountPasswordTextEdit'):setFocusable(true)
+      enterGame:recursiveGetChildById('accountPasswordTextEdit'):setFocusable(true)
     end)
 
     g_keyboard.bindKeyPress('Enter', function() EnterGame.doLogin() end, enterGame)
@@ -190,19 +190,19 @@ end
 
 function EnterGame.setAccountName(account)
   local account = g_crypt.decrypt(account)
-  enterGame:getChildById('accountNameTextEdit'):setText(account)
-  enterGame:getChildById('lembrarSenha'):setChecked(#account > 0)
+  enterGame:recursiveGetChildById('accountNameTextEdit'):setText(account)
+  enterGame:recursiveGetChildById('lembrarSenha'):setChecked(#account > 0)
 end
 
 function EnterGame.setPassword(password)
   local password = g_crypt.decrypt(password)
-  enterGame:getChildById('accountPasswordTextEdit'):setText(password)
+  enterGame:recursiveGetChildById('accountPasswordTextEdit'):setText(password)
 end
 
 function EnterGame.clearAccountFields()
-  enterGame:getChildById('accountNameTextEdit'):clearText()
-  enterGame:getChildById('accountPasswordTextEdit'):clearText()
-  enterGame:getChildById('accountPasswordTextEdit'):focus()
+  enterGame:recursiveGetChildById('accountNameTextEdit'):clearText()
+  enterGame:recursiveGetChildById('accountPasswordTextEdit'):clearText()
+  enterGame:recursiveGetChildById('accountPasswordTextEdit'):focus()
   g_settings.remove('account')
   g_settings.remove('password')
 end
@@ -214,10 +214,10 @@ function EnterGame.onClientVersionChange(comboBox, text, data)
 end
 
 function EnterGame.doLogin()
-  G.account = enterGame:getChildById('accountNameTextEdit'):getText()
-  G.password = enterGame:getChildById('accountPasswordTextEdit'):getText()
+  G.account = enterGame:recursiveGetChildById('accountNameTextEdit'):getText()
+  G.password = enterGame:recursiveGetChildById('accountPasswordTextEdit'):getText()
   G.authenticatorToken = ""
-  G.stayLogged = enterGame:getChildById('stayLoggedBox'):isChecked()
+  G.stayLogged = enterGame:recursiveGetChildById('stayLoggedBox'):isChecked()
   G.host = serverIP
   G.port = 7183
   local clientVersion = 854
@@ -268,11 +268,11 @@ function EnterGame.displayMotd()
 end
 
 function EnterGame.setDefaultServer(host, port, protocol)
-  local hostTextEdit = enterGame:getChildById('serverHostTextEdit')
-  local portTextEdit = enterGame:getChildById('serverPortTextEdit')
-  local clientLabel = enterGame:getChildById('clientLabel')
-  local accountTextEdit = enterGame:getChildById('accountNameTextEdit')
-  local passwordTextEdit = enterGame:getChildById('accountPasswordTextEdit')
+  local hostTextEdit = enterGame:recursiveGetChildById('serverHostTextEdit')
+  local portTextEdit = enterGame:recursiveGetChildById('serverPortTextEdit')
+  local clientLabel = enterGame:recursiveGetChildById('clientLabel')
+  local accountTextEdit = enterGame:recursiveGetChildById('accountNameTextEdit')
+  local passwordTextEdit = enterGame:recursiveGetChildById('accountPasswordTextEdit')
 
   if hostTextEdit:getText() ~= host then
     hostTextEdit:setText(host)
@@ -284,11 +284,11 @@ function EnterGame.setDefaultServer(host, port, protocol)
 end
 
 function EnterGame.setUniqueServer(host, port, protocol, windowWidth, windowHeight)
-  local hostTextEdit = enterGame:getChildById('serverHostTextEdit')
+  local hostTextEdit = enterGame:recursiveGetChildById('serverHostTextEdit')
   hostTextEdit:setText(host)
   hostTextEdit:setVisible(false)
   hostTextEdit:setHeight(0)
-  local portTextEdit = enterGame:getChildById('serverPortTextEdit')
+  local portTextEdit = enterGame:recursiveGetChildById('serverPortTextEdit')
   portTextEdit:setText(port)
   portTextEdit:setVisible(false)
   portTextEdit:setHeight(0)
@@ -297,22 +297,22 @@ function EnterGame.setUniqueServer(host, port, protocol, windowWidth, windowHeig
   clientBox:setVisible(false)
   clientBox:setHeight(0)
 
-  local serverLabel = enterGame:getChildById('serverLabel')
+  local serverLabel = enterGame:recursiveGetChildById('serverLabel')
   serverLabel:setVisible(false)
   serverLabel:setHeight(0)
-  local portLabel = enterGame:getChildById('portLabel')
+  local portLabel = enterGame:recursiveGetChildById('portLabel')
   portLabel:setVisible(false)
   portLabel:setHeight(0)
-  local clientLabel = enterGame:getChildById('clientLabel')
+  local clientLabel = enterGame:recursiveGetChildById('clientLabel')
   clientLabel:setVisible(false)
   clientLabel:setHeight(0)
 
-  local serverListButton = enterGame:getChildById('serverListButton')
+  local serverListButton = enterGame:recursiveGetChildById('serverListButton')
   serverListButton:setVisible(false)
   serverListButton:setHeight(0)
   serverListButton:setWidth(0)
 
-  --local rememberPasswordBox = enterGame:getChildById('rememberPasswordBox')
+  --local rememberPasswordBox = enterGame:recursiveGetChildById('rememberPasswordBox')
   --rememberPasswordBox:setMarginTop(-5)
 
   if not windowWidth then windowWidth = 236 end
@@ -322,7 +322,7 @@ function EnterGame.setUniqueServer(host, port, protocol, windowWidth, windowHeig
 end
 
 function EnterGame.setServerInfo(message)
-  local label = enterGame:getChildById('serverInfoLabel')
+  local label = enterGame:recursiveGetChildById('serverInfoLabel')
   label:setText(message)
 end
 

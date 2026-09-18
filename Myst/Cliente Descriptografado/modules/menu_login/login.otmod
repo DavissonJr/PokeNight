@@ -11,8 +11,11 @@ Module
   @onLoad: |
     dofile 'login'
     dofile 'characterlist'
+    -- Precisa vir depois de login.lua: estende a tabela EnterGame dele.
+    dofile 'pko_register'
     EnterGame.init()
     init()
+    EnterGame.refreshOnline()
 
   @onUnload: |
     EnterGame.terminate()

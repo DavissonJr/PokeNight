@@ -16,15 +16,16 @@ SS = 4  # fator de supersampling
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pko-theme')
 os.makedirs(OUT, exist_ok=True)
 
-# ---- Paleta PokeOrigin -----------------------------------------------------
-BG        = (8, 12, 22)        # fundo profundo
-SURF      = (16, 24, 38)       # superficie padrao
-SURF_HI   = (24, 33, 47)       # superficie elevada / hover
-SURF_LO   = (11, 17, 28)       # superficie afundada / pressed
-BORDER    = (46, 62, 85)       # borda padrao
-BORDER_HI = (62, 83, 114)      # borda destacada
-ACCENT    = (77, 163, 255)     # azul de acao
-TEXT_DIM  = (138, 154, 176)
+# ---- Paleta PokeOrigin (preto + laranja) -----------------------------------
+BG        = (10, 10, 11)       # preto de fundo
+SURF      = (20, 20, 22)       # superficie padrao
+SURF_HI   = (31, 31, 34)       # superficie elevada / hover
+SURF_LO   = (14, 14, 16)       # superficie afundada / pressed
+BORDER    = (42, 42, 46)       # borda padrao
+BORDER_HI = (61, 61, 68)       # borda destacada
+ACCENT    = (255, 122, 24)     # laranja de acao
+ACCENT_HI = (255, 162, 77)     # laranja claro (brilho)
+TEXT_DIM  = (138, 138, 146)
 
 def rr(draw, box, radius, fill=None, outline=None, width=1):
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
@@ -77,7 +78,7 @@ cell(32, 32, 4, SURF_LO, BORDER, inset=True).save(os.path.join(OUT, 'textedit.pn
 # ---- progressbar.png (80x16 = 2 estados de 80x8) -------------------------
 pb = Image.new('RGBA', (80, 16), (0, 0, 0, 0))
 trilho = cell(80, 8, 3, SURF_LO, BORDER)
-preench = cell(80, 8, 3, ACCENT, ACCENT, top_glow=(140, 200, 255))
+preench = cell(80, 8, 3, ACCENT, ACCENT, top_glow=ACCENT_HI)
 pb.paste(trilho, (0, 0), trilho)
 pb.paste(preench, (0, 8), preench)
 pb.save(os.path.join(OUT, 'progressbar.png'))
