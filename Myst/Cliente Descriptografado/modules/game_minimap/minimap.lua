@@ -287,7 +287,8 @@ end
 
 function controller:onGameStart()
     self.ui:setupOnStart() -- load character window configuration
-    self.ui:hide()
+    -- Mesmo caso do game_battle: o hide() daqui anulava o estado que
+    -- setupOnStart acabara de restaurar.
     startTownLabelTicker()
 
     -- Load Map
@@ -319,7 +320,9 @@ function controller:onGameStart()
     end
 
     self.ui.contentsPanel.minimap:load()
-    minimapButton:setOn(false)
+    -- O botao segue a janela: cravar false aqui deixava o icone apagado
+    -- mesmo com o minimapa aberto.
+    minimapButton:setOn(self.ui:isVisible())
 end
 
 function controller:onGameEnd()

@@ -33,6 +33,7 @@ Module
     - game_pokebar
     - game_autoloot
     - game_pokemoninfo
+    - game_cofre
     - game_playerbank
     - game_house
     - game_dialogs

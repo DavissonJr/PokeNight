@@ -313,9 +313,11 @@ local function reSort(oldSortType, newSortType, oldSortOrder, newSortOrder) -- R
 end
 
 function onGameStart()
-    battleWindow:setupOnStart() -- load character window configuration 
-    battleWindow:hide()
-    battleButton:setOn(false)
+    battleWindow:setupOnStart() -- load character window configuration
+    -- setupOnStart ja reabre ou nao a janela conforme o que ficou salvo.
+    -- O hide() que vinha aqui descartava isso, e o jogador tinha de
+    -- reabrir tudo a cada login. O botao do topo passa a seguir a janela.
+    battleButton:setOn(battleWindow:isVisible())
 
     connect(LocalPlayer, {
         onPositionChange = onCreaturePositionChange
