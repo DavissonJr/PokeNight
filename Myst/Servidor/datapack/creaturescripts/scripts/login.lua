@@ -3,7 +3,7 @@ local config = {
 	useFragHandler = getBooleanFromString(getConfigValue('useFragHandler'))
 }
 
-local events = {"PokeBar", "PokeLevel", "EmpilharDinheiro", "BikeEffect", "LootAll", "AutoLootReceive", "AutoLootChangeCategory",
+local events = {"PokeBar", "PokeLevel", "EmpilharDinheiro", "BikeEffect", "Cofre", "LootAll", "AutoLootReceive", "AutoLootChangeCategory",
 "AutoLootAdd", "AutoLootRemove", "AutoLootStatus", "AutoLootSearch", "dropStone",
 "PlayerLogout", "WildAttack", "Idle", "EffectOnAdvance", "GeneralConfiguration", "SaveReportBug",
 "LookSystem", "UpAbsolute", "Outfit250", "Outfit150", "onlinebonus", "upspeed", "Monster Hunterl",

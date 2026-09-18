@@ -1,0 +1,131 @@
+CofreButton < UIButton
+  height: 32
+  font: sans-bold-16px
+  color: #0a0a0b
+  background-color: #ff7a18
+
+  $hover !disabled:
+    background-color: #ffa24d
+
+  $pressed:
+    background-color: #e0680f
+
+  $disabled:
+    background-color: #3a2a1c
+    color: #7a6a5c
+
+CofreGhostButton < UIButton
+  height: 32
+  font: verdana-11px-antialised
+  color: #f5f5f6
+  background-color: #1f1f22
+
+  $hover !disabled:
+    background-color: #2a2a2e
+
+  $pressed:
+    background-color: #141416
+
+CofreValue < Label
+  font: sans-bold-16px
+  color: #ff7a18
+  text-auto-resize: true
+
+CofreCaption < Label
+  font: verdana-11px-antialised
+  color: #8a8a92
+  text-auto-resize: true
+
+MainWindow
+  id: cofreWindow
+  !text: tr('Cofre')
+  size: 300 250
+  visible: false
+  @onEscape: modules.game_cofre.toggle()
+
+  CofreCaption
+    id: balanceCaption
+    !text: tr('Guardado no cofre')
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+
+  CofreValue
+    id: balanceValue
+    text: 0
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+
+  CofreCaption
+    id: walletCaption
+    !text: tr('Na mochila')
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 10
+
+  CofreValue
+    id: walletValue
+    text: 0
+    color: #f5f5f6
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+
+  TextEdit
+    id: amountEdit
+    height: 30
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 14 6 0 6
+    text: 0
+
+  CofreButton
+    id: depositButton
+    !text: tr('Depositar')
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
+    margin-top: 8
+    margin-left: 6
+    margin-right: 3
+    @onClick: modules.game_cofre.deposit(false)
+
+  CofreButton
+    id: withdrawButton
+    !text: tr('Sacar')
+    anchors.top: prev.top
+    anchors.left: parent.horizontalCenter
+    anchors.right: parent.right
+    margin-left: 3
+    margin-right: 6
+    @onClick: modules.game_cofre.withdraw(false)
+
+  CofreGhostButton
+    id: depositAllButton
+    !text: tr('Depositar tudo')
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
+    margin-top: 6
+    margin-left: 6
+    margin-right: 3
+    @onClick: modules.game_cofre.deposit(true)
+
+  CofreGhostButton
+    id: withdrawAllButton
+    !text: tr('Sacar tudo')
+    anchors.top: prev.top
+    anchors.left: parent.horizontalCenter
+    anchors.right: parent.right
+    margin-left: 3
+    margin-right: 6
+    @onClick: modules.game_cofre.withdraw(true)
+
+  CofreCaption
+    id: statusLabel
+    text-wrap: true
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 8 6 0 6

@@ -1,0 +1,8 @@
+Module
+  name: game_cofre
+  description: Cofre - guardar e sacar dinheiro sem o NPC do banco
+  author: PokeOrigin
+  sandboxed: true
+  scripts: [ cofre ]
+  @onLoad: init()
+  @onUnload: terminate()
