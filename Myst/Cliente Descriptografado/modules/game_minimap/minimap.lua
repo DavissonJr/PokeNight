@@ -180,6 +180,18 @@ function controller:onGameStart()
 
     if g_resources.fileExists(minimapFile) then
         loadFnc(minimapFile)
+    elseif otmm and g_resources.fileExists('/minimap_base.otmm') then
+        -- Primeira vez deste jogador: semeia com o mapa inteiro em tom
+        -- escuro (gerado do OTBM por design/gen_minimap.py). Andar
+        -- substitui cada tile pela cor real, entao o explorado "acende".
+        --
+        -- O arquivo tem nome proprio de proposito: data/ e montado a
+        -- frente do diretorio de escrita, entao um "minimap.otmm" ali
+        -- venceria o save do jogador e apagaria a exploracao dele a cada
+        -- login. Como semente, so entra quando nao ha save nenhum -- e
+        -- loadOtmm marca os blocos com justSaw(), entao o proximo save
+        -- ja leva a base junto.
+        loadFnc('/minimap_base.otmm')
     end
 
     self.ui.contentsPanel.minimap:load()
